@@ -1,0 +1,63 @@
+name: Auto-Publish Scheduled Guides
+
+on:
+  schedule:
+    # Runs every day at 08:00 UTC (10:00 Zurich time)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check schedule and publish
+        id: publish
+        run: |
+          node auto-publish.js
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "published=false" >> $GITHUB_OUTPUT
+            echo "No guides scheduled for today"
+          else
+            echo "published=true" >> $GITHUB_OUTPUT
+            echo "Guide(s) published!"
+          fi
+
+      - name: Commit changes
+        if: steps.publish.outputs.published == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          SLUG=$(node -e "
+            const s = require('./publish-schedule.json');
+            const today = new Date().toISOString().slice(0,10);
+            const published = s.schedule.filter(x => x.date === today && x.status === 'published');
+            console.log(published.map(x => x.slug).join(', '));
+          ")
+          git commit -m "Publish guide: ${SLUG}
+
+          Auto-published by GitHub Actions schedule.
+          Includes: interlinking, sitemap update, schema markup."
+
+      - name: Push changes
+        if: steps.publish.outputs.published == 'true'
+        run: git push
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.publish.outputs.published == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy output --project-name=cryptolicenses-net --branch=master --commit-dirty=true
