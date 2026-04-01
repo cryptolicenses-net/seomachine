@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CryptoLicenses.net — Swiss-Based Crypto Licensing Consultancy 2026</title>
+    <meta name="description" content="CryptoLicenses.net is a Swiss-based crypto licensing consultancy headquartered in Zug. 200+ clients licensed across 15+ jurisdictions since 2018. Crypto-only specialists.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/about/">
+    <meta property="og:title" content="About CryptoLicenses.net — Swiss-Based Crypto Licensing Consultancy 2026">
+    <meta property="og:description" content="CryptoLicenses.net is a Swiss-based crypto licensing consultancy headquartered in Zug. 200+ clients licensed across 15+ jurisdictions since 2018.">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/zurich-lakeside-historic-buildings.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <style>
+:root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+.cards-grid { display: grid; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+.cards-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { border-right: var(--border); border-bottom: var(--border); padding: 1.75rem; text-decoration: none; color: var(--ink); display: block; transition: background 0.2s; }
+.card-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+.card-meta { font-size: 0.8rem; color: var(--muted); }
+.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer-col { padding: 3rem 2rem; border-right: 1px solid rgba(255,255,255,.08); }
+.footer-brand { font-family: 'Fraunces', serif; font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+.footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,.4); line-height: 1.65; margin-bottom: 1.5rem; }
+.footer-address { font-size: 0.78rem; color: rgba(255,255,255,.35); line-height: 1.75; }
+.footer-col-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent); margin-bottom: 1.25rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.footer-link { display: block; font-size: 0.85rem; color: rgba(255,255,255,.6); text-decoration: none; margin-bottom: 0.6rem; transition: color 0.2s; }
+.footer-link:hover { color: #fff; }
+.footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: rgba(255,255,255,.3); }
+@media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-aside { border-top: var(--heavy); }
+            .content-wrap { grid-template-columns: 1fr; }
+            .main-col { border-right: none; }
+            .sticky-aside { position: static; }
+            .cards-grid-4 { grid-template-columns: 1fr 1fr; }
+            .cards-grid-3 { grid-template-columns: 1fr 1fr; }
+            .req-grid { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+/* mobile_nav_fix */
+
+.cta-section{background:var(--ink);color:#fff;padding:72px 24px;border-top:4px solid var(--accent)}
+/* Expert block */
+.expert-block { display: grid; grid-template-columns: 220px 1fr; gap: 2.5rem; margin-top: 1.5rem; align-items: start; }
+.expert-photo-wrap { border: var(--heavy); overflow: hidden; }
+.expert-photo { display: block; width: 100%; height: auto; }
+.expert-name { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 0.35rem; }
+.expert-role { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.5rem; }
+.expert-creds { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: var(--border); }
+.expert-highlights { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.expert-hl { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+.expert-hl-dot { width: 6px; height: 6px; background: var(--accent); flex-shrink: 0; }
+@media (max-width: 768px) {
+    .expert-block { grid-template-columns: 1fr; gap: 1.5rem; }
+    .expert-photo-wrap { max-width: 180px; }
+    .expert-name { font-size: 1.3rem; }
+}
+@media (max-width: 520px) {
+    .expert-block { gap: 1rem; }
+    .expert-photo-wrap { max-width: 140px; }
+    .expert-name { font-size: 1.15rem; }
+    .expert-creds { font-size: 0.75rem; }
+    .expert-hl { font-size: 0.78rem; }
+}
+/* ====== MOBILE ADAPTIVE (injected) ====== */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr !important;min-height:auto !important}
+  .hero-content{border-right:none !important;border-bottom:var(--heavy,1px solid #1C2B4A)}
+  .hero-aside{border-top:none}
+  .content-wrap{grid-template-columns:1fr !important}
+  .main-col{border-right:none !important}
+  .sticky-aside{position:static !important}
+  .cards-grid{grid-template-columns:1fr 1fr !important}
+  .cards-grid-2{grid-template-columns:1fr !important}
+  .req-grid{grid-template-columns:1fr !important}
+  .footer-grid{grid-template-columns:1fr 1fr !important}
+  .footer-top{grid-template-columns:1fr 1fr !important}
+  .cta-inner{grid-template-columns:1fr !important;gap:0 !important}
+  .ig-compare{grid-template-columns:1fr !important}
+  .ig-compare-col{border-right:none !important;border-bottom:var(--border)}
+  .ig-compare-col:last-child{border-bottom:none}
+  .hero-stats{grid-template-columns:repeat(2,1fr) !important}
+  .tier-block .cards-grid{grid-template-columns:1fr !important}
+}
+@media(max-width:768px){
+  .hero-content{padding:2rem 1.25rem !important}
+  .hero-aside,.hero-visual{padding:1.5rem 1.25rem !important}
+  .hero-h1,.hero-headline{font-size:clamp(1.8rem,6vw,2.8rem) !important}
+  .hero-intro{font-size:.95rem !important}
+  .section-block{padding:2rem 1.25rem !important}
+  .breadcrumb{padding:.75rem 1.25rem !important;flex-wrap:wrap}
+  .step-item{grid-template-columns:48px 1fr !important}
+  .step-body{padding:1rem 1.25rem !important}
+  .step-num{padding:1rem 0 !important}
+  .sticky-aside{padding:1.25rem !important}
+  .aside-cta-box{padding:1.5rem !important}
+  .aside-card{padding:1.25rem !important}
+  .cards-grid{grid-template-columns:1fr !important}
+  .card{border-right:none !important;border-bottom:var(--border,1px solid rgba(28,43,74,0.14))}
+  .card:last-child{border-bottom:none}
+  .faq-q{padding:1.25rem !important;font-size:.95rem !important}
+  .faq-a{padding:0 1.25rem 1.25rem !important}
+  .footer-grid,.footer-top{grid-template-columns:1fr !important}
+  .footer-col{padding:2rem 1.25rem !important}
+  .footer-bottom{padding:1rem 1.25rem !important;flex-wrap:wrap;gap:.5rem}
+  .cta-section{padding:48px 16px !important}
+  .cta-text{padding:2rem 0 !important;border-right:none !important;border-bottom:1px solid rgba(255,255,255,.1)}
+  .cta-form-wrap{padding:2rem 0 !important}
+  .cta-form-row{grid-template-columns:1fr !important}
+  .cta-h2{font-size:1.6rem !important}
+  .ig-stats{grid-template-columns:1fr 1fr !important}
+  .ig-step{grid-template-columns:44px 1fr !important}
+  .ig-step-body{padding:1rem 1.25rem !important}
+  .ig-cost-row{padding:.875rem 1.25rem !important}
+  .ig-bar-row{padding:.75rem 1.25rem !important}
+  .compare-table th,.compare-table td,.cost-table th,.cost-table td{padding:.625rem .75rem !important;font-size:.78rem !important}
+  .alert-box{padding:1rem 1.25rem !important}
+  .req-cell{padding:1rem 1.25rem !important}
+  .aside-metric{font-size:.8rem !important}
+  .info-row{font-size:.8rem !important}
+  .aside-info-box{padding:1.25rem !important}
+  .tier-header{padding:1rem 1.25rem !important}
+  .tier-body{padding:1.25rem !important}
+  .tier-body p{font-size:.85rem !important}
+  nav{min-height:0 !important}
+}
+@media(max-width:520px){
+  .hero-content{padding:1.5rem 1rem !important}
+  .hero-aside,.hero-visual{padding:1.25rem 1rem !important}
+  .hero-h1,.hero-headline{font-size:clamp(1.5rem,5.5vw,2.2rem) !important}
+  .hero-intro{font-size:.88rem !important}
+  .hero-label{font-size:.7rem !important}
+  .stat-value{font-size:1.3rem !important}
+  .stat-label{font-size:.72rem !important}
+  .stat-box{padding:1rem .75rem !important}
+  .section-block{padding:1.5rem 1rem !important}
+  .section-h2{font-size:1.3rem !important}
+  .section-label{font-size:.65rem !important}
+  .breadcrumb{padding:.625rem 1rem !important;font-size:.72rem !important}
+  .step-item{grid-template-columns:40px 1fr !important}
+  .step-body{padding:.875rem 1rem !important}
+  .step-title{font-size:.95rem !important}
+  .step-desc{font-size:.82rem !important}
+  .step-num{font-size:1.3rem !important}
+  .prose p{font-size:.88rem !important}
+  .checklist li{font-size:.82rem !important}
+  .faq-q{padding:1rem !important;font-size:.88rem !important}
+  .faq-a{padding:0 1rem 1rem !important;font-size:.82rem !important}
+  .faq-icon{width:20px !important;height:20px !important;font-size:.9rem !important}
+  .aside-card{padding:1rem !important}
+  .aside-metric{padding:.5rem 0 !important;font-size:.78rem !important}
+  .aside-metric-value{font-size:.72rem !important}
+  .aside-card-title{font-size:.65rem !important}
+  .sticky-aside{padding:1rem !important}
+  .aside-cta-box{padding:1.25rem !important}
+  .aside-cta-box h3{font-size:1.1rem !important}
+  .aside-cta-box p{font-size:.82rem !important}
+  .btn-primary{padding:.75rem 1rem !important;font-size:.72rem !important}
+  .aside-info-box{padding:1rem !important}
+  .info-row{font-size:.78rem !important}
+  .req-cell{padding:.875rem 1rem !important}
+  .req-label{font-size:.65rem !important}
+  .req-value{font-size:.85rem !important}
+  .cards-grid{grid-template-columns:1fr !important}
+  .card{padding:1.25rem 1rem !important}
+  .card-title{font-size:.92rem !important}
+  .card-desc{font-size:.75rem !important}
+  .footer-col{padding:1.5rem 1rem !important}
+  .footer-bottom{padding:.875rem 1rem !important;font-size:.7rem !important}
+  .footer-brand{font-size:1.1rem !important}
+  .footer-tagline{font-size:.75rem !important}
+  .footer-link{font-size:.8rem !important}
+  .footer-col-title{font-size:.62rem !important}
+  .cta-section{padding:32px 12px !important}
+  .cta-h2{font-size:1.4rem !important}
+  .cta-lead{font-size:.85rem !important}
+  .cta-field input,.cta-field textarea,.cta-sel-wrap select{font-size:.82rem !important;padding:8px 12px !important}
+  .cta-submit{padding:12px !important;font-size:.82rem !important}
+  .cta-privacy{font-size:.62rem !important}
+  .cta-trust li{font-size:.78rem !important}
+  .cta-label{font-size:.65rem !important}
+  h1{font-size:clamp(1.5rem,5.5vw,2.2rem) !important}
+  h2{font-size:clamp(1.2rem,4.5vw,1.8rem) !important}
+  h3{font-size:clamp(1rem,3.5vw,1.4rem) !important}
+  .mono{font-size:.68rem !important}
+}
+@media(max-width:380px){
+  .hero-stats{grid-template-columns:1fr 1fr !important}
+  .stat-box{padding:.75rem .5rem !important}
+  .stat-value{font-size:1.1rem !important}
+  .section-block{padding:1.25rem .75rem !important}
+  .hero-content{padding:1.25rem .75rem !important}
+  .breadcrumb{padding:.5rem .75rem !important}
+  .cta-section{padding:24px 8px !important}
+}
+/* ====== END MOBILE ADAPTIVE ====== */
+    
+/* === CANONICAL NAV/FOOTER === */
+nav{display:flex;align-items:stretch;border-bottom:var(--heavy);position:sticky;top:0;background:var(--paper);z-index:100;}
+.ig-compare-col{padding:2rem}
+.ig-compare-col:first-child{border-right:var(--border)}
+.ig-compare-col-title{font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:1.25rem}
+.ig-compare-row{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:var(--border);font-size:.875rem}
+.ig-compare-label{color:var(--muted)}
+.ig-compare-value{font-weight:500;text-align:right}
+    </style>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="+hh3DN/48kYIX1vd1G9NNQ" async></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Russian"
+        ]
+      },
+      "sameAs": [
+        "https://t.me/cryptolicensesnet"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About CryptoLicenses.net",
+          "item": "https://cryptolicenses.net/about/"
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://cryptolicenses.net/about/#webpage",
+      "name": "About CryptoLicenses.net",
+      "description": "CryptoLicenses.net is a Swiss-based crypto licensing consultancy headquartered in Zug. 200+ clients licensed across 15+ jurisdictions since 2018. Crypto-only specialists.",
+      "url": "https://cryptolicenses.net/about/",
+      "publisher": {
+        "@id": "https://cryptolicenses.net/#organization"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
+        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
+        <a href="/banking-licenses/" class="nav-link">Banking &amp; EMI</a>
+        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
+        <a href="/regulation/" class="nav-link">Regulation Hub</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Free Consultation</a>
+</nav>
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="/crypto-licenses/" class="mobile-nav-item">Crypto Licenses</a>
+    <a href="/forex-licenses/" class="mobile-nav-item">Forex Licenses</a>
+    <a href="/banking-licenses/" class="mobile-nav-item">Banking &amp; EMI</a>
+    <a href="/corporate-services/" class="mobile-nav-item">Corporate Services</a>
+    <a href="/regulation/" class="mobile-nav-item">Regulation Hub</a>
+    <a href="/blog/" class="mobile-nav-item">Blog</a>
+    <a href="/guides/" class="mobile-nav-item">Guides</a>
+    <a href="/contact/" class="mobile-nav-item mobile-nav-cta">Free Consultation &rarr;</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>›</span>
+    About
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div>
+            <div class="mono hero-label">Swiss-Based · Since 2018</div>
+            <h1 class="hero-h1">We Help Crypto Businesses <em>Get Licensed</em></h1>
+            <p class="hero-intro">CryptoLicenses.net is a specialised regulatory consultancy headquartered in Zug, Switzerland — the heart of Crypto Valley. We have guided 200+ clients through licensing processes across 15+ jurisdictions. Every member of our team focuses exclusively on digital asset regulation.</p>
+        </div>
+        <div class="hero-stats" style="margin-top: 2.5rem;">
+            <div class="stat-box">
+                <div class="stat-value">200+</div>
+                <div class="stat-label">Clients licensed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">15+</div>
+                <div class="stat-label">Jurisdictions</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">7 yrs</div>
+                <div class="stat-label">In crypto licensing</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">Zug, CH</div>
+                <div class="stat-label">Headquarters</div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-aside">
+        <div class="aside-card">
+            <div class="aside-card-title">At a Glance</div>
+            <div class="aside-metric">
+                <span>Clients served</span>
+                <span class="aside-metric-value">200+</span>
+            </div>
+            <div class="aside-metric">
+                <span>Jurisdictions</span>
+                <span class="aside-metric-value">15+</span>
+            </div>
+            <div class="aside-metric">
+                <span>Years active</span>
+                <span class="aside-metric-value">7 years</span>
+            </div>
+            <div class="aside-metric">
+                <span>Headquarters</span>
+                <span class="aside-metric-value">Zug, CH</span>
+            </div>
+            <div class="aside-metric">
+                <span>Specialisation</span>
+                <span class="aside-metric-value" style="display:flex;flex-wrap:wrap;gap:0.4rem;justify-content: flex-end;"><span class="badge badge-green">Crypto Licensing</span><span class="badge badge-green">Forex Licensing</span><span class="badge badge-yellow">Banking &amp; EMI</span><span class="badge badge-yellow">Corporate Services</span><span class="badge badge-yellow">Regulatory Compliance</span></span>
+            </div>
+            <div class="aside-metric">
+                <span>Languages</span>
+                <span class="aside-metric-value">EN / DE</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="content-wrap">
+    <main class="main-col">
+
+        <!-- WHO WE ARE -->
+        <section class="section-block">
+            <div class="section-label">Who We Are</div>
+            <h2 class="section-h2">A <em>Specialist Firm,</em> Not a Generalist</h2>
+            <div class="prose">
+                <p>CryptoLicenses.net was founded in 2018 — the same year Gibraltar enacted the world's first DLT-specific regulatory framework and just as the first wave of EU crypto regulations was being drafted. We have operated exclusively in the crypto and digital asset licensing space since day one.</p>
+                <p>Our team combines lawyers, ex-regulators, compliance officers, and former exchange executives. Many of our senior advisors previously worked at the very regulatory bodies that now review our clients' applications — at the FCA, BaFin, FINMA, MAS, and the Bank of Lithuania. This inside perspective is invaluable when structuring an application.</p>
+                <p>We are headquartered in Zug, Switzerland — strategically located to serve both EU and non-EU clients, and adjacent to the largest concentration of blockchain companies in Europe. Our Swiss presence means we are subject to Swiss professional standards and can provide FINMA-related services directly.</p>
+                <p>We do not provide generic corporate services. Every member of our team specialises in digital asset regulation. When you work with us, you get deep, current knowledge — not a generalist law firm applying existing financial services frameworks to crypto without understanding the specific dynamics of this space.</p>
+            </div>
+        </section>
+
+        <!-- HOW WE WORK -->
+        <section class="section-block">
+            <div class="section-label">Our Approach</div>
+            <h2 class="section-h2">How <em>We Work</em></h2>
+            <div class="req-grid">
+                <div class="req-cell">
+                    <div class="req-label">01</div>
+                    <div class="req-value">Honest Assessment First</div>
+                    <div class="req-note">We tell you which jurisdictions match your business model and why. If a jurisdiction is wrong for your situation, we say so — even if it's more expensive for us to recommend otherwise. Bad advice that leads to a failed application costs everyone more in the long run.</div>
+                </div>
+                <div class="req-cell">
+                    <div class="req-label">02</div>
+                    <div class="req-value">Local Counsel in Every Jurisdiction</div>
+                    <div class="req-note">We do not pretend to have offices everywhere. We maintain a network of vetted local law firms and compliance professionals in every jurisdiction we cover. You get genuine local expertise, not a desk review from a remote location.</div>
+                </div>
+                <div class="req-cell">
+                    <div class="req-label">03</div>
+                    <div class="req-value">Fixed-Fee Transparency</div>
+                    <div class="req-note">Most regulatory advisory is billed hourly, making costs unpredictable. We offer fixed-fee engagements for standard licensing projects wherever possible. You know the cost upfront and we are incentivised to work efficiently.</div>
+                </div>
+                <div class="req-cell">
+                    <div class="req-label">04</div>
+                    <div class="req-value">Beyond the Licence</div>
+                    <div class="req-note">Getting licensed is the beginning, not the end. We build compliance programmes that regulators accept — and that actually work operationally. We have advised clients through regulatory audits, licence renewals, and licence upgrades as their businesses grew.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHERE WE OPERATE -->
+        <section class="section-block">
+            <div class="section-label">Jurisdictions</div>
+            <h2 class="section-h2">Where <em>We Operate</em></h2>
+            <div class="prose">
+                <p>Active licensing experience in all jurisdictions below. Local counsel engaged in each location.</p>
+            </div>
+            <div class="cards-grid cards-grid-4">
+                <a href="/crypto-licenses/europe/switzerland/" class="card">
+                    <div class="card-flag">🇨🇭</div>
+                    <div class="card-title">Switzerland</div>
+                    <div class="card-meta">FINMA</div>
+                </a>
+                <a href="/crypto-licenses/europe/lithuania/" class="card">
+                    <div class="card-flag">🇱🇹</div>
+                    <div class="card-title">Lithuania</div>
+                    <div class="card-meta">Bank of Lithuania</div>
+                </a>
+                <a href="/crypto-licenses/europe/estonia/" class="card">
+                    <div class="card-flag">🇪🇪</div>
+                    <div class="card-title">Estonia</div>
+                    <div class="card-meta">FIU</div>
+                </a>
+                <a href="/crypto-licenses/europe/poland/" class="card">
+                    <div class="card-flag">🇵🇱</div>
+                    <div class="card-title">Poland</div>
+                    <div class="card-meta">KNF</div>
+                </a>
+                <a href="/crypto-licenses/europe/slovakia/" class="card">
+                    <div class="card-flag">🇸🇰</div>
+                    <div class="card-title">Slovakia</div>
+                    <div class="card-meta">NBS</div>
+                </a>
+                <a href="/crypto-licenses/europe/bulgaria/" class="card">
+                    <div class="card-flag">🇧🇬</div>
+                    <div class="card-title">Bulgaria</div>
+                    <div class="card-meta">NAP</div>
+                </a>
+                <a href="/crypto-licenses/europe/united-kingdom/" class="card">
+                    <div class="card-flag">🇬🇧</div>
+                    <div class="card-title">United Kingdom</div>
+                    <div class="card-meta">FCA</div>
+                </a>
+                <a href="/crypto-licenses/europe/gibraltar/" class="card">
+                    <div class="card-flag">🇬🇮</div>
+                    <div class="card-title">Gibraltar</div>
+                    <div class="card-meta">GFSC</div>
+                </a>
+                <a href="/crypto-licenses/mena/uae/" class="card">
+                    <div class="card-flag">🇦🇪</div>
+                    <div class="card-title">UAE</div>
+                    <div class="card-meta">VARA / ADGM</div>
+                </a>
+                <a href="/crypto-licenses/asia/singapore/" class="card">
+                    <div class="card-flag">🇸🇬</div>
+                    <div class="card-title">Singapore</div>
+                    <div class="card-meta">MAS</div>
+                </a>
+                <a href="/crypto-licenses/asia/hong-kong/" class="card">
+                    <div class="card-flag">🇭🇰</div>
+                    <div class="card-title">Hong Kong</div>
+                    <div class="card-meta">SFC</div>
+                </a>
+                <a href="/crypto-licenses/asia/labuan/" class="card">
+                    <div class="card-flag">🇲🇾</div>
+                    <div class="card-title">Labuan</div>
+                    <div class="card-meta">LFSA</div>
+                </a>
+                <a href="/crypto-licenses/latam/panama/" class="card">
+                    <div class="card-flag">🇵🇦</div>
+                    <div class="card-title">Panama</div>
+                    <div class="card-meta">MICI</div>
+                </a>
+                <a href="/crypto-licenses/latam/el-salvador/" class="card">
+                    <div class="card-flag">🇸🇻</div>
+                    <div class="card-title">El Salvador</div>
+                    <div class="card-meta">CNAD</div>
+                </a>
+                <a href="/crypto-licenses/africa/seychelles/" class="card">
+                    <div class="card-flag">🇸🇨</div>
+                    <div class="card-title">Seychelles</div>
+                    <div class="card-meta">FSA</div>
+                </a>
+                <a href="/crypto-licenses/caribbean/svg/" class="card">
+                    <div class="card-flag">🇻🇨</div>
+                    <div class="card-title">SVG</div>
+                    <div class="card-meta">FSA</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- LEAD EXPERT -->
+        <section class="section-block">
+            <div class="section-label">Lead Expert</div>
+            <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+            <div class="expert-block">
+                <div class="expert-photo-wrap">
+                    <img src="/assets/authors/dr-marcus-hartmann-portret.png?v=2" alt="Dr. Marcus Hartmann — Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+                </div>
+                <div class="expert-info">
+                    <div class="expert-name">Dr. Marcus Hartmann</div>
+                    <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+                    <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+                    <div class="prose">
+                        <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug — Switzerland's crypto valley — he has guided startups, trading platforms, and institutional investors through the full spectrum of VASP licensing, from FINMA notifications to MiCA CASP applications and offshore structuring across 60+ jurisdictions.</p>
+                        <p>He joined CryptoLicenses.net as Senior Licensing Advisor after a decade leading the fintech practice of a Swiss-regulated law firm, where he managed regulatory mandates in the UAE, Singapore, Liechtenstein, and the Cayman Islands.</p>
+                    </div>
+                    <div class="expert-highlights">
+                        <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                        <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                        <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                        <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+                    </div>
+                    <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE DELIVER -->
+        <section class="section-block">
+            <div class="section-label">Services</div>
+            <h2 class="section-h2">What <em>We Deliver</em></h2>
+            <div class="cards-grid cards-grid-3">
+                <div class="card">
+                    <div class="card-num">01</div>
+                    <div class="card-title">Jurisdiction Assessment</div>
+                    <div class="card-desc">We map your business model to the optimal jurisdiction based on markets, budget, timeline, tax, and banking requirements.</div>
+                </div>
+                <div class="card">
+                    <div class="card-num">02</div>
+                    <div class="card-title">Application Management</div>
+                    <div class="card-desc">End-to-end application preparation: entity incorporation, document drafting, regulatory filing, and query management through to approval.</div>
+                </div>
+                <div class="card">
+                    <div class="card-num">03</div>
+                    <div class="card-title">AML Programme Design</div>
+                    <div class="card-desc">Build a regulator-ready AML/CFT framework: KYC procedures, transaction monitoring, Travel Rule compliance, and MLRO role definition.</div>
+                </div>
+                <div class="card">
+                    <div class="card-num">04</div>
+                    <div class="card-title">Compliance Outsourcing</div>
+                    <div class="card-desc">Ongoing MLRO and compliance officer services for licensed entities. Annual regulatory reporting, licence renewals, and regulatory horizon scanning.</div>
+                </div>
+                <div class="card">
+                    <div class="card-num">05</div>
+                    <div class="card-title">MiCA Transition Support</div>
+                    <div class="card-desc">For EU-registered VASPs: gap analysis, CASP application strategy, and full transition management before the July 2026 grandfathering deadline.</div>
+                </div>
+                <div class="card">
+                    <div class="card-num">06</div>
+                    <div class="card-title">Multi-Jurisdiction Structuring</div>
+                    <div class="card-desc">Design multi-entity structures that optimise for tax efficiency, regulatory scope, and operational flexibility across two or more jurisdictions.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- STICKY ASIDE -->
+    <aside class="sticky-aside">
+        <div class="aside-cta-box">
+            <h3>Talk to a Licensing Specialist</h3>
+            <p>30 minutes with one of our senior advisors. We'll assess your business model, identify the right jurisdiction, and outline a realistic path to authorisation.</p>
+            <a href="/contact/" class="btn-primary">Book Free Consultation</a>
+        </div>
+        <div class="aside-info-box">
+            <div class="aside-info-title">Firm Profile</div>
+            <div class="info-row">
+                <span class="info-row-label">Founded</span>
+                <span class="info-row-val">2018</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Headquarters</span>
+                <span class="info-row-val">Zug, Switzerland</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Clients served</span>
+                <span class="info-row-val">200+</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Jurisdictions</span>
+                <span class="info-row-val">15+</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Specialisation</span>
+                <span class="info-row-val" style="display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="badge badge-green">Crypto Licensing</span><span class="badge badge-green">Forex Licensing</span><span class="badge badge-yellow">Banking &amp; EMI</span><span class="badge badge-yellow">Corporate Services</span><span class="badge badge-yellow">Regulatory Compliance</span></span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Languages</span>
+                <span class="info-row-val">EN / DE</span>
+            </div>
+        </div>
+        <div class="aside-info-box">
+            <div class="aside-info-title">Contact</div>
+            <div class="info-row">
+                <span class="info-row-label">Email</span>
+                <span class="info-row-val"><!--email_off--><a href="mailto:info@cryptolicenses.net" style="color:var(--ink);text-decoration:none;">info@cryptolicenses.net</a><!--/email_off--></span>
+            </div>
+
+            <div class="info-row">
+                <span class="info-row-label">Address</span>
+                <span class="info-row-val">Grafenauweg 4, 6300 Zug ZG</span>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="cta-inner">
+        <div class="cta-text">
+            <div class="cta-label">Free Consultation</div>
+            <h2 class="cta-h2">Ready to Get Licensed?</h2>
+            <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
+            <ul class="cta-trust">
+                <li>&#x1F1E8;&#x1F1ED; Swiss-registered firm, Zug</li>
+                <li>&#x26A1; Response within a few hours</li>
+                <li>&#x1F512; Strictly confidential</li>
+                <li>&#x2713; 15+ jurisdictions covered</li>
+            </ul>
+        </div>
+        <div class="cta-form-wrap">
+            <form data-contact-form="">
+                <div class="cta-form-row">
+                    <div class="cta-field">
+                        <label>Name *</label>
+                        <input type="text" name="first_name" required="" placeholder="John Smith">
+                    </div>
+                    <div class="cta-field">
+                        <label>Email *</label>
+                        <input type="email" name="email" required="" placeholder="john@company.com">
+                    </div>
+                </div>
+                <div class="cta-field cta-field-full">
+                    <label>Company</label>
+                    <input type="text" name="company" placeholder="Acme Exchange Ltd">
+                </div>
+                <div class="cta-sel-wrap">
+                    <select name="service">
+                        <option value="">Service needed…</option>
+                        <option value="exchange">Crypto Exchange License</option>
+                        <option value="custodian">Crypto Custodian</option>
+                        <option value="broker">Broker / OTC Desk</option>
+                        <option value="defi">DeFi Protocol</option>
+                        <option value="payment">Crypto Payment Services</option>
+                        <option value="mica">MiCA CASP Transition</option>
+                        <option value="other">Other / Not Sure</option>
+                    </select>
+                </div>
+                <div class="cta-field cta-field-full" style="margin-bottom:20px">
+                    <label>Message *</label>
+                    <textarea name="message" required="" placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
+                </div>
+                <button type="submit" class="cta-submit">Get Free Consultation &rarr;</button>
+                <p class="cta-privacy">Confidential &middot; No obligation &middot; No spam</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <div class="footer-tagline">International crypto &amp; FinTech licensing specialists. 80+ jurisdictions worldwide. Headquartered in Zug, Switzerland — the global crypto hub.</div>
+            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br><a href="mailto:info@cryptolicenses.net" style="color:inherit;text-decoration:none;">info@cryptolicenses.net</a></div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Crypto Licenses</div>
+            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
+            <a href="/crypto-licenses/mena/" class="footer-link">MENA &amp; UAE</a>
+            <a href="/crypto-licenses/asia/" class="footer-link">Asia &amp; Pacific</a>
+            <a href="/crypto-licenses/americas/" class="footer-link">Americas &amp; Offshore</a>
+            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
+            <a href="/crypto-licenses/europe/mica-compliance/" class="footer-link">MiCA Compliance</a>
+            <a href="/crypto-licenses/vasp-license/" class="footer-link">VASP License</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
+            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
+            <a href="/banking-licenses/msb/" class="footer-link">MSB Licenses</a>
+            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
+            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
+            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
+            <a href="/corporate-services/aml-kyc/" class="footer-link">AML/KYC Services</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Resources</div>
+            <a href="/guides/how-to-get-crypto-license/" class="footer-link">How to Get a Crypto License</a>
+            <a href="/guides/crypto-license-cost/" class="footer-link">Crypto License Cost</a>
+            <a href="/guides/what-is-vasp/" class="footer-link">What Is a VASP?</a>
+            <a href="/guides/mica-explained/" class="footer-link">MiCA Explained</a>
+            <a href="/regulation/" class="footer-link">Regulation Hub</a>
+            <a href="/about/" class="footer-link">About Us</a>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
+        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy Policy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms of Service</a> · <a href="/sitemap/" style="color:inherit;text-decoration:none;">Sitemap</a></span>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var btn = document.querySelector('.burger-btn');
+    var nav = document.getElementById('mobile-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        nav.setAttribute('aria-hidden', open ? 'false' : 'true');
+    });
+})();
+</script>
+
+</body>
+</html>

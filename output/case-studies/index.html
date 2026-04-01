@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crypto Licensing Case Studies 2026 — Client Success Stories | CryptoLicenses.net</title>
+<meta name="description" content="Real-world crypto licensing case studies: how we helped clients obtain MiCA CASP, FCA, VARA, MAS and other licenses. Timelines, costs and outcomes.">
+<link rel="canonical" href="https://cryptolicenses.net/case-studies/">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+    <style>
+.hero { display: grid; grid-template-columns: 1fr 400px; border-bottom: var(--heavy); min-height: 320px; }
+.hero-h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05; margin-bottom: 1.5rem; }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+.card { border-right: var(--border); padding: 1.75rem; text-decoration: none; color: var(--ink); display: block; transition: background 0.2s; border-bottom: var(--border); }
+.card-meta { font-size: 0.8rem; color: var(--muted); }
+.cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+.cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+.cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+.cta-lead { opacity: .75; font-size: .95rem; line-height: 1.7; margin-bottom: 24px; }
+.cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.cta-trust li { font-size: .85rem; opacity: .7; }
+.cta-form-wrap { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+.cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.cta-field label { font-size: .78rem; opacity: .6; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .06em; }
+.cta-field input, .cta-field textarea { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .9rem; }
+.cta-field input::placeholder, .cta-field textarea::placeholder { opacity: .4; }
+.cta-field-full { grid-column: 1/-1; }
+.cta-sel-wrap { position: relative; margin-bottom: 16px; }
+.cta-sel-wrap select { width: 100%; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .9rem; appearance: none; }
+.cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+.cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; cursor: pointer; transition: opacity .2s; }
+.cta-submit:hover { opacity: .85; }
+.cta-privacy { font-size: .75rem; opacity: .4; margin-top: 12px; text-align: center; }
+/* Case Studies specific */
+.case-studies-grid { display: flex; flex-direction: column; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+.cs-card { border-bottom: var(--border); padding: 2rem; }
+.cs-card:last-child { border-bottom: none; }
+.cs-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.cs-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3); padding: 0.25rem 0.6rem; }
+.cs-meta-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.cs-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); background: rgba(28,43,74,0.06); border: var(--border); padding: 0.2rem 0.5rem; }
+.cs-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 1rem; }
+.cs-body { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.25rem; }
+.cs-col-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.4rem; }
+.cs-col-text { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+.cs-outcome-row { display: flex; gap: 1rem; align-items: center; padding-top: 1.25rem; border-top: var(--border); flex-wrap: wrap; }
+.cs-outcome-item { display: flex; gap: 0.5rem; align-items: center; font-size: 0.82rem; }
+.cs-outcome-label { color: var(--muted); }
+.cs-outcome-val { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 500; }
+.cs-outcome-divider { width: 1px; height: 16px; background: rgba(28,43,74,0.14); }
+.industries-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+.ind-card { border-right: var(--border); border-bottom: var(--border); padding: 1.5rem; }
+.ind-card:nth-child(3n) { border-right: none; }
+.ind-card:nth-last-child(-n+3) { border-bottom: none; }
+.ind-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.ind-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.4rem; }
+.ind-text { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+.process-step { border-right: var(--border); padding: 1.75rem; }
+.process-step:last-child { border-right: none; }
+.step-num { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.75rem; }
+.step-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.5rem; }
+.step-text { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+.aside-links-box { border: var(--border); padding: 1.5rem; margin-bottom: 1rem; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .hero-aside { border-top: var(--heavy); } .content-wrap { grid-template-columns: 1fr; } .main-col { border-right: none; } .sticky-aside { position: static; } .cards-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } .cs-body { grid-template-columns: 1fr 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .industries-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { html, body { overflow-x: hidden; } nav { overflow: hidden; } .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; } .nav-links { display: none !important; } .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; } .cards-grid { grid-template-columns: 1fr; } .cta-inner { grid-template-columns: 1fr; gap: 40px; } .cta-form-row { grid-template-columns: 1fr; } .cs-body { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr; } .industries-grid { grid-template-columns: 1fr; } }
+    </style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="+hh3DN/48kYIX1vd1G9NNQ" async></script>
+    <meta property="og:title" content="Crypto Licensing Case Studies 2026 — Client Success Stories | CryptoLicenses.net">
+    <meta property="og:description" content="Real-world crypto licensing case studies: how we helped clients obtain MiCA CASP, FCA, VARA, MAS and other licenses. Timelines, costs and outcomes.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/zurich-lakeside-historic-buildings.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Russian"
+        ]
+      },
+      "sameAs": [
+        "https://t.me/cryptolicensesnet"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Crypto Licensing Case Studies 2026",
+          "item": "https://cryptolicenses.net/case-studies/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/case-studies/#article",
+      "headline": "Crypto Licensing Case Studies 2026",
+      "description": "Real-world crypto licensing case studies: how we helped clients obtain MiCA CASP, FCA, VARA, MAS and other licenses. Timelines, costs and outcomes.",
+      "url": "https://cryptolicenses.net/case-studies/",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-03-22",
+      "author": {
+        "@id": "https://cryptolicenses.net/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cryptolicenses.net/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/case-studies/"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does crypto licensing typically take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Timelines vary significantly by jurisdiction. Offshore registrations (Cayman, BVI) can be completed in 4–6 weeks. EU MiCA CASP applications typically take 6–12 months. UAE VARA and Singapore MAS applications usually take 8–12 months. We always provide a realistic timeline estimate before engagement — and we have a strong track record of meeting them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you guarantee a successful license application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No responsible advisor can guarantee regulatory approval — that decision rests with the regulator. What we can guarantee is that we only take on engagements where we believe the application has a strong chance of success, and that we will manage the process with the highest possible level of diligence and expertise. Our 94% success rate reflects this approach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle all the paperwork and correspondence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We handle all aspects of the application process: document preparation, company formation, AML program drafting, application submission, and all regulator correspondence. You remain informed and in control, but we manage the operational burden. Your team's time is better spent building the business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with an application that has already been started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We regularly take over partially completed applications, including those that have received a rejection or requests for further information from a regulator. In these cases we begin with a gap analysis to identify weaknesses in the existing application before advising on the best path forward."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which jurisdictions do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover 80+ jurisdictions spanning the EU (all MiCA member states), MENA (UAE VARA, ADGM, DIFC), Asia-Pacific (Singapore MAS, Japan JFSA, Hong Kong SFC, Australia AUSTRAC), UK (FCA), Switzerland (FINMA), and major offshore centres (Cayman Islands, BVI, Seychelles, Mauritius, Labuan and others). Contact us if you have a specific jurisdiction in mind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the typical costs for obtaining a crypto license in Switzerland in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "License application fees in Switzerland typically range from CHF 5,000 to CHF 25,000 depending on the service type and complexity, with additional costs for legal representation, compliance setup, and ongoing regulatory fees. Our advisory package starts at CHF 15,000 for a complete application with documentation preparation. Annual maintenance and compliance reporting costs generally fall between CHF 8,000 and CHF 20,000 once licensed. Keep in mind that banking relationships and capital requirements may add significant expenses depending on your business model."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documentation do I need to prepare before applying for a crypto license?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You will typically need articles of association, shareholder identification documents, proof of address for all beneficial owners, detailed business plans, risk management policies, anti-money laundering procedures, and corporate governance documentation. The Swiss Financial Market Supervisory Authority (FINMA) requires demonstration of adequate capitalization and proof of qualified personnel managing compliance. We provide a complete documentation checklist tailored to your specific license type during the initial consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the 2026 regulatory environment in Switzerland compare to other crypto licensing jurisdictions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Switzerland remains one of the most crypto-friendly jurisdictions globally, with clear FINMA guidelines established since 2019 and the 2024 updates providing additional clarity on digital asset activities. Compared to jurisdictions like Malta, Liechtenstein, or Singapore, Switzerland offers stronger reputation and banking relationships, though with potentially longer processing timelines of 6-12 months. The cost structure in Switzerland is generally mid-range compared to major financial centers, making it attractive for serious projects seeking regulatory legitimacy in 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the capital requirements for a cryptocurrency trading or exchange license?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minimum capital requirements in Switzerland are typically CHF 300,000 for smaller operations, though larger exchanges often maintain CHF 1 million to CHF 5 million in liquid assets to demonstrate financial stability. FINMA evaluates capital requirements based on your business volume, customer base size, and market risk exposure. Your bank and FINMA will both review capitalization during the licensing process to ensure you can handle operational losses and customer protection obligations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my license application is rejected, and can I reapply in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If rejected, FINMA provides specific reasons for denial, typically related to inadequate controls, capitalization, or AML procedures. You can remediate issues and reapply, though this extends your timeline by 4-8 months and incurs additional costs. We assess rejection likelihood during pre-application review and help structure applications to minimize this risk, with many clients successfully reapplying within 6 months if initial issues are corrected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I maintain compliance after receiving my crypto license and what are the reporting obligations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Licensed entities must file quarterly financial reports with FINMA, conduct annual audits by approved auditors, and maintain detailed transaction records for regulatory oversight. You are required to implement ongoing AML/KYC procedures, report suspicious transactions, and maintain current documentation on all beneficial owners and management. Non-compliance can result in fines up to 5% of annual turnover or license revocation, making continuous compliance management essential in 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tax implications should I expect as a licensed crypto business in Switzerland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a licensed cryptocurrency business, you are subject to standard corporate tax (approximately 12-18% depending on canton), VAT exemption for cryptocurrency exchanges (a significant advantage), and specific reporting of digital assets for beneficial owners. Capital gains on cryptocurrency holdings may be taxable depending on holding periods and business classification. We recommend engaging a Swiss tax advisor specializing in crypto, as cantonal variations and 2026 tax law updates significantly impact your overall tax burden."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
+        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
+        <a href="/banking-licenses/" class="nav-link">Banking &amp; EMI</a>
+        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
+        <a href="/regulation/" class="nav-link">Regulation Hub</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Free Consultation</a>
+</nav>
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <a href="/crypto-licenses/" class="mobile-nav-item">Crypto Licenses</a>
+  <a href="/forex-licenses/" class="mobile-nav-item">Forex Licenses</a>
+  <a href="/banking-licenses/" class="mobile-nav-item">Banking &amp; EMI</a>
+  <a href="/corporate-services/" class="mobile-nav-item">Corporate Services</a>
+  <a href="/regulation/" class="mobile-nav-item">Regulation Hub</a>
+  <a href="/blog/" class="mobile-nav-item">Blog</a>
+  <a href="/guides/" class="mobile-nav-item">Guides</a>
+  <a href="/contact/" class="mobile-nav-item mobile-nav-cta">Free Consultation &rarr;</a>
+</div>
+
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>›</span>
+    <span style="color:var(--ink);">Case Studies</span>
+</div>
+    <div class="last-updated">Last updated: April 2026</div>
+<div class="hero">
+    <div class="hero-content">
+        <div>
+            <div class="hero-label mono">Client Outcomes</div>
+            <h1 class="hero-h1">Crypto Licensing <em>Case Studies</em> — Real Client Outcomes</h1>
+            <p class="hero-intro">From EU MiCA CASP authorizations to UAE VARA and Singapore MAS licenses — real results for real clients. 200+ successful engagements across 40+ jurisdictions since 2019.</p>
+        </div>
+    </div>
+    <div class="hero-aside">
+        <div class="aside-card">
+            <div class="aside-card-title">At a Glance</div>
+            <div class="aside-metric">
+                <span>Clients served</span>
+                <span class="aside-metric-value">200+</span>
+            </div>
+            <div class="aside-metric">
+                <span>Jurisdictions</span>
+                <span class="aside-metric-value">40+</span>
+            </div>
+            <div class="aside-metric">
+                <span>Avg. timeline</span>
+                <span class="aside-metric-value">On target</span>
+            </div>
+            <div class="aside-metric">
+                <span>Success rate</span>
+                <span class="aside-metric-value">94%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wrap">
+    <div class="main-col">
+
+        <!-- Track Record -->
+        <div class="section-block">
+            <div class="section-label">About Us</div>
+            <h2 class="section-h2">Our <em>Track Record</em></h2>
+            <div class="prose">
+                <p>Since 2019, the CryptoLicenses.net team has guided more than 200 clients — from pre-seed startups to established fintech firms — through the complexities of crypto licensing across 40+ jurisdictions. Our Swiss-based team combines deep regulatory expertise with on-the-ground relationships at regulators in the EU, MENA, Asia-Pacific and offshore centres.</p>
+                <p>Our 94% success rate reflects a rigorous pre-screening process: we only take on engagements where the regulatory pathway is clear and the client meets the threshold requirements. When an application is likely to fail, we tell clients before they spend money — not after.</p>
+                <p>The case studies below represent a cross-section of our work: different license types, jurisdictions, client backgrounds and business models. Identifying details have been generalised at client request, but timelines and outcomes are accurate.</p>
+            </div>
+        </div>
+
+        <!-- Case Studies -->
+        <div class="section-block">
+            <div class="section-label">Client Work</div>
+            <h2 class="section-h2">Featured <em>Case Studies</em></h2>
+
+            <div class="case-studies-grid">
+
+                <!-- CS 1 -->
+                <div class="cs-card">
+                    <div class="cs-header">
+                        <span class="cs-badge">Case Study #1</span>
+                        <div class="cs-meta-tags">
+                            <span class="cs-tag">🇫🇷 France / EU</span>
+                            <span class="cs-tag">Exchange</span>
+                            <span class="cs-tag">MiCA CASP</span>
+                        </div>
+                    </div>
+                    <div class="cs-title">EU MiCA CASP Authorization — Crypto Exchange (Germany)</div>
+                    <div class="cs-body">
+                        <div>
+                            <div class="cs-col-label">Challenge</div>
+                            <div class="cs-col-text">German startup needed MiCA CASP authorization to operate across the EU without obtaining 27 individual national licenses. Tight Series A timeline required fast regulatory clarity.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Solution</div>
+                            <div class="cs-col-text">Incorporated French SAS entity in Paris, filed AMF CASP application using France's fast-track digital assets framework, and built a full MiCA-compliant AML/CFT program with Travel Rule procedures.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Outcome</div>
+                            <div class="cs-col-text">Full CASP authorization granted by AMF. EU passport activated in all 26 remaining member states. Client raised Series A within 60 days of authorization.</div>
+                        </div>
+                    </div>
+                    <div class="cs-outcome-row">
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Timeline</span><span class="cs-outcome-val">7 months</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">License</span><span class="cs-outcome-val">AMF CASP</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Type</span><span class="cs-outcome-val">Exchange</span></div>
+                    </div>
+                </div>
+
+                <!-- CS 2 -->
+                <div class="cs-card">
+                    <div class="cs-header">
+                        <span class="cs-badge">Case Study #2</span>
+                        <div class="cs-meta-tags">
+                            <span class="cs-tag">🇦🇪 UAE</span>
+                            <span class="cs-tag">OTC Broker</span>
+                            <span class="cs-tag">VARA</span>
+                        </div>
+                    </div>
+                    <div class="cs-title">UAE VARA License — OTC Desk Expansion (Singapore-based)</div>
+                    <div class="cs-body">
+                        <div>
+                            <div class="cs-col-label">Challenge</div>
+                            <div class="cs-col-text">Singapore-based OTC desk wanted to expand into MENA markets without losing its Singapore operational base or triggering conflicting regulatory obligations.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Solution</div>
+                            <div class="cs-col-text">Established IFZA free zone company in Dubai, filed VARA OTC Broker license application with tailored AML program. Structured the dual-jurisdiction group to avoid regulatory conflict between MAS and VARA.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Outcome</div>
+                            <div class="cs-col-text">VARA OTC Broker license granted. Client fully operational in UAE within 9 months of engagement start. Dubai office onboarded three institutional MENA clients in first quarter.</div>
+                        </div>
+                    </div>
+                    <div class="cs-outcome-row">
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Timeline</span><span class="cs-outcome-val">9 months</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">License</span><span class="cs-outcome-val">VARA OTC</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Type</span><span class="cs-outcome-val">OTC Broker</span></div>
+                    </div>
+                </div>
+
+                <!-- CS 3 -->
+                <div class="cs-card">
+                    <div class="cs-header">
+                        <span class="cs-badge">Case Study #3</span>
+                        <div class="cs-meta-tags">
+                            <span class="cs-tag">🇪🇪 Estonia / EU</span>
+                            <span class="cs-tag">Payment</span>
+                            <span class="cs-tag">FIU VASP</span>
+                        </div>
+                    </div>
+                    <div class="cs-title">Estonia FIU VASP — Crypto Payment Startup (Ukraine-based)</div>
+                    <div class="cs-body">
+                        <div>
+                            <div class="cs-col-label">Challenge</div>
+                            <div class="cs-col-text">Ukrainian fintech urgently needed an EU-based crypto payment license following 2022 events. Speed was critical — the client had existing B2B contracts requiring an EU-licensed counterparty.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Solution</div>
+                            <div class="cs-col-text">Fast-track Estonian OÜ formation with pre-approved AML/CFT policy package, tailored beneficial ownership disclosures and a designated compliance officer arrangement. Full FIU VASP application within 3 weeks of engagement.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Outcome</div>
+                            <div class="cs-col-text">FIU VASP license obtained. EU banking relationships established with two partner banks. Client operational and processing transactions within 5 months of first contact.</div>
+                        </div>
+                    </div>
+                    <div class="cs-outcome-row">
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Timeline</span><span class="cs-outcome-val">5 months</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">License</span><span class="cs-outcome-val">FIU VASP</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Type</span><span class="cs-outcome-val">Payment</span></div>
+                    </div>
+                </div>
+
+                <!-- CS 4 -->
+                <div class="cs-card">
+                    <div class="cs-header">
+                        <span class="cs-badge">Case Study #4</span>
+                        <div class="cs-meta-tags">
+                            <span class="cs-tag">🇸🇬 Singapore</span>
+                            <span class="cs-tag">Investment</span>
+                            <span class="cs-tag">MAS DPT</span>
+                        </div>
+                    </div>
+                    <div class="cs-title">Singapore MAS DPT License — Institutional Investment Platform (HK)</div>
+                    <div class="cs-body">
+                        <div>
+                            <div class="cs-col-label">Challenge</div>
+                            <div class="cs-col-text">Hong Kong-based crypto investment platform needed a Singapore MAS license to serve institutional clients requiring regulatory assurance. SFC licensing alone was insufficient for their target client base.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Solution</div>
+                            <div class="cs-col-text">Incorporated Singapore Pte Ltd, filed MAS PSA DPT application with institutional-grade AML program, technology risk management framework, and board governance documentation aligned with MAS expectations.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Outcome</div>
+                            <div class="cs-col-text">MAS Standard Payment Institution license with DPT services granted. Platform onboarded institutional clients from Japan, Korea and Australia within six months of licensing.</div>
+                        </div>
+                    </div>
+                    <div class="cs-outcome-row">
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Timeline</span><span class="cs-outcome-val">11 months</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">License</span><span class="cs-outcome-val">MAS SPI DPT</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Type</span><span class="cs-outcome-val">Investment</span></div>
+                    </div>
+                </div>
+
+                <!-- CS 5 -->
+                <div class="cs-card">
+                    <div class="cs-header">
+                        <span class="cs-badge">Case Study #5</span>
+                        <div class="cs-meta-tags">
+                            <span class="cs-tag">🇬🇧 United Kingdom</span>
+                            <span class="cs-tag">Exchange</span>
+                            <span class="cs-tag">FCA Crypto</span>
+                        </div>
+                    </div>
+                    <div class="cs-title">FCA Crypto Registration — Retail Exchange (Netherlands)</div>
+                    <div class="cs-body">
+                        <div>
+                            <div class="cs-col-label">Challenge</div>
+                            <div class="cs-col-text">Dutch crypto exchange serving UK retail clients needed FCA crypto registration post-Brexit. Previous self-managed application had been rejected for AML deficiencies.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Solution</div>
+                            <div class="cs-col-text">Established UK Ltd with substantive UK operations, rebuilt entire AML/CTF framework to FCA standards, designed a financial promotions compliance program, and managed the re-application with a dedicated FCA liaison approach.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Outcome</div>
+                            <div class="cs-col-text">FCA cryptoasset registration granted. Client resumed serving UK retail clients within 8 months. No further remedial actions required post-registration.</div>
+                        </div>
+                    </div>
+                    <div class="cs-outcome-row">
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Timeline</span><span class="cs-outcome-val">8 months</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">License</span><span class="cs-outcome-val">FCA Crypto</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Type</span><span class="cs-outcome-val">Exchange</span></div>
+                    </div>
+                </div>
+
+                <!-- CS 6 -->
+                <div class="cs-card">
+                    <div class="cs-header">
+                        <span class="cs-badge">Case Study #6</span>
+                        <div class="cs-meta-tags">
+                            <span class="cs-tag">🌐 Cayman Islands</span>
+                            <span class="cs-tag">DeFi</span>
+                            <span class="cs-tag">CIMA VASP</span>
+                        </div>
+                    </div>
+                    <div class="cs-title">Cayman CIMA VASP — DeFi Protocol Regulatory Wrapper (Global)</div>
+                    <div class="cs-body">
+                        <div>
+                            <div class="cs-col-label">Challenge</div>
+                            <div class="cs-col-text">DeFi protocol with a global user base needed regulatory clarity and institutional investor credibility without disrupting its decentralized architecture or token structure.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Solution</div>
+                            <div class="cs-col-text">Structured a Cayman Islands foundation company as DAO legal wrapper, filed CIMA VASP registration for the protocol's fiat on/off-ramp component, and delivered a token classification memorandum with US securities law analysis.</div>
+                        </div>
+                        <div>
+                            <div class="cs-col-label">Outcome</div>
+                            <div class="cs-col-text">CIMA VASP registered within 4 months. Three institutional investors (2 VC funds, 1 family office) onboarded. US persons excluded from token distribution per legal advice, eliminating key regulatory risk.</div>
+                        </div>
+                    </div>
+                    <div class="cs-outcome-row">
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Timeline</span><span class="cs-outcome-val">4 months</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">License</span><span class="cs-outcome-val">CIMA VASP</span></div>
+                        <div class="cs-outcome-divider"></div>
+                        <div class="cs-outcome-item"><span class="cs-outcome-label">Type</span><span class="cs-outcome-val">DeFi</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Industries -->
+        <div class="section-block">
+            <div class="section-label">Sectors</div>
+            <h2 class="section-h2">Industries <em>We Serve</em></h2>
+            <div class="industries-grid">
+                <div class="ind-card">
+                    <div class="ind-icon">⚡</div>
+                    <div class="ind-title">Crypto Exchanges</div>
+                    <div class="ind-text">Spot, derivatives and OTC exchanges seeking MiCA CASP, FCA, MAS, VARA or offshore authorizations.</div>
+                </div>
+                <div class="ind-card">
+                    <div class="ind-icon">📊</div>
+                    <div class="ind-title">OTC / Brokerage</div>
+                    <div class="ind-text">Institutional and retail OTC desks requiring broker-dealer or VASP registration across key markets.</div>
+                </div>
+                <div class="ind-card">
+                    <div class="ind-icon">🔗</div>
+                    <div class="ind-title">DeFi Protocols</div>
+                    <div class="ind-text">Decentralized protocols seeking legal wrappers, DAO structures and VASP registration for regulated activities.</div>
+                </div>
+                <div class="ind-card">
+                    <div class="ind-icon">💳</div>
+                    <div class="ind-title">Payment Processors</div>
+                    <div class="ind-text">Crypto payment service providers requiring EU EMI, VASP or equivalent authorization in target markets.</div>
+                </div>
+                <div class="ind-card">
+                    <div class="ind-icon">🔒</div>
+                    <div class="ind-title">Custody Providers</div>
+                    <div class="ind-text">Institutional and retail crypto custodians navigating MiCA CASPy, BaFin, MAS and comparable custody licenses.</div>
+                </div>
+                <div class="ind-card">
+                    <div class="ind-icon">📈</div>
+                    <div class="ind-title">Fund Managers</div>
+                    <div class="ind-text">Crypto-focused fund managers requiring AIFMD authorization, MAS CMS license or Cayman Islands registered fund status.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process -->
+        <div class="section-block">
+            <div class="section-label">How We Work</div>
+            <h2 class="section-h2">Our <em>Licensing Process</em></h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-num">Step 01</div>
+                    <div class="step-title">Discovery & Jurisdiction Analysis</div>
+                    <div class="step-text">We start with a free consultation to understand your business model, target markets and timeline. We then identify the optimal jurisdiction, estimate costs and provide a realistic timeline — no obligation.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">Step 02</div>
+                    <div class="step-title">Entity Setup & Documentation</div>
+                    <div class="step-text">We handle company formation, directors and nominee arrangements as needed. We then build the full application pack: AML/CFT policies, governance documents, business plan and financial projections.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">Step 03</div>
+                    <div class="step-title">Regulator Application Management</div>
+                    <div class="step-text">We submit the application and manage all regulator correspondence on your behalf. We respond to queries, attend hearings if required, and keep you updated at every stage.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">Step 04</div>
+                    <div class="step-title">Post-License Compliance Support</div>
+                    <div class="step-text">Once licensed, we offer ongoing compliance retainers covering AML program maintenance, regulatory reporting, license renewals, and assistance with regulator queries and examinations.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section-block">
+            <div class="section-label">Common Questions</div>
+            <h2 class="section-h2">Frequently Asked <em>Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">
+                        How long does crypto licensing typically take?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Timelines vary significantly by jurisdiction. Offshore registrations (Cayman, BVI) can be completed in 4–6 weeks. EU MiCA CASP applications typically take 6–12 months. UAE VARA and Singapore MAS applications usually take 8–12 months. We always provide a realistic timeline estimate before engagement — and we have a strong track record of meeting them.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Can you guarantee a successful license application?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">No responsible advisor can guarantee regulatory approval — that decision rests with the regulator. What we can guarantee is that we only take on engagements where we believe the application has a strong chance of success, and that we will manage the process with the highest possible level of diligence and expertise. Our 94% success rate reflects this approach.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Do you handle all the paperwork and correspondence?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Yes. We handle all aspects of the application process: document preparation, company formation, AML program drafting, application submission, and all regulator correspondence. You remain informed and in control, but we manage the operational burden. Your team's time is better spent building the business.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Can you help with an application that has already been started?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Yes. We regularly take over partially completed applications, including those that have received a rejection or requests for further information from a regulator. In these cases we begin with a gap analysis to identify weaknesses in the existing application before advising on the best path forward.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Which jurisdictions do you cover?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">We cover 80+ jurisdictions spanning the EU (all MiCA member states), MENA (UAE VARA, ADGM, DIFC), Asia-Pacific (Singapore MAS, Japan JFSA, Hong Kong SFC, Australia AUSTRAC), UK (FCA), Switzerland (FINMA), and major offshore centres (Cayman Islands, BVI, Seychelles, Mauritius, Labuan and others). Contact us if you have a specific jurisdiction in mind.</div>
+                </div>
+            
+                <div class="faq-item">
+                    <button class="faq-q">What are the typical costs for obtaining a crypto license in Switzerland in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">License application fees in Switzerland typically range from CHF 5,000 to CHF 25,000 depending on the service type and complexity, with additional costs for legal representation, compliance setup, and ongoing regulatory fees. Our advisory package starts at CHF 15,000 for a complete application with documentation preparation. Annual maintenance and compliance reporting costs generally fall between CHF 8,000 and CHF 20,000 once licensed. Keep in mind that banking relationships and capital requirements may add significant expenses depending on your business model.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What documentation do I need to prepare before applying for a crypto license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">You will typically need articles of association, shareholder identification documents, proof of address for all beneficial owners, detailed business plans, risk management policies, anti-money laundering procedures, and corporate governance documentation. The Swiss Financial Market Supervisory Authority (FINMA) requires demonstration of adequate capitalization and proof of qualified personnel managing compliance. We provide a complete documentation checklist tailored to your specific license type during the initial consultation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the 2026 regulatory environment in Switzerland compare to other crypto licensing jurisdictions?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Switzerland remains one of the most crypto-friendly jurisdictions globally, with clear FINMA guidelines established since 2019 and the 2024 updates providing additional clarity on digital asset activities. Compared to jurisdictions like Malta, Liechtenstein, or Singapore, Switzerland offers stronger reputation and banking relationships, though with potentially longer processing timelines of 6-12 months. The cost structure in Switzerland is generally mid-range compared to major financial centers, making it attractive for serious projects seeking regulatory legitimacy in 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What are the capital requirements for a cryptocurrency trading or exchange license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Minimum capital requirements in Switzerland are typically CHF 300,000 for smaller operations, though larger exchanges often maintain CHF 1 million to CHF 5 million in liquid assets to demonstrate financial stability. FINMA evaluates capital requirements based on your business volume, customer base size, and market risk exposure. Your bank and FINMA will both review capitalization during the licensing process to ensure you can handle operational losses and customer protection obligations.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What happens if my license application is rejected, and can I reapply in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">If rejected, FINMA provides specific reasons for denial, typically related to inadequate controls, capitalization, or AML procedures. You can remediate issues and reapply, though this extends your timeline by 4-8 months and incurs additional costs. We assess rejection likelihood during pre-application review and help structure applications to minimize this risk, with many clients successfully reapplying within 6 months if initial issues are corrected.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do I maintain compliance after receiving my crypto license and what are the reporting obligations?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Licensed entities must file quarterly financial reports with FINMA, conduct annual audits by approved auditors, and maintain detailed transaction records for regulatory oversight. You are required to implement ongoing AML/KYC procedures, report suspicious transactions, and maintain current documentation on all beneficial owners and management. Non-compliance can result in fines up to 5% of annual turnover or license revocation, making continuous compliance management essential in 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What tax implications should I expect as a licensed crypto business in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">As a licensed cryptocurrency business, you are subject to standard corporate tax (approximately 12-18% depending on canton), VAT exemption for cryptocurrency exchanges (a significant advantage), and specific reporting of digital assets for beneficial owners. Capital gains on cryptocurrency holdings may be taxable depending on holding periods and business classification. We recommend engaging a Swiss tax advisor specializing in crypto, as cantonal variations and 2026 tax law updates significantly impact your overall tax burden.</div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.main-col -->
+
+    <div class="sticky-aside">
+        <div class="aside-cta-box">
+            <h3>Get Your License</h3>
+            <p>Tell us about your project and we'll identify the right jurisdiction, outline requirements and give you a realistic cost estimate — free.</p>
+            <a href="/contact/" class="btn-primary">Start Free Consultation →</a>
+        </div>
+        <div class="aside-info-box">
+            <div class="aside-info-title">Our Track Record</div>
+            <div class="info-row">
+                <span class="info-row-label">Clients served</span>
+                <span class="info-row-val">200+</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Success rate</span>
+                <span class="info-row-val">94%</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Jurisdictions</span>
+                <span class="info-row-val">40+ active</span>
+            </div>
+            <div class="info-row">
+                <span class="info-row-label">Years experience</span>
+                <span class="info-row-val">7 years</span>
+            </div>
+        </div>
+        <div class="aside-links-box">
+            <div class="aside-info-title">Related Pages</div>
+            <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.5rem;">
+                <a href="/about/" style="font-size:0.875rem;color:var(--ink);text-decoration:none;">About CryptoLicenses.net →</a>
+                <a href="/about/experts/" style="font-size:0.875rem;color:var(--ink);text-decoration:none;">Meet Our Experts →</a>
+                <a href="/guides/" style="font-size:0.875rem;color:var(--ink);text-decoration:none;">Licensing Guides →</a>
+                <a href="/crypto-licenses/" style="font-size:0.875rem;color:var(--ink);text-decoration:none;">Crypto License Directory →</a>
+            </div>
+        </div>
+    </div>
+
+</div><!-- /.content-wrap -->
+
+
+    <!-- Author -->
+    <div class="author-box">
+        <div class="author-avatar">MH</div>
+        <div>
+            <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+            <div class="author-box-meta">Senior Licensing Consultant · LL.M. International Financial Law</div>
+            <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2" data-heading-tag="H2">Ready to Get Licensed?</h2>
+      <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within a few hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <div class="footer-tagline">International crypto &amp; FinTech licensing specialists. 80+ jurisdictions worldwide. Headquartered in Zug, Switzerland — the global crypto hub.</div>
+            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br><a href="mailto:info@cryptolicenses.net" style="color:inherit;text-decoration:none;">info@cryptolicenses.net</a></div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Crypto Licenses</div>
+            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
+            <a href="/crypto-licenses/mena/" class="footer-link">MENA &amp; UAE</a>
+            <a href="/crypto-licenses/asia/" class="footer-link">Asia &amp; Pacific</a>
+            <a href="/crypto-licenses/americas/" class="footer-link">Americas &amp; Offshore</a>
+            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
+            <a href="/crypto-licenses/europe/mica-compliance/" class="footer-link">MiCA Compliance</a>
+            <a href="/crypto-licenses/vasp-license/" class="footer-link">VASP License</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
+            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
+            <a href="/banking-licenses/msb/" class="footer-link">MSB Licenses</a>
+            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
+            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
+            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
+            <a href="/corporate-services/aml-kyc/" class="footer-link">AML/KYC Services</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Resources</div>
+            <a href="/guides/how-to-get-crypto-license/" class="footer-link">How to Get a Crypto License</a>
+            <a href="/guides/crypto-license-cost/" class="footer-link">Crypto License Cost</a>
+            <a href="/guides/what-is-vasp/" class="footer-link">What Is a VASP?</a>
+            <a href="/guides/mica-explained/" class="footer-link">MiCA Explained</a>
+            <a href="/regulation/" class="footer-link">Regulation Hub</a>
+            <a href="/about/" class="footer-link">About Us</a>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
+        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy Policy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms of Service</a> · <a href="/sitemap/" style="color:inherit;text-decoration:none;">Sitemap</a></span>
+    </div>
+</footer>
+
+<script src="/contact-form.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    });
+});
+</script>
+<script>
+(function(){var b=document.querySelector('.burger-btn'),n=document.querySelector('.mobile-nav');if(!b||!n)return;b.addEventListener('click',function(){var o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',o);n.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!n.contains(e.target)){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''})})})();
+</script>
+<script>
+(function(){
+  var applied=false;
+  function fix(){
+    var w=window.innerWidth;
+    if(w>900){if(applied){location.reload()}return}
+    applied=true;
+    var all=document.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var el=all[i];
+      var cs=getComputedStyle(el);
+      // Fix grids with multiple columns
+      if(cs.display==='grid'){
+        var cols=cs.gridTemplateColumns;
+        if(cols&&cols.indexOf(' ')!==-1){
+          var parts=cols.split(' ').filter(function(p){return p&&p!=='0px'});
+          if(parts.length>1){
+            // Check if any column is fixed px and wider than viewport
+            var hasFixed=false;
+            parts.forEach(function(p){
+              var px=parseFloat(p);
+              if(px>200&&p.indexOf('px')!==-1)hasFixed=true;
+            });
+            if(hasFixed||w<=768){
+              el.style.gridTemplateColumns='1fr';
+            } else if(parts.length>2&&w<=900){
+              el.style.gridTemplateColumns='1fr 1fr';
+            }
+          }
+        }
+      }
+      // Fix padding
+      if(w<=768){
+        var pl=parseFloat(cs.paddingLeft);
+        var pr=parseFloat(cs.paddingRight);
+        if(pl+pr>w*0.15&&pl>20){
+          var np=w<=520?Math.min(pl,16):Math.min(pl,20);
+          el.style.paddingLeft=np+'px';
+          el.style.paddingRight=np+'px';
+        }
+        var pt=parseFloat(cs.paddingTop);
+        var pb=parseFloat(cs.paddingBottom);
+        if(pt>60){
+          el.style.paddingTop=Math.min(pt,w<=520?24:40)+'px';
+        }
+        if(pb>60){
+          el.style.paddingBottom=Math.min(pb,w<=520?24:40)+'px';
+        }
+      }
+      // Fix elements wider than viewport
+      if(el.scrollWidth>w&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
+        el.style.maxWidth='100%';
+        el.style.overflowX='auto';
+      }
+      // Fix fixed widths
+      if(cs.width&&cs.width.indexOf('px')!==-1){
+        var ew=parseFloat(cs.width);
+        if(ew>w*0.7&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
+          el.style.width='100%';
+          el.style.maxWidth='100%';
+        }
+      }
+    }
+    // Specific: border-right removal on stacked grids
+    document.querySelectorAll('[style*="grid-template-columns: 1fr"]').forEach(function(grid){
+      var ch=grid.children;
+      for(var j=0;j<ch.length;j++){
+        var brs=getComputedStyle(ch[j]).borderRightStyle;
+        if(brs!=='none'){
+          ch[j].style.borderRight='none';
+          ch[j].style.borderBottom='var(--border,1px solid rgba(28,43,74,0.14))';
+        }
+      }
+    });
+    // Force no overflow on html/body
+    document.documentElement.style.overflowX='hidden';
+    document.body.style.overflowX='hidden';
+    document.body.style.minWidth='0';
+    document.body.style.maxWidth='100vw';
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',fix);
+  }else{
+    fix();
+  }
+  var resizeTimer;
+  window.addEventListener('resize',function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(fix,150)});
+})();
+</script>
+</body>
+</html>

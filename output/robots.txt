@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block query string variations to prevent duplicate content
+Disallow: /*?*
+
+# Block internal/utility paths
+Disallow: /templates/
+Disallow: /functions/
+
+Host: https://cryptolicenses.net
+Sitemap: https://cryptolicenses.net/sitemap.xml

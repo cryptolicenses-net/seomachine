@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Licenses in {{REGION}} — All Jurisdictions Compared | CryptoLicenses.net</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta property="og:title" content="Crypto Licenses in {{REGION}} — All Jurisdictions Compared | CryptoLicenses.net">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/zurich-lakeside-historic-buildings.jpg">
+    <meta property="og:type" content="article">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 260px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; border-left: var(--heavy); text-decoration: none; display: flex; align-items: center; transition: background 0.2s; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO HUB */
+        .hub-hero { padding: 4rem 3rem; border-bottom: var(--heavy); display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: end; }
+        .hub-hero-label { color: var(--accent); margin-bottom: 1.25rem; }
+        .hub-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.05; margin-bottom: 1.5rem; }
+        .hub-hero h1 em { font-style: italic; color: var(--accent); }
+        .hub-hero-lead { font-size: 1.1rem; color: var(--muted); line-height: 1.75; max-width: 580px; }
+        .hub-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: var(--heavy); }
+        .hub-stat { padding: 1.5rem; border-right: var(--border); text-align: center; }
+        .hub-stat:last-child { border-right: none; }
+        .hub-stat-val { font-family: 'Fraunces', serif; font-size: 2rem; color: var(--accent); margin-bottom: 0.25rem; }
+        .hub-stat-lbl { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* COMPARISON TABLE */
+        section { padding: 3rem; border-bottom: var(--border); }
+        .section-label { color: var(--accent); margin-bottom: 1.25rem; }
+        .section-h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.7; max-width: 680px; }
+        p { margin-bottom: 1.25rem; line-height: 1.75; color: #374151; }
+
+        .compare-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+        .compare-table thead tr { background: var(--ink); color: var(--paper); }
+        .compare-table th { padding: 0.875rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .compare-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); vertical-align: middle; }
+        .compare-table tr:hover td { background: #F0EBE4; }
+        .compare-table td:first-child { font-weight: 500; }
+        .compare-table td a { color: var(--ink); text-decoration: none; font-weight: 500; }
+        .compare-table td a:hover { color: var(--accent); }
+        .badge { display: inline-block; padding: 0.2rem 0.6rem; font-size: 0.68rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+        .badge-low { background: #D1FAE5; color: #065F46; }
+        .badge-med { background: #FEF3C7; color: #92400E; }
+        .badge-high { background: #FEE2E2; color: #991B1B; }
+        .badge-eu { background: #DBEAFE; color: #1E40AF; }
+
+        /* JURISDICTION CARDS */
+        .jurisdiction-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: var(--heavy); }
+        .jurisdiction-card { padding: 2rem; border-right: var(--border); border-bottom: var(--border); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; }
+        .jurisdiction-card:nth-child(2n) { border-right: none; }
+        .jurisdiction-card-top { }
+        .jurisdiction-card-flag { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; }
+        .jurisdiction-card h3 { font-size: 1.15rem; margin-bottom: 0.75rem; font-family: 'Fraunces', serif; font-weight: 400; }
+        .jurisdiction-card p { font-size: 0.875rem; color: #4B5563; line-height: 1.6; margin: 0; }
+        .jurisdiction-card-meta { display: flex; gap: 1.5rem; padding-top: 1rem; border-top: var(--border); }
+        .j-meta-item { }
+        .j-meta-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem; }
+        .j-meta-val { font-size: 0.85rem; font-weight: 500; }
+        .jurisdiction-card-link { display: inline-block; margin-top: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 0.1rem; transition: color 0.2s, border-color 0.2s; }
+        .jurisdiction-card-link:hover { color: var(--accent); border-color: var(--accent); }
+
+        /* CHOOSE GUIDE */
+        .choose-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: var(--heavy); margin-bottom: 2rem; }
+        .choose-item { padding: 2rem; border-right: var(--border); }
+        .choose-item:last-child { border-right: none; }
+        .choose-num { font-family: 'Fraunces', serif; font-size: 2.5rem; color: var(--accent); margin-bottom: 0.75rem; line-height: 1; }
+        .choose-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .choose-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+        /* CTA BLOCK */
+        .cta-block { background: var(--ink); color: var(--paper); padding: 3rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+        .cta-block h2 { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 300; margin-bottom: 0.75rem; }
+        .cta-block p { color: rgba(245,240,235,0.65); font-size: 0.95rem; max-width: 500px; margin: 0; }
+        .cta-actions { display: flex; flex-direction: column; gap: 0.75rem; min-width: 220px; }
+        .btn-gold { background: var(--accent); color: var(--ink); padding: 1rem 2rem; text-align: center; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; transition: opacity 0.2s; white-space: nowrap; display: block; }
+        .btn-gold:hover { opacity: 0.85; }
+        .btn-outline-light { border: 1px solid rgba(255,255,255,0.3); color: var(--paper); padding: 0.875rem 2rem; text-align: center; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; transition: border-color 0.2s; display: block; }
+        .btn-outline-light:hover { border-color: rgba(255,255,255,0.7); }
+
+        footer { background: var(--ink); color: #D1D5DB; }
+        .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .footer-col { padding: 3rem 2rem; border-right: 1px solid rgba(255,255,255,0.08); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.3rem; color: #fff; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 1.5rem; }
+        .footer-address { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.7; }
+        .footer-col-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent); margin-bottom: 1.25rem; letter-spacing: 0.08em; }
+        .footer-link { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 0.6rem; transition: color 0.2s; }
+        .footer-link:hover { color: #fff; }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+        @media (max-width: 900px) {
+            .hub-hero { grid-template-columns: 1fr; }
+            .jurisdiction-grid { grid-template-columns: 1fr; }
+            .jurisdiction-card { border-right: none; }
+            .choose-grid { grid-template-columns: 1fr; }
+            .cta-block { flex-direction: column; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            section { padding: 2rem 1.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+        }
+        /* mobile_nav_fix */
+    
+.cta-section{background:var(--ink);color:#fff;padding:72px 24px;border-top:4px solid var(--accent)}
+.cta-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.cta-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.cta-h2{font-family:'Fraunces',serif;font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:16px;line-height:1.1}
+.cta-lead{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;max-width:440px}
+.cta-trust{list-style:none;display:flex;flex-direction:column;gap:8px}
+.cta-trust li{font-size:.82rem;color:rgba(255,255,255,.6)}
+.cta-form-wrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:32px}
+.cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.cta-field{display:flex;flex-direction:column;gap:6px;margin-bottom:0}
+.cta-field label{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em}
+.cta-field input,.cta-field textarea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:10px 14px;font-family:'Inter',sans-serif;font-size:.875rem;outline:none;transition:border-color .15s;width:100%}
+.cta-field input::placeholder,.cta-field textarea::placeholder{color:rgba(255,255,255,.3)}
+.cta-field input:focus,.cta-field textarea:focus{border-color:var(--accent)}
+.cta-field-full{margin-bottom:16px}
+.cta-sel-wrap{position:relative;margin-bottom:16px}
+.cta-sel-wrap::after{content:'';position:absolute;right:14px;top:50%;transform:translateY(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid rgba(255,255,255,.5);pointer-events:none}
+.cta-sel-wrap select{-webkit-appearance:none;appearance:none;width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:10px 36px 10px 14px;font-family:'Inter',sans-serif;font-size:.875rem;outline:none;cursor:pointer;transition:border-color .15s}
+.cta-sel-wrap select option{background:#1C2B4A;color:#fff}
+.cta-sel-wrap select:focus{border-color:var(--accent)}
+.cta-submit{width:100%;background:var(--accent);color:var(--ink);border:none;padding:14px;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:opacity .15s;margin-top:4px}
+.cta-submit:hover{opacity:.85}
+.cta-privacy{font-size:.7rem;color:rgba(255,255,255,.3);text-align:center;margin-top:10px}
+@media(max-width:900px){.cta-inner{grid-template-columns:1fr;gap:40px}}
+@media(max-width:480px){.cta-form-row{grid-template-columns:1fr}}
+/* cta_block_added */
+</style>
+
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-brand">CryptoLicenses.net</a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
+        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
+        <a href="/banking-licenses/" class="nav-link">Banking & EMI</a>
+        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
+        <a href="/regulation/" class="nav-link">Regulation Hub</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Free Consultation</a>
+</nav>
+
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/crypto-licenses/">Crypto Licenses</a>
+    <span>/</span>
+    {{REGION}}
+</div>
+
+<!-- HUB HERO -->
+<div class="hub-hero">
+    <div>
+        <div class="mono hub-hero-label">◆ {{JURISDICTION_COUNT}} Jurisdictions · {{REGION}}</div>
+        <h1>Crypto Licenses in<br><em>{{REGION}}</em></h1>
+        <p class="hub-hero-lead">{{HERO_LEAD}}</p>
+    </div>
+    <div class="hub-stats">
+        <div class="hub-stat">
+            <div class="hub-stat-val">{{STAT1_VAL}}</div>
+            <div class="hub-stat-lbl">{{STAT1_LBL}}</div>
+        </div>
+        <div class="hub-stat">
+            <div class="hub-stat-val">{{STAT2_VAL}}</div>
+            <div class="hub-stat-lbl">{{STAT2_LBL}}</div>
+        </div>
+        <div class="hub-stat">
+            <div class="hub-stat-val">{{STAT3_VAL}}</div>
+            <div class="hub-stat-lbl">{{STAT3_LBL}}</div>
+        </div>
+    </div>
+</div>
+
+<!-- WHY THIS REGION -->
+<section>
+    <div class="mono section-label">01 — Overview</div>
+    <h2 class="section-h2">Why Choose {{REGION}} for Your Crypto License?</h2>
+    <p class="section-lead">{{WHY_LEAD}}</p>
+    <p>{{WHY_BODY}}</p>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section>
+    <div class="mono section-label">02 — Comparison</div>
+    <h2 class="section-h2">{{REGION}} Crypto License Comparison</h2>
+    <p class="section-lead">Compare all {{REGION}} jurisdictions by timeline, capital requirements, cost, and regulatory framework.</p>
+    <div style="overflow-x:auto;">
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>Jurisdiction</th>
+                <th>Regulator</th>
+                <th>License Type</th>
+                <th>Timeline</th>
+                <th>Min. Capital</th>
+                <th>Difficulty</th>
+                <th>EU Access</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{COMPARISON_ROWS}}
+            <!-- Example:
+            <tr>
+                <td><a href="/crypto-licenses/europe/poland/">Poland</a></td>
+                <td>KNF</td>
+                <td>VASP</td>
+                <td>3–6 months</td>
+                <td>No minimum</td>
+                <td><span class="badge badge-low">Low</span></td>
+                <td><span class="badge badge-eu">✓ MiCA</span></td>
+            </tr>
+            -->
+        </tbody>
+    </table>
+    </div>
+</section>
+
+<!-- JURISDICTION CARDS -->
+<section>
+    <div class="mono section-label">03 — Jurisdictions</div>
+    <h2 class="section-h2">{{REGION}} Crypto Licensing — All Options</h2>
+    <div class="jurisdiction-grid">
+        {{JURISDICTION_CARDS}}
+        <!-- Example:
+        <div class="jurisdiction-card">
+            <div class="jurisdiction-card-top">
+                <div class="jurisdiction-card-flag">🇵🇱 Poland · KNF</div>
+                <h3>Poland Crypto License</h3>
+                <p>One of Europe's most accessible VASP registrations. Poland's KNF oversees a straightforward registration process with no minimum capital requirement, making it popular for EU-market entry.</p>
+            </div>
+            <div>
+                <div class="jurisdiction-card-meta">
+                    <div class="j-meta-item">
+                        <div class="j-meta-label">Timeline</div>
+                        <div class="j-meta-val">3–6 months</div>
+                    </div>
+                    <div class="j-meta-item">
+                        <div class="j-meta-label">Capital</div>
+                        <div class="j-meta-val">No minimum</div>
+                    </div>
+                    <div class="j-meta-item">
+                        <div class="j-meta-label">EU Access</div>
+                        <div class="j-meta-val">Yes (MiCA)</div>
+                    </div>
+                </div>
+                <a href="/crypto-licenses/europe/poland/" class="jurisdiction-card-link">Full Guide →</a>
+            </div>
+        </div>
+        -->
+    </div>
+</section>
+
+<!-- HOW TO CHOOSE -->
+<section>
+    <div class="mono section-label">04 — How to Choose</div>
+    <h2 class="section-h2">How to Choose the Right {{REGION}} Jurisdiction</h2>
+    <p class="section-lead">The right jurisdiction depends on your business model, target markets, budget, and timeline. Here's how to think through the decision.</p>
+    <div class="choose-grid">
+        <div class="choose-item">
+            <div class="choose-num">01</div>
+            <div class="choose-title">Consider Your Target Market</div>
+            <div class="choose-desc">{{CHOOSE1}}</div>
+        </div>
+        <div class="choose-item">
+            <div class="choose-num">02</div>
+            <div class="choose-title">Match Budget to Jurisdiction</div>
+            <div class="choose-desc">{{CHOOSE2}}</div>
+        </div>
+        <div class="choose-item">
+            <div class="choose-num">03</div>
+            <div class="choose-title">Factor in Your Timeline</div>
+            <div class="choose-desc">{{CHOOSE3}}</div>
+        </div>
+    </div>
+    <p>{{CHOOSE_BODY}}</p>
+</section>
+
+<!-- CTA -->
+<div class="cta-block">
+    <div>
+        <h2>Not sure which {{REGION}} jurisdiction is right for you?</h2>
+        <p>Our Switzerland-based specialists compare options across all {{JURISDICTION_COUNT}} {{REGION}} jurisdictions and recommend the best fit for your business model, budget, and timeline.</p>
+    </div>
+    <div class="cta-actions">
+        <a href="/contact/" class="btn-gold">Get Expert Advice — Free</a>
+        <!--email_off--><a href="mailto:info@cryptolicenses.net" class="btn-outline-light">info@cryptolicenses.net</a><!--/email_off-->
+    </div>
+</div>
+
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Ready to Get Licensed?</h2>
+      <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form>
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <div class="footer-tagline">International crypto & FinTech licensing specialists. 80+ jurisdictions. Based in Zug, Switzerland.</div>
+            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br>info@cryptolicenses.net</div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Crypto Licenses</div>
+            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
+            <a href="/crypto-licenses/mena/" class="footer-link">MENA & UAE</a>
+            <a href="/crypto-licenses/asia/" class="footer-link">Asia & Pacific</a>
+            <a href="/crypto-licenses/americas/" class="footer-link">Americas & Offshore</a>
+            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
+            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
+            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
+            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
+            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Resources</div>
+            <a href="/guides/" class="footer-link">Knowledge Base</a>
+            <a href="/regulation/" class="footer-link">Regulation Hub</a>
+            <a href="/about/" class="footer-link">About Us</a>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
+        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms</a></span>
+    </div>
+</footer>
+
+<script src="/assets/contact-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{GUIDE_TITLE}} — Complete {{YEAR}} Guide | CryptoLicenses.net</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta property="og:title" content="{{GUIDE_TITLE}} — Complete {{YEAR}} Guide | CryptoLicenses.net">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/zurich-lakeside-historic-buildings.jpg">
+    <meta property="og:type" content="article">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 260px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; border-left: var(--heavy); text-decoration: none; display: flex; align-items: center; transition: background 0.2s; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* GUIDE HERO */
+        .guide-hero { padding: 4rem 3rem; border-bottom: var(--heavy); max-width: 860px; }
+        .guide-hero-label { color: var(--accent); margin-bottom: 1.25rem; }
+        .guide-hero h1 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.1; margin-bottom: 1.5rem; }
+        .guide-hero h1 em { font-style: italic; color: var(--accent); }
+        .guide-hero-lead { font-size: 1.1rem; color: var(--muted); line-height: 1.75; margin-bottom: 2rem; }
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 1.75rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent); writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); letter-spacing: 0.1em; }
+        .tldr-content { font-size: 0.9rem; color: rgba(245,240,235,0.8); line-height: 1.7; }
+        .tldr-content ul { list-style: none; }
+        .tldr-content li { padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; gap: 0.75rem; }
+        .tldr-content li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+
+        /* LAYOUT */
+        .guide-wrap { display: grid; grid-template-columns: 220px 1fr 260px; min-height: 70vh; }
+        .guide-toc { border-right: var(--border); padding: 2.5rem 1.5rem; position: sticky; top: 57px; height: fit-content; }
+        .toc-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: var(--border); }
+        .toc-link { display: block; font-size: 0.8rem; color: var(--muted); text-decoration: none; padding: 0.35rem 0; border-bottom: var(--border); transition: color 0.2s; }
+        .toc-link:hover { color: var(--ink); }
+        .toc-link.active { color: var(--accent); font-weight: 500; }
+
+        .guide-main { border-right: var(--border); }
+        section { padding: 3rem; border-bottom: var(--border); }
+        .section-label { color: var(--accent); margin-bottom: 1.25rem; }
+        .section-h2 { font-size: clamp(1.4rem, 2.5vw, 1.875rem); margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.7; }
+        p { margin-bottom: 1.25rem; line-height: 1.75; color: #374151; }
+        p:last-child { margin-bottom: 0; }
+        h3 { font-size: 1.1rem; margin: 2rem 0 1rem; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--ink); }
+
+        ul.content-list { list-style: none; margin: 1rem 0 1.5rem; }
+        ul.content-list li { padding: 0.6rem 0; border-bottom: var(--border); padding-left: 1.5rem; position: relative; font-size: 0.9rem; color: #374151; line-height: 1.6; }
+        ul.content-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; top: 0.75rem; }
+
+        /* DEFINITION BOX */
+        .definition-box { background: #F0EBE4; border-left: 3px solid var(--accent); padding: 1.5rem; margin: 1.5rem 0; }
+        .definition-box .def-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent); margin-bottom: 0.5rem; }
+        .definition-box p { color: var(--ink); font-size: 0.95rem; margin: 0; }
+
+        /* COMPARISON TABLE in guide */
+        .guide-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 1.5rem 0; }
+        .guide-table th { background: var(--ink); color: var(--paper); padding: 0.75rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 400; }
+        .guide-table td { padding: 0.75rem 1rem; border-bottom: var(--border); }
+        .guide-table tr:hover td { background: #F0EBE4; }
+
+        /* MISTAKES */
+        .mistake-list { list-style: none; }
+        .mistake-item { display: grid; grid-template-columns: 36px 1fr; gap: 1rem; padding: 1.25rem 0; border-bottom: var(--border); align-items: start; }
+        .mistake-icon { width: 36px; height: 36px; background: #FEE2E2; color: #991B1B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+        .mistake-text strong { display: block; margin-bottom: 0.25rem; font-size: 0.9rem; }
+        .mistake-text span { font-size: 0.85rem; color: var(--muted); }
+
+        /* INLINE CTA */
+        .inline-cta { background: var(--ink); color: var(--paper); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+        .inline-cta h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5rem; }
+        .inline-cta p { color: rgba(245,240,235,0.65); font-size: 0.875rem; max-width: 480px; margin: 0; }
+        .btn-gold { background: var(--accent); color: var(--ink); padding: 0.9rem 1.75rem; text-align: center; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; transition: opacity 0.2s; display: inline-block; }
+        .btn-gold:hover { opacity: 0.85; }
+
+        /* FAQ */
+        .faq-item { border-bottom: var(--border); }
+        .faq-question { padding: 1.25rem 0; font-weight: 500; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; }
+        .faq-question::after { content: '+'; font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: var(--accent); flex-shrink: 0; }
+        .faq-item.open .faq-question::after { content: '−'; }
+        .faq-answer { display: none; padding-bottom: 1.25rem; font-size: 0.9rem; color: #4B5563; line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2.5rem 1.75rem; position: sticky; top: 57px; height: fit-content; }
+        .aside-block { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: var(--border); }
+        .aside-block:last-child { border-bottom: none; }
+        .aside-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.07em; }
+        .aside-link { display: block; font-size: 0.875rem; color: var(--ink); text-decoration: none; padding: 0.4rem 0; border-bottom: var(--border); }
+        .aside-link:hover { color: var(--accent); }
+        .btn-primary { display: block; background: var(--ink); color: var(--paper); padding: 0.9rem 1.5rem; text-align: center; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; transition: background 0.2s; }
+        .btn-primary:hover { background: var(--accent); color: var(--ink); }
+
+        footer { background: var(--ink); color: #D1D5DB; }
+        .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .footer-col { padding: 3rem 2rem; border-right: 1px solid rgba(255,255,255,0.08); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.3rem; color: #fff; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 1.5rem; }
+        .footer-address { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.7; }
+        .footer-col-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent); margin-bottom: 1.25rem; letter-spacing: 0.08em; }
+        .footer-link { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 0.6rem; }
+        .footer-link:hover { color: #fff; }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr; }
+            .guide-toc, .guide-aside { display: none; }
+        }
+        @media (max-width: 700px) {
+            section { padding: 2rem 1.5rem; }
+            .guide-hero { padding: 2.5rem 1.5rem; }
+            .inline-cta { flex-direction: column; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+        }
+        /* mobile_nav_fix */
+    
+.cta-section{background:var(--ink);color:#fff;padding:72px 24px;border-top:4px solid var(--accent)}
+.cta-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.cta-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.cta-h2{font-family:'Fraunces',serif;font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:16px;line-height:1.1}
+.cta-lead{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;max-width:440px}
+.cta-trust{list-style:none;display:flex;flex-direction:column;gap:8px}
+.cta-trust li{font-size:.82rem;color:rgba(255,255,255,.6)}
+.cta-form-wrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:32px}
+.cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.cta-field{display:flex;flex-direction:column;gap:6px;margin-bottom:0}
+.cta-field label{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em}
+.cta-field input,.cta-field textarea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:10px 14px;font-family:'Inter',sans-serif;font-size:.875rem;outline:none;transition:border-color .15s;width:100%}
+.cta-field input::placeholder,.cta-field textarea::placeholder{color:rgba(255,255,255,.3)}
+.cta-field input:focus,.cta-field textarea:focus{border-color:var(--accent)}
+.cta-field-full{margin-bottom:16px}
+.cta-sel-wrap{position:relative;margin-bottom:16px}
+.cta-sel-wrap::after{content:'';position:absolute;right:14px;top:50%;transform:translateY(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid rgba(255,255,255,.5);pointer-events:none}
+.cta-sel-wrap select{-webkit-appearance:none;appearance:none;width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:10px 36px 10px 14px;font-family:'Inter',sans-serif;font-size:.875rem;outline:none;cursor:pointer;transition:border-color .15s}
+.cta-sel-wrap select option{background:#1C2B4A;color:#fff}
+.cta-sel-wrap select:focus{border-color:var(--accent)}
+.cta-submit{width:100%;background:var(--accent);color:var(--ink);border:none;padding:14px;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:opacity .15s;margin-top:4px}
+.cta-submit:hover{opacity:.85}
+.cta-privacy{font-size:.7rem;color:rgba(255,255,255,.3);text-align:center;margin-top:10px}
+@media(max-width:900px){.cta-inner{grid-template-columns:1fr;gap:40px}}
+@media(max-width:480px){.cta-form-row{grid-template-columns:1fr}}
+/* cta_block_added */
+</style>
+
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-brand">CryptoLicenses.net</a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
+        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
+        <a href="/banking-licenses/" class="nav-link">Banking & EMI</a>
+        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
+        <a href="/regulation/" class="nav-link">Regulation Hub</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Free Consultation</a>
+</nav>
+
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    {{GUIDE_TITLE}}
+</div>
+
+<!-- GUIDE HERO -->
+<div class="guide-hero">
+    <div class="mono guide-hero-label">◆ {{GUIDE_CATEGORY}} · Updated {{YEAR}}</div>
+    <h1>{{GUIDE_H1}}</h1>
+    <p class="guide-hero-lead">{{GUIDE_LEAD}}</p>
+    <div class="tldr-box">
+        <div class="tldr-label">TL;DR</div>
+        <div class="tldr-content">
+            <ul>
+                {{TLDR_POINTS}}
+                <!-- Example:
+                <li>A crypto license is a regulatory approval required to operate a VASP legally.</li>
+                <li>Requirements vary by jurisdiction — from simple registration to full licensing.</li>
+                <li>Costs range from a few thousand to hundreds of thousands of dollars.</li>
+                <li>CryptoLicenses.net covers 80+ jurisdictions and handles the full process.</li>
+                -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 3-COLUMN LAYOUT -->
+<div class="guide-wrap">
+
+<!-- TABLE OF CONTENTS -->
+<nav class="guide-toc">
+    <div class="toc-label">Contents</div>
+    {{TOC_LINKS}}
+    <!-- Example:
+    <a href="#what-is" class="toc-link">What Is a Crypto License?</a>
+    <a href="#who-needs" class="toc-link">Who Needs One?</a>
+    <a href="#types" class="toc-link">Types of Licenses</a>
+    <a href="#jurisdictions" class="toc-link">Best Jurisdictions</a>
+    <a href="#cost" class="toc-link">How Much Does It Cost?</a>
+    <a href="#process" class="toc-link">How to Apply</a>
+    <a href="#mistakes" class="toc-link">Common Mistakes</a>
+    <a href="#help" class="toc-link">How We Help</a>
+    <a href="#faq" class="toc-link">FAQ</a>
+    -->
+</nav>
+
+<!-- MAIN GUIDE CONTENT -->
+<main class="guide-main">
+
+    <!-- WHAT IS -->
+    <section id="what-is">
+        <div class="mono section-label">01</div>
+        <h2 class="section-h2">What Is {{TOPIC}}?</h2>
+        <div class="definition-box">
+            <div class="def-label">Definition</div>
+            <p>{{DEFINITION}}</p>
+        </div>
+        <p>{{WHAT_IS_BODY}}</p>
+    </section>
+
+    <!-- WHO NEEDS -->
+    <section id="who-needs">
+        <div class="mono section-label">02</div>
+        <h2 class="section-h2">Who Needs {{TOPIC}}?</h2>
+        <p class="section-lead">{{WHO_NEEDS_LEAD}}</p>
+        <ul class="content-list">
+            {{WHO_NEEDS_LIST}}
+        </ul>
+        <p>{{WHO_NEEDS_BODY}}</p>
+    </section>
+
+    <!-- MAIN SECTION(S) — repeat as needed -->
+    <section id="types">
+        <div class="mono section-label">03</div>
+        <h2 class="section-h2">{{SECTION3_TITLE}}</h2>
+        <p class="section-lead">{{SECTION3_LEAD}}</p>
+        <p>{{SECTION3_BODY}}</p>
+    </section>
+
+    <section id="jurisdictions">
+        <div class="mono section-label">04</div>
+        <h2 class="section-h2">{{SECTION4_TITLE}}</h2>
+        <p class="section-lead">{{SECTION4_LEAD}}</p>
+        <div style="overflow-x:auto;">
+        <table class="guide-table">
+            <thead>
+                <tr>
+                    {{TABLE_HEADERS}}
+                </tr>
+            </thead>
+            <tbody>
+                {{TABLE_ROWS}}
+            </tbody>
+        </table>
+        </div>
+        <p>{{SECTION4_BODY}}</p>
+    </section>
+
+    <section id="cost">
+        <div class="mono section-label">05</div>
+        <h2 class="section-h2">{{SECTION5_TITLE}}</h2>
+        <p class="section-lead">{{SECTION5_LEAD}}</p>
+        <p>{{SECTION5_BODY}}</p>
+    </section>
+
+    <section id="process">
+        <div class="mono section-label">06</div>
+        <h2 class="section-h2">{{SECTION6_TITLE}}</h2>
+        <p class="section-lead">{{SECTION6_LEAD}}</p>
+        <p>{{SECTION6_BODY}}</p>
+    </section>
+
+    <!-- MISTAKES -->
+    <section id="mistakes">
+        <div class="mono section-label">07</div>
+        <h2 class="section-h2">Common Mistakes to Avoid</h2>
+        <ul class="mistake-list">
+            {{MISTAKES}}
+            <!-- Example:
+            <li class="mistake-item">
+                <div class="mistake-icon">✕</div>
+                <div class="mistake-text">
+                    <strong>Choosing a jurisdiction based on price alone</strong>
+                    <span>The cheapest license may not allow you to serve your target clients. Match jurisdiction to your business model first.</span>
+                </div>
+            </li>
+            -->
+        </ul>
+    </section>
+
+    <!-- INLINE CTA -->
+    <div class="inline-cta">
+        <div>
+            <h3>Need help navigating {{TOPIC}}?</h3>
+            <p>Our Switzerland-based team handles the full process — from jurisdiction selection to license approval — across 80+ countries.</p>
+        </div>
+        <a href="/contact/" class="btn-gold">Free Consultation →</a>
+    </div>
+
+    <!-- HOW WE HELP -->
+    <section id="help">
+        <div class="mono section-label">08</div>
+        <h2 class="section-h2">How CryptoLicenses.net Can Help</h2>
+        <p>CryptoLicenses.net is a Switzerland-based licensing firm (Grafenauweg 4, 6300 Zug) specializing in crypto and FinTech regulatory services across 80+ jurisdictions. We provide end-to-end support — from initial jurisdiction assessment to license approval and ongoing compliance.</p>
+        <p>{{HOW_WE_HELP}}</p>
+        <p>Ready to get started? Contact our team at <!--email_off--><a href="mailto:info@cryptolicenses.net" style="color:var(--ink);font-weight:500;">info@cryptolicenses.net</a><!--/email_off--> or <a href="/contact/" style="color:var(--ink);font-weight:500;">request a free consultation</a>.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="mono section-label">09</div>
+        <h2 class="section-h2">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">{{FAQ1_Q}}</div>
+            <div class="faq-answer">{{FAQ1_A}}</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">{{FAQ2_Q}}</div>
+            <div class="faq-answer">{{FAQ2_A}}</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">{{FAQ3_Q}}</div>
+            <div class="faq-answer">{{FAQ3_A}}</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">{{FAQ4_Q}}</div>
+            <div class="faq-answer">{{FAQ4_A}}</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">{{FAQ5_Q}}</div>
+            <div class="faq-answer">{{FAQ5_A}}</div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ASIDE -->
+<aside class="guide-aside">
+    <div class="aside-block">
+        <div class="aside-label">Related Guides</div>
+        <a href="/guides/what-is-crypto-license/" class="aside-link">What Is a Crypto License?</a>
+        <a href="/guides/crypto-license-cost/" class="aside-link">Crypto License Cost</a>
+        <a href="/guides/fastest-crypto-licenses/" class="aside-link">Fastest Crypto Licenses</a>
+        <a href="/guides/cheapest-crypto-licenses/" class="aside-link">Cheapest Crypto Licenses</a>
+        <a href="/guides/mica-explained/" class="aside-link">MiCA Regulation Explained</a>
+        <a href="/guides/aml-kyc-explained/" class="aside-link">AML/KYC for Crypto</a>
+    </div>
+    <div class="aside-block">
+        <div class="aside-label">Top Jurisdictions</div>
+        <a href="/crypto-licenses/europe/poland/" class="aside-link">Poland (KNF)</a>
+        <a href="/crypto-licenses/mena/uae/" class="aside-link">Dubai / UAE (VARA)</a>
+        <a href="/crypto-licenses/asia/singapore/" class="aside-link">Singapore (MAS)</a>
+        <a href="/crypto-licenses/europe/lithuania/" class="aside-link">Lithuania (FCIS)</a>
+        <a href="/crypto-licenses/africa/seychelles/" class="aside-link">Seychelles (FSA)</a>
+    </div>
+    <div class="aside-block">
+        <div class="aside-label">Fast Track Options</div>
+        <a href="/corporate-services/ready-made-companies/" class="aside-link">Ready-Made Companies</a>
+        <a href="/corporate-services/ready-made-companies/crypto-license/" class="aside-link">Crypto License for Sale</a>
+    </div>
+    <div>
+        <div class="aside-label">Get Expert Advice</div>
+        <p style="font-size:0.82rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">Switzerland-based specialists. 80+ jurisdictions. Free first consultation.</p>
+        <a href="/contact/" class="btn-primary">Start Free Consultation</a>
+    </div>
+</aside>
+
+</div><!-- end guide-wrap -->
+
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Ready to Get Licensed?</h2>
+      <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form>
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <div class="footer-tagline">International crypto & FinTech licensing specialists. 80+ jurisdictions. Based in Zug, Switzerland.</div>
+            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br>info@cryptolicenses.net</div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Crypto Licenses</div>
+            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
+            <a href="/crypto-licenses/mena/" class="footer-link">MENA & UAE</a>
+            <a href="/crypto-licenses/asia/" class="footer-link">Asia & Pacific</a>
+            <a href="/crypto-licenses/americas/" class="footer-link">Americas & Offshore</a>
+            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
+            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
+            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
+            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
+            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Resources</div>
+            <a href="/guides/" class="footer-link">Knowledge Base</a>
+            <a href="/regulation/" class="footer-link">Regulation Hub</a>
+            <a href="/about/" class="footer-link">About Us</a>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
+        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms</a></span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/assets/contact-form.js"></script>
+</body>
+</html>

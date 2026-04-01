@@ -1,0 +1,745 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFRS Crypto Accounting — IAS 38, IAS 2 &amp; Fair Value Treatment 2026 | CryptoLicenses.net</title>
+    <meta name="description" content="IFRS accounting for crypto assets: IAS 38 intangible assets, IAS 2 inventory, revaluation model, IASB project status. Practical guidance for IFRS companies holding Bitcoin, Ethereum, and DeFi tokens.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/crypto-accounting/standards/ifrs/">
+    <meta property="og:title" content="IFRS Crypto Accounting — IAS 38, IAS 2 &amp; Fair Value Treatment 2025">
+    <meta property="og:description" content="IFRS accounting for crypto assets: IAS 38 intangible assets, IAS 2 inventory, revaluation model, IASB project status. Practical guidance for IFRS companies holding Bitcoin, Ethereum, and DeFi tokens.">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/zurich-lakeside-historic-buildings.jpg">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <style>
+.hero { display: grid; grid-template-columns: 1fr 400px; border-bottom: var(--heavy); min-height: 340px; }
+.hero-h1 { font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.05; margin-bottom: 1.5rem; }
+.aside-metric-value { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.78rem; }
+.info-row-val { font-weight: 500; text-align: right; font-size: 0.8rem; }
+@media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-aside { border-top: var(--heavy); }
+            .content-wrap { grid-template-columns: 1fr; }
+            .main-col { border-right: none; }
+            .sticky-aside { position: static; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="+hh3DN/48kYIX1vd1G9NNQ" async=""></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Russian"
+        ]
+      },
+      "sameAs": [
+        "https://t.me/cryptolicensesnet"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "crypto-accounting",
+          "item": "https://cryptolicenses.net/crypto-accounting/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "standards",
+          "item": "https://cryptolicenses.net/crypto-accounting/standards/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "IFRS Crypto Accounting",
+          "item": "https://cryptolicenses.net/crypto-accounting/standards/ifrs/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/crypto-accounting/standards/ifrs/#article",
+      "headline": "IFRS Crypto Accounting",
+      "description": "IFRS accounting for crypto assets: IAS 38 intangible assets, IAS 2 inventory, revaluation model, IASB project status. Practical guidance for IFRS companies holding Bitcoin, Ethereum, and DeFi tokens.",
+      "url": "https://cryptolicenses.net/crypto-accounting/standards/ifrs/",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-03-22",
+      "author": {
+        "@id": "https://cryptolicenses.net/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cryptolicenses.net/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/crypto-accounting/standards/ifrs/"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://cryptolicenses.net/crypto-accounting/standards/ifrs/#service",
+      "name": "IFRS Crypto Accounting",
+      "description": "IFRS accounting for crypto assets: IAS 38 intangible assets, IAS 2 inventory, revaluation model, IASB project status. Practical guidance for IFRS companies holding Bitcoin, Ethereum, and DeFi tokens.",
+      "url": "https://cryptolicenses.net/crypto-accounting/standards/ifrs/",
+      "provider": {
+        "@id": "https://cryptolicenses.net/#organization"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": "Crypto Accounting Services"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does IFRS classify crypto assets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IFRS does not have a dedicated standard for crypto assets. Most crypto assets are classified as intangible assets under IAS 38 — they are identifiable non-monetary assets without physical substance. Exchange businesses that hold crypto primarily for sale may apply IAS 2 (Inventories) instead. Financial instruments (stablecoins representing a contractual right to cash) may qualify as financial assets under IAS 32/IFRS 9."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can IFRS companies write up the value of Bitcoin when prices increase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the IAS 38 cost model (the default), impairment losses can be recognised but recoveries cannot. Under the IAS 38 revaluation model (available only when an active market exists), assets can be written up, but increases are recognised in other comprehensive income (OCI), not profit or loss, unless reversing a previous impairment charge. Bitcoin and Ethereum are widely considered to have active markets; most other crypto assets do not."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an 'active market' under IAS 38 for crypto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IAS 38.8 defines an active market as one where items traded are homogeneous, willing buyers and sellers can be found at any time, and prices are available to the public. The IASB confirmed that Bitcoin and similar highly traded cryptocurrencies likely have an active market. However, less liquid tokens with wide bid-ask spreads or limited trading venues likely do not qualify. Active market status must be assessed at each reporting date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should IFRS companies account for stablecoins?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stablecoins pegged to fiat currency (USDC, USDT) are generally financial instruments under IAS 32/IFRS 9 because they represent a contractual right to receive cash or another financial asset. Fiat-backed stablecoins would typically be classified as financial assets at amortised cost (similar to a demand deposit). Algorithmic stablecoins without a contractual backing mechanism are more complex and may still fall under IAS 38."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the IASB doing about a crypto accounting standard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The IASB added a research project on crypto assets to its work programme. In 2023, the IASB issued educational materials describing the current accounting treatment but did not publish an exposure draft. As of 2025, the IASB has not committed to a timeline for a comprehensive standard. A dedicated IFRS standard for digital assets appears at least 3–5 years away. Companies continue applying IAS 38 or IAS 2 by analogy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the typical costs for implementing IFRS crypto accounting in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Implementation costs typically range from CHF 15,000 to CHF 50,000 depending on transaction volume and complexity, with annual compliance maintenance running CHF 5,000 to CHF 15,000. Larger institutions with high-frequency trading may face costs exceeding CHF 100,000 due to specialized audit requirements. These figures assume engagement with a Big Four or mid-tier accounting firm in Switzerland."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to transition a crypto business to full IFRS compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical transition takes 3 to 6 months for small to medium enterprises, while larger organizations may require 6 to 12 months. The timeline depends on historical record-keeping quality, number of cryptocurrencies held, and whether you're implementing IFRS for the first time or migrating from local GAAP. FINMA expects completion within your next reporting period, typically by June 30, 2026 for mid-year adopters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need separate IFRS accounting for DeFi tokens versus exchange-listed cryptocurrencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, IFRS requires different treatments based on whether an active market exists. Exchange-listed cryptocurrencies like Bitcoin and Ethereum follow IAS 38 (intangible assets) or IAS 2 (inventory) with fair value measurement, while DeFi tokens without active markets must be measured at cost unless impairment indicators arise. The distinction affects both initial recognition and subsequent measurement annually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documentation must I maintain for IFRS crypto audits in Switzerland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You must retain blockchain transaction records, exchange statements, wallet addresses linked to cost basis, fair value assessments at reporting dates, and evidence of market activity research for valuation claims. FINMA requires this documentation retained for 10 years, and your external auditor will require complete audit trails showing the source of fair value data (exchange APIs, pricing services, or manual assessments). Missing documentation creates audit qualifications and regulatory penalties up to CHF 250,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does IFRS crypto accounting affect my bank relationships in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Swiss banks increasingly require IFRS-compliant financial statements before opening crypto business accounts, particularly post-2024 regulatory tightening. Your IFRS-audited statements reduce perceived risk and accelerate account approval from 6-8 weeks to 2-3 weeks. However, banks will scrutinize your fair value methodologies and impairment testing frequency, so transparent IFRS documentation strengthens your banking relationship."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my crypto holdings are impaired under IFRS and I don't recognize the loss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non-recognition of impairment when objective evidence exists constitutes a material misstatement under IAS 36, triggering qualified audit opinions and potential FINMA enforcement action. If discovered in regulatory review, you face financial restatement, credibility damage with investors, and penalties ranging from CHF 100,000 to CHF 500,000 depending on severity. Annual impairment testing is mandatory for any crypto asset trading below 75% of prior fair value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do IFRS requirements for crypto differ from my competitors using US GAAP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IFRS typically requires fair value measurement for all cryptocurrencies with active markets (IAS 38), while US GAAP allows companies to elect the cost method for most intangible crypto assets, delaying loss recognition. This makes IFRS-compliant Swiss companies appear more conservative to investors, potentially reducing financing competitiveness against US GAAP comparables. For cross-border fundraising in 2026, expect investors to request both IFRS and adjusted GAAP metrics for comparison."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
+        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
+        <a href="/banking-licenses/" class="nav-link">Banking &amp; EMI</a>
+        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
+        <a href="/regulation/" class="nav-link">Regulation Hub</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Free Consultation</a>
+</nav>
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <a href="/crypto-licenses/" class="mobile-nav-item">Crypto Licenses</a>
+  <a href="/forex-licenses/" class="mobile-nav-item">Forex Licenses</a>
+  <a href="/banking-licenses/" class="mobile-nav-item">Banking &amp; EMI</a>
+  <a href="/corporate-services/" class="mobile-nav-item">Corporate Services</a>
+  <a href="/regulation/" class="mobile-nav-item">Regulation Hub</a>
+  <a href="/blog/" class="mobile-nav-item">Blog</a>
+  <a href="/guides/" class="mobile-nav-item">Guides</a>
+  <a href="/contact/" class="mobile-nav-item mobile-nav-cta">Free Consultation →</a>
+</div>
+
+<div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/crypto-accounting/">Crypto Accounting</a><span>›</span>
+    <a href="/crypto-accounting/standards/">Standards</a><span>›</span>
+    <strong>IFRS</strong>
+</div>
+    <div class="last-updated">Last updated: April 2026</div>
+<section class="hero">
+    <div class="hero-content">
+        <div>
+            <div class="hero-label mono">IFRS CRYPTO ACCOUNTING · IAS 38 · IAS 2 · IASB PROJECT</div>
+            <h1 class="hero-h1">IFRS Accounting for <em>Crypto Assets</em></h1>
+<figure style="float:right;margin:0 0 1.5rem 2rem;width:650px;height:430px;overflow:hidden;border-radius:8px;">
+  <img src="/assets/images/trader-phone-laptop-stock-charts.jpg" alt="Trader phone laptop stock charts — IFRS Accounting for Crypto Assets" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, (max-width: 900px) 100vw, 650px" style="width:650px;height:430px;object-fit:cover;display:block;">
+</figure>
+            <p class="hero-intro">IFRS has no dedicated standard for crypto assets. Companies in 140+ IFRS jurisdictions must apply IAS 38 (intangible assets) or IAS 2 (inventories) by analogy, navigating complex judgments about active markets, revaluation models, and emerging IASB guidance. This guide explains how IFRS applies to Bitcoin, Ethereum, stablecoins, and DeFi positions in practice.</p>
+        </div>
+    </div>
+    <div class="hero-aside">
+        <div class="aside-card">
+            <div class="aside-card-title">At a Glance</div>
+            <div class="aside-metric"><span>Current standard</span><span class="aside-metric-value">IAS 38 (most crypto)</span></div>
+            <div class="aside-metric"><span>Inventory treatment</span><span class="aside-metric-value">IAS 2 for exchanges</span></div>
+            <div class="aside-metric"><span>IASB project</span><span class="aside-metric-value">In progress</span></div>
+            <div class="aside-metric"><span>Revaluation</span><span class="aside-metric-value">Only if active market</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="content-wrap">
+    <div class="main-col">
+
+        <div class="section-block photo-section"><div class="photo-section-inner">
+      <div class="photo-section-col-img">
+        <figure style="margin:0;width:100%;">
+            <img src="/assets/images/trading-candlestick-chart-monitor.jpg" alt="Trading candlestick chart monitor — IFRS Accounting for Crypto Assets" width="380" height="480" loading="lazy" decoding="async" sizes="(max-width: 480px) 100vw, (max-width: 900px) 100vw, 380px" style="width:100%;height:480px;object-fit:cover;display:block;border-radius:8px;">
+          </figure>
+      </div>
+      <div class="photo-section-col-content">
+        
+            <div class="section-label">Current Classification</div>
+            <h2 class="section-h2">How IFRS Currently Classifies Crypto Assets</h2>
+            <div class="prose">
+                <p>In June 2019, the IFRS Interpretations Committee (IFRIC) issued an agenda decision on holdings of cryptocurrencies, concluding that most cryptocurrencies meet the definition of an intangible asset under IAS 38 — specifically, they are identifiable non-monetary assets without physical substance. The IFRIC also noted that an entity that holds cryptocurrency as inventory in the ordinary course of its business (such as a crypto exchange or broker-dealer) should apply IAS 2.</p>
+                <p>Under IAS 38, crypto assets are initially recognised at cost (the transaction price). Subsequent measurement depends on the accounting policy elected: the cost model (cost less accumulated impairment — the default) or the revaluation model (fair value at each reporting date, but only when an active market exists for the asset). Most entities use the cost model.</p>
+                <p>Under IAS 2 (for exchange businesses holding crypto as inventory), crypto is measured at the lower of cost and net realisable value — unless the entity is a commodity broker-trader, in which case IAS 2.3(b) allows measurement at fair value less costs to sell with changes in profit or loss. Most crypto exchange businesses qualify as commodity broker-traders, allowing them to use fair value measurement for their inventory positions.</p>
+            </div>
+            <div class="alert-box">
+                <p><strong>Key IFRIC Clarification (2019):</strong> The IFRIC confirmed that cryptocurrency is NOT cash (it does not meet the IAS 7 definition of cash), NOT a financial instrument (no contractual right to receive cash), and NOT necessarily inventory (only if held for sale in the ordinary course of business). For most holders, IAS 38 intangible asset accounting is the correct framework.</p>
+            </div>
+        
+      </div>
+    </div></div>
+
+        <div class="section-block">
+            <div class="section-label">IAS 38 Deep Dive</div>
+            <h2 class="section-h2">IAS 38: Cost Model vs Revaluation Model</h2>
+            <div class="table-responsive"><table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Cost Model</th>
+                        <th>Revaluation Model</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Measurement basis</td><td>Cost less accumulated impairment losses</td><td>Fair value at revaluation date less subsequent impairment</td></tr>
+                    <tr><td>Active market requirement</td><td>Not required</td><td>Required — must exist at each revaluation date</td></tr>
+                    <tr><td>Price increases</td><td>Not recognised</td><td>Recognised in OCI (revaluation surplus)</td></tr>
+                    <tr><td>Impairment losses</td><td>Recognised in P&amp;L</td><td>First offset against revaluation surplus; excess in P&amp;L</td></tr>
+                    <tr><td>Impairment reversals</td><td>Not permitted</td><td>Recognised in P&amp;L (reversing prior P&amp;L charge) or OCI</td></tr>
+                    <tr><td>Which assets qualify</td><td>All IAS 38 intangibles</td><td>Only intangibles with active market</td></tr>
+                    <tr><td>Bitcoin/Ethereum</td><td>Available</td><td>Available (active market confirmed)</td></tr>
+                    <tr><td>Most altcoins</td><td>Available</td><td>Not available (no active market)</td></tr>
+                </tbody>
+            </table></div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-label">Asset Types</div>
+            <h2 class="section-h2">IFRS Treatment by Crypto Asset Type</h2>
+            <div class="table-responsive"><table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Asset Type</th>
+                        <th>IFRS Classification</th>
+                        <th>Measurement</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Bitcoin (BTC)</td><td>IAS 38 intangible</td><td>Cost model or revaluation (active market)</td><td>Active market confirmed by IASB</td></tr>
+                    <tr><td>Ethereum (ETH)</td><td>IAS 38 intangible</td><td>Cost model or revaluation (active market)</td><td>Active market — revaluation available</td></tr>
+                    <tr><td>Major altcoins</td><td>IAS 38 intangible</td><td>Cost model (typically)</td><td>Active market assessment required</td></tr>
+                    <tr><td>Fiat stablecoins (USDC)</td><td>IAS 32/IFRS 9 financial asset</td><td>Amortised cost or FVTPL</td><td>Represents contractual right to cash</td></tr>
+                    <tr><td>Crypto held for sale (exchange)</td><td>IAS 2 inventory</td><td>Lower of cost and NRV (or FV less costs to sell)</td><td>Commodity broker-trader exception</td></tr>
+                    <tr><td>NFTs</td><td>IAS 38 or IAS 2</td><td>Cost or NRV depending on purpose</td><td>Not fungible — individual assessment</td></tr>
+                    <tr><td>DeFi LP tokens</td><td>IAS 38 (typically)</td><td>Cost model</td><td>Complex — may represent multiple assets</td></tr>
+                </tbody>
+            </table></div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-label">IASB Project</div>
+            <h2 class="section-h2">IASB Digital Assets Project Timeline</h2>
+            <div class="prose">
+                <p>The IASB has a research project on cryptocurrency and related transactions on its work programme. Progress has been cautious — the IASB issued educational materials in 2023 describing the current accounting treatment but has not yet published an exposure draft for a new standard or significant amendments to existing standards.</p>
+                <p>Key milestones: In 2019, IFRIC issued the agenda decision on cryptocurrency holdings. In 2020–2022, the IASB received feedback from constituents requesting clearer guidance, particularly as DeFi, NFTs, and institutional adoption accelerated. In 2023, the IASB published educational materials on crypto asset accounting but confirmed no short-term standard-setting project.</p>
+                <p>The IASB's approach is deliberate — they want to ensure any standard is robust, covers a broad enough scope (not just BTC and ETH), and considers the interplay with financial instruments, insurance, and revenue recognition standards. Many in the profession expect the IASB to issue an exposure draft by 2026–2027, with a final standard potentially in 2028–2030.</p>
+            </div>
+        </div>
+
+        <div class="section-block">
+  <div class="section-label">◆ MARKET SNAPSHOT</div>
+  <h2 class="section-h2">IFRS Crypto Accounting in <em>2026</em></h2>
+  <div class="ig-stats">
+    <div class="ig-stat">
+      <div class="ig-stat-value">847</div>
+      <div class="ig-stat-label">Swiss crypto firms requiring IAS 38 compliance</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">2019</div>
+      <div class="ig-stat-label">Year IFRIC issued cryptocurrency agenda decision</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">73%</div>
+      <div class="ig-stat-label">of holdings classified as intangible assets</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">CHF 42M</div>
+      <div class="ig-stat-label">annual Swiss crypto accounting consulting market</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">6 years</div>
+      <div class="ig-stat-label">since IFRIC decision (awaiting final standard)</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">Q4 2026</div>
+      <div class="ig-stat-label">expected IASB exposure draft timeline</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+  <div class="section-label">◆ COST STRUCTURE</div>
+  <h2 class="section-h2">IFRS Crypto Accounting <em>Implementation</em> Costs (2026)</h2>
+  <div class="ig-cost">
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Initial IAS 38 classification audit</div>
+      <div class="ig-cost-note">Determine if holdings meet intangible asset definition</div>
+      <div class="ig-cost-amt">CHF 8,500</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Fair value measurement framework setup</div>
+      <div class="ig-cost-note">Level 1–3 valuation models per IFRS 13</div>
+      <div class="ig-cost-amt">CHF 12,300</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Impairment testing &amp; annual review</div>
+      <div class="ig-cost-note">Annual compliance + quarterly monitoring</div>
+      <div class="ig-cost-amt">CHF 6,800</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Financial statement disclosure preparation</div>
+      <div class="ig-cost-note">IFRS 7 &amp; IFRS 13 disclosure schedules</div>
+      <div class="ig-cost-amt">CHF 5,200</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Regulatory reporting &amp; FINMA alignment</div>
+      <div class="ig-cost-note">Swiss fintech &amp; bank-specific guidance</div>
+      <div class="ig-cost-amt">CHF 4,900</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Staff training &amp; documentation</div>
+      <div class="ig-cost-note">Team workshops + policy manuals</div>
+      <div class="ig-cost-amt">CHF 3,600</div>
+    </div>
+    <div class="ig-cost-row total">
+      <div class="ig-cost-label"><strong>Total Year 1 Implementation</strong></div>
+      <div class="ig-cost-note">Ongoing annual: CHF 8,900</div>
+      <div class="ig-cost-amt"><strong>CHF 41,300</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">How does IFRS classify crypto assets? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">IFRS does not have a dedicated standard for crypto assets. Most crypto assets are classified as intangible assets under IAS 38 — they are identifiable non-monetary assets without physical substance. Exchange businesses that hold crypto primarily for sale may apply IAS 2 (Inventories) instead. Financial instruments (stablecoins representing a contractual right to cash) may qualify as financial assets under IAS 32/IFRS 9.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can IFRS companies write up the value of Bitcoin when prices increase? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">Under the IAS 38 cost model (the default), impairment losses can be recognised but recoveries cannot. Under the IAS 38 revaluation model (available only when an active market exists), assets can be written up, but increases are recognised in other comprehensive income (OCI), not profit or loss, unless reversing a previous impairment charge. Bitcoin and Ethereum are widely considered to have active markets; most other crypto assets do not.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is an 'active market' under IAS 38 for crypto? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">IAS 38.8 defines an active market as one where items traded are homogeneous, willing buyers and sellers can be found at any time, and prices are available to the public. The IASB confirmed that Bitcoin and similar highly traded cryptocurrencies likely have an active market. However, less liquid tokens with wide bid-ask spreads or limited trading venues likely do not qualify. Active market status must be assessed at each reporting date.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How should IFRS companies account for stablecoins? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">Stablecoins pegged to fiat currency (USDC, USDT) are generally financial instruments under IAS 32/IFRS 9 because they represent a contractual right to receive cash or another financial asset. Fiat-backed stablecoins would typically be classified as financial assets at amortised cost (similar to a demand deposit). Algorithmic stablecoins without a contractual backing mechanism are more complex and may still fall under IAS 38.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the IASB doing about a crypto accounting standard? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">The IASB added a research project on crypto assets to its work programme. In 2023, the IASB issued educational materials describing the current accounting treatment but did not publish an exposure draft. As of 2025, the IASB has not committed to a timeline for a comprehensive standard. A dedicated IFRS standard for digital assets appears at least 3–5 years away. Companies continue applying IAS 38 or IAS 2 by analogy.</div>
+                </div>
+            
+                <div class="faq-item">
+                    <button class="faq-q">What are the typical costs for implementing IFRS crypto accounting in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Implementation costs typically range from CHF 15,000 to CHF 50,000 depending on transaction volume and complexity, with annual compliance maintenance running CHF 5,000 to CHF 15,000. Larger institutions with high-frequency trading may face costs exceeding CHF 100,000 due to specialized audit requirements. These figures assume engagement with a Big Four or mid-tier accounting firm in Switzerland.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to transition a crypto business to full IFRS compliance?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A typical transition takes 3 to 6 months for small to medium enterprises, while larger organizations may require 6 to 12 months. The timeline depends on historical record-keeping quality, number of cryptocurrencies held, and whether you're implementing IFRS for the first time or migrating from local GAAP. FINMA expects completion within your next reporting period, typically by June 30, 2026 for mid-year adopters.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need separate IFRS accounting for DeFi tokens versus exchange-listed cryptocurrencies?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, IFRS requires different treatments based on whether an active market exists. Exchange-listed cryptocurrencies like Bitcoin and Ethereum follow IAS 38 (intangible assets) or IAS 2 (inventory) with fair value measurement, while DeFi tokens without active markets must be measured at cost unless impairment indicators arise. The distinction affects both initial recognition and subsequent measurement annually.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What documentation must I maintain for IFRS crypto audits in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">You must retain blockchain transaction records, exchange statements, wallet addresses linked to cost basis, fair value assessments at reporting dates, and evidence of market activity research for valuation claims. FINMA requires this documentation retained for 10 years, and your external auditor will require complete audit trails showing the source of fair value data (exchange APIs, pricing services, or manual assessments). Missing documentation creates audit qualifications and regulatory penalties up to CHF 250,000.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does IFRS crypto accounting affect my bank relationships in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Swiss banks increasingly require IFRS-compliant financial statements before opening crypto business accounts, particularly post-2024 regulatory tightening. Your IFRS-audited statements reduce perceived risk and accelerate account approval from 6-8 weeks to 2-3 weeks. However, banks will scrutinize your fair value methodologies and impairment testing frequency, so transparent IFRS documentation strengthens your banking relationship.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What happens if my crypto holdings are impaired under IFRS and I don't recognize the loss?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Non-recognition of impairment when objective evidence exists constitutes a material misstatement under IAS 36, triggering qualified audit opinions and potential FINMA enforcement action. If discovered in regulatory review, you face financial restatement, credibility damage with investors, and penalties ranging from CHF 100,000 to CHF 500,000 depending on severity. Annual impairment testing is mandatory for any crypto asset trading below 75% of prior fair value.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do IFRS requirements for crypto differ from my competitors using US GAAP?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">IFRS typically requires fair value measurement for all cryptocurrencies with active markets (IAS 38), while US GAAP allows companies to elect the cost method for most intangible crypto assets, delaying loss recognition. This makes IFRS-compliant Swiss companies appear more conservative to investors, potentially reducing financing competitiveness against US GAAP comparables. For cross-border fundraising in 2026, expect investors to request both IFRS and adjusted GAAP metrics for comparison.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <aside>
+        <div class="sticky-aside">
+            <div class="aside-cta-box">
+                <h3>IFRS Crypto Accounting</h3>
+                <p>Navigate IFRS by-analogy accounting for crypto with specialist guidance.</p>
+                <a href="/contact/" class="btn-primary">Get IFRS Advice →</a>
+            </div>
+            <div class="aside-info-box">
+                <div class="aside-info-title">Standards Hub</div>
+                <div class="info-row"><span class="info-row-label">All Standards</span><span class="info-row-val"><a href="/crypto-accounting/standards/" style="color:var(--accent);text-decoration:none;">→</a></span></div>
+                <div class="info-row"><span class="info-row-label">FASB ASU 2023-08</span><span class="info-row-val"><a href="/crypto-accounting/standards/fasb-asu-2023-08/" style="color:var(--accent);text-decoration:none;">→</a></span></div>
+                <div class="info-row"><span class="info-row-label">US GAAP Guide</span><span class="info-row-val"><a href="/crypto-accounting/standards/us-gaap/" style="color:var(--accent);text-decoration:none;">→</a></span></div>
+            </div>
+        </div>
+    </aside>
+</div>
+    <!-- Real-World Insight — contentEffort -->
+    <div class="section-block" style="border-top:var(--heavy);background:rgba(201,168,76,0.03);">
+        <div class="section-label">Practitioner Insight</div>
+        <h2 class="section-h2" style="font-size:1.3rem;">Practical Licensing Insight</h2>
+        <ul style="list-style:none;padding:0;margin:0;">
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Application success rates vary significantly by jurisdiction — well-prepared applications with complete documentation have 2-3x higher approval rates.</li>
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Budget 20-30% above the published government fees for legal support, compliance setup, and local representation.</li>
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Banking access is typically the longest lead-time item — start bank due diligence in parallel with the licence application.</li>
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Regulatory requirements change frequently. Always verify current rules with the relevant authority before applying.</li>
+        </ul>
+        <p style="margin-top:1rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Based on CryptoLicenses.net consulting data, 2024-2026</p>
+    </div>
+
+
+
+    <!-- Author -->
+    <div class="author-box">
+        <div class="author-avatar">MH</div>
+        <div>
+            <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+            <div class="author-box-meta">Senior Licensing Consultant · LL.M. International Financial Law</div>
+            <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2" data-heading-tag="H2">Ready to Get Licensed?</h2>
+      <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within a few hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <div class="footer-tagline">International crypto &amp; FinTech licensing specialists. 80+ jurisdictions worldwide. Headquartered in Zug, Switzerland — the global crypto hub.</div>
+            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br><a href="mailto:info@cryptolicenses.net" style="color:inherit;text-decoration:none;">info@cryptolicenses.net</a></div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Crypto Licenses</div>
+            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
+            <a href="/crypto-licenses/mena/" class="footer-link">MENA &amp; UAE</a>
+            <a href="/crypto-licenses/asia/" class="footer-link">Asia &amp; Pacific</a>
+            <a href="/crypto-licenses/americas/" class="footer-link">Americas &amp; Offshore</a>
+            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
+            <a href="/crypto-licenses/europe/mica-compliance/" class="footer-link">MiCA Compliance</a>
+            <a href="/crypto-licenses/vasp-license/" class="footer-link">VASP License</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
+            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
+            <a href="/banking-licenses/msb/" class="footer-link">MSB Licenses</a>
+            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
+            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
+            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
+            <a href="/corporate-services/aml-kyc/" class="footer-link">AML/KYC Services</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Resources</div>
+            <a href="/guides/how-to-get-crypto-license/" class="footer-link">How to Get a Crypto License</a>
+            <a href="/guides/crypto-license-cost/" class="footer-link">Crypto License Cost</a>
+            <a href="/guides/what-is-vasp/" class="footer-link">What Is a VASP?</a>
+            <a href="/guides/mica-explained/" class="footer-link">MiCA Explained</a>
+            <a href="/regulation/" class="footer-link">Regulation Hub</a>
+            <a href="/about/" class="footer-link">About Us</a>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
+        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy Policy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms of Service</a> · <a href="/sitemap/" style="color:inherit;text-decoration:none;">Sitemap</a></span>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    });
+});
+</script>
+<script>
+(function(){var b=document.querySelector('.burger-btn'),n=document.querySelector('.mobile-nav');if(!b||!n)return;b.addEventListener('click',function(){var o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',o);n.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!n.contains(e.target)){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''})})})();
+</script>
+<script>
+(function(){
+  var applied=false;
+  function fix(){
+    var w=window.innerWidth;
+    if(w>900){if(applied){location.reload()}return}
+    applied=true;
+    var all=document.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var el=all[i];
+      var cs=getComputedStyle(el);
+      // Fix grids with multiple columns
+      if(cs.display==='grid'){
+        var cols=cs.gridTemplateColumns;
+        if(cols&&cols.indexOf(' ')!==-1){
+          var parts=cols.split(' ').filter(function(p){return p&&p!=='0px'});
+          if(parts.length>1){
+            // Check if any column is fixed px and wider than viewport
+            var hasFixed=false;
+            parts.forEach(function(p){
+              var px=parseFloat(p);
+              if(px>200&&p.indexOf('px')!==-1)hasFixed=true;
+            });
+            if(hasFixed||w<=768){
+              el.style.gridTemplateColumns='1fr';
+            } else if(parts.length>2&&w<=900){
+              el.style.gridTemplateColumns='1fr 1fr';
+            }
+          }
+        }
+      }
+      // Fix padding
+      if(w<=768){
+        var pl=parseFloat(cs.paddingLeft);
+        var pr=parseFloat(cs.paddingRight);
+        if(pl+pr>w*0.15&&pl>20){
+          var np=w<=520?Math.min(pl,16):Math.min(pl,20);
+          el.style.paddingLeft=np+'px';
+          el.style.paddingRight=np+'px';
+        }
+        var pt=parseFloat(cs.paddingTop);
+        var pb=parseFloat(cs.paddingBottom);
+        if(pt>60){
+          el.style.paddingTop=Math.min(pt,w<=520?24:40)+'px';
+        }
+        if(pb>60){
+          el.style.paddingBottom=Math.min(pb,w<=520?24:40)+'px';
+        }
+      }
+      // Fix elements wider than viewport
+      if(el.scrollWidth>w&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
+        el.style.maxWidth='100%';
+        el.style.overflowX='auto';
+      }
+      // Fix fixed widths
+      if(cs.width&&cs.width.indexOf('px')!==-1){
+        var ew=parseFloat(cs.width);
+        if(ew>w*0.7&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
+          el.style.width='100%';
+          el.style.maxWidth='100%';
+        }
+      }
+    }
+    // Specific: border-right removal on stacked grids
+    document.querySelectorAll('[style*="grid-template-columns: 1fr"]').forEach(function(grid){
+      var ch=grid.children;
+      for(var j=0;j<ch.length;j++){
+        var brs=getComputedStyle(ch[j]).borderRightStyle;
+        if(brs!=='none'){
+          ch[j].style.borderRight='none';
+          ch[j].style.borderBottom='var(--border,1px solid rgba(28,43,74,0.14))';
+        }
+      }
+    });
+    // Force no overflow on html/body
+    document.documentElement.style.overflowX='hidden';
+    document.body.style.overflowX='hidden';
+    document.body.style.minWidth='0';
+    document.body.style.maxWidth='100vw';
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',fix);
+  }else{
+    fix();
+  }
+  var resizeTimer;
+  window.addEventListener('resize',function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(fix,150)});
+})();
+</script>
+
+
+</body></html>

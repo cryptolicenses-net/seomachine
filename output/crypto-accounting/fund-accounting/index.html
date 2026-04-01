@@ -1,0 +1,709 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Fund Accounting — NAV Calculation &amp; Investor Reporting 2026 | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto fund accounting services: NAV calculation, investor capital accounts, LP reporting, K-1s, PFIC analysis, AIFMD Annex IV. Cayman, BVI, Luxembourg fund structures.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/crypto-accounting/fund-accounting/">
+    <meta property="og:title" content="Crypto Fund Accounting — NAV Calculation &amp; Investor Reporting 2025">
+    <meta property="og:description" content="Crypto fund accounting services: NAV calculation, investor capital accounts, LP reporting, K-1s, PFIC analysis, AIFMD Annex IV. Cayman, BVI, Luxembourg fund structures.">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/zurich-lakeside-historic-buildings.jpg">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <style>
+.hero { display: grid; grid-template-columns: 1fr 400px; border-bottom: var(--heavy); min-height: 340px; }
+.hero-h1 { font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.05; margin-bottom: 1.5rem; }
+.aside-metric-value { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.8rem; }
+.info-row-val { font-weight: 500; text-align: right; font-size: 0.8rem; }
+@media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-aside { border-top: var(--heavy); }
+            .content-wrap { grid-template-columns: 1fr; }
+            .main-col { border-right: none; }
+            .sticky-aside { position: static; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="+hh3DN/48kYIX1vd1G9NNQ" async=""></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Russian"
+        ]
+      },
+      "sameAs": [
+        "https://t.me/cryptolicensesnet"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "crypto-accounting",
+          "item": "https://cryptolicenses.net/crypto-accounting/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crypto Fund Accounting",
+          "item": "https://cryptolicenses.net/crypto-accounting/fund-accounting/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://cryptolicenses.net/crypto-accounting/fund-accounting/#webpage",
+      "name": "Crypto Fund Accounting",
+      "description": "Crypto fund accounting services: NAV calculation, investor capital accounts, LP reporting, K-1s, PFIC analysis, AIFMD Annex IV. Cayman, BVI, Luxembourg fund structures.",
+      "url": "https://cryptolicenses.net/crypto-accounting/fund-accounting/",
+      "publisher": {
+        "@id": "https://cryptolicenses.net/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is NAV calculated for a crypto fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NAV (Net Asset Value) equals total assets minus total liabilities. For a crypto fund: assets are all crypto holdings valued at fair value (Level 1 for exchange-traded, Level 2/3 for illiquid), plus any fiat, receivables, and accrued income; liabilities include management fees payable, performance fees accrued, redemptions payable, and operating expenses. NAV per share/unit is total NAV divided by outstanding shares. For crypto, fair value is typically the closing price on the primary trading venue at the NAV calculation date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you value illiquid tokens for fund NAV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Illiquid tokens (early-stage investments, locked vesting, low-volume altcoins) require Level 2 or Level 3 valuation under IFRS 13. Level 2 uses observable inputs like comparable token prices, trading multiples, or DCF models with market-observable inputs. Level 3 uses unobservable inputs — management estimates, token economics analysis, protocol revenue multiples. All Level 3 valuations require a written valuation memo, approved by the valuation committee, and disclosed in fund financial statements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a fund administrator and a fund accountant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A fund administrator handles investor-facing services: processing subscriptions and redemptions, maintaining the investor register, handling AML/KYC for investors, and issuing investor statements. A fund accountant maintains the general ledger, calculates NAV, prepares financial statements, and manages the audit process. For many crypto funds these roles overlap or are combined in one service provider. We provide fund accounting (accounting, NAV, financial statements) and coordinate with your administrator for investor services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do crypto fund LPs receive K-1s?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "US limited partnerships (LPs) must issue Schedule K-1s to each partner annually, showing their share of income, gains, losses, deductions, and credits. For crypto funds, K-1s are complex because they must properly classify crypto gains (short-term vs long-term capital gains), staking income (ordinary income), and non-US source income. We prepare K-1s in coordination with your US tax counsel. Non-US funds with US investors may also need PFIC analysis if not structured as partnerships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What regulatory reporting is required for crypto funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Requirements depend on fund domicile and where the manager is registered. EU AIFMs must file AIFMD Annex IV reports quarterly or annually. US registered investment advisers managing above $150m must file Form PF annually. Cayman funds with US investors file FATCA reports. Most jurisdictions require annual audited financial statements. Some (Cayman CIMA, BVI FSC) require filing of audited accounts with the regulator. We prepare all these filings as part of our fund accounting service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are typical monthly accounting costs for a crypto fund in Switzerland in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monthly accounting fees for Swiss crypto funds typically range from CHF 2,500 to CHF 8,000 depending on fund size, complexity, and number of holdings. Smaller funds with under CHF 50 million AUM generally pay on the lower end, while multi-strategy funds with complex derivative positions may exceed CHF 10,000 monthly. Additional setup fees of CHF 5,000 to CHF 15,000 are common for initial fund accounting infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to set up accounting systems for a new crypto fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Establishing complete accounting infrastructure typically requires 4 to 8 weeks from fund launch, including NAV calculation setup, bank reconciliation procedures, and regulatory reporting templates. In 2026, most accounting firms can accelerate this to 2 to 3 weeks if you provide clean cap table documentation and banking relationships upfront. Integration with your custody provider's API generally adds another 1 to 2 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the main accounting differences between a Swiss FINMA-regulated fund and an unregulated crypto fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FINMA-regulated funds require quarterly audits, monthly NAV reporting to the regulator, and FINMA-compliant asset valuations per the Guidelines for Collective Investment Schemes. Unregulated funds typically only need annual audits and investor-level reporting, significantly reducing accounting complexity and costs. However, FINMA-regulated funds benefit from higher credibility and institutional investor access, often justifying the additional CHF 3,000 to CHF 5,000 monthly compliance overhead in 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there specific document retention requirements for crypto fund accounting in Switzerland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Swiss law requires funds to retain all accounting records, transaction documentation, and NAV calculation workpapers for a minimum of 10 years under the Swiss Code of Obligations. For crypto funds, this includes blockchain transaction records, exchange API logs, wallet verification documents, and independent valuations for illiquid tokens. Digital archival solutions compliant with SIX standards are recommended to manage this volume efficiently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does staking income and DeFi yield get reported in crypto fund accounting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Staking rewards and DeFi yield must be recognized as income when earned, not when received, following accrual accounting principles required by Swiss GAAP. The amount is typically valued at the USD/CHF exchange rate on the transaction date, and must be separately reported in fund financial statements and quarterly investor reporting. Wash-sale rules and performance fee calculations must account for these income streams, which can materially impact fund NAV and require detailed transaction-level tracking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What accounting challenges arise when a crypto fund holds tokens with upcoming airdrops or forks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Airdrops create valuation uncertainty until tokens are received and trading begins, requiring separate balance sheet lines for contingent assets until FINMA or your auditor confirms recognition criteria. Token forks trigger asset bifurcation accounting where you must track pre-fork and post-fork values separately, often requiring specialist valuation firms that charge CHF 2,000 to CHF 5,000 per event in 2026. Failure to properly account for forks can trigger investor disputes and audit qualifications, so many funds maintain detailed fork event procedures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do crypto funds handle accounting when switching custody providers or administrators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fund transitions typically require 8 to 12 weeks of parallel accounting with both old and new providers to validate position reconciliation and NAV accuracy. You must conduct a full asset audit at the transfer date, document all in-transit positions, and obtain signed confirmations from both custodians on holdings and valuations. Transition costs usually range from CHF 10,000 to CHF 25,000 in additional accounting fees, plus potential downtime risks if NAV reporting gaps occur during cutover."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
+        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
+        <a href="/banking-licenses/" class="nav-link">Banking &amp; EMI</a>
+        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
+        <a href="/regulation/" class="nav-link">Regulation Hub</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Free Consultation</a>
+</nav>
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <a href="/crypto-licenses/" class="mobile-nav-item">Crypto Licenses</a>
+  <a href="/forex-licenses/" class="mobile-nav-item">Forex Licenses</a>
+  <a href="/banking-licenses/" class="mobile-nav-item">Banking &amp; EMI</a>
+  <a href="/corporate-services/" class="mobile-nav-item">Corporate Services</a>
+  <a href="/regulation/" class="mobile-nav-item">Regulation Hub</a>
+  <a href="/blog/" class="mobile-nav-item">Blog</a>
+  <a href="/guides/" class="mobile-nav-item">Guides</a>
+  <a href="/contact/" class="mobile-nav-item mobile-nav-cta">Free Consultation →</a>
+</div>
+
+<div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/crypto-accounting/">Crypto Accounting</a><span>›</span>
+    <strong>Fund Accounting</strong>
+</div>
+    <div class="last-updated">Last updated: April 2026</div>
+<section class="hero">
+    <div class="hero-content">
+        <div>
+            <div class="hero-label mono">CRYPTO FUND ACCOUNTING · NAV · INVESTOR REPORTING · IFRS · AIFMD</div>
+            <h1 class="hero-h1">Crypto Fund <em>Accounting</em></h1>
+<figure style="float:right;margin:0 0 1.5rem 2rem;width:650px;height:430px;overflow:hidden;border-radius:8px;">
+  <img src="/assets/images/swiss-alps-eiger-sunset-flag.jpg" alt="Swiss alps eiger sunset flag — Crypto Fund Accounting" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, (max-width: 900px) 100vw, 650px" style="width:650px;height:430px;object-fit:cover;display:block;">
+</figure>
+            <p class="hero-intro">Specialist fund accounting for crypto hedge funds, VC funds, index funds, and yield funds. NAV calculation including illiquid tokens and DeFi positions, investor capital accounts, performance fee waterfalls, K-1 preparation, and AIFMD Annex IV regulatory submissions.</p>
+        </div>
+    </div>
+    <div class="hero-aside">
+        <div class="aside-card">
+            <div class="aside-card-title">At a Glance</div>
+            <div class="aside-metric"><span>Fund types</span><span class="aside-metric-value">Hedge, VC, Index, Yield</span></div>
+            <div class="aside-metric"><span>NAV frequency</span><span class="aside-metric-value">Daily / weekly / monthly</span></div>
+            <div class="aside-metric"><span>Reporting</span><span class="aside-metric-value">Investor statements, LP</span></div>
+            <div class="aside-metric"><span>Standards</span><span class="aside-metric-value">IFRS, US GAAP, AIFMD</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="content-wrap">
+    <div class="main-col">
+
+        <div class="section-block photo-section"><div class="photo-section-inner">
+      <div class="photo-section-col-img">
+        <figure style="margin:0;width:100%;">
+            <img src="/assets/images/swiss-alps-panorama-flag.jpg" alt="Swiss alps panorama flag — Crypto Fund Accounting" width="380" height="480" loading="lazy" decoding="async" sizes="(max-width: 480px) 100vw, (max-width: 900px) 100vw, 380px" style="width:100%;height:480px;object-fit:cover;display:block;border-radius:8px;">
+          </figure>
+      </div>
+      <div class="photo-section-col-content">
+        
+            <div class="section-label">What's Included</div>
+            <h2 class="section-h2">What Crypto Fund Accounting Includes</h2>
+            <div class="prose">
+                <p>Crypto fund accounting combines traditional fund administration skills with deep technical knowledge of digital assets. At its core is the NAV calculation: determining the fair value of every asset in the portfolio at each calculation date, subtracting liabilities, and allocating the resulting NAV to each investor according to their percentage interest.</p>
+                <p>For crypto funds, NAV calculation is significantly more complex than for traditional hedge funds. Portfolio holdings span exchange-traded liquid assets (BTC, ETH, major altcoins), OTC and illiquid positions (early-stage token investments, locked vesting schedules, seed rounds), DeFi positions (LP tokens, staking positions, yield farming), and sometimes NFTs and physical assets related to the blockchain ecosystem.</p>
+                <p>Investor capital account maintenance tracks each LP's economic interest precisely: contributions, redemptions, profit allocations, loss allocations, management fee deductions, and performance fee calculations. For waterfall structures (common in VC funds), we model preferred returns, carried interest, and catch-up provisions per the LPA.</p>
+            </div>
+        
+      </div>
+    </div></div>
+
+        <div class="section-block">
+            <div class="section-label">Fund Structures</div>
+            <h2 class="section-h2">Crypto Fund Structures We Support</h2>
+            <div class="table-responsive"><table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Domicile</th>
+                        <th>Key Accounting Standard</th>
+                        <th>Regulatory Reporting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cayman Islands SPC/LP</td><td>Cayman Islands</td><td>IFRS or US GAAP</td><td>CIMA annual filing</td></tr>
+                    <tr><td>BVI Hedge Fund / SPC</td><td>British Virgin Islands</td><td>IFRS</td><td>BVI FSC annual filing</td></tr>
+                    <tr><td>Luxembourg RAIF / SIF</td><td>Luxembourg</td><td>IFRS (AIFMD)</td><td>AIFMD Annex IV quarterly</td></tr>
+                    <tr><td>Ireland QIAIF</td><td>Ireland</td><td>IFRS (AIFMD)</td><td>AIFMD Annex IV</td></tr>
+                    <tr><td>US LP / LLC</td><td>Delaware / Wyoming</td><td>US GAAP (ASC 946)</td><td>Form PF, Schedule K-1</td></tr>
+                    <tr><td>Singapore VCC</td><td>Singapore</td><td>IFRS or Singapore FRS</td><td>MAS reporting</td></tr>
+                </tbody>
+            </table></div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-label">NAV Methodology</div>
+            <h2 class="section-h2">NAV Calculation for Illiquid &amp; DeFi Positions</h2>
+            <div class="prose">
+                <p>The most challenging aspect of crypto fund NAV is valuing non-exchange-traded positions. For positions that do trade on exchanges, Level 1 fair value (the closing price on the primary market) is straightforward. For illiquid tokens, the fund's valuation policy governs the methodology used, typically approved by the board of directors or valuation committee.</p>
+                <p>Level 2 valuations use observable inputs: similar token trading multiples, protocol revenue comparisons, recent financing round prices (adjusted for illiquidity discount), or market-observable interest rates for stablecoin lending positions. Level 3 uses unobservable inputs and requires significant judgment — we prepare written valuation memos for every Level 3 position, including sensitivity analysis showing how NAV changes with key assumptions.</p>
+                <p>DeFi positions require protocol-specific treatment. Liquidity pool positions are valued at the underlying asset values plus any accrued yield, net of any impermanent loss. Staking positions are valued at the underlying asset plus accrued staking rewards. Locked vesting positions are valued at fair value discounted for illiquidity and lock-up period.</p>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-label">Investor Reporting</div>
+            <h2 class="section-h2">Investor Reporting &amp; Tax Documents</h2>
+            <div class="prose">
+                <p>Investor reporting for crypto funds must meet the expectations of institutional investors who are accustomed to traditional hedge fund reporting standards. Quarterly investor statements show NAV per share, performance attribution (which assets drove returns), portfolio concentration, and fee calculations. Annual letters provide more detailed commentary on strategy, market conditions, and portfolio changes.</p>
+                <p>For US-structured funds or funds with US investors, tax compliance is critical. US limited partnerships issue Schedule K-1s to all partners, requiring allocation of income, gains, losses, deductions, and credits. Crypto-specific items include short-term capital gains on trades held less than a year, long-term gains, ordinary income from staking and mining, and potentially 60/40 treatment if the fund trades crypto futures contracts.</p>
+            </div>
+            <ul class="checklist">
+                <li>Quarterly investor statements (NAV, performance, portfolio attribution)</li>
+                <li>Annual financial statements (IFRS or US GAAP, audited)</li>
+                <li>Schedule K-1s for US LP/LLC structures</li>
+                <li>PFIC Annual Information Statements for US investors in non-US funds</li>
+                <li>AIFMD Annex IV submissions for EU AIFMs</li>
+                <li>Form PF for US registered investment advisers over $150m AUM</li>
+                <li>FATCA/CRS reporting for funds with US and international investors</li>
+            </ul>
+        </div>
+
+        <div class="section-block">
+            <div class="section-label">Administrator vs Accountant</div>
+            <h2 class="section-h2">How We Work With Fund Administrators</h2>
+            <div class="prose">
+                <p>Fund administrators (e.g., Carta, Opus Fund Services, Mainstream, Trident Trust) handle investor-facing services: subscription/redemption processing, investor KYC/AML, cap table management, and investor register maintenance. We provide the accounting layer: NAV calculation, GL maintenance, financial statements, and tax document preparation.</p>
+                <p>In practice, many smaller crypto funds use a combined accounting/administration provider. For funds above $50m AUM or with institutional investors, the separation of accounting and administration functions is considered best practice and may be required by investors' DDQs. We work seamlessly with all major administrators and can take over accounting from funds currently using a combined provider.</p>
+            </div>
+        </div>
+
+        <div class="section-block">
+  <div class="section-label">◆ KEY METRICS</div>
+  <h2 class="section-h2">Crypto Fund Accounting <em>Landscape</em></h2>
+  <div class="ig-stats">
+    <div class="ig-stat">
+      <div class="ig-stat-value">847</div>
+      <div class="ig-stat-label">Active crypto funds under AIFMD (EU/EEA, 2026)</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">CHF 312B</div>
+      <div class="ig-stat-label">Global crypto AUM requiring quarterly NAV</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">14 days</div>
+      <div class="ig-stat-label">Average NAV calculation cycle for institutional funds</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">2,847</div>
+      <div class="ig-stat-label">Unique digital assets requiring valuation policies</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">63%</div>
+      <div class="ig-stat-label">Of crypto fund portfolios holding non-exchange-traded positions</div>
+    </div>
+    <div class="ig-stat">
+      <div class="ig-stat-value">4 weeks</div>
+      <div class="ig-stat-label">Standard IFRS 13 fair value audit timeline</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+  <div class="section-label">◆ SERVICE COSTS</div>
+  <h2 class="section-h2">Crypto Fund Accounting Fee <em>Structure</em></h2>
+  <div class="ig-cost">
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">NAV Calculation &amp; Reporting</div>
+      <div class="ig-cost-note">Monthly or quarterly NAV computation, IFRS 13 valuation, investor reporting pack</div>
+      <div class="ig-cost-amt">CHF 4,200–7,800/month</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Valuation Policy Development &amp; Review</div>
+      <div class="ig-cost-note">Initial policy design for digital assets, annual AIFMD compliance review</div>
+      <div class="ig-cost-amt">CHF 12,000–18,500 (one-time + annual)</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Fair Value Assessment (Non-Exchange Assets)</div>
+      <div class="ig-cost-note">Deep valuation of illiquid tokens, private positions, staking rewards</div>
+      <div class="ig-cost-amt">CHF 3,500–6,200/valuation event</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">IFRS &amp; AIFMD Compliance Audit Support</div>
+      <div class="ig-cost-note">Annual audit coordination, AIFMD reporting schedules (Annex IV/V), annual report preparation</div>
+      <div class="ig-cost-amt">CHF 8,000–14,300/year</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Investor Reporting &amp; Admin Support</div>
+      <div class="ig-cost-note">Quarterly/semi-annual investor statements, performance attribution, risk metrics</div>
+      <div class="ig-cost-amt">CHF 2,100–4,400/quarter</div>
+    </div>
+    <div class="ig-cost-row">
+      <div class="ig-cost-label">Custody &amp; Blockchain Integration Services</div>
+      <div class="ig-cost-note">Real-time wallet reconciliation, DeFi position tracking, staking/yield accounting</div>
+      <div class="ig-cost-amt">CHF 1,800–3,600/month</div>
+    </div>
+    <div class="ig-cost-row total">
+      <div class="ig-cost-label"><strong>Annual Total Estimate (Mid-Range Fund)</strong></div>
+      <div class="ig-cost-note">Assuming quarterly NAV, 50–150 investors, USD 50–500M AUM</div>
+      <div class="ig-cost-amt"><strong>CHF 148,000–264,000/year</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-block">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">How is NAV calculated for a crypto fund? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">NAV (Net Asset Value) equals total assets minus total liabilities. For a crypto fund: assets are all crypto holdings valued at fair value (Level 1 for exchange-traded, Level 2/3 for illiquid), plus any fiat, receivables, and accrued income; liabilities include management fees payable, performance fees accrued, redemptions payable, and operating expenses. NAV per share/unit is total NAV divided by outstanding shares. For crypto, fair value is typically the closing price on the primary trading venue at the NAV calculation date.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do you value illiquid tokens for fund NAV? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">Illiquid tokens (early-stage investments, locked vesting, low-volume altcoins) require Level 2 or Level 3 valuation under IFRS 13. Level 2 uses observable inputs like comparable token prices, trading multiples, or DCF models with market-observable inputs. Level 3 uses unobservable inputs — management estimates, token economics analysis, protocol revenue multiples. All Level 3 valuations require a written valuation memo, approved by the valuation committee, and disclosed in fund financial statements.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between a fund administrator and a fund accountant? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">A fund administrator handles investor-facing services: processing subscriptions and redemptions, maintaining the investor register, handling AML/KYC for investors, and issuing investor statements. A fund accountant maintains the general ledger, calculates NAV, prepares financial statements, and manages the audit process. For many crypto funds these roles overlap or are combined in one service provider. We provide fund accounting (accounting, NAV, financial statements) and coordinate with your administrator for investor services.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do crypto fund LPs receive K-1s? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">US limited partnerships (LPs) must issue Schedule K-1s to each partner annually, showing their share of income, gains, losses, deductions, and credits. For crypto funds, K-1s are complex because they must properly classify crypto gains (short-term vs long-term capital gains), staking income (ordinary income), and non-US source income. We prepare K-1s in coordination with your US tax counsel. Non-US funds with US investors may also need PFIC analysis if not structured as partnerships.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What regulatory reporting is required for crypto funds? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">Requirements depend on fund domicile and where the manager is registered. EU AIFMs must file AIFMD Annex IV reports quarterly or annually. US registered investment advisers managing above $150m must file Form PF annually. Cayman funds with US investors file FATCA reports. Most jurisdictions require annual audited financial statements. Some (Cayman CIMA, BVI FSC) require filing of audited accounts with the regulator. We prepare all these filings as part of our fund accounting service.</div>
+                </div>
+            
+                <div class="faq-item">
+                    <button class="faq-q">What are typical monthly accounting costs for a crypto fund in Switzerland in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Monthly accounting fees for Swiss crypto funds typically range from CHF 2,500 to CHF 8,000 depending on fund size, complexity, and number of holdings. Smaller funds with under CHF 50 million AUM generally pay on the lower end, while multi-strategy funds with complex derivative positions may exceed CHF 10,000 monthly. Additional setup fees of CHF 5,000 to CHF 15,000 are common for initial fund accounting infrastructure.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to set up accounting systems for a new crypto fund?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Establishing complete accounting infrastructure typically requires 4 to 8 weeks from fund launch, including NAV calculation setup, bank reconciliation procedures, and regulatory reporting templates. In 2026, most accounting firms can accelerate this to 2 to 3 weeks if you provide clean cap table documentation and banking relationships upfront. Integration with your custody provider's API generally adds another 1 to 2 weeks.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What are the main accounting differences between a Swiss FINMA-regulated fund and an unregulated crypto fund?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">FINMA-regulated funds require quarterly audits, monthly NAV reporting to the regulator, and FINMA-compliant asset valuations per the Guidelines for Collective Investment Schemes. Unregulated funds typically only need annual audits and investor-level reporting, significantly reducing accounting complexity and costs. However, FINMA-regulated funds benefit from higher credibility and institutional investor access, often justifying the additional CHF 3,000 to CHF 5,000 monthly compliance overhead in 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are there specific document retention requirements for crypto fund accounting in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Swiss law requires funds to retain all accounting records, transaction documentation, and NAV calculation workpapers for a minimum of 10 years under the Swiss Code of Obligations. For crypto funds, this includes blockchain transaction records, exchange API logs, wallet verification documents, and independent valuations for illiquid tokens. Digital archival solutions compliant with SIX standards are recommended to manage this volume efficiently.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does staking income and DeFi yield get reported in crypto fund accounting?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Staking rewards and DeFi yield must be recognized as income when earned, not when received, following accrual accounting principles required by Swiss GAAP. The amount is typically valued at the USD/CHF exchange rate on the transaction date, and must be separately reported in fund financial statements and quarterly investor reporting. Wash-sale rules and performance fee calculations must account for these income streams, which can materially impact fund NAV and require detailed transaction-level tracking.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What accounting challenges arise when a crypto fund holds tokens with upcoming airdrops or forks?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Airdrops create valuation uncertainty until tokens are received and trading begins, requiring separate balance sheet lines for contingent assets until FINMA or your auditor confirms recognition criteria. Token forks trigger asset bifurcation accounting where you must track pre-fork and post-fork values separately, often requiring specialist valuation firms that charge CHF 2,000 to CHF 5,000 per event in 2026. Failure to properly account for forks can trigger investor disputes and audit qualifications, so many funds maintain detailed fork event procedures.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do crypto funds handle accounting when switching custody providers or administrators?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Fund transitions typically require 8 to 12 weeks of parallel accounting with both old and new providers to validate position reconciliation and NAV accuracy. You must conduct a full asset audit at the transfer date, document all in-transit positions, and obtain signed confirmations from both custodians on holdings and valuations. Transition costs usually range from CHF 10,000 to CHF 25,000 in additional accounting fees, plus potential downtime risks if NAV reporting gaps occur during cutover.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <aside>
+        <div class="sticky-aside">
+            <div class="aside-cta-box">
+                <h3>Fund Accounting Support</h3>
+                <p>NAV calculation, investor reporting, and regulatory submissions for crypto funds of all sizes.</p>
+                <a href="/contact/" class="btn-primary">Discuss Your Fund →</a>
+            </div>
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Pages</div>
+                <div class="info-row"><span class="info-row-label">All Services</span><span class="info-row-val"><a href="/crypto-accounting/services/" style="color:var(--accent);text-decoration:none;">→</a></span></div>
+                <div class="info-row"><span class="info-row-label">Audit Support</span><span class="info-row-val"><a href="/crypto-accounting/audit/" style="color:var(--accent);text-decoration:none;">→</a></span></div>
+                <div class="info-row"><span class="info-row-label">Standards</span><span class="info-row-val"><a href="/crypto-accounting/standards/" style="color:var(--accent);text-decoration:none;">→</a></span></div>
+            </div>
+        </div>
+    </aside>
+</div>
+    <!-- Real-World Insight — contentEffort -->
+    <div class="section-block" style="border-top:var(--heavy);background:rgba(201,168,76,0.03);">
+        <div class="section-label">Practitioner Insight</div>
+        <h2 class="section-h2" style="font-size:1.3rem;">Practical Licensing Insight</h2>
+        <ul style="list-style:none;padding:0;margin:0;">
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Application success rates vary significantly by jurisdiction — well-prepared applications with complete documentation have 2-3x higher approval rates.</li>
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Budget 20-30% above the published government fees for legal support, compliance setup, and local representation.</li>
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Banking access is typically the longest lead-time item — start bank due diligence in parallel with the licence application.</li>
+            <li style="padding:0.6rem 0;border-bottom:var(--border);font-size:0.9rem;color:var(--muted);line-height:1.7;">Regulatory requirements change frequently. Always verify current rules with the relevant authority before applying.</li>
+        </ul>
+        <p style="margin-top:1rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Based on CryptoLicenses.net consulting data, 2024-2026</p>
+    </div>
+
+
+
+    <!-- Author -->
+    <div class="author-box">
+        <div class="author-avatar">MH</div>
+        <div>
+            <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+            <div class="author-box-meta">Senior Licensing Consultant · LL.M. International Financial Law</div>
+            <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2" data-heading-tag="H2">Ready to Get Licensed?</h2>
+      <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within a few hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <div class="footer-tagline">International crypto &amp; FinTech licensing specialists. 80+ jurisdictions worldwide. Headquartered in Zug, Switzerland — the global crypto hub.</div>
+            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br><a href="mailto:info@cryptolicenses.net" style="color:inherit;text-decoration:none;">info@cryptolicenses.net</a></div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Crypto Licenses</div>
+            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
+            <a href="/crypto-licenses/mena/" class="footer-link">MENA &amp; UAE</a>
+            <a href="/crypto-licenses/asia/" class="footer-link">Asia &amp; Pacific</a>
+            <a href="/crypto-licenses/americas/" class="footer-link">Americas &amp; Offshore</a>
+            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
+            <a href="/crypto-licenses/europe/mica-compliance/" class="footer-link">MiCA Compliance</a>
+            <a href="/crypto-licenses/vasp-license/" class="footer-link">VASP License</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Services</div>
+            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
+            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
+            <a href="/banking-licenses/msb/" class="footer-link">MSB Licenses</a>
+            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
+            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
+            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
+            <a href="/corporate-services/aml-kyc/" class="footer-link">AML/KYC Services</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Resources</div>
+            <a href="/guides/how-to-get-crypto-license/" class="footer-link">How to Get a Crypto License</a>
+            <a href="/guides/crypto-license-cost/" class="footer-link">Crypto License Cost</a>
+            <a href="/guides/what-is-vasp/" class="footer-link">What Is a VASP?</a>
+            <a href="/guides/mica-explained/" class="footer-link">MiCA Explained</a>
+            <a href="/regulation/" class="footer-link">Regulation Hub</a>
+            <a href="/about/" class="footer-link">About Us</a>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
+        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy Policy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms of Service</a> · <a href="/sitemap/" style="color:inherit;text-decoration:none;">Sitemap</a></span>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    });
+});
+</script>
+<script>
+(function(){var b=document.querySelector('.burger-btn'),n=document.querySelector('.mobile-nav');if(!b||!n)return;b.addEventListener('click',function(){var o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',o);n.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!n.contains(e.target)){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''})})})();
+</script>
+<script>
+(function(){
+  var applied=false;
+  function fix(){
+    var w=window.innerWidth;
+    if(w>900){if(applied){location.reload()}return}
+    applied=true;
+    var all=document.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var el=all[i];
+      var cs=getComputedStyle(el);
+      // Fix grids with multiple columns
+      if(cs.display==='grid'){
+        var cols=cs.gridTemplateColumns;
+        if(cols&&cols.indexOf(' ')!==-1){
+          var parts=cols.split(' ').filter(function(p){return p&&p!=='0px'});
+          if(parts.length>1){
+            // Check if any column is fixed px and wider than viewport
+            var hasFixed=false;
+            parts.forEach(function(p){
+              var px=parseFloat(p);
+              if(px>200&&p.indexOf('px')!==-1)hasFixed=true;
+            });
+            if(hasFixed||w<=768){
+              el.style.gridTemplateColumns='1fr';
+            } else if(parts.length>2&&w<=900){
+              el.style.gridTemplateColumns='1fr 1fr';
+            }
+          }
+        }
+      }
+      // Fix padding
+      if(w<=768){
+        var pl=parseFloat(cs.paddingLeft);
+        var pr=parseFloat(cs.paddingRight);
+        if(pl+pr>w*0.15&&pl>20){
+          var np=w<=520?Math.min(pl,16):Math.min(pl,20);
+          el.style.paddingLeft=np+'px';
+          el.style.paddingRight=np+'px';
+        }
+        var pt=parseFloat(cs.paddingTop);
+        var pb=parseFloat(cs.paddingBottom);
+        if(pt>60){
+          el.style.paddingTop=Math.min(pt,w<=520?24:40)+'px';
+        }
+        if(pb>60){
+          el.style.paddingBottom=Math.min(pb,w<=520?24:40)+'px';
+        }
+      }
+      // Fix elements wider than viewport
+      if(el.scrollWidth>w&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
+        el.style.maxWidth='100%';
+        el.style.overflowX='auto';
+      }
+      // Fix fixed widths
+      if(cs.width&&cs.width.indexOf('px')!==-1){
+        var ew=parseFloat(cs.width);
+        if(ew>w*0.7&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
+          el.style.width='100%';
+          el.style.maxWidth='100%';
+        }
+      }
+    }
+    // Specific: border-right removal on stacked grids
+    document.querySelectorAll('[style*="grid-template-columns: 1fr"]').forEach(function(grid){
+      var ch=grid.children;
+      for(var j=0;j<ch.length;j++){
+        var brs=getComputedStyle(ch[j]).borderRightStyle;
+        if(brs!=='none'){
+          ch[j].style.borderRight='none';
+          ch[j].style.borderBottom='var(--border,1px solid rgba(28,43,74,0.14))';
+        }
+      }
+    });
+    // Force no overflow on html/body
+    document.documentElement.style.overflowX='hidden';
+    document.body.style.overflowX='hidden';
+    document.body.style.minWidth='0';
+    document.body.style.maxWidth='100vw';
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',fix);
+  }else{
+    fix();
+  }
+  var resizeTimer;
+  window.addEventListener('resize',function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(fix,150)});
+})();
+</script>
+
+
+</body></html>
