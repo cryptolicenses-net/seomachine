@@ -1,0 +1,278 @@
+{
+  "schedule": [
+    {
+      "date": "2026-03-29",
+      "slug": "crypto-license-cost",
+      "title": "How Much Does a Crypto License Cost in 2026?",
+      "status": "published"
+    },
+    {
+      "date": "2026-04-05",
+      "slug": "what-is-crypto-license",
+      "title": "What Is a Crypto License? Complete Guide 2026",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-12",
+      "slug": "what-is-vasp",
+      "title": "What Is a VASP? Virtual Asset Service Provider Explained",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-19",
+      "slug": "mica-explained",
+      "title": "MiCA Regulation Explained: EU Crypto Framework 2026",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-26",
+      "slug": "aml-kyc-explained",
+      "title": "AML & KYC for Crypto: Complete Compliance Guide",
+      "status": "pending"
+    },
+    {
+      "date": "2026-05-03",
+      "slug": "no-kyc-exchanges-risks",
+      "title": "No-KYC Crypto Exchanges: Legal Risks & Consequences",
+      "status": "pending"
+    },
+    {
+      "date": "2026-05-10",
+      "slug": "stablecoin-regulation",
+      "title": "Stablecoin Regulation: Global Framework 2026",
+      "status": "pending"
+    },
+    {
+      "date": "2026-05-17",
+      "slug": "crypto-broker-license",
+      "title": "How to Get a Crypto Broker License in 2026",
+      "status": "pending"
+    },
+    {
+      "date": "2026-05-24",
+      "slug": "fastest-crypto-licenses",
+      "title": "Fastest Crypto Licenses: Get Licensed in Weeks",
+      "status": "pending"
+    },
+    {
+      "date": "2026-05-31",
+      "slug": "cheapest-crypto-licenses",
+      "title": "Cheapest Crypto Licenses: Budget-Friendly Jurisdictions",
+      "status": "pending"
+    },
+    {
+      "date": "2026-06-07",
+      "slug": "start-crypto-business",
+      "title": "How to Start a Crypto Business: Step-by-Step Guide",
+      "status": "pending"
+    },
+    {
+      "date": "2026-06-14",
+      "slug": "what-is-crypto-regulation",
+      "title": "What Is Crypto Regulation? Global Overview 2026",
+      "status": "pending"
+    }
+  ],
+  "interlinking": {
+    "guide_links": {
+      "crypto-license-cost": {
+        "related_guides": [
+          "what-is-crypto-license",
+          "cheapest-crypto-licenses",
+          "fastest-crypto-licenses"
+        ],
+        "related_pages": [
+          "/crypto-licenses/",
+          "/crypto-licenses/europe/",
+          "/contact/"
+        ],
+        "keywords_to_anchor": {
+          "crypto license cost": "/guides/crypto-license-cost/",
+          "how much does a crypto license cost": "/guides/crypto-license-cost/",
+          "licensing fees": "/guides/crypto-license-cost/"
+        }
+      },
+      "what-is-crypto-license": {
+        "related_guides": [
+          "crypto-license-cost",
+          "what-is-vasp",
+          "start-crypto-business"
+        ],
+        "related_pages": [
+          "/crypto-licenses/",
+          "/crypto-licenses/europe/",
+          "/regulation/"
+        ],
+        "keywords_to_anchor": {
+          "what is a crypto license": "/guides/what-is-crypto-license/",
+          "crypto license definition": "/guides/what-is-crypto-license/",
+          "cryptocurrency license": "/guides/what-is-crypto-license/"
+        }
+      },
+      "what-is-vasp": {
+        "related_guides": [
+          "what-is-crypto-license",
+          "aml-kyc-explained",
+          "mica-explained"
+        ],
+        "related_pages": [
+          "/crypto-licenses/vasp-license/",
+          "/regulation/eu/",
+          "/crypto-licenses/"
+        ],
+        "keywords_to_anchor": {
+          "what is a VASP": "/guides/what-is-vasp/",
+          "virtual asset service provider": "/guides/what-is-vasp/",
+          "VASP registration": "/guides/what-is-vasp/"
+        }
+      },
+      "mica-explained": {
+        "related_guides": [
+          "what-is-crypto-license",
+          "what-is-vasp",
+          "stablecoin-regulation"
+        ],
+        "related_pages": [
+          "/crypto-licenses/europe/mica-compliance/",
+          "/regulation/eu/",
+          "/crypto-licenses/europe/"
+        ],
+        "keywords_to_anchor": {
+          "MiCA regulation": "/guides/mica-explained/",
+          "MiCA compliance": "/guides/mica-explained/",
+          "Markets in Crypto-Assets": "/guides/mica-explained/"
+        }
+      },
+      "aml-kyc-explained": {
+        "related_guides": [
+          "what-is-vasp",
+          "no-kyc-exchanges-risks",
+          "what-is-crypto-license"
+        ],
+        "related_pages": [
+          "/corporate-services/aml-kyc/",
+          "/corporate-services/compliance/",
+          "/crypto-licenses/"
+        ],
+        "keywords_to_anchor": {
+          "AML KYC requirements": "/guides/aml-kyc-explained/",
+          "anti-money laundering": "/guides/aml-kyc-explained/",
+          "KYC compliance": "/guides/aml-kyc-explained/"
+        }
+      },
+      "no-kyc-exchanges-risks": {
+        "related_guides": [
+          "aml-kyc-explained",
+          "what-is-crypto-regulation",
+          "what-is-vasp"
+        ],
+        "related_pages": [
+          "/regulation/",
+          "/corporate-services/compliance/",
+          "/crypto-licenses/"
+        ],
+        "keywords_to_anchor": {
+          "no-KYC exchange risks": "/guides/no-kyc-exchanges-risks/",
+          "unregulated exchange": "/guides/no-kyc-exchanges-risks/"
+        }
+      },
+      "stablecoin-regulation": {
+        "related_guides": [
+          "mica-explained",
+          "what-is-crypto-regulation",
+          "what-is-crypto-license"
+        ],
+        "related_pages": [
+          "/regulation/eu/",
+          "/regulation/usa/",
+          "/regulation/uk/"
+        ],
+        "keywords_to_anchor": {
+          "stablecoin regulation": "/guides/stablecoin-regulation/",
+          "stablecoin licensing": "/guides/stablecoin-regulation/"
+        }
+      },
+      "crypto-broker-license": {
+        "related_guides": [
+          "crypto-license-cost",
+          "fastest-crypto-licenses",
+          "what-is-crypto-license"
+        ],
+        "related_pages": [
+          "/forex-licenses/crypto-brokerage/",
+          "/forex-licenses/",
+          "/crypto-licenses/"
+        ],
+        "keywords_to_anchor": {
+          "crypto broker license": "/guides/crypto-broker-license/",
+          "broker licensing": "/guides/crypto-broker-license/"
+        }
+      },
+      "fastest-crypto-licenses": {
+        "related_guides": [
+          "cheapest-crypto-licenses",
+          "crypto-license-cost",
+          "start-crypto-business"
+        ],
+        "related_pages": [
+          "/crypto-licenses/europe/lithuania/",
+          "/crypto-licenses/europe/poland/",
+          "/crypto-licenses/europe/czech-republic/"
+        ],
+        "keywords_to_anchor": {
+          "fastest crypto license": "/guides/fastest-crypto-licenses/",
+          "quick crypto licensing": "/guides/fastest-crypto-licenses/"
+        }
+      },
+      "cheapest-crypto-licenses": {
+        "related_guides": [
+          "fastest-crypto-licenses",
+          "crypto-license-cost",
+          "start-crypto-business"
+        ],
+        "related_pages": [
+          "/crypto-licenses/europe/poland/",
+          "/crypto-licenses/europe/lithuania/",
+          "/crypto-licenses/europe/czech-republic/"
+        ],
+        "keywords_to_anchor": {
+          "cheapest crypto license": "/guides/cheapest-crypto-licenses/",
+          "affordable crypto license": "/guides/cheapest-crypto-licenses/",
+          "budget crypto licensing": "/guides/cheapest-crypto-licenses/"
+        }
+      },
+      "start-crypto-business": {
+        "related_guides": [
+          "what-is-crypto-license",
+          "crypto-license-cost",
+          "fastest-crypto-licenses"
+        ],
+        "related_pages": [
+          "/corporate-services/company-formation/",
+          "/crypto-licenses/",
+          "/contact/"
+        ],
+        "keywords_to_anchor": {
+          "start a crypto business": "/guides/start-crypto-business/",
+          "launch crypto company": "/guides/start-crypto-business/"
+        }
+      },
+      "what-is-crypto-regulation": {
+        "related_guides": [
+          "what-is-crypto-license",
+          "mica-explained",
+          "aml-kyc-explained"
+        ],
+        "related_pages": [
+          "/regulation/",
+          "/regulation/map/",
+          "/regulation/eu/"
+        ],
+        "keywords_to_anchor": {
+          "crypto regulation": "/guides/what-is-crypto-regulation/",
+          "cryptocurrency regulation": "/guides/what-is-crypto-regulation/"
+        }
+      }
+    }
+  }
+}

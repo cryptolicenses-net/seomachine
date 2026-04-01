@@ -1,0 +1,1062 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is Crypto Regulation? A Global Overview for 2026 | CryptoLicenses.net</title>
+    <meta name="description" content="Complete guide to crypto regulation in 2026: what it is, how it works globally, the regulatory spectrum from China to El Salvador, MiCA, FATF, and what it means for your business.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/what-is-crypto-regulation/">
+    <meta property="og:title" content="What Is Crypto Regulation? A Global Overview for 2026">
+    <meta property="og:description" content="Complete guide to crypto regulation in 2026: what it is, how it works globally, the regulatory spectrum from China to El Salvador, MiCA, FATF, and what it means for your business.">
+    <meta property="og:type" content="article">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* STEPS */
+        .steps-big { display: flex; flex-direction: column; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+        .step-big { display: grid; grid-template-columns: 80px 1fr; border-bottom: var(--border); }
+        .step-big:last-child { border-bottom: none; }
+        .step-big-num { border-right: var(--heavy); display: flex; align-items: flex-start; justify-content: center; font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 300; color: var(--accent); padding: 2rem 0; padding-top: 1.75rem; }
+        .step-big-body { padding: 2rem; }
+        .step-big-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 0.75rem; }
+        .step-big-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+        .step-big-desc p { margin-bottom: 0.75rem; }
+        .step-big-desc p:last-child { margin-bottom: 0; }
+        .step-tip { margin-top: 1rem; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(201,168,76,0.05); font-size: 0.85rem; color: var(--ink); }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* CHECKLIST */
+        .checklist { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+        .checklist li { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: var(--muted); }
+        .checklist li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+
+        /* PILLARS */
+        .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+        .pillar-item { padding: 2rem; border-right: var(--border); border-bottom: var(--border); }
+        .pillar-item:nth-child(2n) { border-right: none; }
+        .pillar-item:nth-last-child(-n+2) { border-bottom: none; }
+        .pillar-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 300; color: var(--accent); margin-bottom: 0.75rem; line-height: 1; }
+        .pillar-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 400; margin-bottom: 0.5rem; }
+        .pillar-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+        /* CLASSIFICATION CARDS */
+        .class-list { display: flex; flex-direction: column; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+        .class-item { display: grid; grid-template-columns: 160px 1fr; border-bottom: var(--border); }
+        .class-item:last-child { border-bottom: none; }
+        .class-tag { border-right: var(--heavy); padding: 1.5rem; display: flex; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); font-weight: 500; }
+        .class-body { padding: 1.5rem; }
+        .class-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.4rem; }
+        .class-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+        }
+
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .pillars-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+        }
+        @media (max-width: 900px) {
+  .hero-guide { grid-template-columns: 1fr !important; }
+  .hero-guide-img { display: none; } .cta-inner { grid-template-columns: 1fr; gap: 40px; } }
+        @media (max-width: 480px) { .cta-form-row { grid-template-columns: 1fr; } }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "German"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://cryptolicenses.net/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is Crypto Regulation? A Global Overview for 2026",
+          "item": "https://cryptolicenses.net/guides/what-is-crypto-regulation/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/what-is-crypto-regulation/#article",
+      "headline": "What Is Crypto Regulation? A Global Overview for 2026",
+      "description": "Complete guide to crypto regulation in 2026: what it is, how it works globally, the regulatory spectrum from China to El Salvador, MiCA, FATF, and what it means for your business.",
+      "url": "https://cryptolicenses.net/guides/what-is-crypto-regulation/",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-03-25",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cryptolicenses.net/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/what-is-crypto-regulation/"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    What Is Crypto Regulation?
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/geneva-old-town-swiss-cantonal-flags.jpg" alt="Geneva old town swiss cantonal flags — What Is Crypto Regulation?A Global Overview for 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+    
+        <div class="hero-label">Global Overview · Updated 2026</div>
+        <h1 class="hero-h1">What Is <em>Crypto Regulation</em>?<br>A Global Overview for 2026</h1>
+        <p class="hero-intro">Crypto regulation is no longer a fringe debate — it is a global reality shaping how every crypto business operates, where it can serve clients, and what obligations it carries. This guide explains what crypto regulation is, how it differs by country, and what the major frameworks mean for businesses entering the market in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~10 minutes</div>
+            <div class="hero-meta-item"><span>Frameworks covered</span>MiCA, FATF, FCA, MAS, VARA, GENIUS Act</div>
+            <div class="hero-meta-item"><span>Last updated</span>March 2026</div>
+        </div>
+    
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#what-is">What Is Crypto Regulation?</a></li>
+            <li class="toc-item"><a href="#spectrum">The Regulatory Spectrum</a></li>
+            <li class="toc-item"><a href="#categories">Main Regulatory Categories</a></li>
+            <li class="toc-item"><a href="#frameworks">Key Frameworks Explained</a></li>
+            <li class="toc-item"><a href="#classification">How Crypto Is Classified</a></li>
+            <li class="toc-item"><a href="#timeline">Timeline 2009–2026</a></li>
+            <li class="toc-item"><a href="#coming-next">What's Coming Next</a></li>
+            <li class="toc-item"><a href="#for-businesses">For Businesses</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann — Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug — Switzerland's Crypto Valley — he has guided startups, trading platforms, and institutional investors through the full spectrum of VASP licensing: from FINMA FinTech notifications to MiCA CASP applications and offshore structuring across 60+ jurisdictions.</p>
+                <p>He joined CryptoLicenses.net as Senior Licensing Advisor after a decade leading the fintech practice of a Swiss-regulated law firm, where he managed regulatory mandates in the UAE, Singapore, Liechtenstein, and the Cayman Islands.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net.</p>
+        </section>
+
+        <!-- KEY TAKEAWAYS + SECTION 1 -->
+        <section class="guide-section" id="what-is">
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>Crypto regulation = the legal rules governing how crypto businesses operate, who can use them, and how they report to authorities</li>
+                    <li>Approaches vary dramatically by country — from outright bans (China) to full legal tender status (El Salvador)</li>
+                    <li>EU's Markets in Crypto-Assets Regulation (MiCA) entered full force in December 2024, creating the world's most comprehensive unified crypto framework</li>
+                    <li>Three main regulatory categories apply globally: AML/VASP obligations, securities law, and consumer protection</li>
+                    <li>There is no global standard, but the FATF sets the baseline AML framework that most countries follow</li>
+                    <li>2026 is the enforcement era — regulators are now actively supervising licensed entities, not just approving them</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1</div>
+            <h2 class="section-h2">What Is <em>Crypto Regulation?</em></h2>
+            <div class="prose">
+                <p>Crypto regulation refers to the body of laws, rules, and supervisory frameworks that govern the creation, trading, custody, and use of cryptocurrencies and digital assets. It determines which entities must register or obtain a licence, what compliance obligations they carry, how they must treat customer funds, and what reporting they owe to financial intelligence units and tax authorities.</p>
+                <p>Regulation exists for four core reasons. First, consumer protection: retail investors need assurance that platforms are solvent, transparent, and not fraudulent. Second, anti-money laundering (AML) and counter-terrorism financing (CTF): the pseudonymous nature of crypto makes it a potential vehicle for illicit finance if left unmonitored. Third, financial stability: as crypto markets grow to trillions in market capitalisation, systemic risks from exchange collapses (like FTX in 2022) spill into the broader financial system. Fourth, tax compliance: governments need to know when taxable events occur and ensure income is reported.</p>
+                <p>Before 2013, crypto operated largely outside any regulatory framework. Bitcoin was seen as a niche technology experiment. The first regulatory moves — from FinCEN in the US and early EU guidance — focused narrowly on AML obligations for exchange operators. By 2018, FATF had issued dedicated guidance on virtual assets. By 2024, the EU's MiCA regulation created a comprehensive licensing framework covering exchanges, custodians, stablecoin issuers, and brokers across all 27 member states. In 2026, the focus has shifted from frameworks to enforcement: regulators are now examining whether licensed businesses actually comply, not just whether they have a licence.</p>
+
+                <h3>Why Crypto Regulation Matters for Businesses</h3>
+                <p>If you offer any service involving the exchange, custody, or transfer of crypto assets to third parties for profit, you are almost certainly subject to some form of regulation in the jurisdictions where your clients are based. Operating without compliance — even if your entity is in an unregulated jurisdiction — can expose your founders, directors, and investors to criminal liability in the jurisdictions where clients reside. The era of regulatory arbitrage is closing fast.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: REGULATORY SPECTRUM -->
+        <section class="guide-section" id="spectrum">
+            <div class="section-label">Section 2</div>
+            <h2 class="section-h2">The <em>Regulatory Spectrum</em> — From Banned to Embraced</h2>
+            <div class="prose">
+                <p>No two countries regulate crypto identically. The spectrum runs from outright prohibition to proactive legal frameworks designed to attract crypto businesses. The table below maps the major positions as of 2026.</p>
+            </div>
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Position</th>
+                        <th>Regulator</th>
+                        <th>Key Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>China</td>
+                        <td style="color:#dc2626;font-weight:600;">Banned</td>
+                        <td>PBOC / CBIRC</td>
+                        <td>All crypto trading and mining banned since 2021; CBDC (digital yuan) promoted instead</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td style="color:#d97706;font-weight:600;">Complex / Multi-regulator</td>
+                        <td>SEC, CFTC, FinCEN, state regulators</td>
+                        <td>No unified federal framework; GENIUS Act (2025) addresses stablecoins; enforcement-heavy</td>
+                    </tr>
+                    <tr>
+                        <td>European Union</td>
+                        <td style="color:#16a34a;font-weight:600;">Comprehensive</td>
+                        <td>ESMA + national NCAs</td>
+                        <td>MiCA in full force Dec 2024; single licence for 27 member states; CASP authorisation required</td>
+                    </tr>
+                    <tr>
+                        <td>United Kingdom</td>
+                        <td style="color:#2563eb;font-weight:600;">Regulated — expanding</td>
+                        <td>FCA</td>
+                        <td>Crypto firms must register with FCA; full authorisation regime being phased in through 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Singapore</td>
+                        <td style="color:#16a34a;font-weight:600;">Progressive / Licensed</td>
+                        <td>MAS</td>
+                        <td>Payment Services Act (PSA) covers crypto exchanges and custodians; stringent but well-regarded</td>
+                    </tr>
+                    <tr>
+                        <td>UAE</td>
+                        <td style="color:#16a34a;font-weight:600;">Crypto-friendly / Sandbox</td>
+                        <td>VARA (Dubai), ADGM, DIFC</td>
+                        <td>Multiple free-zone frameworks; VARA licence in Dubai most recognised; active fintech hub</td>
+                    </tr>
+                    <tr>
+                        <td>Georgia</td>
+                        <td style="color:#7c3aed;font-weight:600;">Light-touch</td>
+                        <td>NBG</td>
+                        <td>VASP registration available with low capital requirements; no income tax on crypto for individuals</td>
+                    </tr>
+                    <tr>
+                        <td>El Salvador</td>
+                        <td style="color:#16a34a;font-weight:600;">Legal tender + licensed</td>
+                        <td>BCR / CNAD</td>
+                        <td>Bitcoin is legal tender since 2021; digital asset service providers licensed under CNAD</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Note:</strong> Even in "light-touch" jurisdictions, operating a crypto business that serves clients in stricter jurisdictions (EU, USA, UK) triggers those jurisdictions' obligations. Where your clients are located is often more important than where your company is incorporated.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"The regulatory spectrum is not static — it compresses towards stricter standards over time. What was a light-touch jurisdiction in 2020 is now subject to FATF mutual evaluation pressure, banking de-risking, and MiCA passporting requirements that effectively export EU standards globally. Founders who think they can permanently avoid regulation by routing through permissive jurisdictions are building on sand."</p>
+            <cite>— Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- SECTION 3: CATEGORIES -->
+        <section class="guide-section" id="categories">
+            <div class="section-label">Section 3</div>
+            <h2 class="section-h2">The Four <em>Main Regulatory Categories</em></h2>
+            <div class="prose">
+                <p>Across all jurisdictions, crypto regulation organises itself into four functional pillars. Every major regulatory framework addresses some or all of these — understanding them is essential for mapping your compliance obligations.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-item">
+                    <div class="pillar-num">01</div>
+                    <div class="pillar-title">AML / CTF (Anti-Money Laundering)</div>
+                    <div class="pillar-desc">The most universal pillar. Based on the FATF Recommendations, particularly Recommendation 15 (virtual assets). Requires crypto service providers to register as VASPs, conduct customer due diligence (CDD/KYC), monitor transactions, file suspicious activity reports (SARs), and implement the Travel Rule — sharing originator and beneficiary data on transfers above threshold. Almost every country that regulates crypto starts here.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-num">02</div>
+                    <div class="pillar-title">Securities Regulation</div>
+                    <div class="pillar-desc">When is a crypto token a security? In the US, the Howey Test applies: if a token involves an investment of money in a common enterprise with an expectation of profits from others' efforts, it is a security and falls under SEC jurisdiction. This classification triggers full securities law obligations: disclosure, registration, broker-dealer requirements. The EU's MiCA largely sidesteps this for utility tokens and e-money tokens, but leaves securities-like tokens to existing MiFID II frameworks.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-num">03</div>
+                    <div class="pillar-title">Consumer Protection</div>
+                    <div class="pillar-desc">Regulators require crypto businesses to treat customers fairly: clear disclosure of risks, transparent fee structures, honest marketing (no misleading claims about returns), fair complaint handling, and protection of client assets. MiCA has detailed consumer protection provisions. The UK FCA's "fair value" framework applies to crypto marketing. These rules are increasingly actively enforced — fines for misleading crypto advertising have multiplied since 2024.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-num">04</div>
+                    <div class="pillar-title">Prudential / Banking Rules</div>
+                    <div class="pillar-desc">Covers capital adequacy, custody obligations, and financial resilience requirements. MiCA requires CASPs to hold minimum capital (from EUR 50,000 for advisors to EUR 150,000 for exchanges). Stablecoin issuers under MiCA must hold 1:1 reserves in segregated accounts. Singapore's MAS requires SGD 250,000–1M in capital depending on licence class. Prudential rules ensure licensed entities can absorb losses without harming clients.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: KEY FRAMEWORKS -->
+        <section class="guide-section" id="frameworks">
+            <div class="section-label">Section 4</div>
+            <h2 class="section-h2">Key Regulatory <em>Frameworks Explained</em></h2>
+            <div class="prose">
+                <p>The following table covers the six most important regulatory frameworks that crypto businesses encounter globally in 2026 — from the international AML baseline to the most comprehensive regional regime.</p>
+            </div>
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Framework</th>
+                        <th>Jurisdiction</th>
+                        <th>In Force</th>
+                        <th>Scope</th>
+                        <th>Key Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FATF Recommendation 15</td>
+                        <td>37+ member countries</td>
+                        <td>2019 (updated 2021)</td>
+                        <td>All VASPs globally</td>
+                        <td>VASP registration, CDD/KYC, Travel Rule (transfers &gt;USD 1,000), SAR filing, risk-based approach</td>
+                    </tr>
+                    <tr>
+                        <td>MiCA — Markets in Crypto-Assets</td>
+                        <td>European Union (27 states)</td>
+                        <td>Dec 2024 (full)</td>
+                        <td>Exchanges, custodians, brokers, stablecoin issuers, advisors</td>
+                        <td>CASP authorisation, capital requirements (EUR 50k–150k), whitepaper disclosure, consumer protection, passporting</td>
+                    </tr>
+                    <tr>
+                        <td>GENIUS Act</td>
+                        <td>United States</td>
+                        <td>2025</td>
+                        <td>Stablecoin issuers</td>
+                        <td>Federal or state charter, 1:1 reserve backing, monthly public disclosure, AML compliance, bankruptcy protections for holders</td>
+                    </tr>
+                    <tr>
+                        <td>UK FCA Crypto Registration</td>
+                        <td>United Kingdom</td>
+                        <td>2020 (AML); expanding 2026</td>
+                        <td>Crypto asset firms serving UK clients</td>
+                        <td>FCA registration / authorisation, UK AML regime, financial promotions approval, Consumer Duty compliance</td>
+                    </tr>
+                    <tr>
+                        <td>Singapore PSA (Payment Services Act)</td>
+                        <td>Singapore</td>
+                        <td>2020 (amended 2023)</td>
+                        <td>Digital payment token services, e-money</td>
+                        <td>MAS licence (Standard/Major), SGD 250k–1M capital, custody standards, AML obligations, user protection rules</td>
+                    </tr>
+                    <tr>
+                        <td>UAE CBUAE / VARA</td>
+                        <td>UAE (Dubai, Abu Dhabi)</td>
+                        <td>2022–2023</td>
+                        <td>Virtual asset service providers in UAE</td>
+                        <td>VARA licence in Dubai, ADGM/FSRA framework in Abu Dhabi, AED 1M+ capital, local presence required, VASP rulebooks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION 5: CLASSIFICATION -->
+        <section class="guide-section" id="classification">
+            <div class="section-label">Section 5</div>
+            <h2 class="section-h2">How Crypto Is <em>Classified</em> — and Why It Matters</h2>
+            <div class="prose">
+                <p>The legal classification of a crypto asset determines which regulatory regime applies to it. The same token can be classified differently in different countries — and even by different agencies within the same country. Getting the classification wrong at the design stage can result in your product being treated as an unlicensed security offering years later.</p>
+            </div>
+            <div class="class-list">
+                <div class="class-item">
+                    <div class="class-tag">Property</div>
+                    <div class="class-body">
+                        <div class="class-title">Property (Most Countries)</div>
+                        <div class="class-desc">The most common classification globally. Crypto is treated as a property asset — like a stock or commodity — subject to capital gains tax on disposal. AML/VASP rules apply to service providers. The UK, Australia, Canada, and most EU states treat crypto this way. Simpler to navigate than securities classification.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-tag">Security</div>
+                    <div class="class-body">
+                        <div class="class-title">Security (USA — varies by token)</div>
+                        <div class="class-desc">Under the Howey Test, many tokens issued via ICOs or with profit expectations are securities under US law, requiring SEC registration or a valid exemption. This triggers the full securities law framework — the most burdensome classification for crypto businesses. The SEC's enforcement posture has been aggressive since 2022 and continues in 2026.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-tag">Commodity</div>
+                    <div class="class-body">
+                        <div class="class-title">Commodity (USA — Bitcoin, Ether)</div>
+                        <div class="class-desc">The CFTC (Commodity Futures Trading Commission) asserts jurisdiction over commodities, including Bitcoin and Ether in the US context. Commodity classification means spot trading is less regulated federally, but derivatives (futures, options) require CFTC registration. The GENIUS Act and ongoing legislation aim to clarify the boundary between CFTC and SEC crypto jurisdiction.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-tag">Currency</div>
+                    <div class="class-body">
+                        <div class="class-title">Legal Tender Currency (El Salvador, Central African Republic)</div>
+                        <div class="class-desc">Only El Salvador and the Central African Republic have formally adopted Bitcoin as legal tender, requiring merchants to accept it. This is the most extreme pro-crypto classification and remains highly experimental. It creates complex monetary policy and IMF-relationship challenges for small economies.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-tag">Utility Token</div>
+                    <div class="class-body">
+                        <div class="class-title">Utility Token / E-Money Token (EU MiCA)</div>
+                        <div class="class-desc">MiCA creates a taxonomy: asset-referenced tokens (ARTs), e-money tokens (EMTs), and other crypto-assets. Utility tokens — tokens that grant access to a service — are subject to lighter-touch disclosure requirements under MiCA's whitepaper regime, provided they do not also function as investments. This classification offers EU businesses a path to market without full CASP authorisation in some cases.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: TIMELINE -->
+        <section class="guide-section" id="timeline">
+            <div class="section-label">Section 6</div>
+            <h2 class="section-h2">Crypto Regulation Timeline <em>2009–2026</em></h2>
+            <div class="prose">
+                <p>The regulatory arc from Bitcoin's creation to today's enforcement era spans less than two decades — but the pace of change has been extraordinary. Understanding the timeline helps contextualise where current rules came from and where they are heading.</p>
+            </div>
+            <div class="steps-big">
+                <div class="step-big">
+                    <div class="step-big-num">2009</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">Bitcoin Launched — No Regulation</div>
+                        <div class="step-big-desc">
+                            <p>Satoshi Nakamoto releases the Bitcoin whitepaper and genesis block. Crypto exists entirely outside any regulatory framework. Governments and central banks largely ignore it as a fringe experiment. No AML obligations, no licensing, no oversight of any kind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2013</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">First Regulatory Moves — US FinCEN Guidance</div>
+                        <div class="step-big-desc">
+                            <p>FinCEN (US Financial Crimes Enforcement Network) issues the first formal guidance classifying Bitcoin exchanges as money services businesses (MSBs) subject to AML obligations. The EU begins informal monitoring. China bans financial institutions from handling Bitcoin (but not individuals). The first regulated exchanges emerge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2018</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">FATF Issues First Crypto Guidance</div>
+                        <div class="step-big-desc">
+                            <p>The Financial Action Task Force formally extends its AML/CTF standards to virtual assets and introduces the term VASP (Virtual Asset Service Provider). This triggers a wave of national legislation across 37+ FATF member countries requiring crypto businesses to register, implement KYC, and file STRs. The 2018 ICO boom also triggers securities enforcement globally.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2020</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">Travel Rule Becomes Global Standard</div>
+                        <div class="step-big-desc">
+                            <p>FATF's Travel Rule — requiring VASPs to collect and transmit originator/beneficiary information on crypto transfers above USD 1,000 — begins national implementation. Singapore enacts the Payment Services Act. Lithuania's VASP registration framework attracts 500+ crypto firms. COVID-era DeFi boom accelerates regulatory focus on decentralised protocols.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2023</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">MiCA Passed — EU Creates World's Biggest Unified Framework</div>
+                        <div class="step-big-desc">
+                            <p>The EU formally passes MiCA after three years of negotiation. The FTX collapse in late 2022 accelerated political will for comprehensive regulation. UAE VARA launches its full licensing framework. Hong Kong pivots to a pro-crypto stance with its VASP licensing regime. The era of patchwork national rules begins its end in Europe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2024</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">MiCA Enters Full Force — December 2024</div>
+                        <div class="step-big-desc">
+                            <p>MiCA's full provisions for CASPs (crypto-asset service providers) enter force across all 27 EU member states in December 2024. Existing operators enter an 18-month transition period. Stablecoin issuer provisions (Title III/IV) already in force from June 2024. The EU becomes the first major economy with a comprehensive, harmonised crypto licensing framework covering exchanges, custodians, and advisors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2025</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">US GENIUS Act — Federal Stablecoin Framework</div>
+                        <div class="step-big-desc">
+                            <p>The US passes the GENIUS Act, creating the first federal framework for stablecoin issuers. Issuers must obtain federal or state charter, hold 1:1 reserves, and disclose reserve composition monthly. The SEC and CFTC continue negotiations on broader crypto market structure legislation. The US remains the most complex jurisdiction — multi-regulator, multi-state, enforcement-heavy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-big">
+                    <div class="step-big-num">2026</div>
+                    <div class="step-big-body">
+                        <div class="step-big-title">The Enforcement Era — Compliance Under Scrutiny</div>
+                        <div class="step-big-desc">
+                            <p>2026 is the year of enforcement. ESMA and national regulators begin active supervision of MiCA-authorised CASPs. The FCA ramps up UK crypto firm examination. UAE VARA conducts first licence suspension actions. FATF's 2024 mutual evaluation cycle reveals compliance gaps in member states. For businesses, having a licence is necessary but no longer sufficient — demonstrating ongoing compliance is the new baseline.</p>
+                            <div class="step-tip">We are operating in the enforcement era. The question for every crypto business is no longer "do we need a licence?" but "can we demonstrate that our compliance programme actually works?"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure which licence fits your business?</strong> Get a free 30-minute consultation with our advisors. We'll review your model and recommend the right jurisdiction.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"We are firmly in the enforcement era. In 2026, ESMA and national competent authorities are actively examining whether MiCA-authorised CASPs actually comply — not just whether they have authorisation on paper. I advise every client to treat their compliance programme as a live, auditable system: documented, tested, and capable of producing evidence on demand. The days of box-ticking are over."</p>
+            <cite>— Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- SECTION 7: COMING NEXT -->
+        <section class="guide-section" id="coming-next">
+            <div class="section-label">Section 7</div>
+            <h2 class="section-h2">What's <em>Coming Next</em> in Crypto Regulation</h2>
+            <div class="prose">
+                <p>Regulation never stands still. Five major developments are reshaping the crypto regulatory landscape beyond 2026, and businesses should be building compliance strategies that account for them now.</p>
+
+                <h3>DeFi Regulation</h3>
+                <p>MiCA currently excludes "fully decentralised" protocols from its scope — but ESMA is conducting an ongoing review of DeFi, due to report in 2026. The UK FCA, US CFTC, and G20 Financial Stability Board (FSB) are all studying how to apply regulatory obligations to protocols without identifiable operators. The emerging consensus: if your DeFi protocol has an identifiable governance structure, front-end operator, or fee recipient, it is likely to fall within scope of future regulation. Expect a DeFi regulatory framework in at least one major jurisdiction by 2028.</p>
+
+                <h3>NFT Classification</h3>
+                <p>Non-fungible tokens remain in a regulatory grey zone. MiCA excludes unique, non-fungible NFTs — but fractionalized NFTs, high-volume NFT trading platforms, and NFTs used for financial purposes are under increasing scrutiny. The SEC has opened investigations into NFT platforms as unregistered securities offerings. The UK and Australia are both consulting on NFT-specific guidance. Expect clearer classification rules by 2027.</p>
+
+                <h3>CBDC Interplay</h3>
+                <p>Over 130 countries are researching central bank digital currencies (CBDCs), with the digital euro in advanced pilot and China's digital yuan in broad circulation. CBDCs will create new regulatory pressures on private crypto — particularly stablecoins that compete directly with CBDCs for payment use. MiCA's stablecoin issuer framework was partly designed to ensure private stablecoins do not undermine monetary sovereignty before a digital euro is launched.</p>
+
+                <h3>AI and Crypto Supervision</h3>
+                <p>Regulators are increasingly using AI tools to monitor on-chain activity, detect suspicious patterns, and identify unlicensed operators. The FATF and Egmont Group have published guidance on AI-assisted STR analysis. For crypto businesses, this means that compliance gaps that once went undetected will increasingly trigger regulatory attention — on-chain data is public and permanently auditable.</p>
+
+                <h3>G20 Coordination</h3>
+                <p>The FSB and IMF are pushing G20 members toward more consistent crypto regulation based on the 2023 "same activity, same risk, same regulation" principle. While a true global standard remains far off, expect progressive convergence in AML standards, stablecoin rules, and CASP licensing requirements across major economies through 2027–2030.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 8: FOR BUSINESSES -->
+        <section class="guide-section" id="for-businesses">
+            <div class="section-label">Section 8</div>
+            <h2 class="section-h2">What Crypto Regulation Means <em>for Your Business</em></h2>
+            <div class="prose">
+                <p>Understanding the regulatory landscape is one thing. Turning that understanding into a practical compliance strategy is another. Here is a condensed framework for businesses entering or operating in the crypto space in 2026.</p>
+
+                <h3>Compliance Checklist for Crypto Businesses in 2026</h3>
+            </div>
+            <ul class="checklist" style="margin-top:0.5rem;">
+                <li>Identify all jurisdictions where you have clients or operations — each may trigger separate obligations</li>
+                <li>Determine the correct legal classification of your tokens/assets in each relevant jurisdiction</li>
+                <li>Establish whether you qualify as a VASP/CASP under applicable AML frameworks</li>
+                <li>Register or apply for a licence in every jurisdiction that requires it before onboarding clients there</li>
+                <li>Implement a full AML/KYC programme: CDD, enhanced due diligence, transaction monitoring, SAR filing</li>
+                <li>Implement Travel Rule compliance for applicable crypto transfers</li>
+                <li>Publish required disclosures (whitepapers, risk warnings, fee structures) before marketing</li>
+                <li>Appoint a qualified MLRO (Money Laundering Reporting Officer) with relevant experience</li>
+                <li>Maintain capital at or above the minimum required by each licence</li>
+                <li>Schedule annual independent AML audits and regulatory compliance reviews</li>
+                <li>Notify regulators promptly of material changes: ownership, business model, key staff departures</li>
+            </ul>
+
+            <div class="prose" style="margin-top:2rem;">
+                <h3>Jurisdiction Selection: Key Criteria</h3>
+                <p>Choosing a regulatory home is one of the most consequential decisions a crypto business makes. The right answer depends on: (1) where your clients are located — serving EU clients from a non-EU entity without MiCA authorisation is becoming increasingly difficult; (2) your business model — a custodian has different requirements than a broker; (3) your capital position — Singapore requires SGD 250k minimum, MiCA requires EUR 50k–150k, some light-touch jurisdictions require as little as EUR 5,000; (4) your timeline — Slovakia can be done in 4–6 weeks, Singapore takes 6–12 months; (5) your bank account needs — licences from well-regarded jurisdictions make it substantially easier to open business banking.</p>
+
+                <h3>When You Need a Lawyer vs. a Licensing Consultant</h3>
+                <p>You need a lawyer for: reviewing whether a specific token is a security in a specific jurisdiction, handling regulatory investigations or enforcement actions, structuring complex corporate groups for regulatory purposes, and reviewing contractual documentation with counterparties. You need a licensing consultant for: identifying the right jurisdiction and licence type, managing the application process end-to-end, building AML/KYC documentation packages, coordinating local legal partners, and maintaining ongoing compliance obligations. Most successful licensing projects use both — a specialist licensing consultant coordinates the process, with local lawyers providing jurisdiction-specific advice at key stages.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Regulation — <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Is crypto legal in most countries?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">In most countries, owning and trading cryptocurrency is legal for individuals. However, running a crypto business — an exchange, custodian, broker, or payment service — typically requires a licence or registration. Outright bans on crypto ownership are rare; China is the most prominent example. The more relevant question for businesses is not "is crypto legal?" but "what licence do I need to operate legally?"</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        What exactly is regulated — all crypto, or only certain activities?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Regulation targets activities and service providers, not the underlying assets per se. The regulated activities typically include: operating a crypto exchange (buy/sell), providing crypto custody services, offering crypto broker or OTC desk services, providing advice on crypto investments, transferring crypto on behalf of others, and issuing stablecoins or asset-referenced tokens. Simply holding crypto for yourself, or running a non-custodial wallet where users control their own keys, is generally not regulated in most jurisdictions.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Do I need to comply if my company is incorporated offshore?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Generally yes — if you serve clients in a jurisdiction, that jurisdiction's regulations apply to you regardless of where your company is incorporated. The EU explicitly includes this in MiCA: a company incorporated in Seychelles serving EU clients must obtain MiCA authorisation or face enforcement. The US applies its securities and AML laws extra-territorially too. Offshore incorporation without a corresponding regulated entity in markets where you have clients is increasingly unworkable for legitimate businesses.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        What is FATF and why does it matter for crypto?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">FATF — the Financial Action Task Force — is an intergovernmental body with 37 member countries (covering most of the global economy) that sets the international standard for AML and CTF. Its Recommendation 15, updated in 2019 and 2021, applies the full AML framework to virtual assets and VASPs. Countries that do not implement FATF standards risk being placed on the FATF grey list or blacklist — which makes it nearly impossible for businesses in those countries to access global banking. This is why even small jurisdictions like Georgia or Seychelles have implemented VASP registration: FATF compliance is economically necessary.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        What is the difference between the SEC and CFTC for crypto?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Both are US federal regulators but with different mandates. The SEC (Securities and Exchange Commission) regulates securities — stocks, bonds, and tokens that qualify as securities under the Howey Test. If a crypto token is a security, the SEC has jurisdiction over its offering and trading. The CFTC (Commodity Futures Trading Commission) regulates commodities and their derivatives. It has asserted that Bitcoin and Ether are commodities, giving it jurisdiction over crypto derivatives markets (futures, swaps). The boundary between the two agencies' crypto jurisdiction has been fiercely contested and remains incompletely resolved as of 2026 — which is one reason the US remains the most complex jurisdiction for crypto businesses.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Which jurisdiction is best regulated for a crypto business in 2026?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">"Best" depends on your goals. For serving EU clients with a single licence: MiCA-authorised CASP via Poland, Lithuania, or another EU member state. For the most credible Asia-Pacific licence: Singapore MAS MPI. For the Middle East and MENA: UAE VARA (Dubai). For the fastest and most affordable route to a legitimate AML-compliant licence: Slovakia or Georgia. For a Bitcoin-focused business with low capital: El Salvador CNAD. In 2026, the trend is clear: regulators and banks increasingly distinguish between well-regarded jurisdictions (Singapore, EU, UAE VARA) and low-credibility shell registrations. Choosing a well-regarded jurisdiction pays dividends in banking access, institutional partnerships, and long-term business viability.</div>
+                </div>
+            </div>
+
+            <!-- SOURCES -->
+            <section class="guide-section" id="sources">
+              <div class="section-label">References</div>
+              <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+              <ul class="sources-list">
+                <li><a href="https://www.finma.ch/en/documentation/dossier/dossier-fintech/entwicklungen-im-bereich-fintech/" target="_blank" rel="noopener nofollow">FINMA — Developments in FinTech: Regulatory Evolution in Switzerland</a></li>
+                <li><a href="https://www.finma.ch/en/news/2026/01/20260112-mm-am-01-26/" target="_blank" rel="noopener nofollow">FINMA Guidance 01/2026 — Custody Risks for Crypto-Based Assets</a></li>
+                <li><a href="https://www.finma.ch/en/documentation/dossier/dossier-fintech/auf-einen-blick-aufstellung-der-krypto-dienstleistungen/" target="_blank" rel="noopener nofollow">FINMA — At a Glance: Crypto Services Subject to Swiss Financial Market Law</a></li>
+                <li><a href="https://www.admin.ch/opc/en/classified-compilation/19970427/index.html" target="_blank" rel="noopener nofollow">Swiss Federal Anti-Money Laundering Act (AMLA) — Full Text</a></li>
+                <li><a href="https://www.seco.admin.ch/seco/en/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/sanktionen-und-embargos.html" target="_blank" rel="noopener nofollow">SECO — Sanctions and Embargoes: Switzerland's Implementation of International Standards</a></li>
+              </ul>
+            </section>
+
+            <div class="author-box">
+                <div class="author-avatar">MH</div>
+                <div>
+                    <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                    <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                    <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Navigate Crypto Regulation</h3>
+                <p>We analyse your business model, target markets, and client base — and map out exactly which regulatory frameworks apply to you and what you need to do next.</p>
+                <a href="/contact/?topic=regulation" class="btn-primary">Talk to an Advisor</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Regulatory Snapshot 2026</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Countries with rules</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">60+ jurisdictions with VASP/crypto frameworks</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">MiCA full force</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">December 2024 — 27 EU states</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">FATF members</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">37+ countries implementing VASP rules</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Banned jurisdictions</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">China, Algeria, Morocco (exchanges)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/how-to-get-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">How to Get a Crypto License</a>
+                    <a href="/guides/what-is-vasp/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a VASP?</a>
+                    <a href="/guides/mica-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Explained</a>
+                    <a href="/guides/aml-kyc-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">AML/KYC for Crypto Businesses</a>
+                    <a href="/guides/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">All Guides →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Our Services</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0;">
+                    <li>Regulatory mapping by jurisdiction</li>
+                    <li>VASP/CASP licence applications</li>
+                    <li>AML programme design</li>
+                    <li>Travel Rule implementation</li>
+                    <li>Ongoing compliance support</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Need to Understand Your Regulatory Obligations?</h2>
+      <p class="cta-lead">Tell us about your business and we'll map out which regulatory frameworks apply, what licences you need, and what the process looks like — at no charge.</p>
+      <ul class="cta-trust">
+        <li>Swiss-registered firm, Zug</li>
+        <li>Response within 24 hours</li>
+        <li>Strictly confidential</li>
+        <li>60+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="regulation">Regulatory mapping / compliance audit</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business, target markets, and what you need to understand about your regulatory obligations…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/how-to-get-crypto-license/">How to Get a Crypto License</a></li>
+                <li><a href="/guides/what-is-crypto-regulation/">What Is Crypto Regulation?</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Explained</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Top Jurisdictions</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/europe/poland/">Poland</a></li>
+                <li><a href="/crypto-licenses/mena/uae/">UAE</a></li>
+                <li><a href="/crypto-licenses/asia/singapore/">Singapore</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Registered in Switzerland</span>
+        <span>Information only — not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+
+</body></html>
