@@ -1,0 +1,1112 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is a VASP? Virtual Asset Service Provider Definition &amp; Requirements 2026 | CryptoLicenses.net</title>
+    <meta name="description" content="VASP explained: FATF definition, VASP vs CASP differences, 6 types of Virtual Asset Service Providers, Travel Rule obligations, and registration requirements by jurisdiction. Complete 2026 guide.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/what-is-vasp/">
+    <meta property="og:title" content="What Is a VASP? Virtual Asset Service Provider Explained 2026">
+    <meta property="og:description" content="FATF definition of a VASP, VASP vs CASP differences, Travel Rule requirements, and how to register as a VASP in 60+ jurisdictions. Expert guide updated for 2026.">
+    <meta property="og:type" content="article">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* CHECKLIST */
+        .checklist { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+        .checklist li { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: var(--muted); }
+        .checklist li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+
+        /* VASP TYPES CARDS */
+        .vasp-types { display: flex; flex-direction: column; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+        .vasp-type-item { display: grid; grid-template-columns: 60px 1fr; border-bottom: var(--border); }
+        .vasp-type-item:last-child { border-bottom: none; }
+        .vasp-type-num { border-right: var(--heavy); display: flex; align-items: flex-start; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 300; color: var(--accent); padding: 1.5rem 0; padding-top: 1.25rem; }
+        .vasp-type-body { padding: 1.5rem; }
+        .vasp-type-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 400; margin-bottom: 0.5rem; }
+        .vasp-type-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
+
+        /* DECISION CHECKLIST */
+        .decision-list { display: flex; flex-direction: column; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+        .decision-item { display: grid; grid-template-columns: 48px 1fr; border-bottom: var(--border); }
+        .decision-item:last-child { border-bottom: none; }
+        .decision-icon { border-right: var(--border); display: flex; align-items: center; justify-content: center; font-size: 1rem; background: rgba(201,168,76,0.08); }
+        .decision-body { padding: 1.25rem 1.5rem; }
+        .decision-q { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .decision-note { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+        }
+
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 900px) {
+  .hero-guide { grid-template-columns: 1fr !important; }
+  .hero-guide-img { display: none; } .cta-inner { grid-template-columns: 1fr; gap: 40px; } }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+        }
+        @media (max-width: 480px) { .cta-form-row { grid-template-columns: 1fr; } }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Russian"
+        ]
+      },
+      "sameAs": [
+        "https://t.me/cryptolicensesnet"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://cryptolicenses.net/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is a VASP? Virtual Asset Service Provider Definition & Requirements 2026",
+          "item": "https://cryptolicenses.net/guides/what-is-vasp/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/what-is-vasp/#article",
+      "headline": "What Is a VASP? Virtual Asset Service Provider Definition & Requirements 2026",
+      "description": "VASP explained: FATF definition, VASP vs CASP differences, 6 types of Virtual Asset Service Providers, Travel Rule obligations, and registration requirements by jurisdiction. Complete 2026 guide.",
+      "url": "https://cryptolicenses.net/guides/what-is-vasp/",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-03-22",
+      "author": {
+        "@id": "https://cryptolicenses.net/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cryptolicenses.net/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/what-is-vasp/"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    What Is a VASP?
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/gold-bars-pile.jpg" alt="Gold bars pile — What Is a VASP? Definition, Types &amp; Registration Requirement" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+    
+        <div class="hero-label">Regulatory Guide · Updated 2026</div>
+        <h1 class="hero-h1">What Is a VASP? Definition, Types &amp; Registration Requirements in 2026</h1>
+        <p class="hero-intro">VASP — Virtual Asset Service Provider — is the FATF-defined category that determines whether your crypto business must register with a financial regulator. If you exchange, transfer, custody, or issue virtual assets as a business, you are almost certainly a VASP. This guide explains exactly what that means, what obligations it triggers, and how to register across 60+ jurisdictions.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~8 minutes</div>
+            <div class="hero-meta-item"><span>Standard</span>FATF Recommendation 15</div>
+            <div class="hero-meta-item"><span>Last updated</span>March 2026</div>
+        </div>
+    
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#vasp-definition">VASP Definition</a></li>
+            <li class="toc-item"><a href="#vasp-vs-casp">VASP vs CASP</a></li>
+            <li class="toc-item"><a href="#types-of-vasps">Types of VASPs</a></li>
+            <li class="toc-item"><a href="#fatf-requirements">FATF Requirements</a></li>
+            <li class="toc-item"><a href="#registration-by-country">Registration by Country</a></li>
+            <li class="toc-item"><a href="#travel-rule">Travel Rule</a></li>
+            <li class="toc-item"><a href="#am-i-a-vasp">Am I a VASP?</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann — Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug — Switzerland's Crypto Valley — he has guided startups, trading platforms, and institutional investors through the full spectrum of VASP licensing: from FINMA FinTech notifications to MiCA CASP applications and offshore structuring across 60+ jurisdictions.</p>
+                <p>He joined CryptoLicenses.net as Senior Licensing Advisor after a decade leading the fintech practice of a Swiss-regulated law firm, where he managed regulatory mandates in the UAE, Singapore, Liechtenstein, and the Cayman Islands.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net.</p>
+        </section>
+
+        <!-- KEY TAKEAWAYS + DEFINITION -->
+        <section class="guide-section" id="vasp-definition">
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>A VASP is any business that exchanges, transfers, or custodies virtual assets on behalf of others — as defined by the Financial Action Task Force (FATF)</li>
+                    <li>VASP status triggers mandatory AML/KYC registration in 60+ jurisdictions worldwide</li>
+                    <li>The Travel Rule applies to VASPs: transfers above $1,000 require sender and recipient data to be shared between VASPs</li>
+                    <li>Under EU MiCA, the equivalent term is CASP (Crypto-Asset Service Provider) — same concept, different regulatory label</li>
+                    <li>Operating as an unregistered VASP carries criminal liability in most jurisdictions, including the EU, UK, Singapore, and UAE</li>
+                    <li>DeFi protocols may qualify as VASPs depending on the degree of decentralisation and the presence of an identifiable operator</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1 — Definition</div>
+            <h2 class="section-h2">What Is a <em>VASP</em>? The FATF Definition</h2>
+            <div class="prose">
+                <p>The term VASP was introduced by the Financial Action Task Force (FATF) in its 2019 revision of Recommendation 15. FATF defines a Virtual Asset Service Provider as any natural or legal person that, as a business, conducts one or more of the following activities for or on behalf of another person: exchange between virtual assets and fiat currencies, exchange between one or more forms of virtual assets, transfer of virtual assets, safekeeping and/or administration of virtual assets or instruments enabling control over virtual assets, and participation in and provision of financial services related to an issuer's offer and/or sale of a virtual asset.</p>
+                <p>The definition is deliberately broad. It is not limited to centralised exchanges. Any business that touches virtual assets in a service capacity — whether as a broker, custodian, payment processor, or token issuer — is likely to fall within the VASP perimeter. The test is whether the activity is conducted as a business and on behalf of others. Personal use of crypto does not make you a VASP.</p>
+                <p>FATF Recommendations are not law by themselves — they are international standards adopted by 200+ member jurisdictions through their domestic legislation. However, because FATF membership covers virtually every significant financial centre, and because non-compliance with FATF standards results in grey-listing or blacklisting (with severe banking consequences), the standard has effectively become global law for any business operating in or serving regulated markets.</p>
+
+                <h3>Five Core VASP Activities</h3>
+                <p>The following five categories of activity, when conducted as a business on behalf of clients, make an entity a VASP under FATF standards:</p>
+            </div>
+
+            <ul class="checklist" style="margin-top: 1.25rem;">
+                <li>Exchange between virtual assets and fiat currencies (buying and selling crypto for money)</li>
+                <li>Exchange between one or more forms of virtual assets (crypto-to-crypto swaps, conversions)</li>
+                <li>Transfer of virtual assets (sending crypto on behalf of clients — payment processors, remittance providers)</li>
+                <li>Safekeeping or administration of virtual assets (custodian wallets, key management services)</li>
+                <li>Participation in financial services related to the issuance or sale of a virtual asset (IEOs, token launchpads, placement agents)</li>
+            </ul>
+
+            <div class="alert-box" style="margin-top: 1.5rem;">
+                <p><strong>Key principle:</strong> You do not need to be a licensed exchange to be a VASP. A payment processor, an NFT marketplace that facilitates primary sales, a DeFi aggregator with an identifiable operator, or a company that holds crypto on behalf of clients — all may qualify as VASPs and must register with the relevant authority.</p>
+            </div>
+        </section>
+
+        <!-- VASP VS CASP -->
+        <section class="guide-section" id="vasp-vs-casp">
+            <div class="section-label">Section 2 — Terminology</div>
+            <h2 class="section-h2">VASP vs <em>CASP</em> — Same Concept, Different Names</h2>
+            <div class="prose">
+                <p>One of the most common points of confusion in crypto regulation is the relationship between VASP and CASP. They refer to substantially the same category of business, but originate from different regulatory frameworks. Understanding the distinction matters when determining which rules apply to your business and in which jurisdiction.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>VASP</th>
+                        <th>CASP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stands for</td>
+                        <td>Virtual Asset Service Provider</td>
+                        <td>Crypto-Asset Service Provider</td>
+                    </tr>
+                    <tr>
+                        <td>Source framework</td>
+                        <td>FATF Recommendation 15 (global)</td>
+                        <td>EU MiCA Regulation (EU-specific)</td>
+                    </tr>
+                    <tr>
+                        <td>Geographic scope</td>
+                        <td>200+ FATF member jurisdictions</td>
+                        <td>27 EU member states</td>
+                    </tr>
+                    <tr>
+                        <td>Primary focus</td>
+                        <td>AML/CFT — preventing money laundering and terrorist financing</td>
+                        <td>Full regulatory framework — investor protection, market integrity, AML</td>
+                    </tr>
+                    <tr>
+                        <td>Regulatory outcome</td>
+                        <td>Registration / licence with AML authority</td>
+                        <td>Authorisation as CASP — mandatory from Dec 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Travel Rule</td>
+                        <td>Applies to VASPs (FATF Rec. 16)</td>
+                        <td>Applies to CASPs (EU Transfer of Funds Regulation)</td>
+                    </tr>
+                    <tr>
+                        <td>Who uses the term</td>
+                        <td>FATF, UK FCA, UAE VARA, Singapore MAS, most non-EU jurisdictions</td>
+                        <td>EU regulators (ESMA, EBA), national competent authorities within EU</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="prose" style="margin-top: 1.5rem;">
+                <p>In practice: if you are a crypto business operating in the EU, you will encounter the CASP designation under MiCA. If you operate globally or in non-EU markets, VASP is the applicable term. Both trigger equivalent AML/KYC obligations and both require formal registration or authorisation with a financial regulator.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"The VASP definition under FATF Recommendation 15 is deliberately broad — and that breadth is intentional. Regulators wanted to capture not just exchanges but any business model that touches virtual assets as a service. In my practice, I regularly see companies that assumed they were not VASPs — NFT platforms, DeFi aggregators, crypto payroll services — and were surprised to find they had been operating as unregistered VASPs for years. The first question any crypto founder should ask is: am I a VASP?"</p>
+            <cite>— Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- TYPES OF VASPS -->
+        <section class="guide-section" id="types-of-vasps">
+            <div class="section-label">Section 3 — Business Types</div>
+            <h2 class="section-h2">Types of <em>VASPs</em> — Which Category Are You?</h2>
+            <div class="prose">
+                <p>FATF does not prescribe a closed list of VASP sub-types, but regulators and industry bodies have converged on the following categories. Each category has distinct compliance implications and may require different licence types in some jurisdictions.</p>
+            </div>
+
+            <div class="vasp-types">
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num">1</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">Cryptocurrency Exchange</div>
+                        <div class="vasp-type-desc">A platform that allows users to buy, sell, or trade virtual assets — either against fiat (on-ramp/off-ramp) or crypto-to-crypto. This is the most common VASP type and the primary target of most crypto licensing regimes. Includes spot exchanges, derivatives platforms, and OTC desks. All require VASP registration. Some jurisdictions — notably Singapore MAS and Hong Kong SFC — require separate licence categories for derivatives trading.</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num">2</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">P2P Platform / Marketplace</div>
+                        <div class="vasp-type-desc">Platforms that facilitate peer-to-peer trading of virtual assets without operating as the counterparty themselves. Even if the platform does not hold assets, providing the infrastructure for users to exchange virtual assets as a business activity typically qualifies as a VASP. FATF guidance explicitly states that P2P platforms with an identifiable operator must comply with AML/KYC obligations.</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num">3</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">Custodian Wallet Provider</div>
+                        <div class="vasp-type-desc">A business that holds private keys on behalf of customers — providing wallet services where the provider, not the user, controls the cryptographic keys. This is a core VASP category in every jurisdiction. Custodians are subject to the highest level of AML scrutiny, capital requirements, and safeguarding obligations (particularly under EU MiCA, which mandates client asset segregation for custodians).</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num">4</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">Crypto Broker / Dealer</div>
+                        <div class="vasp-type-desc">A business that buys and sells virtual assets on its own account while providing liquidity or execution services to clients. This includes market makers, OTC brokers, and proprietary trading firms that also provide client-facing services. The VASP classification applies when client service is part of the business model — pure proprietary trading with no client service component may fall outside the VASP perimeter in some jurisdictions.</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num">5</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">DeFi Protocol (When Regulated)</div>
+                        <div class="vasp-type-desc">FATF guidance is clear that decentralisation does not automatically exclude a protocol from VASP classification. If a DeFi protocol has an identifiable creator, operator, or owner who controls the protocol — including through governance tokens, upgrade keys, or fee collection — regulators may treat that entity as a VASP. True, fully decentralised protocols with no single point of control remain in a grey zone, but regulators in the UK, EU, and US are actively closing this gap.</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num">6</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">NFT Platforms (When Considered VASP)</div>
+                        <div class="vasp-type-desc">FATF has stated that NFT platforms are not automatically VASPs — NFTs that are unique digital collectibles without financial functionality fall outside the standard VASP definition. However, NFT platforms that facilitate large-scale primary sales of tokens with investment characteristics, or that enable secondary market trading in fractionalized NFTs, may cross into VASP territory. Regulators in Germany, the UK, and South Korea have signalled increasing scrutiny of NFT marketplaces.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FATF REQUIREMENTS -->
+        <section class="guide-section" id="fatf-requirements">
+            <div class="section-label">Section 4 — Compliance Framework</div>
+            <h2 class="section-h2">FATF Requirements for <em>VASPs</em></h2>
+            <div class="prose">
+                <p>FATF Recommendation 15, updated in 2019, sets out the baseline obligations for VASPs. These requirements are implemented through domestic legislation by each FATF member jurisdiction — the specific rules differ, but the substance is consistent across all major financial centres.</p>
+
+                <h3>Recommendation 15 — Core Obligations</h3>
+                <p>Under Recommendation 15, countries are required to ensure that VASPs are regulated for AML/CFT purposes, licensed or registered, and subject to effective systems for monitoring or supervision. VASPs must implement AML/CFT programmes equivalent to those required of financial institutions.</p>
+            </div>
+
+            <table class="jx-table" style="margin-top: 1.5rem;">
+                <thead>
+                    <tr>
+                        <th>Obligation</th>
+                        <th>What It Requires</th>
+                        <th>Timing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Registration / Authorisation</td>
+                        <td>Obtain licence or registration from the national financial authority before providing VASP services</td>
+                        <td>Before operations begin</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Due Diligence (CDD/KYC)</td>
+                        <td>Identify and verify customers, understand the nature of their business, apply enhanced due diligence for high-risk clients</td>
+                        <td>At onboarding and ongoing</td>
+                    </tr>
+                    <tr>
+                        <td>Transaction Monitoring</td>
+                        <td>Monitor transactions for suspicious patterns; file Suspicious Activity Reports (SARs) with the FIU</td>
+                        <td>Ongoing — real-time or near real-time</td>
+                    </tr>
+                    <tr>
+                        <td>Travel Rule Compliance</td>
+                        <td>Share originator and beneficiary data with counterpart VASPs for transfers exceeding $1,000 / EUR 1,000</td>
+                        <td>Per-transaction requirement</td>
+                    </tr>
+                    <tr>
+                        <td>Record Keeping</td>
+                        <td>Maintain transaction records and customer identification data for a minimum of 5 years (7 years in some jurisdictions)</td>
+                        <td>Ongoing — audit-ready</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance Officer / MLRO</td>
+                        <td>Appoint a qualified Money Laundering Reporting Officer responsible for AML programme management and SAR filing</td>
+                        <td>Before operations begin</td>
+                    </tr>
+                    <tr>
+                        <td>AML Policy Documentation</td>
+                        <td>Maintain a written AML/CFT policy, risk assessment, and procedure manual — updated at least annually</td>
+                        <td>Ongoing — annual review minimum</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box">
+                <p><strong>Sanctions screening:</strong> In addition to FATF obligations, VASPs must screen customers and transactions against OFAC, EU, UN, and domestic sanctions lists. Sanction violations are treated separately from AML failures and carry strict liability in most jurisdictions — meaning no intent needs to be proven.</p>
+            </div>
+        </section>
+
+        <!-- REGISTRATION BY JURISDICTION -->
+        <section class="guide-section" id="registration-by-country">
+            <div class="section-label">Section 5 — Jurisdictions</div>
+            <h2 class="section-h2">VASP Registration by <em>Jurisdiction</em></h2>
+            <div class="prose">
+                <p>The following table summarises VASP registration requirements across key jurisdictions. Requirements, timelines, and capital thresholds are accurate as of March 2026 but are subject to regulatory updates. Always verify current requirements with a qualified local advisor before initiating an application.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Jurisdiction</th>
+                        <th>Regulator</th>
+                        <th>Regime</th>
+                        <th>Timeline</th>
+                        <th>Capital Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🇪🇪 Estonia</td>
+                        <td>FIU (Rahapesu Andmebüroo)</td>
+                        <td>VASP registration; MiCA transition in progress</td>
+                        <td>2–4 months</td>
+                        <td>EUR 100,000</td>
+                    </tr>
+                    <tr>
+                        <td>🇬🇧 United Kingdom</td>
+                        <td>FCA (Financial Conduct Authority)</td>
+                        <td>Crypto asset registration under MLRs 2017</td>
+                        <td>3–6 months</td>
+                        <td>No fixed minimum (capital adequacy assessed)</td>
+                    </tr>
+                    <tr>
+                        <td>🇱🇹 Lithuania</td>
+                        <td>FNTT (Financial Crime Investigation Service)</td>
+                        <td>VASP registration; MiCA CASP authorisation pathway</td>
+                        <td>2–3 months</td>
+                        <td>EUR 125,000</td>
+                    </tr>
+                    <tr>
+                        <td>🇩🇪 Germany</td>
+                        <td>BaFin (Federal Financial Supervisory Authority)</td>
+                        <td>Crypto custody licence (Section 1 KWG); MiCA CASP</td>
+                        <td>6–12 months</td>
+                        <td>EUR 730,000+ (custody)</td>
+                    </tr>
+                    <tr>
+                        <td>🇦🇪 UAE (Dubai)</td>
+                        <td>VARA (Virtual Assets Regulatory Authority)</td>
+                        <td>VASP licence — full or MVP authorisation</td>
+                        <td>3–6 months</td>
+                        <td>AED 500,000–2M+ depending on activity</td>
+                    </tr>
+                    <tr>
+                        <td>🇸🇬 Singapore</td>
+                        <td>MAS (Monetary Authority of Singapore)</td>
+                        <td>Major/Standard Payment Institution licence under PSA</td>
+                        <td>6–12 months</td>
+                        <td>SGD 250,000–1M depending on activities</td>
+                    </tr>
+                    <tr>
+                        <td>🇵🇱 Poland</td>
+                        <td>KNF (Polish Financial Supervision Authority)</td>
+                        <td>VASP registration in Virtual Currency Activities Register</td>
+                        <td>4–8 weeks</td>
+                        <td>No fixed minimum</td>
+                    </tr>
+                    <tr>
+                        <td>🇭🇰 Hong Kong</td>
+                        <td>SFC (Securities and Futures Commission)</td>
+                        <td>VATP licence (Virtual Asset Trading Platform)</td>
+                        <td>9–18 months</td>
+                        <td>HKD 5,000,000+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="prose" style="margin-top: 1.5rem;">
+                <p>Note that within the EU, the MiCA framework has been phasing in since June 2023 and is now the primary regulatory framework for all crypto businesses. Existing national VASP registrations (e.g., Poland, Lithuania, Estonia) provide grandfathering periods that vary by country, but full MiCA CASP authorisation is required for continued EU market access. Businesses that registered under legacy national regimes must transition to MiCA authorisation or cease EU operations.</p>
+            </div>
+        </section>
+
+        <!-- TRAVEL RULE -->
+        <section class="guide-section" id="travel-rule">
+            <div class="section-label">Section 6 — Travel Rule</div>
+            <h2 class="section-h2">The Travel Rule — <em>VASP-to-VASP</em> Data Sharing</h2>
+            <div class="prose">
+                <p>The Travel Rule is one of the most operationally significant obligations for VASPs. Derived from FATF Recommendation 16 (originally designed for wire transfers between banks), it requires that VASPs collect and transmit originator and beneficiary information alongside virtual asset transfers above the $1,000 threshold.</p>
+                <p>The rule is called the "Travel Rule" because the information must travel with the transaction — the sending VASP must pass customer data to the receiving VASP as part of the transfer process. Unlike in the traditional banking world, where SWIFT messaging carries this data automatically, the crypto industry lacked a standardised infrastructure for VASP-to-VASP data sharing, which led to the development of several competing protocols.</p>
+
+                <h3>What Data Must Travel?</h3>
+            </div>
+
+            <table class="jx-table" style="margin-top: 1rem;">
+                <thead>
+                    <tr>
+                        <th>Data Category</th>
+                        <th>Originator (Sender)</th>
+                        <th>Beneficiary (Receiver)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Full legal name — required</td>
+                        <td>Full legal name — required</td>
+                    </tr>
+                    <tr>
+                        <td>Account / Wallet Address</td>
+                        <td>Account number or virtual asset wallet address</td>
+                        <td>Account number or virtual asset wallet address</td>
+                    </tr>
+                    <tr>
+                        <td>Physical Address</td>
+                        <td>National ID number, date of birth, or physical address</td>
+                        <td>National ID, customer ID, or date and place of birth (where available)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="prose" style="margin-top: 1.5rem;">
+                <h3>Travel Rule Compliance Tools (2026)</h3>
+                <p>Three main protocols have emerged as the leading infrastructure solutions for Travel Rule compliance between VASPs. Each has a different adoption base and technical approach, and many VASPs implement multiple solutions to maximise counterpart coverage:</p>
+            </div>
+
+            <div class="vasp-types" style="margin-top: 1rem;">
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num" style="font-size:1rem;padding:1.25rem 0.75rem;align-items:center;">TRISA</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">TRISA (Travel Rule Information Sharing Architecture)</div>
+                        <div class="vasp-type-desc">Open-source, decentralised protocol developed by CipherTrace. Uses PKI certificate-based identity verification. Strong adoption among regulated VASPs in the US, UK, and APAC. Free to join; requires a TRISA certificate issued after KYB verification.</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num" style="font-size:1rem;padding:1.25rem 0.75rem;align-items:center;">OpenVASP</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">OpenVASP</div>
+                        <div class="vasp-type-desc">Ethereum-based, open-source protocol initiated by Bitcoin Suisse. Uses blockchain-anchored VASP codes for decentralised discovery. Adopted by several European banks and exchanges. Technically complex but offers strong privacy characteristics for VASP-to-VASP messaging.</div>
+                    </div>
+                </div>
+                <div class="vasp-type-item">
+                    <div class="vasp-type-num" style="font-size:1rem;padding:1.25rem 0.75rem;align-items:center;">VerifyVASP</div>
+                    <div class="vasp-type-body">
+                        <div class="vasp-type-title">VerifyVASP</div>
+                        <div class="vasp-type-desc">Commercial platform with strong adoption in Asia-Pacific, particularly South Korea and Japan. Managed service model — lower technical overhead but involves a central operator. Supports both FATF Travel Rule and Korean-specific SPECIFIC Act requirements. Endorsed by Korea's DAXA self-regulatory body.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box" style="margin-top: 1.5rem;">
+                <p><strong>Unhosted wallets:</strong> The Travel Rule as written applies to VASP-to-VASP transfers. Transfers to unhosted wallets (self-custody addresses not held by a VASP) are treated differently across jurisdictions. The EU Transfer of Funds Regulation requires VASPs to collect beneficiary information for transfers to unhosted wallets above EUR 1,000, even when no counterpart VASP is involved. The UK FCA has similar requirements under its own regime.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure which licence fits your business?</strong> Get a free 30-minute consultation with our advisors. We'll review your model and recommend the right jurisdiction.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"The Travel Rule is the compliance challenge that separates serious VASPs from box-checkers. Implementing it correctly requires not just policy — it requires interoperable technical infrastructure, counterparty VASP discovery, sanctions screening on both sides of the transfer, and documented escalation procedures for unhosted wallet transfers. VASPs that built their Travel Rule solution in a hurry are now discovering the gaps during supervisory examinations. Build it properly from the start."</p>
+            <cite>— Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- AM I A VASP -->
+        <section class="guide-section" id="am-i-a-vasp">
+            <div class="section-label">Section 7 — Self-Assessment</div>
+            <h2 class="section-h2">Is Your Business a <em>VASP</em>?</h2>
+            <div class="prose">
+                <p>Use the following decision checklist to assess whether your business meets the FATF definition of a VASP. A "yes" answer to any of the core questions indicates you are likely operating as a VASP and must register with the relevant authority in each jurisdiction where you operate or have clients. This checklist is a starting point — always confirm with a qualified legal advisor before concluding you are or are not a VASP.</p>
+            </div>
+
+            <div class="decision-list">
+                <div class="decision-item">
+                    <div class="decision-icon">?</div>
+                    <div class="decision-body">
+                        <div class="decision-q">Do you exchange virtual assets for fiat currency (or vice versa) on behalf of customers?</div>
+                        <div class="decision-note">Yes → You are a VASP. Applies to: on-ramps, off-ramps, ATM operators, OTC desks, retail exchanges.</div>
+                    </div>
+                </div>
+                <div class="decision-item">
+                    <div class="decision-icon">?</div>
+                    <div class="decision-body">
+                        <div class="decision-q">Do you exchange one virtual asset for another on behalf of customers?</div>
+                        <div class="decision-note">Yes → You are a VASP. Applies to: crypto swap services, DEX aggregators with an identifiable operator, trading platforms.</div>
+                    </div>
+                </div>
+                <div class="decision-item">
+                    <div class="decision-icon">?</div>
+                    <div class="decision-body">
+                        <div class="decision-q">Do you transfer virtual assets on behalf of others?</div>
+                        <div class="decision-note">Yes → You are a VASP. Applies to: crypto payment processors, remittance services, payroll-in-crypto providers, any service moving crypto between wallets for clients.</div>
+                    </div>
+                </div>
+                <div class="decision-item">
+                    <div class="decision-icon">?</div>
+                    <div class="decision-body">
+                        <div class="decision-q">Do you hold or control virtual assets on behalf of others (custody)?</div>
+                        <div class="decision-note">Yes → You are a VASP. Applies to: custodian wallets, exchange hot/cold wallets holding client assets, staking-as-a-service where you hold keys, asset managers holding crypto on behalf of investors.</div>
+                    </div>
+                </div>
+                <div class="decision-item">
+                    <div class="decision-icon">?</div>
+                    <div class="decision-body">
+                        <div class="decision-q">Do you participate in the issuance or sale of virtual assets for others?</div>
+                        <div class="decision-note">Yes → You are likely a VASP. Applies to: token launchpads, IEO platforms, placement agents for token offerings, issuance agents acting on behalf of a token issuer.</div>
+                    </div>
+                </div>
+                <div class="decision-item">
+                    <div class="decision-icon">?</div>
+                    <div class="decision-body">
+                        <div class="decision-q">Are your activities purely personal (not as a business, not on behalf of others)?</div>
+                        <div class="decision-note">Yes → You are NOT a VASP. Personal crypto usage, self-custody, and private investment activities do not fall within the VASP definition. Mining and staking solely for your own account are also typically excluded.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box" style="margin-top: 1.5rem;">
+                <p><strong>If you answered yes to any of questions 1–5:</strong> You are operating as a VASP and must register with the financial intelligence unit or financial regulator in every jurisdiction where you are incorporated or where you actively serve customers. Failure to register carries criminal liability in most jurisdictions, including fines, business closure orders, and personal liability for directors and officers.</p>
+            </div>
+        </section>
+
+        
+        <!-- Related Content — auto-published -->
+        <div class="section-block" style="border-top: var(--heavy);">
+            <div class="section-label">Related Resources</div>
+            <h2 class="section-h2">Continue <em>Reading</em></h2>
+            <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Guides</h3>
+            <ul style="list-style:none;padding:0;margin-bottom:1.5rem;">
+                        <li><a href="/guides/what-is-crypto-license/">What Is a Crypto License? Complete Guide 2026</a></li>
+            </ul>
+            <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Services</h3>
+            <ul style="list-style:none;padding:0;">
+                        <li><a href="/crypto-licenses/vasp-license/">Crypto-Licenses Vasp-License</a></li>
+                        <li><a href="/regulation/eu/">Regulation Eu</a></li>
+                        <li><a href="/crypto-licenses/">Crypto-Licenses</a></li>
+            </ul>
+        </div>
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">VASP — <em>Common Questions</em> Answered</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">
+                        What exactly is a VASP?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">A VASP (Virtual Asset Service Provider) is any natural or legal person that conducts, as a business, one or more of the following activities for others: exchanging virtual assets for fiat or other virtual assets, transferring virtual assets, custodying virtual assets, or participating in the issuance of virtual assets. The definition comes from the Financial Action Task Force (FATF) Recommendation 15 (2019) and has been adopted by 60+ jurisdictions worldwide. Being a VASP triggers mandatory AML/KYC registration requirements.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        What is the difference between a VASP and a CASP?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">VASP and CASP refer to substantially the same category of crypto business, but come from different regulatory frameworks. VASP is the FATF global standard — used by the UK FCA, UAE VARA, Singapore MAS, and most non-EU jurisdictions. CASP (Crypto-Asset Service Provider) is the EU's term under the MiCA regulation. If you operate in the EU, you will be classified as a CASP and must obtain a MiCA authorisation. Outside the EU, you are a VASP and must register under the relevant national VASP regime. In both cases, AML/KYC obligations, Travel Rule compliance, and regulatory oversight requirements are materially the same.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        Does a DeFi protocol count as a VASP?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">It depends on the degree of decentralisation. FATF guidance (2021 Updated Guidance) explicitly states that DeFi protocols are not automatically excluded from VASP classification. If a DeFi protocol has an identifiable owner or operator who maintains control — for example, through admin keys, upgrade mechanisms, governance token majority, or fee collection — then that person or entity may be classified as a VASP. Fully decentralised protocols with no single point of control remain in a grey area, but regulators in the EU (ESMA), UK (FCA), and US (CFTC, FinCEN) are actively developing frameworks that will bring more DeFi activity within the regulatory perimeter. If you operate or develop a DeFi protocol, seek specific legal advice before launch.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        How does Travel Rule compliance work in practice?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">When a customer at VASP A sends virtual assets to a customer at VASP B, and the transfer value exceeds $1,000 (or EUR 1,000 in the EU), VASP A must send the originator's name, wallet address, and one additional identifier (such as national ID number, date of birth, or physical address) to VASP B before or simultaneously with the transaction. VASP B must verify the beneficiary information and can refuse the transaction if the information is incomplete or inconsistent. In practice, VASPs implement this through Travel Rule protocols such as TRISA, OpenVASP, or VerifyVASP, which create secure messaging channels between registered VASPs. The main compliance challenge is the "sunrise problem" — what to do when the counterpart VASP is in a jurisdiction that has not yet enforced the Travel Rule.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        How do I register as a VASP?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">VASP registration varies by jurisdiction but typically involves: (1) incorporating a legal entity in the jurisdiction, (2) appointing a qualified AML/compliance officer (MLRO), (3) drafting an AML/KYC policy tailored to your specific business model, (4) preparing a business plan, technical description, and risk assessment, (5) submitting a registration application to the relevant authority (e.g., FIU in Estonia, FCA in the UK, FNTT in Lithuania), and (6) paying any applicable government fees. Timelines range from 4 weeks (Poland, Slovakia) to 12+ months (Singapore MAS, Hong Kong SFC). Capital requirements range from none (some EU registrations) to several million USD for premium licences. Working with a specialist VASP advisory firm significantly improves success rates and compresses timelines.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">
+                        What are the penalties for operating as an unregistered VASP?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-a">Penalties for unlicensed VASP operation are severe and increasing globally. In the UK, operating without FCA registration carries up to 2 years imprisonment and/or an unlimited fine. In the EU (under MiCA), unlicensed CASP activity can result in fines of up to EUR 5 million or 3% of annual turnover, plus business shutdown orders. In the UAE, operating without a VARA licence can result in fines of up to AED 50 million and criminal prosecution. In the US, operating without FinCEN registration as an MSB (Money Services Business) — which applies to most VASPs serving US customers — carries fines of up to $1 million per day of violation. Beyond financial penalties, unregistered VASPs typically lose access to banking services, cannot list on regulated exchanges, and face reputational damage that is difficult to recover from.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.finma.ch/en/documentation/dossier/dossier-fintech/auf-einen-blick-aufstellung-der-krypto-dienstleistungen/" target="_blank" rel="noopener nofollow">FINMA — Crypto Services Classification: VASP Activities Under Swiss Financial Market Law</a></li>
+            <li><a href="https://www.finma.ch/en/authorisation/fintech/" target="_blank" rel="noopener nofollow">FINMA — FinTech Financial Services Providers: Authorisation Framework</a></li>
+            <li><a href="https://www.finma.ch/en/news/2026/01/20260112-mm-am-01-26/" target="_blank" rel="noopener nofollow">FINMA Guidance 01/2026 — Risks Associated with Custody of Crypto-Based Assets</a></li>
+            <li><a href="https://www.finma.ch/en/documentation/dossier/dossier-geldwaeschereibekaempfung/geldwaescherei-schwerpunkte-der-verhaltensaufsicht-2021/" target="_blank" rel="noopener nofollow">FINMA — Money Laundering: Focus of Conduct Supervision (AML/VASP)</a></li>
+            <li><a href="https://www.admin.ch/opc/en/classified-compilation/19970427/index.html" target="_blank" rel="noopener nofollow">Swiss AMLA — Anti-Money Laundering Act: VASP Registration Obligations</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box" style="margin: 0 3rem 3rem;">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Register as a VASP</h3>
+                <p>We manage your VASP registration end-to-end — from jurisdiction selection and entity formation to AML policy drafting and regulator liaison. Fixed-fee engagements, Swiss coordination.</p>
+                <a href="/contact/?topic=vasp-registration" class="btn-primary">Start Registration</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Key Facts</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.78rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.04em;">FATF Rec. 15 Adopted</div>
+                        <div style="font-size: 0.95rem; font-weight: 600; margin-top: 0.15rem;">2019</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.78rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.04em;">Countries Enforcing</div>
+                        <div style="font-size: 0.95rem; font-weight: 600; margin-top: 0.15rem;">60+</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.78rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.04em;">Travel Rule Threshold</div>
+                        <div style="font-size: 0.95rem; font-weight: 600; margin-top: 0.15rem;">$1,000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/how-to-get-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">How to Get a Crypto License →</a>
+                    <a href="/crypto-licenses/europe/mica-compliance/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA CASP Compliance Guide →</a>
+                    <a href="/crypto-licenses/europe/estonia/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Estonia VASP Registration →</a>
+                    <a href="/crypto-licenses/europe/lithuania/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Lithuania VASP Registration →</a>
+                    <a href="/crypto-licenses/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">All Jurisdictions →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">We Handle</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0;">
+                    <li>VASP / CASP registration in 30+ countries</li>
+                    <li>AML/KYC policy drafting</li>
+                    <li>Travel Rule implementation</li>
+                    <li>MLRO / compliance officer sourcing</li>
+                    <li>Ongoing regulatory monitoring</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Need to Register as a VASP?</h2>
+      <p class="cta-lead">Tell us about your business model and target markets. We will identify the right jurisdiction, outline the registration requirements, and give you a realistic cost and timeline estimate — at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 60+ VASP jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="vasp-registration">VASP Registration</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="travel-rule">Travel Rule Compliance</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Describe your business model, target markets, and any specific VASP registration questions…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/how-to-get-crypto-license/">How to Get a Crypto License</a></li>
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/crypto-licenses/europe/mica-compliance/">MiCA Compliance Guide</a></li>
+                <li><a href="/compare/">Compare Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Top Jurisdictions</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/europe/poland/">Poland</a></li>
+                <li><a href="/crypto-licenses/europe/lithuania/">Lithuania</a></li>
+                <li><a href="/crypto-licenses/mena/uae/">UAE</a></li>
+                <li><a href="/crypto-licenses/asia/singapore/">Singapore</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Registered in Switzerland</span>
+        <span>Information only — not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+
+</body></html>
