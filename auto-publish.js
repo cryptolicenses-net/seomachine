@@ -54,6 +54,25 @@ function copyDirSync(src, dest) {
   }
 }
 
+/**
+ * Read <title> of a published page at urlPath (e.g. "/crypto-licenses/vasp-license/")
+ * and return a short human-readable label. Strips " | CryptoLicenses.net" suffix
+ * and takes the part before the first em/en dash or pipe separator.
+ */
+function getPageTitle(urlPath) {
+  const filePath = path.join(OUTPUT, urlPath.replace(/^\//, ''), 'index.html');
+  if (!fs.existsSync(filePath)) return null;
+  const html = readFile(filePath);
+  const match = html.match(/<title>([^<]+)<\/title>/);
+  if (!match) return null;
+  let title = match[1]
+    .replace(/\s*\|\s*CryptoLicenses\.net\s*$/i, '')
+    .trim();
+  const sepMatch = title.match(/^(.+?)\s*[—–|]\s*/);
+  if (sepMatch) title = sepMatch[1].trim();
+  return title || null;
+}
+
 // ---------------------------------------------------------------------------
 // 1. Check schedule
 // ---------------------------------------------------------------------------
@@ -115,17 +134,17 @@ function addLinksToNewPage(slug, guideConfig, schedule) {
   const guideLinks = relatedGuides.map(g => {
     const entry = schedule.find(s => s.slug === g);
     const title = entry ? entry.title : g.replace(/-/g, ' ');
-    return `                        <li><a href="/guides/${g}/">${title}</a></li>`;
+    return `                <li><a href="/guides/${g}/">${title}</a></li>`;
   }).join('\n');
 
   const pageLinks = relatedPages.map(p => {
-    const name = p.replace(/\//g, ' ').trim().replace(/\b\w/g, c => c.toUpperCase());
-    return `                        <li><a href="${p}">${name}</a></li>`;
+    const name = getPageTitle(p) || p.replace(/\//g, ' ').trim().replace(/\b\w/g, c => c.toUpperCase());
+    return `                <li><a href="${p}">${name}</a></li>`;
   }).join('\n');
 
   const relatedBlock = `
         <!-- Related Content — auto-published -->
-        <div class="section-block" style="border-top: var(--heavy);">
+        <section class="guide-section" id="related">
             <div class="section-label">Related Resources</div>
             <h2 class="section-h2">Continue <em>Reading</em></h2>
             ${guideLinks ? `<h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Guides</h3>
@@ -136,7 +155,7 @@ ${guideLinks}
             <ul style="list-style:none;padding:0;">
 ${pageLinks}
             </ul>` : ''}
-        </div>`;
+        </section>`;
 
   // Insert before FAQ section or before footer
   if (html.includes('<!-- FAQ')) {
