@@ -43,7 +43,7 @@
 1. `node add_schema.js "$(pwd)/output"` — обновить Schema.org разметку на всех страницах
 2. `node generate_sitemap.js` — перегенерировать `output/sitemap.xml` с новыми URL
 3. `node generate_redirects.js output` — перегенерировать `output/_redirects` (trailing slash + www + 404)
-4. Задеплоить: `CLOUDFLARE_API_TOKEN=cfut_XhKdixhNNCX88Uof8YEbaC8rBaQTCbpj5it7abuse2a52713 CLOUDFLARE_ACCOUNT_ID=0166508d5cf2032b7d2eff4f9b50f66a npx wrangler pages deploy output --project-name=cryptolicenses-net --branch=master --commit-dirty=true`
+4. Задеплоить: `CLOUDFLARE_API_TOKEN=cfut_***REDACTED*** CLOUDFLARE_ACCOUNT_ID=0166508d5cf2032b7d2eff4f9b50f66a npx wrangler pages deploy output --project-name=cryptolicenses-net --branch=master --commit-dirty=true`
 5. Обновить PROGRESS.md — отметить созданные страницы ✅ и обновить таблицу ИТОГ
 
 **Правила Schema.org:**
@@ -81,17 +81,17 @@
 | Неделя | Дата публикации | Slug | Статус |
 |--------|----------------|------|--------|
 | 1 | 2026-03-29 | `crypto-license-cost` | published ✅ |
-| 2 | 2026-04-05 | `what-is-crypto-license` | drafts ⏳ |
-| 3 | 2026-04-12 | `what-is-vasp` | drafts ⏳ |
-| 4 | 2026-04-19 | `mica-explained` | drafts ⏳ |
-| 5 | 2026-04-26 | `aml-kyc-explained` | drafts ⏳ |
-| 6 | 2026-05-03 | `no-kyc-exchanges-risks` | drafts ⏳ |
-| 7 | 2026-05-10 | `stablecoin-regulation` | drafts ⏳ |
-| 8 | 2026-05-17 | `crypto-broker-license` | drafts ⏳ |
-| 9 | 2026-05-24 | `fastest-crypto-licenses` | drafts ⏳ |
-| 10 | 2026-05-31 | `cheapest-crypto-licenses` | drafts ⏳ |
-| 11 | 2026-06-07 | `start-crypto-business` | drafts ⏳ |
-| 12 | 2026-06-14 | `what-is-crypto-regulation` | drafts ⏳ |
+| 2 | 2026-04-05 | `what-is-crypto-license` | published ✅ |
+| 3 | 2026-04-12 | `what-is-vasp` | published ✅ |
+| 4 | 2026-04-19 | `mica-explained` | pending ⏳ (следующий) |
+| 5 | 2026-04-26 | `aml-kyc-explained` | pending ⏳ |
+| 6 | 2026-05-03 | `no-kyc-exchanges-risks` | pending ⏳ |
+| 7 | 2026-05-10 | `stablecoin-regulation` | pending ⏳ |
+| 8 | 2026-05-17 | `crypto-broker-license` | pending ⏳ |
+| 9 | 2026-05-24 | `fastest-crypto-licenses` | pending ⏳ |
+| 10 | 2026-05-31 | `cheapest-crypto-licenses` | pending ⏳ |
+| 11 | 2026-06-07 | `start-crypto-business` | pending ⏳ |
+| 12 | 2026-06-14 | `what-is-crypto-regulation` | pending ⏳ |
 
 **Команда для публикации одной статьи:**
 ```bash
@@ -463,19 +463,19 @@ node generate_sitemap.js
 - [x] `/regulation/news/trends/` — Global Trends ✅
 - [x] `/regulation/switzerland/` — Switzerland (FINMA, FinTech Licence, DLT Act) ✅ (2026-03-26)
 
-**Guides (отложенная публикация — 1 в неделю):**
-- [ ] `/guides/crypto-license-cost/` ← неделя 1
-- [ ] `/guides/what-is-crypto-license/` ← неделя 2
-- [ ] `/guides/what-is-vasp/` ← неделя 3
-- [ ] `/guides/mica-explained/` ← неделя 4
-- [ ] `/guides/aml-kyc-explained/` ← неделя 5
-- [ ] `/guides/no-kyc-exchanges-risks/` ← неделя 6
-- [ ] `/guides/stablecoin-regulation/` ← неделя 7
-- [ ] `/guides/crypto-broker-license/` ← неделя 8
-- [ ] `/guides/fastest-crypto-licenses/` ← неделя 9
-- [ ] `/guides/cheapest-crypto-licenses/` ← неделя 10
-- [ ] `/guides/start-crypto-business/` ← неделя 11
-- [ ] `/guides/what-is-crypto-regulation/` ← неделя 12
+**Guides (отложенная публикация — 1 в неделю, статус из publish-schedule.json):**
+- [x] `/guides/crypto-license-cost/` ← неделя 1, 2026-03-29 ✅
+- [x] `/guides/what-is-crypto-license/` ← неделя 2, 2026-04-05 ✅
+- [x] `/guides/what-is-vasp/` ← неделя 3, 2026-04-12 ✅
+- [ ] `/guides/mica-explained/` ← неделя 4, 2026-04-19 ⏳ (следующий)
+- [ ] `/guides/aml-kyc-explained/` ← неделя 5, 2026-04-26 ⏳
+- [ ] `/guides/no-kyc-exchanges-risks/` ← неделя 6, 2026-05-03 ⏳
+- [ ] `/guides/stablecoin-regulation/` ← неделя 7, 2026-05-10 ⏳
+- [ ] `/guides/crypto-broker-license/` ← неделя 8, 2026-05-17 ⏳
+- [ ] `/guides/fastest-crypto-licenses/` ← неделя 9, 2026-05-24 ⏳
+- [ ] `/guides/cheapest-crypto-licenses/` ← неделя 10, 2026-05-31 ⏳
+- [ ] `/guides/start-crypto-business/` ← неделя 11, 2026-06-07 ⏳
+- [ ] `/guides/what-is-crypto-regulation/` ← неделя 12, 2026-06-14 ⏳
 
 ### ✅ СПЛИТ 19 — ВЫПОЛНЕН (2026-03-22)
 - [x] `/case-studies/` — 6 кейсов (EU MiCA, UAE VARA, Estonia, Singapore, FCA, Cayman) ✅
@@ -504,9 +504,13 @@ node generate_sitemap.js
 | Crypto Accounting | 12 | 0 ✅ |
 | Corporate Services | 28 | 0 ✅ |
 | Regulation Hub | 17 | 0 ✅ |
-| Guides | 2 (опубл.) + 12 (drafts) | 0 ⏳ |
+| Guides | 3 + 1 (how-to) (опубл.) + 9 (drafts) | 0 ⏳ |
 | Offshore | 1 | 0 ✅ |
-| **ИТОГО (задеплоено)** | **241** | — |
+| **ИТОГО (задеплоено)** | **246** | — |
+
+*Обновлено: 2026-04-17 (сессия 15). Опубликовано 3 гайда по расписанию автопубликации: crypto-license-cost (2026-03-29), what-is-crypto-license (2026-04-05), what-is-vasp (2026-04-12). Следующий: mica-explained — 2026-04-19. Воркфлоу GitHub Actions запускается ежедневно 08:00 UTC, работает корректно. 246 страниц задеплоено.*
+
+*Обновлено: 2026-04-10 (сессия 13). Опубликован гайд `what-is-crypto-license` (неделя 2, просрочен на 5 дней). 245 страниц задеплоены. Следующий: `what-is-vasp` — 2026-04-12.*
 
 *Обновлено: 2026-03-26 (сессия 12). Создана `/regulation/switzerland/` (FINMA, FinTech Licence, DLT Act, SRO, AMLA, Crypto Valley Zug). 243 страницы задеплоены.
 
@@ -599,7 +603,7 @@ node generate_sitemap.js
 - Pages URL: https://cryptolicenses-net.pages.dev
 - Домен: cryptolicenses.net (CNAME → cryptolicenses-net.pages.dev, статус deactivated — ожидает деплоя с контентом)
 - DNS записи в Cloudflare: cryptolicenses.net + www.cryptolicenses.net → proxied CNAME ✅
-- Создан API Token для GitHub Actions: `cfut_XhKdixhNNCX88Uof8YEbaC8rBaQTCbpj5it7abuse2a52713`
+- Создан API Token для GitHub Actions: `cfut_***REDACTED***`
 - Workflow файл сохранён: `seomachine/github-actions-deploy.yml`
 
 **Что нужно сделать для автодеплоя:**
@@ -633,7 +637,7 @@ node generate_sitemap.js
 **Результат:** Сайт https://cryptolicenses.net работает ✅
 
 **Используемые токены:**
-- Pages API: `cfut_XhKdixhNNCX88Uof8YEbaC8rBaQTCbpj5it7abuse2a52713` (scope: Cloudflare Pages)
+- Pages API: `cfut_***REDACTED***` (scope: Cloudflare Pages)
 - DNS API: Global API Key `bea1e01ac913e7280cf9c4097e639af8e31a8` + email `info@goldblum.ch`
 - Zone ID: `868ab2384ceda8cc9bca22fca197f38d`
 
@@ -671,7 +675,7 @@ node generate_sitemap.js
 - Гайды → Organization + BreadcrumbList + Article + FAQPage
 
 #### Деплой сессии 8
-- Команда: `cd seomachine && CLOUDFLARE_API_TOKEN=cfut_XhKdixhNNCX88Uof8YEbaC8rBaQTCbpj5it7abuse2a52713 CLOUDFLARE_ACCOUNT_ID=0166508d5cf2032b7d2eff4f9b50f66a npx wrangler pages deploy output --project-name=cryptolicenses-net --branch=master --commit-dirty=true`
+- Команда: `cd seomachine && CLOUDFLARE_API_TOKEN=cfut_***REDACTED*** CLOUDFLARE_ACCOUNT_ID=0166508d5cf2032b7d2eff4f9b50f66a npx wrangler pages deploy output --project-name=cryptolicenses-net --branch=master --commit-dirty=true`
 - Последний деплой: 2026-03-21, 79 файлов ✅
 
 ---
@@ -1118,3 +1122,73 @@ node generate_sitemap.js
 11. Брендовые сигналы: социальные сети, каталоги, упоминания
 
 *Обновлено: 2026-04-01 (сессия 13, часть 2). SEO аудит проведён. Оценка 7.5/10.*
+
+---
+
+### Сессия 14 (2026-04-08) — ИСПРАВЛЕНИЕ ФОРМЫ ОБРАТНОЙ СВЯЗИ
+
+**Проблема 1:** Форма на `/contact/` (и CTA-формы на всех 247 страницах) не отправлялась.
+
+**Причина:** Cloudflare Pages Function (`functions/api/contact.js`) не была задеплоена. POST на `/api/contact` возвращал `405 Method Not Allowed`. Копия `functions/` внутри `output/functions/` обрабатывалась как статический файл, а не как серверная функция.
+
+**Решение:**
+1. Удалена `output/functions/` (копия функции внутри статических файлов)
+2. Передеплоено — wrangler подхватил `functions/` из корня проекта
+3. Functions bundle успешно загружен, POST `/api/contact` → `200 {"success":true}` ✅
+
+**Проблема 2:** Email-уведомления не приходили. MailChannels прекратил бесплатную интеграцию с Cloudflare Workers.
+
+**Решение:** Заменён MailChannels на Cloudflare Email Workers:
+- `functions/api/contact.js` — переписан email-блок, отправка через `env.SEND_EMAIL.send()` (binding)
+- Импорт `EmailMessage` из `cloudflare:email`
+- ⚠️ Binding `SEND_EMAIL` должен быть настроен в Cloudflare Dashboard → Pages → cryptolicenses-net → Settings → Bindings → Email
+
+**Проблема 3:** Валидация формы на русском — браузер показывал `"Заполни это поле"`.
+
+**Решение:** `output/assets/contact-form.js` — обработчики `invalid`/`input`/`change` + `setCustomValidity('Please fill in this field' / 'Please enter a valid email address')`.
+
+---
+
+### Сессия 15 (2026-04-17) — ПРАВКА Related Resources + ПОВТОРНАЯ ПОЧИНКА ФОРМЫ
+
+**Правка 1 — блок Related Resources в автопубликациях.**
+
+Обнаружен "слетевший" дизайн блока на `/guides/what-is-vasp/` (и `/guides/what-is-crypto-license/`). Контейнер `<div class="section-block">` не имел стилей на странице → отсутствовал padding. Якорные тексты страниц генерились примитивно: "Crypto-Licenses Vasp-License", "Regulation Eu".
+
+**Решение:**
+1. `auto-publish.js` — контейнер заменён на `<section class="guide-section" id="related">` (унифицирован с соседними секциями).
+2. Добавлен helper `getPageTitle(urlPath)` — читает `<title>` целевой страницы, убирает `| CryptoLicenses.net`, берёт часть до em/en-dash. Теперь anchor-тексты human-readable: "VASP License", "EU Crypto Regulation 2026", "Crypto Licenses Worldwide".
+3. Вручную перегенерены блоки на 2 уже опубликованных гайдах: `what-is-vasp`, `what-is-crypto-license`.
+
+Коммит: `d7a0ac7 fix: styled Related Resources block in auto-published guides`
+
+**Правка 2 — форма обратной связи снова не работала.**
+
+`POST /api/contact` → 405. Причина: в коммите `d34174e` (SEO audit fixes) кто-то снова добавил `output/functions/api/contact.js` — старую версию, ту что была удалена в сессии 14. Wrangler брал её как статический файл, актуальная функция из `functions/` не деплоилась.
+
+**Решение:** `git rm -r output/functions/` + передеплой. POST `/api/contact` → `{"success":true}` ✅
+
+Коммит: `36cebd8 fix: remove stale output/functions/ copy blocking Pages Functions`
+
+⚠️ **Ни в коем случае не добавлять `output/functions/` в git — это ломает Pages Functions.**
+
+**Статус публикаций гайдов (актуально на 2026-04-17):**
+
+| Неделя | Дата | Slug | Статус |
+|--------|------|------|--------|
+| 1 | 2026-03-29 | crypto-license-cost | published ✅ |
+| 2 | 2026-04-05 | what-is-crypto-license | published ✅ |
+| 3 | 2026-04-12 | what-is-vasp | published ✅ |
+| 4 | 2026-04-19 | mica-explained | pending ⏳ (следующий, через 2 дня) |
+| 5 | 2026-04-26 | aml-kyc-explained | pending ⏳ |
+| 6 | 2026-05-03 | no-kyc-exchanges-risks | pending ⏳ |
+| 7 | 2026-05-10 | stablecoin-regulation | pending ⏳ |
+| 8 | 2026-05-17 | crypto-broker-license | pending ⏳ |
+| 9 | 2026-05-24 | fastest-crypto-licenses | pending ⏳ |
+| 10 | 2026-05-31 | cheapest-crypto-licenses | pending ⏳ |
+| 11 | 2026-06-07 | start-crypto-business | pending ⏳ |
+| 12 | 2026-06-14 | what-is-crypto-regulation | pending ⏳ |
+
+**GitHub Actions cron:** работает корректно, запуск ежедневно 08:00 UTC. Последний успешный запуск: 2026-04-16. Следующая автопубликация: `mica-explained` — 2026-04-19.
+
+*Обновлено: 2026-04-17 (сессия 15). Задеплоено 246 страниц. Автопубликация гайдов идёт по графику (3 из 12 опубликовано).*
