@@ -5,1483 +5,1489 @@
           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://cryptolicenses.net/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/about/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/blog/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/case-studies/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/contact/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/privacy/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/sitemap/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/terms/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/about/dr-marcus-hartmann/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/about/experts/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/crypto-banking/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/crypto-payment-processing/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/msb/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/spi/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/aml-kyc/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/company-formation/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/compliance/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/license-renewal/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/ready-made-companies/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/surety-bonds/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/audit/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/bookkeeping/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/fund-accounting/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/mining/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/services/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/software/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/standards/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/tax/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/caribbean/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/custody-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/general/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/latam/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/offshore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/otc-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/vasp-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/wallet-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/white-label-exchange/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/broker-setup/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/crypto-brokerage/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/aml-kyc-explained/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/crypto-license-cost/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/how-to-get-crypto-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/mica-explained/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cryptolicenses.net/guides/no-kyc-exchanges-risks/</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/what-is-crypto-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/guides/what-is-vasp/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/canada/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/china/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/estonia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/eu/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/india/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/japan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/map/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/news/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/pakistan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/singapore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/switzerland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/turkey/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/uk/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/usa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/crypto-payment-processing/high-risk/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/cyprus/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/czech-republic/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/egypt/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/estonia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/ireland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/lithuania/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/malaysia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/malta/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/netherlands/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/pakistan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/philippines/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/singapore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/switzerland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/uae/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/emi/uk/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/spi/czech-republic/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/spi/poland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/banking-licenses/spi/uk/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/company-formation/bulgaria/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/company-formation/dubai/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/company-formation/switzerland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/crypto-casino/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/crypto-gambling/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/egypt/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/ghana/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/india/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/isle-of-man/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/jersey/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/malaysia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/nigeria/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/p2p-lending/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/seychelles/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/singapore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/fintech-licensing/switzerland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/ready-made-companies/crypto-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/ready-made-companies/emi-license/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/ready-made-companies/forex-broker/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/corporate-services/ready-made-companies/shelf-companies/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/standards/fasb-asu-2023-08/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/standards/ifrs/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-accounting/standards/us-gaap/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/anjouan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/cape-verde/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/kenya/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/mauritius/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/nigeria/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/seychelles/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/africa/south-africa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/argentina/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/bahamas/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/barbados/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/belize/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/bermuda/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/brazil/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/bvi/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/canada/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/cayman-islands/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/costa-rica/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/ecuador/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/marshall-islands/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/saint-lucia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/samoa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/usa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/wyoming/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/australia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/hong-kong/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/india/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/indonesia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/japan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/kazakhstan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/labuan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/malaysia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/new-zealand/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/philippines/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/singapore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/south-korea/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/thailand/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/uzbekistan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/asia/vietnam/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/caribbean/seychelles/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/caribbean/svg/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/armenia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/bosnia-herzegovina/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/bulgaria/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/cyprus/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/czech-republic/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/estonia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/finland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/france/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/georgia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/germany/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/gibraltar/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/guernsey/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/ireland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/isle-of-man/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/italy/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/jersey/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/liechtenstein/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/lithuania/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/malta/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/mica-compliance/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/monaco/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/montenegro/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/netherlands/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/poland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/portugal/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/romania/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/serbia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/slovakia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/slovenia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/spain/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/sweden/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/switzerland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/ukraine/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/europe/united-kingdom/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/latam/el-salvador/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/latam/panama/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/bahrain/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/israel/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/turkey/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/offshore/vanuatu/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/antigua-barbuda/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/bahamas/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/belize/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/bermuda/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/bvi/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/cape-verde/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/cayman-islands/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/comoros/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/dominica/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/labuan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/marshall-islands/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/mauritius/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/panama/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/saint-kitts-nevis/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/saint-lucia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/seychelles/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/svg/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/offshore/vanuatu/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/australia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/bulgaria/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/cambodia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/cyprus/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/czech-republic/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/dubai/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/estonia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/georgia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/hong-kong/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/india/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/japan/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/lithuania/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/malta/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/new-zealand/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/serbia/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/singapore/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/south-africa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/switzerland/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/uk/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/forex-licenses/onshore/usa/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/news/licensing/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/regulation/news/trends/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/americas/usa/new-york/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/adgm/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/dafza/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/difc/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/dmcc/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/dwtc/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/ifza/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/rak-dao/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cryptolicenses.net/crypto-licenses/mena/uae/vara/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
