@@ -1,15 +1,36 @@
 #!/usr/bin/env node
 /**
- * fix_og_tags.js — Add missing og:title and og:description tags
- * Extracts from existing <title> and <meta name="description"> tags
+ * fix_og_tags.js — Ensure all 4 mandatory OG tags on every page (idempotent).
+ *
+ *   og:title       <- existing <title>            (fallback if missing)
+ *   og:description <- existing meta description    (fallback if missing)
+ *   og:url         <- <link rel="canonical"> href
+ *   og:image       <- faithful session-19 value when available, else first
+ *                     /assets/images/ content image, else /assets/og-default.jpg
+ *
+ * og:image source of truth: the pre-livesync stash (STASH_REF) holds session-19's
+ * contextual og:image per page (e.g. homepage -> bern-old-town, which has no inline
+ * <img>). We prefer that exact value; pages absent from the stash (the 9 cron guides
+ * published later) fall back to their first content image. Preserves LF line endings.
  */
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const OUTPUT = path.join(__dirname, 'output');
-let fixed = 0;
-let skipped = 0;
+const SITE = 'https://cryptolicenses.net';
+const STASH_REF = process.env.OG_STASH_REF || 'stash@{0}';
+const GENERIC = ['og-default.jpg', 'zurich-lakeside-historic-buildings.jpg'];
+let fixed = 0, skipped = 0;
+
+function stashOgImage(relFromRoot) {
+  try {
+    const buf = execSync(`git show ${STASH_REF}:${relFromRoot}`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] });
+    const m = buf.match(/property="og:image"\s+content="([^"]+)"/);
+    return m ? m[1] : null;
+  } catch { return null; }
+}
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -18,75 +39,71 @@ function walk(dir) {
       if (['templates', 'functions', '.github', '.wrangler', 'assets'].includes(entry.name)) continue;
       walk(full);
     } else if (entry.name === 'index.html') {
-      fixOgTags(full);
+      fixOne(full);
     }
   }
 }
 
-function fixOgTags(filePath) {
+function fixOne(filePath) {
   let html = fs.readFileSync(filePath, 'utf-8');
-  let modified = false;
+  const before = html;
 
-  // Extract title
-  const titleMatch = html.match(/<title>([^<]+)<\/title>/);
-  const title = titleMatch ? titleMatch[1].trim() : null;
+  const title = (html.match(/<title>([^<]+)<\/title>/) || [])[1]?.trim();
+  const desc = (html.match(/<meta\s+name="description"\s+content="([^"]+)"/) || [])[1]?.trim();
+  const canonical = (html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/) || [])[1]?.trim();
 
-  // Extract meta description
-  const descMatch = html.match(/<meta\s+name="description"\s+content="([^"]+)"/);
-  const desc = descMatch ? descMatch[1].trim() : null;
-
-  // Check and add og:title
-  if (!html.includes('og:title') && title) {
-    const ogTitle = `    <meta property="og:title" content="${title}">`;
-    // Insert after existing og tags, or after description meta, or before </head>
-    if (html.includes('og:image')) {
-      html = html.replace(
-        /(<meta\s+property="og:image"[^>]*>)/,
-        `<meta property="og:title" content="${title}">\n    $1`
-      );
-    } else if (html.includes('</head>')) {
-      html = html.replace('</head>', `    ${ogTitle}\n    </head>`);
-    }
-    modified = true;
+  // --- og:title / og:description (fallbacks) ---
+  if (!html.includes('property="og:title"') && title) {
+    html = insertHead(html, `<meta property="og:title" content="${title}">`);
+  }
+  if (!html.includes('property="og:description"') && desc) {
+    html = insertHead(html, `<meta property="og:description" content="${desc}">`);
   }
 
-  // Check and add og:description
-  if (!html.includes('og:description') && desc) {
-    const ogDesc = `<meta property="og:description" content="${desc}">`;
-    if (html.includes('og:title')) {
-      html = html.replace(
-        /(<meta\s+property="og:title"[^>]*>)/,
-        `$1\n    ${ogDesc}`
-      );
-    } else if (html.includes('og:image')) {
-      html = html.replace(
-        /(<meta\s+property="og:image"[^>]*>)/,
-        `${ogDesc}\n    $1`
-      );
-    } else if (html.includes('</head>')) {
-      html = html.replace('</head>', `    ${ogDesc}\n    </head>`);
+  // --- og:image (contextual) ---
+  const relFromRoot = path.relative(__dirname, filePath);
+  let img = stashOgImage(relFromRoot);
+  if (!img) {
+    const firstImg = (html.match(/<img[^>]+src="(\/assets\/images\/[^"]+)"/) || [])[1];
+    img = firstImg ? `${SITE}${firstImg}` : `${SITE}/assets/og-default.jpg`;
+  }
+  const curImg = (html.match(/property="og:image"\s+content="([^"]+)"/) || [])[1];
+  if (curImg) {
+    // replace only if current is generic and we have a better contextual one
+    const curGeneric = GENERIC.some(g => curImg.includes(g));
+    if (curGeneric && !GENERIC.some(g => img.includes(g)) && curImg !== img) {
+      html = html.replace(/(property="og:image"\s+content=")[^"]+(")/, `$1${img}$2`);
     }
-    modified = true;
+  } else {
+    html = insertHead(html, `<meta property="og:image" content="${img}">`);
   }
 
-  // Check and add og:type if missing
-  if (!html.includes('og:type') && modified) {
-    const ogType = html.includes('/guides/') ? 'article' : 'website';
-    if (html.includes('og:description')) {
-      html = html.replace(
-        /(<meta\s+property="og:description"[^>]*>)/,
-        `$1\n    <meta property="og:type" content="${ogType}">`
-      );
+  // --- og:url (from canonical) ---
+  if (!html.includes('property="og:url"') && canonical) {
+    const tag = `<meta property="og:url" content="${canonical}">`;
+    if (html.includes('property="og:image"')) {
+      html = html.replace(/(\s*)(<meta\s+property="og:image")/, `$1${tag}$1$2`);
+    } else {
+      html = insertHead(html, tag);
     }
   }
 
-  if (modified) {
+  if (html !== before) {
     fs.writeFileSync(filePath, html, 'utf-8');
     fixed++;
-    console.log(`Fixed: ${path.relative(OUTPUT, filePath)}`);
   } else {
     skipped++;
   }
+}
+
+function insertHead(html, tag) {
+  if (html.includes('property="og:image"')) {
+    return html.replace(/(<meta\s+property="og:image"[^>]*>)/, `${tag}\n    $1`);
+  }
+  if (html.includes('</head>')) {
+    return html.replace('</head>', `    ${tag}\n</head>`);
+  }
+  return html;
 }
 
 walk(OUTPUT);
