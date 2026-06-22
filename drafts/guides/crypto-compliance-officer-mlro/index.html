@@ -1,0 +1,993 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Does a Crypto MLRO Do? Compliance Officer Role & Requirements (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="What does a crypto MLRO do in 2026? The Money Laundering Reporting Officer role explained: SAR filing, AML program ownership, fit and proper tests, board reporting, and why MiCA CASPs and VASPs must appoint one.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-compliance-officer-mlro/">
+    <meta property="og:title" content="What Does a Crypto MLRO Do? Compliance Officer Role & Requirements (2026)">
+    <meta property="og:description" content="The crypto Money Laundering Reporting Officer role explained for 2026: SAR filing, AML program ownership, fit and proper tests, board reporting, and why MiCA CASPs and VASPs must appoint one.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-compliance-officer-mlro/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/business-meeting-signing-documents-team.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cryptolicenses.net/about/dr-marcus-hartmann/#person",
+      "name": "Dr. Marcus Hartmann",
+      "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/",
+      "jobTitle": "Senior Licensing Advisor",
+      "worksFor": { "@id": "https://cryptolicenses.net/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "What Does a Crypto MLRO Do?", "item": "https://cryptolicenses.net/guides/crypto-compliance-officer-mlro/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-compliance-officer-mlro/#article",
+      "headline": "What Does a Crypto MLRO Do? Compliance Officer Role & Requirements (2026)",
+      "description": "The crypto Money Laundering Reporting Officer role explained for 2026: SAR filing, AML program ownership, fit and proper tests, board reporting, and why MiCA CASPs and VASPs must appoint one.",
+      "url": "https://cryptolicenses.net/guides/crypto-compliance-officer-mlro/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-compliance-officer-mlro/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/business-meeting-signing-documents-team.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an MLRO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An MLRO is a Money Laundering Reporting Officer, the named individual a regulated firm appoints to own its anti-money laundering programme. The MLRO receives internal suspicion reports from staff, decides whether to file a Suspicious Activity Report with the national financial intelligence unit, and ensures the firm complies with money laundering regulations." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a crypto MLRO actually do?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A crypto MLRO owns the firm's AML and CFT framework, receives internal suspicious activity reports, investigates them, and decides whether to file a formal SAR with the national authority. They also oversee transaction monitoring, the Travel Rule process, staff training, sanctions screening, and report on financial crime risk to the board or senior management." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a crypto firm legally required to appoint an MLRO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. In almost every regulated market, a licensed or registered crypto firm is an obliged entity that must appoint an MLRO or equivalent compliance officer. FATF Recommendation 18 requires a compliance officer at management level, and MiCA, FCA registration, and national VASP regimes all make the appointment a precondition of authorisation." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an MLRO and a compliance officer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A compliance officer oversees the firm's general adherence to regulation, including conduct, governance, and AML policy design. The MLRO is the specific role responsible for receiving internal suspicion reports and deciding whether to file SARs with the authorities. In smaller firms one person may hold both roles, but larger firms separate them." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a SAR and who files it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A SAR, or Suspicious Activity Report, is a disclosure to the national financial intelligence unit about a transaction or customer suspected of money laundering or terrorist financing. Staff raise an internal report to the MLRO, who investigates and decides whether to submit a formal SAR externally. The MLRO is the only person who files the external report." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fit and proper test for an MLRO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Fit and proper is a regulatory assessment of whether a candidate has the honesty, integrity, competence, and financial soundness to hold a key function. For an MLRO, the regulator examines AML experience, qualifications, criminal and disciplinary history, and capacity. The FCA assesses the SMF17 candidate's competence in proportion to the firm's size and risk." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SMF17 in the UK?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SMF17 is the Money Laundering Reporting Officer Senior Management Function under the FCA's Senior Managers and Certification Regime. A UK firm in scope must have an FCA-approved SMF17 holder. The FCA pays particular attention to the competence and capability of SMF17 candidates, expecting skills proportionate to the firm's size and risk of harm." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a MiCA CASP need an MLRO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Crypto-asset service providers authorised under MiCA are obliged entities under the EU anti-money laundering framework, so the full AML and CFT regime applies. National competent authorities expect a CASP applicant to name a qualified MLRO, evidence a three-lines-of-defence model, and pass fit and proper assessments on all key function holders." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a crypto firm outsource the MLRO role?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Some operational tasks can be supported by outsourced specialists, but the accountable MLRO must be a named, approved individual with real authority inside the firm. Regulators reject applications where the compliance function is combined with a revenue role or shared across entities, and many expect the MLRO to be on the firm's own payroll." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does an MLRO need to be local resident?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Increasingly, yes. As substance requirements tighten, many regulators expect the MLRO to be locally resident, available to the supervisor, and genuinely present rather than a name on paper. The exact rule varies by jurisdiction, but a remote or nominal MLRO with no local footprint is a common reason for application delay or refusal." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an MLRO be held personally liable?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The MLRO holds personal accountability for the AML function. Under regimes such as the FCA Senior Managers and Certification Regime, an approved MLRO can face individual enforcement, fines, or a prohibition order for failures in the firm's financial crime controls. Failure to report a known suspicion can also carry personal criminal exposure." }
+        },
+        {
+          "@type": "Question",
+          "name": "What qualifications should a crypto MLRO have?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no single mandatory licence, but regulators expect relevant AML experience plus recognised credentials such as an ACAMS certification, a legal or finance background, and demonstrable knowledge of FATF crypto guidance, the Travel Rule, blockchain analytics, and wallet tracing. The depth required scales with the firm's size and risk profile." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does FATF say about the compliance officer role?",
+          "acceptedAnswer": { "@type": "Answer", "text": "FATF Recommendation 18 requires financial institutions, including virtual asset service providers, to maintain internal AML and CFT programmes that include the appointment of a compliance officer at management level, plus internal policies, employee screening, training, and an independent audit function to test the system." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the MLRO requirement affect crypto licensing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Naming a credible, fit and proper MLRO is a baseline condition of most VASP and CASP licence applications. Regulators want to see who the MLRO is, their qualifications, their authority within the firm, and how the AML programme they own is documented before granting authorisation. A weak MLRO appointment is a frequent cause of application failure." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto MLRO
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/business-meeting-signing-documents-team.jpg" alt="Compliance team signing documents in a meeting, the crypto MLRO role explained in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: AML &amp; Compliance</div>
+        <h1 class="hero-h1">What Does a Crypto MLRO Do? Compliance Officer Role &amp; Requirements in <em>2026</em></h1>
+        <p class="hero-intro">The crypto MLRO, or Money Laundering Reporting Officer, is the named individual who owns a licensed firm's AML programme, files Suspicious Activity Reports, and answers to the regulator. This guide explains the role, the difference between an MLRO and a compliance officer, the fit and proper test, why MiCA CASPs and VASPs must appoint one, and the personal liability that comes with the job in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>AML &amp; Compliance</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">What an MLRO Is</a></li>
+            <li class="toc-item"><a href="#duties">What the MLRO Does</a></li>
+            <li class="toc-item"><a href="#vs">MLRO vs Compliance Officer</a></li>
+            <li class="toc-item"><a href="#why">Why Crypto Firms Must Appoint One</a></li>
+            <li class="toc-item"><a href="#fit">Fit and Proper Requirements</a></li>
+            <li class="toc-item"><a href="#liability">Personal Liability</a></li>
+            <li class="toc-item"><a href="#sar">The SAR Workflow</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and institutional investors through the full spectrum of VASP and CASP licensing, where naming a credible MLRO is now a standard condition of authorisation.</p>
+                <p>He has built and staffed AML governance structures for clients operating under MiCA in the EU, FCA registration in the UK, and FATF-aligned regimes across the Gulf and Asia, and advises on fit and proper assessments, compliance-team design, and MLRO appointments across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Definition · MLRO</div>
+                <p>An MLRO is a Money Laundering Reporting Officer: the named individual a regulated crypto firm appoints to own its anti-money laundering programme. The MLRO receives internal suspicion reports from staff, decides whether to file a Suspicious Activity Report with the national authority, and ensures the firm complies with money laundering regulations.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>An MLRO is the named officer accountable for a crypto firm's AML and CFT programme, including the legal duty to file Suspicious Activity Reports to the national authority</li>
+                    <li>FATF Recommendation 18 requires obliged entities to appoint a compliance officer at management level, and MiCA, FCA registration, and VASP regimes make the appointment a licensing precondition</li>
+                    <li>The post-holder must pass a fit and proper or approved-person test; in the UK the role is the FCA's SMF17 Senior Management Function</li>
+                    <li>An MLRO carries personal accountability and can face individual enforcement, fines, or a prohibition order for failures in the firm's controls</li>
+                    <li>Regulators increasingly expect a genuinely resident, on-payroll MLRO with real authority, not a nominal name on the application</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">What an MLRO <em>Actually Is</em></h2>
+            <div class="prose">
+                <p>The MLRO, or Money Laundering Reporting Officer, is the single most important compliance appointment a crypto business makes. It is the named individual who carries personal responsibility for the firm's anti-money laundering and counter-terrorist financing programme. The role is not unique to crypto: it has existed in banking and professional services for decades. What is new is that licensed and registered crypto firms now sit squarely within the same obligation.</p>
+                <p>The MLRO has two distinct legal responsibilities. The first is the duty to report suspicion of money laundering to the national financial intelligence unit, for example the National Crime Agency in the United Kingdom. The second is to ensure the firm as a whole complies with the applicable money laundering regulations. Everything an MLRO does flows from those two pillars: the reporting line and the ownership of the control framework.</p>
+                <p>For a crypto firm specifically, the MLRO must understand more than traditional AML. They need a working grasp of FATF crypto guidance, blockchain analytics, wallet tracing, and the Travel Rule that attaches sender and recipient data to virtual asset transfers. If you are new to the underlying obligations, our companion guide on <a href="/guides/aml-kyc-explained/">AML and KYC explained</a> sets out the framework the MLRO is appointed to run.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">R.18</div>
+                    <div class="ig-stat-label">FATF Compliance-Officer Rule</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">SMF17</div>
+                    <div class="ig-stat-label">UK FCA MLRO Function</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2</div>
+                    <div class="ig-stat-label">Core Legal Duties</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€1,000</div>
+                    <div class="ig-stat-label">EU Travel Rule Threshold</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">5 yrs</div>
+                    <div class="ig-stat-label">CASP Record Retention</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Mandatory</div>
+                    <div class="ig-stat-label">For VASP &amp; CASP Licences</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: FATF Recommendation 18; FCA Handbook (SMF17 / SUP 10C.6); Regulation (EU) 2023/1114 (MiCA) and the EU AML framework.</p>
+        </section>
+
+        <!-- DUTIES -->
+        <section class="guide-section" id="duties">
+            <div class="section-label">Section 2: The Role</div>
+            <h2 class="section-h2">What the Crypto MLRO <em>Does Day to Day</em></h2>
+            <div class="prose">
+                <p>The MLRO sits at the centre of the firm's financial crime defences. The most visible duty is handling suspicious activity. Staff who notice something unusual raise an internal report to the MLRO, who investigates, gathers context, and decides whether the suspicion warrants a formal Suspicious Activity Report to the authorities. That decision is the MLRO's alone, and it is the point at which a firm's internal concern becomes a legal disclosure.</p>
+                <p>Beyond reporting, the MLRO owns the AML control framework. That means designing and maintaining the firm's written policies, overseeing customer due diligence and enhanced due diligence, running transaction monitoring, managing sanctions and watchlist screening, and ensuring the Travel Rule data process works for covered transfers. The MLRO also drives staff training so that the people raising internal reports know what to look for.</p>
+                <p>Crucially, the MLRO is a reporting line to the top of the firm. They are expected to brief the board or senior management on financial crime risk, escalate systemic weaknesses, and act as the firm's main point of contact with the supervisor. Where a firm operates a no-questions-asked model, those defences collapse, which is exactly the failure pattern we examine in our analysis of <a href="/guides/no-kyc-exchanges-risks/">the risks of no-KYC exchanges</a>.</p>
+            </div>
+        </section>
+
+        <!-- MLRO VS COMPLIANCE OFFICER -->
+        <section class="guide-section" id="vs">
+            <div class="section-label">Section 3: The Distinction</div>
+            <h2 class="section-h2">MLRO vs <em>Compliance Officer</em></h2>
+            <div class="prose">
+                <p>The terms MLRO, AML compliance officer, and compliance officer are often used loosely, but regulators draw real distinctions. A compliance officer has the broad mandate of keeping the firm within all of its regulatory obligations, including conduct, governance, reporting, and the design of AML policy. The MLRO is the narrower, statutory role focused on suspicious activity reporting and the operational AML function. In larger firms the two are separate people; in smaller firms one person may lawfully hold both, subject to the regulator's approval.</p>
+                <p>The table below sets out where the responsibilities differ. Getting this structure right is a governance decision that regulators scrutinise closely during licensing, and our <a href="/corporate-services/compliance/">compliance advisory service</a> helps firms design a defensible split before they apply.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>MLRO</th>
+                        <th>Compliance Officer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primary focus</td>
+                        <td>Suspicious activity reporting and AML operations</td>
+                        <td>All regulatory compliance and conduct</td>
+                    </tr>
+                    <tr>
+                        <td>Files SARs externally</td>
+                        <td>Yes, the named filer</td>
+                        <td>No, unless also the MLRO</td>
+                    </tr>
+                    <tr>
+                        <td>Statutory appointment</td>
+                        <td>Required by AML law / FATF R.18</td>
+                        <td>Often required, role scope varies</td>
+                    </tr>
+                    <tr>
+                        <td>UK function</td>
+                        <td>SMF17 (MLRO)</td>
+                        <td>SMF16 (Compliance Oversight)</td>
+                    </tr>
+                    <tr>
+                        <td>Can be combined</td>
+                        <td>Yes, in smaller firms with approval</td>
+                        <td>Yes, with the MLRO role in smaller firms</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on FATF Recommendation 18 and the FCA Senior Managers and Certification Regime (SMF16 / SMF17). National rules vary.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders think the MLRO is a box to tick. It is not. The regulator reads the appointment as a statement about how seriously the firm takes financial crime. We have seen otherwise strong applications stall purely because the proposed MLRO could not evidence real authority or relevant crypto AML experience."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- WHY REQUIRED -->
+        <section class="guide-section" id="why">
+            <div class="section-label">Section 4: The Requirement</div>
+            <h2 class="section-h2">Why Crypto Firms <em>Must Appoint One</em></h2>
+            <div class="prose">
+                <p>The obligation to appoint an MLRO is not optional for a regulated crypto business. It flows from international standards down into national law. At the global level, FATF Recommendation 18 requires obliged entities, including virtual asset service providers, to run an internal AML and CFT programme that includes the appointment of a compliance officer at management level, alongside internal policies, employee screening, and an independent audit function.</p>
+                <p>In the European Union, crypto-asset service providers authorised under MiCA, Regulation (EU) 2023/1114, are designated obliged entities under the EU anti-money laundering framework. That means the full AML and CFT regime applies, not a lighter version: customer due diligence, the Travel Rule for transfers of EUR 1,000 or more, transaction monitoring, five-year record retention, and a named, qualified MLRO. National competent authorities expect to see a clear three-lines-of-defence model and fit and proper key function holders before they authorise a CASP. Our <a href="/corporate-services/aml-kyc/">AML and KYC compliance service</a> builds this structure into the licensing engagement.</p>
+                <p>The same logic applies under legacy national VASP regimes and standalone registrations such as the FCA cryptoasset register in the UK. As the MiCA transitional period for grandfathered VASPs winds down across the EU through 2026, firms moving from a national VASP registration to a full CASP authorisation are finding that the MLRO appointment is examined more rigorously than before, not less.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> the MLRO is not a hire you make after the licence is granted. Most regulators want to assess the named individual as part of the application itself. A weak or absent MLRO appointment is one of the most common reasons a crypto licence application is delayed or refused. See our <a href="/corporate-services/compliance/">compliance service</a> for how we structure the function before submission.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Need a fit and proper MLRO for your licence application?</strong> Get a free 30-minute consultation. We will assess your compliance structure and help you appoint and document the MLRO regulators expect to see.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- FIT AND PROPER -->
+        <section class="guide-section" id="fit">
+            <div class="section-label">Section 5: Fit and Proper</div>
+            <h2 class="section-h2">The <em>Fit and Proper</em> Test</h2>
+            <div class="prose">
+                <p>An MLRO cannot simply be appointed by the firm. The candidate must satisfy the regulator's fit and proper assessment, the test of whether an individual has the honesty, integrity, competence, and financial soundness to hold a key function. The regulator examines AML experience, professional qualifications, criminal and disciplinary history, and the candidate's capacity to actually do the job given other commitments.</p>
+                <p>In the United Kingdom the role is formalised as SMF17, the Money Laundering Reporting Officer Senior Management Function under the FCA's Senior Managers and Certification Regime. A firm in scope must have an FCA-approved SMF17 holder, and the FCA states that it pays particular attention to the competence and capability of SMF17 candidates, expecting their skills and knowledge to be proportionate to the firm's size and its risk of harm.</p>
+                <p>For a crypto MLRO, regulators increasingly look for more than a generic AML background. Recognised credentials such as an ACAMS certification, a legal or finance education, and demonstrable knowledge of FATF crypto guidance, the Travel Rule, and blockchain analytics all strengthen the case. Substance matters too: a growing number of supervisors expect the MLRO to be locally resident, genuinely available, and on the firm's own payroll rather than a remote name on the application.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Fit and Proper Factor</th>
+                        <th>What the Regulator Looks For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Honesty &amp; integrity</td>
+                        <td>Clean criminal and regulatory record, no disqualifications</td>
+                    </tr>
+                    <tr>
+                        <td>Competence &amp; capability</td>
+                        <td>AML experience and qualifications proportionate to firm size and risk</td>
+                    </tr>
+                    <tr>
+                        <td>Crypto knowledge</td>
+                        <td>FATF crypto guidance, Travel Rule, blockchain analytics, wallet tracing</td>
+                    </tr>
+                    <tr>
+                        <td>Capacity</td>
+                        <td>Genuine availability; not spread thin across unrelated mandates</td>
+                    </tr>
+                    <tr>
+                        <td>Substance</td>
+                        <td>Local residence, on payroll, real authority within the firm</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Indicative; based on the FCA approach to SMF17 and common national competent authority practice. Exact criteria vary by jurisdiction.</p>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our VASP and CASP licensing work across more than 60 jurisdictions, the MLRO appointment is where applications most often come unstuck. Founders frequently propose a director who already wears three other hats, or a remote consultant with no local footprint. Supervisors read both as a signal that the firm sees AML as a formality, and the file slows immediately.</p>
+            <p>The applications that move fastest are the ones where the MLRO is identified early, has documented crypto AML experience, and sits inside a clearly drawn three-lines-of-defence structure. We routinely advise clients to lock the MLRO appointment down before drafting the rest of the licensing pack, because almost every other AML document, from the risk assessment to the policy manual, has to be owned by that named individual to carry credibility.</p>
+          </div>
+        </section>
+
+        <!-- LIABILITY -->
+        <section class="guide-section" id="liability">
+            <div class="section-label">Section 6: Accountability</div>
+            <h2 class="section-h2">Personal <em>Liability</em> of the MLRO</h2>
+            <div class="prose">
+                <p>The flip side of holding a key function is personal accountability. The MLRO is not a passive title; it carries individual exposure for the firm's AML failures. Under accountability regimes such as the FCA's Senior Managers and Certification Regime, an approved MLRO can face individual enforcement action, financial penalties, or a prohibition order that bars them from working in regulated financial services.</p>
+                <p>The exposure also runs to the reporting duty itself. Where an MLRO knows or suspects money laundering and fails to make the required disclosure, that omission can carry personal criminal liability in many jurisdictions, separate from any action against the firm. This is precisely why the role demands genuine authority and resources: an MLRO who is denied the information or independence to do the job is being set up to carry a risk they cannot manage.</p>
+                <p>For founders, the practical lesson is that the MLRO must be empowered, not just named. A credible candidate will ask hard questions about reporting lines, budget, and board access before accepting the role, because their own licence to operate in the industry is on the line alongside the firm's.</p>
+            </div>
+        </section>
+
+        <!-- SAR WORKFLOW -->
+        <section class="guide-section" id="sar">
+            <div class="section-label">Section 7: The SAR Workflow</div>
+            <h2 class="section-h2">How the MLRO <em>Files a SAR</em></h2>
+            <div class="prose">
+                <p>The Suspicious Activity Report workflow is the operational heart of the MLRO role. The five steps below describe the path from an employee's first concern to a filed disclosure and the records that evidence it. The detail varies by jurisdiction, but the sequence is consistent across regimes.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Detect</div>
+                        <div class="ig-step-title">Staff identify suspicious activity</div>
+                        <div class="ig-step-desc">An employee or an automated transaction-monitoring alert flags a transaction or customer that looks inconsistent with the expected profile or carries financial crime indicators.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Escalate</div>
+                        <div class="ig-step-title">Raise an internal report to the MLRO</div>
+                        <div class="ig-step-desc">The staff member submits an internal suspicious activity report to the MLRO without tipping off the customer, handing the matter to the one person empowered to decide on external disclosure.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Investigate</div>
+                        <div class="ig-step-title">MLRO reviews and gathers context</div>
+                        <div class="ig-step-desc">The MLRO examines the customer file, transaction history, KYC data, and any blockchain analytics, then forms a reasoned judgment on whether genuine suspicion exists.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Decide &amp; file</div>
+                        <div class="ig-step-title">Submit the SAR to the FIU</div>
+                        <div class="ig-step-desc">If suspicion is confirmed, the MLRO files a formal Suspicious Activity Report with the national financial intelligence unit, and where required seeks consent before proceeding with the transaction.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Record &amp; retain</div>
+                        <div class="ig-step-title">Document the decision and store it</div>
+                        <div class="ig-step-desc">The MLRO records the rationale, whether or not a SAR was filed, and retains the file for the statutory period so the firm can evidence its decision to the supervisor.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto MLRO: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is an MLRO?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An MLRO is a Money Laundering Reporting Officer, the named individual a regulated firm appoints to own its anti-money laundering programme. The MLRO receives internal suspicion reports from staff, decides whether to file a Suspicious Activity Report with the national financial intelligence unit, and ensures the firm complies with money laundering regulations.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does a crypto MLRO actually do?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A crypto MLRO owns the firm's AML and CFT framework, receives internal suspicious activity reports, investigates them, and decides whether to file a formal SAR with the national authority. They also oversee transaction monitoring, the Travel Rule process, staff training, sanctions screening, and report on financial crime risk to the board or senior management.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is a crypto firm legally required to appoint an MLRO?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. In almost every regulated market, a licensed or registered crypto firm is an obliged entity that must appoint an MLRO or equivalent compliance officer. FATF Recommendation 18 requires a compliance officer at management level, and MiCA, FCA registration, and national VASP regimes all make the appointment a precondition of authorisation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between an MLRO and a compliance officer?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A compliance officer oversees the firm's general adherence to regulation, including conduct, governance, and AML policy design. The MLRO is the specific role responsible for receiving internal suspicion reports and deciding whether to file SARs with the authorities. In smaller firms one person may hold both roles, but larger firms separate them.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a SAR and who files it?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A SAR, or Suspicious Activity Report, is a disclosure to the national financial intelligence unit about a transaction or customer suspected of money laundering or terrorist financing. Staff raise an internal report to the MLRO, who investigates and decides whether to submit a formal SAR externally. The MLRO is the only person who files the external report.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the fit and proper test for an MLRO?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Fit and proper is a regulatory assessment of whether a candidate has the honesty, integrity, competence, and financial soundness to hold a key function. For an MLRO, the regulator examines AML experience, qualifications, criminal and disciplinary history, and capacity. The FCA assesses the SMF17 candidate's competence in proportion to the firm's size and risk.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is SMF17 in the UK?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">SMF17 is the Money Laundering Reporting Officer Senior Management Function under the FCA's Senior Managers and Certification Regime. A UK firm in scope must have an FCA-approved SMF17 holder. The FCA pays particular attention to the competence and capability of SMF17 candidates, expecting skills proportionate to the firm's size and risk of harm.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does a MiCA CASP need an MLRO?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. Crypto-asset service providers authorised under MiCA are obliged entities under the EU anti-money laundering framework, so the full AML and CFT regime applies. National competent authorities expect a CASP applicant to name a qualified MLRO, evidence a three-lines-of-defence model, and pass fit and proper assessments on all key function holders.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a crypto firm outsource the MLRO role?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Some operational tasks can be supported by outsourced specialists, but the accountable MLRO must be a named, approved individual with real authority inside the firm. Regulators reject applications where the compliance function is combined with a revenue role or shared across entities, and many expect the MLRO to be on the firm's own payroll.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does an MLRO need to be local resident?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Increasingly, yes. As substance requirements tighten, many regulators expect the MLRO to be locally resident, available to the supervisor, and genuinely present rather than a name on paper. The exact rule varies by jurisdiction, but a remote or nominal MLRO with no local footprint is a common reason for application delay or refusal.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can an MLRO be held personally liable?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. The MLRO holds personal accountability for the AML function. Under regimes such as the FCA Senior Managers and Certification Regime, an approved MLRO can face individual enforcement, fines, or a prohibition order for failures in the firm's financial crime controls. Failure to report a known suspicion can also carry personal criminal exposure.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What qualifications should a crypto MLRO have?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no single mandatory licence, but regulators expect relevant AML experience plus recognised credentials such as an ACAMS certification, a legal or finance background, and demonstrable knowledge of FATF crypto guidance, the Travel Rule, blockchain analytics, and wallet tracing. The depth required scales with the firm's size and risk profile.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does FATF say about the compliance officer role?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">FATF Recommendation 18 requires financial institutions, including virtual asset service providers, to maintain internal AML and CFT programmes that include the appointment of a compliance officer at management level, plus internal policies, employee screening, training, and an independent audit function to test the system.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the MLRO requirement affect crypto licensing?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Naming a credible, fit and proper MLRO is a baseline condition of most VASP and CASP licence applications. Regulators want to see who the MLRO is, their qualifications, their authority within the firm, and how the AML programme they own is documented before granting authorisation. A weak MLRO appointment is a frequent cause of application failure.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html" target="_blank" rel="nofollow noopener noreferrer">FATF: The FATF Recommendations (including Recommendation 18 on internal controls)</a></li>
+            <li><a href="https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/Explanatory-Materials-R18-R23.pdf" target="_blank" rel="nofollow noopener noreferrer">FATF: Explanatory Materials on Recommendations 18 and 23</a></li>
+            <li><a href="https://www.fca.org.uk/firms/approved-persons/heads-compliance-mlros" target="_blank" rel="nofollow noopener noreferrer">FCA: Heads of Compliance and MLROs (SMF16 / SMF17)</a></li>
+            <li><a href="https://handbook.fca.org.uk/handbook/SUP/10C/6.html" target="_blank" rel="nofollow noopener noreferrer">FCA Handbook: SUP 10C.6 FCA-required Senior Management Functions</a></li>
+            <li><a href="https://www.eba.europa.eu/regulation-and-policy/anti-money-laundering-and-countering-financing-terrorism" target="_blank" rel="nofollow noopener noreferrer">EBA: Anti-Money Laundering and Countering the Financing of Terrorism</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1114" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (Markets in Crypto-Assets, MiCA)</a></li>
+            <li><a href="https://www.fatf-gafi.org/en/topics/virtual-assets.html" target="_blank" rel="nofollow noopener noreferrer">FATF: Virtual Assets (guidance for VASPs)</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Need an MLRO?</h3>
+                <p>Tell us your business model and target markets. We will help you appoint and document a fit and proper MLRO and build the AML structure regulators expect. Free, no obligation.</p>
+                <a href="/contact/?topic=mlro" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">MLRO at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">FATF</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Recommendation 18</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Compliance officer at management level</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">UK</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">SMF17</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">FCA Senior Management Function</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EU</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Mandatory for CASPs</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">MiCA Reg. (EU) 2023/1114</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/aml-kyc-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">AML &amp; KYC Explained</a>
+                    <a href="/guides/no-kyc-exchanges-risks/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">No-KYC Exchange Risks</a>
+                    <a href="/corporate-services/aml-kyc/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">AML / KYC Service</a>
+                    <a href="/corporate-services/compliance/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Compliance Service</a>
+                    <a href="/contact/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Talk to an Advisor →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>MLRO and AML structure built for the licence</li>
+                    <li>Fit and proper documentation handled end to end</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get Your AML Function Right Before You Apply</h2>
+      <p class="cta-lead">Share your business model and target markets, and we will help you appoint a fit and proper MLRO, design a defensible compliance structure, and build the AML framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and MLRO needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

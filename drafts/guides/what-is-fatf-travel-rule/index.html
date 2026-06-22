@@ -1,0 +1,988 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is the FATF Travel Rule? Crypto Compliance Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="What is the FATF Travel Rule in 2026? Recommendation 16 explained for crypto: the USD/EUR 1,000 threshold, originator and beneficiary data rules, EU TFR vs FinCEN, the sunrise issue, and what it means for VASP compliance.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/what-is-fatf-travel-rule/">
+    <meta property="og:title" content="What Is the FATF Travel Rule? Crypto Compliance Explained (2026)">
+    <meta property="og:description" content="Recommendation 16 explained for crypto in 2026: the USD/EUR 1,000 threshold, originator and beneficiary data rules, EU TFR vs FinCEN, the sunrise issue, and what it means for VASP compliance.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/what-is-fatf-travel-rule/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-coins-metal-chain-security.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "What Is the FATF Travel Rule?", "item": "https://cryptolicenses.net/guides/what-is-fatf-travel-rule/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/what-is-fatf-travel-rule/#article",
+      "headline": "What Is the FATF Travel Rule? Crypto Compliance Explained (2026)",
+      "description": "Recommendation 16 explained for crypto in 2026: the USD/EUR 1,000 threshold, originator and beneficiary data rules, EU TFR vs FinCEN, the sunrise issue, and what it means for VASP compliance.",
+      "url": "https://cryptolicenses.net/guides/what-is-fatf-travel-rule/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/what-is-fatf-travel-rule/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/bitcoin-coins-metal-chain-security.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the FATF Travel Rule?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The FATF Travel Rule is the application of FATF Recommendation 16 to virtual asset transfers. It requires Virtual Asset Service Providers to collect, verify, and securely transmit identifying information about the originator and beneficiary of a crypto transfer to the counterparty provider, mirroring the data that accompanies a traditional bank wire." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is FATF Recommendation 16?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Recommendation 16 is one of the FATF's 40 Recommendations on anti-money laundering and counter-terrorist financing. It governs originator and beneficiary information in wire transfers. When extended to crypto, it becomes the Travel Rule. FATF substantially revised Recommendation 16 in June 2025 to add fraud and proliferation financing objectives." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Travel Rule threshold?",
+          "acceptedAnswer": { "@type": "Answer", "text": "FATF recommends a de-minimis threshold of USD or EUR 1,000 for virtual asset transfers. Above this amount, fuller verified information must be exchanged. Jurisdictions can set their own thresholds: the EU Transfer of Funds Regulation applies no threshold at all, while the US FinCEN threshold is USD 3,000." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Travel Rule apply below USD 1,000?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, in a lighter form. For virtual asset transfers below the USD 1,000 threshold, FATF says VASPs should still collect the names of the originator and beneficiary plus the wallet address or a unique transaction reference number. The key difference is that this lower-tier data does not require independent verification." }
+        },
+        {
+          "@type": "Question",
+          "name": "What information must VASPs collect and share under the Travel Rule?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Above the threshold, the originating VASP must transmit the originator's verified name, account or wallet identifier, and a physical address or alternative identifier such as a national ID number or date and place of birth. It must also pass the beneficiary's name and wallet identifier to the receiving VASP." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the EU Transfer of Funds Regulation differ from the FATF standard?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The EU Transfer of Funds Regulation 2023/1113 is stricter than the FATF baseline. It applies no de-minimis threshold, so originator and beneficiary data must accompany every crypto-asset transfer regardless of value. It took effect on 30 December 2024, aligned with MiCA licensing for crypto-asset service providers." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the FinCEN Travel Rule threshold in the US?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In the United States, the FinCEN Travel Rule under 31 CFR 1010.410 applies to funds transfers of USD 3,000 or more, including convertible virtual currency per 2019 guidance. FinCEN proposed lowering the cross-border threshold to USD 250 in 2020, but that proposal has not been finalized as of 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Travel Rule sunrise issue?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The sunrise issue describes the gap created by asynchronous global adoption. Some jurisdictions have implemented the Travel Rule while others have not. A VASP in a compliant country is obliged to exchange data, but may have no compliant counterparty to receive it, creating operational friction and risk on cross-border transfers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Travel Rule apply to self-hosted wallets?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It applies to transfers involving self-hosted, or unhosted, wallets through the VASP side of the transaction. Under the EU Transfer of Funds Regulation, crypto-asset service providers must apply extra checks for self-hosted wallet transfers above EUR 1,000, including verifying that the customer owns or controls the self-custody address." }
+        },
+        {
+          "@type": "Question",
+          "name": "What changed in the June 2025 FATF Recommendation 16 revision?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In June 2025, FATF revised Recommendation 16 to broaden its objectives beyond money laundering and terrorist financing to include fraud prevention and proliferation financing. It also mandated Confirmation of Payee verification for cross-border transfers and aligned the requirements with the ISO 20022 messaging standard." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the FATF Travel Rule legally binding?",
+          "acceptedAnswer": { "@type": "Answer", "text": "FATF Recommendations are soft law, not directly binding on businesses. They become enforceable only once a jurisdiction transposes them into national legislation, as the EU did with the Transfer of Funds Regulation and the US did via FinCEN rules. The applicable obligation always flows from your licensing jurisdiction." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many jurisdictions have implemented the Travel Rule?",
+          "acceptedAnswer": { "@type": "Answer", "text": "According to the FATF 2025 Targeted Update, 85 of 117 surveyed jurisdictions, around 73 percent, had passed legislation implementing the Travel Rule, up from 65 in 2024. A further 14 were in the process of implementing it, bringing the total of passed or in-progress jurisdictions to 99." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if a VASP fails to comply with the Travel Rule?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Non-compliance exposes a licensed VASP to regulatory enforcement, fines, licence conditions, or revocation, depending on the jurisdiction. Banking partners and counterparty VASPs may also de-risk and cut off the firm. Travel Rule controls are typically a hard precondition of holding and keeping a crypto licence." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Travel Rule affect crypto licensing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A credible Travel Rule programme is now a baseline expectation in most VASP and CASP licence applications. Regulators want to see your data-collection process, a chosen Travel Rule solution, counterparty due diligence, and threshold logic matched to local law before they grant authorisation to operate." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    FATF Travel Rule
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/bitcoin-coins-metal-chain-security.jpg" alt="Bitcoin coins secured by a metal chain, FATF Travel Rule crypto compliance in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: AML &amp; Compliance</div>
+        <h1 class="hero-h1">What Is the FATF Travel Rule? Crypto Compliance Explained in <em>2026</em></h1>
+        <p class="hero-intro">The FATF Travel Rule extends Recommendation 16 to crypto, forcing Virtual Asset Service Providers to attach verified sender and recipient data to transfers above USD 1,000. This guide explains the threshold, the originator and beneficiary requirements, how the EU TFR and US FinCEN rules diverge, the sunrise issue, and what it all means for your VASP licence in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>AML &amp; Compliance</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">What the Travel Rule Is</a></li>
+            <li class="toc-item"><a href="#threshold">The Travel Rule Threshold</a></li>
+            <li class="toc-item"><a href="#data">Data VASPs Must Exchange</a></li>
+            <li class="toc-item"><a href="#regions">FATF vs EU TFR vs FinCEN</a></li>
+            <li class="toc-item"><a href="#sunrise">The Sunrise Issue</a></li>
+            <li class="toc-item"><a href="#revision">2025 Recommendation 16 Revision</a></li>
+            <li class="toc-item"><a href="#compliance">Complying as a VASP</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and institutional investors through the full spectrum of VASP and CASP licensing, where Travel Rule readiness is now a standard condition of authorisation.</p>
+                <p>He has implemented Travel Rule frameworks for clients operating under the EU Transfer of Funds Regulation, FinCEN rules in the US, and FATF-aligned regimes across the Gulf and Asia, and advises on counterparty due diligence and threshold logic across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Definition · FATF Travel Rule</div>
+                <p>The FATF Travel Rule is the application of FATF Recommendation 16 to crypto. It requires Virtual Asset Service Providers to collect, verify, and securely transmit identifying information about the sender (originator) and recipient (beneficiary) of a virtual asset transfer to the counterparty provider, just as banks do for wire transfers.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>The Travel Rule comes from FATF Recommendation 16, originally written for bank wires and extended to virtual assets so VASPs must pass sender and recipient data to each other</li>
+                    <li>FATF recommends a de-minimis threshold of USD or EUR 1,000; above it, fuller verified information must be exchanged</li>
+                    <li>The EU Transfer of Funds Regulation 2023/1113 applies no threshold at all, while the US FinCEN threshold is USD 3,000</li>
+                    <li>The sunrise issue, asynchronous adoption across countries, is the rule's biggest operational headache for cross-border transfers</li>
+                    <li>By 2025, 85 of 117 surveyed jurisdictions had passed Travel Rule legislation, and FATF revised Recommendation 16 in June 2025</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">What the Travel Rule <em>Actually Is</em></h2>
+            <div class="prose">
+                <p>The Travel Rule is not a crypto-specific invention. It originates in FATF Recommendation 16, part of the Financial Action Task Force's 40 Recommendations, the global benchmark for anti-money laundering and counter-terrorist financing. Recommendation 16 has long required that identifying information about the sender and recipient of a wire transfer "travels" with the payment through the banking chain. The same logic now applies to crypto.</p>
+                <p>In 2019, FATF extended Recommendation 16 to virtual assets and the businesses that handle them. The result is what the industry calls the crypto Travel Rule or VASP Travel Rule. A Virtual Asset Service Provider that sends crypto on behalf of a customer must gather originator and beneficiary details and share them with the receiving provider. If you are new to the VASP concept, our explainer on <a href="/guides/what-is-vasp/">what a VASP is and how it is defined</a> sets out exactly which businesses fall in scope.</p>
+                <p>The rule exists because crypto transfers, unlike bank wires, do not natively carry the sender and recipient identity needed for sanctions screening and investigation. The Travel Rule rebuilds that transparency layer on top of the blockchain, sitting squarely inside a VASP's wider AML obligations. Our companion guide on <a href="/guides/aml-kyc-explained/">AML and KYC explained</a> shows how Travel Rule data flows out of the customer identification process.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">R.16</div>
+                    <div class="ig-stat-label">FATF Recommendation</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">$1,000</div>
+                    <div class="ig-stat-label">FATF Threshold (USD/EUR)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€0</div>
+                    <div class="ig-stat-label">EU TFR Threshold</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">$3,000</div>
+                    <div class="ig-stat-label">US FinCEN Threshold</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">85 / 117</div>
+                    <div class="ig-stat-label">Jurisdictions With Law (2025)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Jun 2025</div>
+                    <div class="ig-stat-label">Latest R.16 Revision</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: FATF Recommendation 16 and the FATF 2025 Targeted Update on virtual assets; EU Regulation 2023/1113; FinCEN 31 CFR 1010.410.</p>
+        </section>
+
+        <!-- THRESHOLD -->
+        <section class="guide-section" id="threshold">
+            <div class="section-label">Section 2: The Threshold</div>
+            <h2 class="section-h2">The Travel Rule <em>Threshold</em> Explained</h2>
+            <div class="prose">
+                <p>The most-searched detail about the Travel Rule is the threshold, the transaction value at which fuller obligations kick in. FATF recommends a de-minimis threshold of USD or EUR 1,000 for virtual asset transfers. This is a recommendation, not a hard global figure: individual jurisdictions transpose it into law and can set the bar higher, lower, or remove it entirely.</p>
+                <p>It is a common mistake to assume transfers under USD 1,000 escape the rule. They do not. Below the threshold, FATF still expects the VASP to collect the names of the originator and beneficiary plus the wallet address for each, or a unique transaction reference number. The single practical difference is that this lower-tier information does not have to be independently verified. Above the threshold, verification becomes mandatory.</p>
+                <p>FATF also warns against structuring, the practice of breaking a large transfer into smaller pieces to stay under the limit. Where smaller transfers appear linked and together reach USD 1,000 or more, the full Travel Rule requirements apply to the aggregate. Monitoring systems therefore need to detect this pattern, not just check single transactions.</p>
+            </div>
+        </section>
+
+        <!-- DATA REQUIREMENTS -->
+        <section class="guide-section" id="data">
+            <div class="section-label">Section 3: Data Requirements</div>
+            <h2 class="section-h2">What Data Must <em>Travel</em> Between VASPs</h2>
+            <div class="prose">
+                <p>Above the threshold, the originating VASP must transmit a defined set of data to the beneficiary VASP. The originator information comprises the customer's verified name, their account or wallet identifier, and either a physical address or an alternative identifier such as a national identity number, a customer identification number, or date and place of birth. The beneficiary information is lighter: the recipient's name and their account or wallet identifier.</p>
+                <p>That data must be shared securely and, in practice, before or at the same time as the on-chain transfer. This is the operational heart of the rule, because the public blockchain itself carries none of it. VASPs use dedicated Travel Rule messaging solutions and shared protocols to exchange the data off-chain in parallel with the on-chain movement of value.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Data Field</th>
+                        <th>Below Threshold</th>
+                        <th>Above Threshold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Originator name</td>
+                        <td>Required, not verified</td>
+                        <td>Required and verified</td>
+                    </tr>
+                    <tr>
+                        <td>Originator wallet / account ID</td>
+                        <td>Required (or unique tx reference)</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td>Originator address or ID detail</td>
+                        <td>Not required</td>
+                        <td>Required (address, national ID, customer ID, or DOB + place)</td>
+                    </tr>
+                    <tr>
+                        <td>Beneficiary name</td>
+                        <td>Required, not verified</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td>Beneficiary wallet / account ID</td>
+                        <td>Required (or unique tx reference)</td>
+                        <td>Required</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on the FATF Recommendation 16 data requirements for virtual asset transfers. National rules may demand more.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders fixate on the USD 1,000 figure, but the threshold that governs your business is the one in your licensing jurisdiction, not the FATF baseline. A CASP operating under EU TFR has no de-minimis at all, while a US money transmitter still works to USD 3,000. We map the right threshold regime before a client picks where to license."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- REGIONS -->
+        <section class="guide-section" id="regions">
+            <div class="section-label">Section 4: Regional Rules</div>
+            <h2 class="section-h2">FATF vs <em>EU TFR</em> vs FinCEN</h2>
+            <div class="prose">
+                <p>The FATF standard is the floor, not the ceiling. What binds your business is the version your regulator has enacted, and the three major regimes diverge sharply, above all on the threshold. Understanding which one applies is a licensing decision as much as a compliance one. Our <a href="/regulation/">regulation hub</a> tracks how individual countries have transposed these rules.</p>
+                <p>In the European Union, the Transfer of Funds Regulation (EU) 2023/1113 is the strictest of the three. It applies no de-minimis threshold whatsoever: crypto-asset service providers must attach originator and beneficiary data to every transfer regardless of value. The regulation became fully applicable on 30 December 2024, deliberately aligned with the start of MiCA licensing for CASPs, and CASPs must apply additional checks to self-hosted wallet transfers above EUR 1,000, including verifying that the customer controls the address.</p>
+                <p>In the United States, the FinCEN Travel Rule under 31 CFR 1010.410 applies to funds transfers of USD 3,000 or more. FinCEN confirmed in 2019 guidance that convertible virtual currency transactions are funds transfers caught by the rule. A 2020 proposal to cut the cross-border threshold to USD 250 remains unfinalised as of 2026.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Regime</th>
+                        <th>Threshold</th>
+                        <th>Scope</th>
+                        <th>Legal Basis</th>
+                        <th>Key Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FATF (global)</td>
+                        <td>USD / EUR 1,000</td>
+                        <td>All VASP virtual asset transfers</td>
+                        <td>Recommendation 16</td>
+                        <td>Soft-law standard; jurisdictions adopt it</td>
+                    </tr>
+                    <tr>
+                        <td>EU TFR</td>
+                        <td>Zero (no de-minimis)</td>
+                        <td>All CASP transfers</td>
+                        <td>Reg. (EU) 2023/1113</td>
+                        <td>Strictest; self-hosted checks above EUR 1,000</td>
+                    </tr>
+                    <tr>
+                        <td>US FinCEN</td>
+                        <td>USD 3,000</td>
+                        <td>Funds transfers incl. CVC</td>
+                        <td>31 CFR 1010.410</td>
+                        <td>Proposed cut to USD 250 cross-border, not finalised</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> a firm that licenses as an EU CASP inherits a zero-threshold Travel Rule obligation from day one, while the same business model under a FinCEN money transmitter registration works to USD 3,000. The threshold regime should be part of your jurisdiction selection, not an afterthought once the licence is granted. See our <a href="/crypto-licenses/vasp-license/">VASP licence overview</a> for how this fits the wider application.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure which Travel Rule regime applies to your model?</strong> Get a free 30-minute consultation. We will map the threshold rules to your target markets and recommend a licensing route.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- SUNRISE -->
+        <section class="guide-section" id="sunrise">
+            <div class="section-label">Section 5: The Sunrise Issue</div>
+            <h2 class="section-h2">The <em>Sunrise Issue</em></h2>
+            <div class="prose">
+                <p>The sunrise issue is the single most underestimated operational problem in Travel Rule compliance. It arises from asynchronous adoption: countries implement the rule at different times, so at any given moment some jurisdictions have it in force and others do not. A VASP in a compliant jurisdiction is legally obliged to share originator and beneficiary data, but it may have no compliant counterparty able to receive that data on the other side of a cross-border transfer.</p>
+                <p>This creates a genuine bind. The compliant VASP must still meet its obligation, yet the receiving provider may have no system to accept the message, no legal duty to act on it, and no incentive to respond. Firms manage this through counterparty due diligence, fallback procedures, and risk-based decisions about which transfers to allow when the receiving side cannot complete the exchange.</p>
+                <p>The good news is that the gap is narrowing. According to the FATF 2025 Targeted Update, the number of jurisdictions with Travel Rule legislation rose to 85 in 2025 from 65 in 2024, with a further 14 in the process of implementing. As more of the world switches on, the sunrise shadow shrinks, but until coverage is universal, the issue remains a live risk in any cross-border VASP relationship.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our VASP and CASP licensing work across more than 60 jurisdictions, we routinely see the sunrise issue surface only after a licence is live, when a perfectly compliant client cannot complete a transfer because the counterparty sits in a jurisdiction that has not adopted the rule. Regulators increasingly expect to see this scenario addressed in the firm's risk assessment before they grant authorisation.</p>
+            <p>We also see applications stall on a more basic point: the firm has chosen a Travel Rule solution but cannot evidence how its threshold logic, counterparty checks, and data-retention process actually map to the legislation in its licensing jurisdiction. Building that documentation early, alongside the AML and KYC framework rather than after it, is consistently the difference between a smooth review and a long round of regulator queries.</p>
+          </div>
+        </section>
+
+        <!-- 2025 REVISION -->
+        <section class="guide-section" id="revision">
+            <div class="section-label">Section 6: Latest Update</div>
+            <h2 class="section-h2">The June 2025 <em>Recommendation 16</em> Revision</h2>
+            <div class="prose">
+                <p>The most significant recent change came in June 2025, when FATF fundamentally revised Recommendation 16. The revision broadened the rule's objectives beyond money laundering and terrorist financing to explicitly include fraud prevention and proliferation financing. This widens the lens through which Travel Rule data is expected to be screened and acted upon.</p>
+                <p>The revision also mandated Confirmation of Payee verification for cross-border transfers, a check that the beneficiary name matches the receiving account, and it fully integrated the requirements with the ISO 20022 messaging standard that is reshaping global payments infrastructure. For crypto businesses, the practical effect is that Travel Rule systems must keep pace with traditional payments standards rather than running on a separate, lighter track.</p>
+                <p>Enforcement, however, still lags adoption. The 2025 Targeted Update found that a majority of jurisdictions with Travel Rule laws had yet to issue supervisory findings or enforcement actions tied specifically to Travel Rule compliance. The direction of travel is clear: legislation first, supervision and enforcement to follow, which means the compliance bar in many markets will rise as regulators move from rule-making to active oversight.</p>
+            </div>
+        </section>
+
+        <!-- COMPLIANCE STEPS -->
+        <section class="guide-section" id="compliance">
+            <div class="section-label">Section 7: Compliance</div>
+            <h2 class="section-h2">How a VASP <em>Complies</em></h2>
+            <div class="prose">
+                <p>Complying with the Travel Rule is a process, not a single setting. The five steps below describe the core workflow a licensed VASP runs for every covered transfer. The detail varies by jurisdiction and threshold regime, but the sequence is consistent. Our <a href="/corporate-services/aml-kyc/">AML and KYC compliance service</a> implements this end to end as part of a licensing engagement.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Assess</div>
+                        <div class="ig-step-title">Identify the transfer and threshold regime</div>
+                        <div class="ig-step-desc">Determine whether the transfer is in scope, which jurisdiction's rules apply, and whether it sits above or below the relevant threshold (zero for EU CASPs, USD 1,000 under FATF, USD 3,000 for FinCEN).</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Collect</div>
+                        <div class="ig-step-title">Gather originator and beneficiary data</div>
+                        <div class="ig-step-desc">Draw the required customer data from your KYC records: verified name, wallet identifier, and the address or alternative identifier needed above the threshold.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Verify counterparty</div>
+                        <div class="ig-step-title">Check the receiving VASP</div>
+                        <div class="ig-step-desc">Confirm the counterparty provider exists, is a legitimate VASP, and can receive Travel Rule data. Apply sunrise-issue fallback logic where the counterparty is non-compliant.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Transmit</div>
+                        <div class="ig-step-title">Securely send the required data</div>
+                        <div class="ig-step-desc">Use a Travel Rule messaging solution to share the data off-chain, before or at the same time as the on-chain transfer, in line with the applicable standard.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Screen &amp; retain</div>
+                        <div class="ig-step-title">Sanctions screen, record, and store</div>
+                        <div class="ig-step-desc">Screen the data against sanctions and watchlists, act on any hits, and retain records for the statutory period so the firm can evidence compliance to its regulator.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">FATF Travel Rule: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is the FATF Travel Rule?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The FATF Travel Rule is the application of FATF Recommendation 16 to virtual asset transfers. It requires Virtual Asset Service Providers to collect, verify, and securely transmit identifying information about the originator and beneficiary of a crypto transfer to the counterparty provider, mirroring the data that accompanies a traditional bank wire.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is FATF Recommendation 16?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Recommendation 16 is one of the FATF's 40 Recommendations on anti-money laundering and counter-terrorist financing. It governs originator and beneficiary information in wire transfers. When extended to crypto, it becomes the Travel Rule. FATF substantially revised Recommendation 16 in June 2025 to add fraud and proliferation financing objectives.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the Travel Rule threshold?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">FATF recommends a de-minimis threshold of USD or EUR 1,000 for virtual asset transfers. Above this amount, fuller verified information must be exchanged. Jurisdictions can set their own thresholds: the EU Transfer of Funds Regulation applies no threshold at all, while the US FinCEN threshold is USD 3,000.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does the Travel Rule apply below USD 1,000?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, in a lighter form. For virtual asset transfers below the USD 1,000 threshold, FATF says VASPs should still collect the names of the originator and beneficiary plus the wallet address or a unique transaction reference number. The key difference is that this lower-tier data does not require independent verification.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What information must VASPs collect and share under the Travel Rule?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Above the threshold, the originating VASP must transmit the originator's verified name, account or wallet identifier, and a physical address or alternative identifier such as a national ID number or date and place of birth. It must also pass the beneficiary's name and wallet identifier to the receiving VASP.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the EU Transfer of Funds Regulation differ from the FATF standard?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The EU Transfer of Funds Regulation 2023/1113 is stricter than the FATF baseline. It applies no de-minimis threshold, so originator and beneficiary data must accompany every crypto-asset transfer regardless of value. It took effect on 30 December 2024, aligned with MiCA licensing for crypto-asset service providers.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the FinCEN Travel Rule threshold in the US?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">In the United States, the FinCEN Travel Rule under 31 CFR 1010.410 applies to funds transfers of USD 3,000 or more, including convertible virtual currency per 2019 guidance. FinCEN proposed lowering the cross-border threshold to USD 250 in 2020, but that proposal has not been finalized as of 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the Travel Rule sunrise issue?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The sunrise issue describes the gap created by asynchronous global adoption. Some jurisdictions have implemented the Travel Rule while others have not. A VASP in a compliant country is obliged to exchange data, but may have no compliant counterparty to receive it, creating operational friction and risk on cross-border transfers.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does the Travel Rule apply to self-hosted wallets?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It applies to transfers involving self-hosted, or unhosted, wallets through the VASP side of the transaction. Under the EU Transfer of Funds Regulation, crypto-asset service providers must apply extra checks for self-hosted wallet transfers above EUR 1,000, including verifying that the customer owns or controls the self-custody address.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What changed in the June 2025 FATF Recommendation 16 revision?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">In June 2025, FATF revised Recommendation 16 to broaden its objectives beyond money laundering and terrorist financing to include fraud prevention and proliferation financing. It also mandated Confirmation of Payee verification for cross-border transfers and aligned the requirements with the ISO 20022 messaging standard.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the FATF Travel Rule legally binding?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">FATF Recommendations are soft law, not directly binding on businesses. They become enforceable only once a jurisdiction transposes them into national legislation, as the EU did with the Transfer of Funds Regulation and the US did via FinCEN rules. The applicable obligation always flows from your licensing jurisdiction.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How many jurisdictions have implemented the Travel Rule?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">According to the FATF 2025 Targeted Update, 85 of 117 surveyed jurisdictions, around 73 percent, had passed legislation implementing the Travel Rule, up from 65 in 2024. A further 14 were in the process of implementing it, bringing the total of passed or in-progress jurisdictions to 99.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What happens if a VASP fails to comply with the Travel Rule?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Non-compliance exposes a licensed VASP to regulatory enforcement, fines, licence conditions, or revocation, depending on the jurisdiction. Banking partners and counterparty VASPs may also de-risk and cut off the firm. Travel Rule controls are typically a hard precondition of holding and keeping a crypto licence.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the Travel Rule affect crypto licensing?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A credible Travel Rule programme is now a baseline expectation in most VASP and CASP licence applications. Regulators want to see your data-collection process, a chosen Travel Rule solution, counterparty due diligence, and threshold logic matched to local law before they grant authorisation to operate.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/targeted-update-virtual-assets-vasps-2025.html" target="_blank" rel="nofollow noopener noreferrer">FATF: Targeted Update on Implementation of the FATF Standards on Virtual Assets and VASPs (2025)</a></li>
+            <li><a href="https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/2025-Targeted-Upate-VA-VASPs.pdf.coredownload.pdf" target="_blank" rel="nofollow noopener noreferrer">FATF: 2025 Targeted Update Report (full PDF)</a></li>
+            <li><a href="https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/Best-Practices-Travel-Rule-Supervision.pdf" target="_blank" rel="nofollow noopener noreferrer">FATF: Best Practices on Travel Rule Supervision (June 2025)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1113/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1113 (Transfer of Funds Regulation)</a></li>
+            <li><a href="https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/anti-money-laundering-and-countering-financing-terrorism/guidelines-information-requirements-relation-transfers-funds-and-certain-crypto-assets-transfers" target="_blank" rel="nofollow noopener noreferrer">EBA: Guidelines on Information Requirements for Transfers under Regulation (EU) 2023/1113</a></li>
+            <li><a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-D/section-1010.410" target="_blank" rel="nofollow noopener noreferrer">eCFR: 31 CFR 1010.410 (FinCEN funds transfer recordkeeping rule)</a></li>
+            <li><a href="https://www.federalregister.gov/documents/2020/10/27/2020-23756/threshold-for-the-requirement-to-collect-retain-and-transmit-information-on-funds-transfers-and" target="_blank" rel="nofollow noopener noreferrer">Federal Register: FinCEN proposed USD 250 cross-border threshold (2020)</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Travel Rule Ready?</h3>
+                <p>Tell us your business model and target markets. We will map the Travel Rule regime that applies and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=travel-rule" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Travel Rule at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">FATF</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">USD / EUR 1,000</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Recommendation 16 threshold</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EU TFR</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">No threshold</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Reg. (EU) 2023/1113</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">US FinCEN</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">USD 3,000</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">31 CFR 1010.410</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-vasp/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a VASP?</a>
+                    <a href="/guides/aml-kyc-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">AML &amp; KYC Explained</a>
+                    <a href="/crypto-licenses/vasp-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">VASP License Overview</a>
+                    <a href="/corporate-services/aml-kyc/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">AML / KYC Service</a>
+                    <a href="/regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Regulation Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Travel Rule built into the licensing plan</li>
+                    <li>Coverage of EU TFR, FinCEN, and FATF regimes</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get Travel Rule Compliant Before You Apply</h2>
+      <p class="cta-lead">Share your business model and target markets, and we will map the Travel Rule regime that applies, recommend a licensing route, and build the compliance framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and Travel Rule needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

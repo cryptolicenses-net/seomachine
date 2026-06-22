@@ -1,0 +1,958 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Regulation: USA vs EU vs UK Compared (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto regulation USA vs EU vs UK in 2026: the EU's unified MiCA regime, the fragmented US split between SEC, CFTC and the GENIUS Act, and the UK's phased FCA rollout to 2027. A balanced comparison for founders choosing where to license.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-regulation-usa-vs-eu-vs-uk/">
+    <meta property="og:title" content="Crypto Regulation: USA vs EU vs UK Compared (2026)">
+    <meta property="og:description" content="The EU's unified MiCA regime, the fragmented US split between SEC, CFTC and the GENIUS Act, and the UK's phased FCA rollout to 2027, compared for founders choosing where to license in 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-regulation-usa-vs-eu-vs-uk/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/justice-scales-gavel-law-books.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Crypto Regulation: USA vs EU vs UK", "item": "https://cryptolicenses.net/guides/crypto-regulation-usa-vs-eu-vs-uk/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-regulation-usa-vs-eu-vs-uk/#article",
+      "headline": "Crypto Regulation: USA vs EU vs UK Compared (2026)",
+      "description": "The EU's unified MiCA regime, the fragmented US split between SEC, CFTC and the GENIUS Act, and the UK's phased FCA rollout to 2027, compared for founders choosing where to license in 2026.",
+      "url": "https://cryptolicenses.net/guides/crypto-regulation-usa-vs-eu-vs-uk/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-regulation-usa-vs-eu-vs-uk/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/justice-scales-gavel-law-books.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does crypto regulation differ between the USA, the EU, and the UK?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The EU has a single unified framework, MiCA, fully applicable since December 2024. The US is fragmented across the SEC, the CFTC, and state regulators, with the GENIUS Act of July 2025 the first federal crypto law. The UK runs a phased FCA regime built on FSMA 2023, with full authorisation expected from October 2027." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is MiCA and when did it take effect?",
+          "acceptedAnswer": { "@type": "Answer", "text": "MiCA, the Markets in Crypto-Assets Regulation, is the EU's single rulebook for crypto-asset service providers and token issuers. Its stablecoin rules applied from June 2024 and the full regime for crypto-asset service providers became applicable on 30 December 2024, giving authorised firms a passport across all 27 EU member states." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is US crypto regulation called fragmented?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The US has no single crypto statute. The SEC treats many tokens as securities, the CFTC treats some as commodities, FinCEN handles anti-money laundering, and individual states add their own licensing such as the New York BitLicense. This overlapping patchwork is why the US framework is described as fragmented compared with the EU." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the GENIUS Act?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The GENIUS Act, signed into law on 18 July 2025, is the first major US federal crypto statute. It creates a regulatory framework for payment stablecoins, requiring 100 percent reserve backing in liquid assets such as US dollars or short-term Treasuries, monthly public reserve disclosures, and consumer marketing safeguards for issuers." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the SEC and the CFTC for crypto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The SEC, the Securities and Exchange Commission, regulates assets it deems securities, including many token offerings. The CFTC, the Commodity Futures Trading Commission, oversees commodity markets and derivatives, and views assets like Bitcoin as commodities. Pending market-structure legislation aims to clarify which agency leads for each type of digital asset." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the UK regulate crypto in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The UK brought crypto into the Financial Conduct Authority's remit through FSMA 2023 and an FCA roadmap published in November 2024. A financial-promotions regime already applies, and a full authorisation regime under the Cryptoassets Regulations 2026 is being phased in, with the main rules expected to take effect on 25 October 2027." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which crypto regime is the strictest?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no single answer. The EU's MiCA is the most comprehensive and prescriptive, covering issuance, stablecoins, and services in one regime. The US imposes heavy securities-law and enforcement risk. The UK sits between them, with a phased, principles-led approach. The right fit depends on your business model and target customers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a MiCA licence be used across the whole EU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. A core advantage of MiCA is passporting. Once a crypto-asset service provider is authorised in one EU member state, it can offer its services across all 27 member states without a separate licence in each country, subject to notification procedures. This single-market access is a major reason firms choose an EU base." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the US have a federal crypto licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not a single one. US crypto businesses typically register with FinCEN as money services businesses, obtain state money transmitter licences, and may face SEC or CFTC oversight depending on their tokens. The GENIUS Act added a federal framework for stablecoin issuers, but a broad federal crypto licence does not yet exist." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the CLARITY Act?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The CLARITY Act is proposed US market-structure legislation that would divide oversight, giving the CFTC authority over digital commodity spot markets and the SEC authority over investment-contract assets. It passed the House of Representatives in 2025 but, as of 2026, awaits action in the Senate and is not yet law." }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the EU MiCA transitional period end?",
+          "acceptedAnswer": { "@type": "Answer", "text": "MiCA allows existing firms operating under national law before 30 December 2024 to continue during a transitional period that can run until 1 July 2026, or until they are authorised or refused. However, member states may shorten or opt out of this window, and some chose a shorter period, so firms must check their local rules." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where should a crypto startup get licensed in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the model and target market. Firms serving EU customers often pursue a MiCA CASP licence for single-market access. Those targeting US users navigate state and federal rules. UK-focused firms prepare for the FCA regime. Many founders also weigh established hubs such as Switzerland or the UAE alongside these three." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are stablecoins regulated differently in the USA, EU, and UK?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The EU regulates stablecoins under MiCA as asset-referenced and e-money tokens, with rules applied from June 2024. The US regulates payment stablecoins under the GENIUS Act of July 2025. The UK is bringing stablecoins into its phased FCA regime. Each sets reserve, disclosure, and issuer requirements with different detail." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does regulatory choice affect crypto licensing strategy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The regime you operate under shapes capital, compliance, and timing. An EU MiCA licence gives passporting but demands a full prudential and governance package. The US route means state-by-state licensing and securities risk. The UK means preparing for a regime still phasing in. We map these trade-offs to a firm's model before it commits." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto Regulation: USA vs EU vs UK
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/justice-scales-gavel-law-books.jpg" alt="Scales of justice, gavel and law books representing crypto regulation in the USA, EU and UK in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Regulation</div>
+        <h1 class="hero-h1">Crypto Regulation: USA vs EU vs UK Compared in <em>2026</em></h1>
+        <p class="hero-intro">Three of the world's largest markets have taken three very different paths. The EU runs one unified MiCA regime, the US stays fragmented across the SEC, CFTC and the new GENIUS Act, and the UK is phasing in an FCA regime to 2027. This guide compares all three so founders can choose where to license.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Regulation</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#overview">The Big Picture</a></li>
+            <li class="toc-item"><a href="#compare">USA vs EU vs UK Table</a></li>
+            <li class="toc-item"><a href="#eu">The EU: MiCA</a></li>
+            <li class="toc-item"><a href="#usa">The USA: SEC, CFTC, GENIUS Act</a></li>
+            <li class="toc-item"><a href="#uk">The UK: Phased FCA Regime</a></li>
+            <li class="toc-item"><a href="#stablecoins">Stablecoins Compared</a></li>
+            <li class="toc-item"><a href="#choose">Choosing a Jurisdiction</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and institutional investors through licensing across the EU's MiCA regime, the US state and federal framework, and the UK's evolving FCA rules.</p>
+                <p>He advises founders on where to base a crypto business, weighing the unified single market of MiCA against the fragmented but deep US market and the phased UK regime, and coordinates applications across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="overview">
+
+            <div class="def-box">
+                <div class="def-term">In Short · USA vs EU vs UK</div>
+                <p>In 2026 the EU regulates crypto through one unified rulebook, MiCA, fully applicable since December 2024 and offering a single passport across 27 member states. The US stays fragmented across the SEC, the CFTC, and state regulators, with the GENIUS Act of July 2025 the first federal crypto law. The UK is phasing in an FCA regime built on FSMA 2023, with full authorisation expected from October 2027.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>The EU's MiCA is the most comprehensive single framework, fully applicable since 30 December 2024, with passporting across all 27 member states</li>
+                    <li>The US is fragmented: the SEC, the CFTC, FinCEN, and individual states each play a role, with no single federal crypto licence</li>
+                    <li>The GENIUS Act, signed 18 July 2025, gave the US its first federal stablecoin framework; broader market-structure rules are still pending in the Senate</li>
+                    <li>The UK runs a phased FCA regime under FSMA 2023, with a financial-promotions rule already in force and full authorisation expected from 25 October 2027</li>
+                    <li>The right regime depends on your model and target market; passporting, securities risk, and timing pull in different directions</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Big Picture</div>
+            <h2 class="section-h2">Three Markets, <em>Three Approaches</em></h2>
+            <div class="prose">
+                <p>Crypto regulation is no longer a blank page in any of the three largest Western markets, but the way each has filled that page could hardly be more different. The European Union built a single, prescriptive rulebook from scratch. The United States layered new federal law on top of an existing patchwork of agencies and state regimes. The United Kingdom chose a phased path, folding crypto into its mainstream financial-services framework over several years. If you want the foundations first, our explainer on <a href="/guides/what-is-crypto-regulation/">what crypto regulation is and why it matters</a> sets the scene.</p>
+                <p>For a founder, the distinction is not academic. It decides how many licences you need, which regulator can sanction you, how much capital you must hold, and how quickly you can serve customers. A business that passports across the EU under one MiCA authorisation faces a very different operating reality from one stitching together state money-transmitter licences in the US, or one waiting for a UK regime that is still phasing in.</p>
+                <p>This guide compares the three regimes on the points that matter most for licensing: the legal framework, the regulators, how stablecoins are treated, the current status, and what each means for retail access. None of the three is simply "better." Each carries trade-offs, and the right choice depends on where your customers are and what you intend to offer.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Dec 2024</div>
+                    <div class="ig-stat-label">EU MiCA Fully Applicable</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Jul 2025</div>
+                    <div class="ig-stat-label">US First Federal Crypto Law</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Oct 2027</div>
+                    <div class="ig-stat-label">UK Full Regime (Planned)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">27</div>
+                    <div class="ig-stat-label">EU States, One MiCA Passport</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2+</div>
+                    <div class="ig-stat-label">US Federal Regulators (SEC, CFTC)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">FCA</div>
+                    <div class="ig-stat-label">Single UK Regulator</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: ESMA MiCA pages; US White House and Congress.gov (GENIUS Act); FCA cryptoasset regime pages.</p>
+        </section>
+
+        <!-- COMPARISON TABLE -->
+        <section class="guide-section" id="compare">
+            <div class="section-label">Section 2: Side by Side</div>
+            <h2 class="section-h2">USA vs EU vs UK <em>at a Glance</em></h2>
+            <div class="prose">
+                <p>The table below distils the three regimes onto the dimensions founders ask about most: the governing framework, the lead regulator, how stablecoins are handled, the current legal status, and the position on retail access. Treat it as a map, not the territory, because the detail within each cell can fill a chapter on its own.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>USA</th>
+                        <th>EU</th>
+                        <th>UK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Framework</td>
+                        <td>Fragmented; GENIUS Act (stablecoins) + securities &amp; commodities law</td>
+                        <td>MiCA, single unified rulebook</td>
+                        <td>FSMA 2023 + phased FCA regime</td>
+                    </tr>
+                    <tr>
+                        <td>Lead regulator</td>
+                        <td>SEC, CFTC, FinCEN + state regulators</td>
+                        <td>National authorities under ESMA / EBA coordination</td>
+                        <td>Financial Conduct Authority (FCA)</td>
+                    </tr>
+                    <tr>
+                        <td>Stablecoins</td>
+                        <td>GENIUS Act: 100% reserves, monthly disclosure</td>
+                        <td>MiCA: ART &amp; EMT rules (from June 2024)</td>
+                        <td>Being brought into phased FCA regime</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>Stablecoin law live; market-structure bill pending in Senate</td>
+                        <td>Fully applicable since 30 Dec 2024; transition to mid-2026</td>
+                        <td>Promotions rule live; full regime planned for Oct 2027</td>
+                    </tr>
+                    <tr>
+                        <td>Retail access</td>
+                        <td>Permitted, varies by state and asset classification</td>
+                        <td>Permitted under authorised CASPs, single market</td>
+                        <td>Permitted with strict financial-promotion rules</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Summary based on official EU, US, and UK sources current to 2026. Always confirm against your specific licensing jurisdiction.</p>
+        </section>
+
+        <!-- EU -->
+        <section class="guide-section" id="eu">
+            <div class="section-label">Section 3: The European Union</div>
+            <h2 class="section-h2">The EU: <em>MiCA</em>, One Rulebook</h2>
+            <div class="prose">
+                <p>The European Union took the boldest structural step of the three. The Markets in Crypto-Assets Regulation, known as MiCA, is a single piece of EU law that governs token issuance, stablecoins, and crypto-asset service providers across all 27 member states. Its stablecoin provisions for asset-referenced and e-money tokens applied from 30 June 2024, and the full regime for crypto-asset service providers became applicable on 30 December 2024. For a deeper walkthrough, see our dedicated guide on <a href="/guides/mica-explained/">MiCA explained</a>, and our <a href="/regulation/eu/">EU regulation overview</a> for the wider context.</p>
+                <p>The headline advantage is passporting. A firm authorised as a crypto-asset service provider, or CASP, in one member state can offer its services across the entire EU single market without a separate licence in each country. For a business targeting European customers, this turns 27 national regimes into one addressable market, which is a powerful reason to base operations inside the bloc.</p>
+                <p>The trade-off is rigour. MiCA imposes detailed governance, prudential, custody, conflict-of-interest, and disclosure requirements, and existing firms must transition into the regime. The grandfathering window lets businesses operating under national law before 30 December 2024 continue until 1 July 2026 or until they are authorised or refused, but member states may shorten or opt out of that period, and several chose a tighter timeline. Founders should confirm the exact deadline in their chosen country rather than assuming the full window applies.</p>
+            </div>
+        </section>
+
+        <!-- USA -->
+        <section class="guide-section" id="usa">
+            <div class="section-label">Section 4: The United States</div>
+            <h2 class="section-h2">The USA: <em>SEC, CFTC</em> and the GENIUS Act</h2>
+            <div class="prose">
+                <p>The United States is the largest crypto market and the most fragmented regulator of the three. There is no single federal crypto statute covering the whole sector. Instead, oversight is split: the Securities and Exchange Commission (SEC) regulates assets it deems securities, the Commodity Futures Trading Commission (CFTC) oversees commodities and derivatives, FinCEN handles anti-money laundering, and individual states add their own licensing, the New York BitLicense being the best-known example. Our <a href="/regulation/usa/">US regulation overview</a> maps this landscape in more detail.</p>
+                <p>The defining federal development came on 18 July 2025, when the GENIUS Act was signed into law, the first major US federal crypto statute. It creates a framework for payment stablecoins, requiring issuers to hold 100 percent reserves in liquid assets such as US dollars or short-term Treasuries, publish monthly disclosures of those reserves, and follow strict marketing rules. Notably, the Act excludes compliant payment stablecoins from the federal definitions of "security" and "commodity," carving them out of the SEC and CFTC overlap.</p>
+                <p>Broader market-structure legislation, commonly referenced as the CLARITY Act, would divide jurisdiction more cleanly, giving the CFTC authority over digital commodity spot markets and the SEC authority over investment-contract assets. It passed the House of Representatives in 2025 but, as of 2026, awaits action in the Senate and is not yet law. Until it passes, the SEC and CFTC boundary remains the central uncertainty for US crypto firms, and licensing typically means combining FinCEN registration with state money-transmitter licences.</p>
+            </div>
+
+            <blockquote class="expert-quote">
+                <p>"Founders often assume the US is one market with one rulebook. It is not. You can be compliant with FinCEN, hold money-transmitter licences in forty states, and still face an SEC view that your token is a security. The fragmentation is the cost of entry, and it is why many EU-facing businesses start with a MiCA licence instead."</p>
+                <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+            </blockquote>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure whether to license in the EU, the US, or the UK?</strong> Get a free 30-minute consultation. We will map each regime to your business model and target markets and recommend a route.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- UK -->
+        <section class="guide-section" id="uk">
+            <div class="section-label">Section 5: The United Kingdom</div>
+            <h2 class="section-h2">The UK: A <em>Phased</em> FCA Regime</h2>
+            <div class="prose">
+                <p>The United Kingdom chose neither the EU's big-bang single rulebook nor the US's agency patchwork. Instead, it is folding crypto into its existing financial-services architecture in phases. The Financial Services and Markets Act 2023 (FSMA 2023) brought cryptoassets within the remit of the Financial Conduct Authority (FCA), and the FCA published a cryptoasset roadmap in November 2024 setting out a multi-phase plan to bring crypto activities into the mainstream regime. Our <a href="/regulation/uk/">UK regulation overview</a> tracks the detail as it develops.</p>
+                <p>One piece is already live: the financial-promotions regime, in force since October 2023, which governs how crypto can be marketed to UK consumers and is among the strictest such regimes anywhere. On top of that, the Financial Services and Markets Act 2000 (Cryptoassets) Regulations 2026 were made by Parliament in February 2026, setting the legislative foundation for full authorisation.</p>
+                <p>The full authorisation regime is being introduced gradually. The FCA plans to open a pre-application support service in July 2026 and run an application window from late September 2026, with the main regime expected to come into force on 25 October 2027. For founders, that means the UK is a market in transition: the promotions rules bind now, but the comprehensive authorisation framework is still arriving, so timing is a genuine planning factor.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our licensing work, the EU-versus-US-versus-UK question almost never has a single right answer, and the worst outcomes come from founders who pick a jurisdiction before they have defined their customer base. We routinely see businesses chase a US presence for prestige, only to discover that state-by-state money-transmitter licensing and unresolved securities risk make the launch far slower and costlier than a MiCA route would have been for the same European customer base.</p>
+            <p>Equally, we see firms assume the UK is open for full authorisation today when, in practice, the comprehensive regime is still phasing in toward 2027 while the promotions rules already bite. Mapping the live obligations against the planned ones, and matching them to where the revenue actually sits, is the single most valuable step before any application. We do that mapping before a client commits a euro to incorporation.</p>
+          </div>
+        </section>
+
+        <!-- STABLECOINS -->
+        <section class="guide-section" id="stablecoins">
+            <div class="section-label">Section 6: Stablecoins</div>
+            <h2 class="section-h2">Stablecoins: <em>Three Models</em></h2>
+            <div class="prose">
+                <p>Stablecoins are where the three regimes have moved fastest and where the contrast is clearest. The EU regulates them under MiCA as asset-referenced tokens and e-money tokens, with rules that applied from 30 June 2024, imposing reserve, redemption, and issuer requirements and capping the use of large non-euro stablecoins as everyday means of payment. The framework sits inside the single MiCA rulebook rather than standing apart.</p>
+                <p>The US took a focused legislative route. The GENIUS Act of July 2025 created a dedicated federal framework for payment stablecoins, mandating full reserve backing in liquid assets, monthly public disclosures, and the technical ability for issuers to freeze or seize tokens under lawful order. It is narrower than MiCA, addressing stablecoins specifically rather than the whole crypto sector, but it is now settled federal law.</p>
+                <p>The UK is bringing stablecoins into its phased FCA regime alongside other cryptoassets, rather than legislating for them in isolation. The result is three distinct models for the same instrument: a comprehensive EU rulebook, a targeted US statute, and a phased UK integration. A stablecoin issuer serving all three markets must satisfy all three, which is a recurring theme in cross-border licensing engagements.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> a project that intends to issue or distribute a stablecoin should treat regime choice as a primary decision, not a detail. The reserve, disclosure, and redemption obligations differ materially between MiCA and the GENIUS Act, and the UK position is still settling. Pin down which framework governs your token before you build the product, not after.</p>
+            </div>
+        </section>
+
+        <!-- CHOOSE -->
+        <section class="guide-section" id="choose">
+            <div class="section-label">Section 7: Choosing a Jurisdiction</div>
+            <h2 class="section-h2">How to <em>Choose</em> Between Them</h2>
+            <div class="prose">
+                <p>Choosing between the three regimes is a structured decision, not a preference. The timeline below sets out the sequence we use with clients, anchored to the real regulatory milestones that shape each market. The detail varies by business model, but the order of questions is consistent: define the customer, map the regime, then commit.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2023</div>
+                        <div class="ig-step-title">Foundations laid</div>
+                        <div class="ig-step-desc">The EU's MiCA enters into force, the UK passes FSMA 2023 and a crypto financial-promotions regime, and US oversight remains enforcement-led across the SEC and CFTC.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Dec 2024</div>
+                        <div class="ig-step-title">EU MiCA fully applicable</div>
+                        <div class="ig-step-desc">The full CASP regime applies from 30 December 2024, opening single-market passporting; the FCA publishes its UK cryptoasset roadmap in November 2024.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Jul 2025</div>
+                        <div class="ig-step-title">US GENIUS Act signed</div>
+                        <div class="ig-step-desc">The first major US federal crypto law creates a payment-stablecoin framework. A broader market-structure bill passes the House but awaits the Senate.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2026</div>
+                        <div class="ig-step-title">Transitions and windows open</div>
+                        <div class="ig-step-desc">The EU MiCA transitional window runs toward 1 July 2026; the UK Cryptoassets Regulations 2026 are made and the FCA application window opens from late September.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Oct 2027</div>
+                        <div class="ig-step-title">UK full regime in force</div>
+                        <div class="ig-step-desc">The comprehensive UK authorisation regime is expected to take effect on 25 October 2027, completing the phased integration of crypto into FSMA.</div>
+                    </div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:1rem;">UK dates are planned and may move; confirm against current FCA guidance before relying on them.</p>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Regulation: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">How does crypto regulation differ between the USA, the EU, and the UK?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The EU has a single unified framework, MiCA, fully applicable since December 2024. The US is fragmented across the SEC, the CFTC, and state regulators, with the GENIUS Act of July 2025 the first federal crypto law. The UK runs a phased FCA regime built on FSMA 2023, with full authorisation expected from October 2027.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is MiCA and when did it take effect?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA, the Markets in Crypto-Assets Regulation, is the EU's single rulebook for crypto-asset service providers and token issuers. Its stablecoin rules applied from June 2024 and the full regime for crypto-asset service providers became applicable on 30 December 2024, giving authorised firms a passport across all 27 EU member states.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is US crypto regulation called fragmented?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The US has no single crypto statute. The SEC treats many tokens as securities, the CFTC treats some as commodities, FinCEN handles anti-money laundering, and individual states add their own licensing such as the New York BitLicense. This overlapping patchwork is why the US framework is described as fragmented compared with the EU.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the GENIUS Act?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The GENIUS Act, signed into law on 18 July 2025, is the first major US federal crypto statute. It creates a regulatory framework for payment stablecoins, requiring 100 percent reserve backing in liquid assets such as US dollars or short-term Treasuries, monthly public reserve disclosures, and consumer marketing safeguards for issuers.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between the SEC and the CFTC for crypto?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The SEC, the Securities and Exchange Commission, regulates assets it deems securities, including many token offerings. The CFTC, the Commodity Futures Trading Commission, oversees commodity markets and derivatives, and views assets like Bitcoin as commodities. Pending market-structure legislation aims to clarify which agency leads for each type of digital asset.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the UK regulate crypto in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The UK brought crypto into the Financial Conduct Authority's remit through FSMA 2023 and an FCA roadmap published in November 2024. A financial-promotions regime already applies, and a full authorisation regime under the Cryptoassets Regulations 2026 is being phased in, with the main rules expected to take effect on 25 October 2027.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which crypto regime is the strictest?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no single answer. The EU's MiCA is the most comprehensive and prescriptive, covering issuance, stablecoins, and services in one regime. The US imposes heavy securities-law and enforcement risk. The UK sits between them, with a phased, principles-led approach. The right fit depends on your business model and target customers.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a MiCA licence be used across the whole EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. A core advantage of MiCA is passporting. Once a crypto-asset service provider is authorised in one EU member state, it can offer its services across all 27 member states without a separate licence in each country, subject to notification procedures. This single-market access is a major reason firms choose an EU base.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does the US have a federal crypto licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Not a single one. US crypto businesses typically register with FinCEN as money services businesses, obtain state money transmitter licences, and may face SEC or CFTC oversight depending on their tokens. The GENIUS Act added a federal framework for stablecoin issuers, but a broad federal crypto licence does not yet exist.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the CLARITY Act?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The CLARITY Act is proposed US market-structure legislation that would divide oversight, giving the CFTC authority over digital commodity spot markets and the SEC authority over investment-contract assets. It passed the House of Representatives in 2025 but, as of 2026, awaits action in the Senate and is not yet law.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When does the EU MiCA transitional period end?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA allows existing firms operating under national law before 30 December 2024 to continue during a transitional period that can run until 1 July 2026, or until they are authorised or refused. However, member states may shorten or opt out of this window, and some chose a shorter period, so firms must check their local rules.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Where should a crypto startup get licensed in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It depends on the model and target market. Firms serving EU customers often pursue a MiCA CASP licence for single-market access. Those targeting US users navigate state and federal rules. UK-focused firms prepare for the FCA regime. Many founders also weigh established hubs such as Switzerland or the UAE alongside these three.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are stablecoins regulated differently in the USA, EU, and UK?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. The EU regulates stablecoins under MiCA as asset-referenced and e-money tokens, with rules applied from June 2024. The US regulates payment stablecoins under the GENIUS Act of July 2025. The UK is bringing stablecoins into its phased FCA regime. Each sets reserve, disclosure, and issuer requirements with different detail.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does regulatory choice affect crypto licensing strategy?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The regime you operate under shapes capital, compliance, and timing. An EU MiCA licence gives passporting but demands a full prudential and governance package. The US route means state-by-state licensing and securities risk. The UK means preparing for a regime still phasing in. We map these trade-offs to a firm's model before it commits.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="nofollow noopener noreferrer">ESMA: Markets in Crypto-Assets Regulation (MiCA)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (MiCA)</a></li>
+            <li><a href="https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/" target="_blank" rel="nofollow noopener noreferrer">The White House: Fact Sheet on the GENIUS Act (July 2025)</a></li>
+            <li><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1582/text" target="_blank" rel="nofollow noopener noreferrer">Congress.gov: S.1582 GENIUS Act (full text)</a></li>
+            <li><a href="https://www.sec.gov/" target="_blank" rel="nofollow noopener noreferrer">US Securities and Exchange Commission (SEC)</a></li>
+            <li><a href="https://www.cftc.gov/" target="_blank" rel="nofollow noopener noreferrer">US Commodity Futures Trading Commission (CFTC)</a></li>
+            <li><a href="https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation" target="_blank" rel="nofollow noopener noreferrer">FCA: A New Regime for Cryptoasset Regulation</a></li>
+            <li><a href="https://www.legislation.gov.uk/ukpga/2023/29/contents" target="_blank" rel="nofollow noopener noreferrer">legislation.gov.uk: Financial Services and Markets Act 2023</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>EU, US, or UK?</h3>
+                <p>Tell us your business model and target markets. We will map the regime that fits and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=regulation" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Regimes at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EU</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">MiCA, unified</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Fully applicable Dec 2024</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">USA</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Fragmented</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">SEC, CFTC + GENIUS Act</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">UK</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Phased FCA</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Full regime planned Oct 2027</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-crypto-regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is Crypto Regulation?</a>
+                    <a href="/guides/mica-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Explained</a>
+                    <a href="/regulation/usa/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">US Regulation Overview</a>
+                    <a href="/regulation/eu/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EU Regulation Overview</a>
+                    <a href="/regulation/uk/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">UK Regulation Overview →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Coverage of MiCA, US, and UK regimes</li>
+                    <li>Jurisdiction selection mapped to your model</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Pick the Right Regime Before You Apply</h2>
+      <p class="cta-lead">Share your business model and target markets, and we will map the EU, US, and UK regimes against your plan, recommend a licensing route, and build the compliance framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and which regimes you are weighing…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-crypto-regulation/">What Is Crypto Regulation?</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

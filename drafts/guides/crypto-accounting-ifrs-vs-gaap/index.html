@@ -1,0 +1,997 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Accounting: IFRS vs US GAAP for Digital Assets Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto accounting under IFRS vs US GAAP in 2026. How IAS 38 and IAS 2 treat digital assets (cost or revaluation), how FASB ASU 2023-08 introduced fair value through net income, and what the divergence means for crypto firms.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-accounting-ifrs-vs-gaap/">
+    <meta property="og:title" content="Crypto Accounting: IFRS vs US GAAP for Digital Assets Explained (2026)">
+    <meta property="og:description" content="How IAS 38 and IAS 2 treat digital assets under IFRS, how FASB ASU 2023-08 introduced fair value through net income under US GAAP, and what the divergence means for crypto firms in 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-accounting-ifrs-vs-gaap/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-coins-euro-banknotes-laptop.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Crypto Accounting: IFRS vs US GAAP", "item": "https://cryptolicenses.net/guides/crypto-accounting-ifrs-vs-gaap/" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cryptolicenses.net/about/dr-marcus-hartmann/#person",
+      "name": "Dr. Marcus Hartmann",
+      "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/",
+      "jobTitle": "Senior Licensing Advisor",
+      "worksFor": { "@id": "https://cryptolicenses.net/#organization" },
+      "knowsAbout": ["Crypto accounting", "IFRS", "US GAAP", "Digital asset reporting", "VASP licensing"]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-accounting-ifrs-vs-gaap/#article",
+      "headline": "Crypto Accounting: IFRS vs US GAAP for Digital Assets Explained (2026)",
+      "description": "How IAS 38 and IAS 2 treat digital assets under IFRS, how FASB ASU 2023-08 introduced fair value through net income under US GAAP, and what the divergence means for crypto firms in 2026.",
+      "url": "https://cryptolicenses.net/guides/crypto-accounting-ifrs-vs-gaap/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-accounting-ifrs-vs-gaap/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/bitcoin-coins-euro-banknotes-laptop.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is crypto accounted for under IFRS?",
+          "acceptedAnswer": { "@type": "Answer", "text": "IFRS has no crypto-specific standard. Under the IFRS Interpretations Committee June 2019 agenda decision, a cryptocurrency holding is an intangible asset under IAS 38, measured at cost or, where an active market exists, the revaluation model. If held for sale in the ordinary course of business, IAS 2 inventory applies instead." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is FASB ASU 2023-08?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ASU 2023-08 is the FASB standard issued in December 2023 that created Subtopic 350-60 for crypto assets under US GAAP. It requires in-scope crypto to be measured at fair value with changes recognised in net income each period, replacing the old cost-less-impairment model that only allowed write-downs." }
+        },
+        {
+          "@type": "Question",
+          "name": "When does ASU 2023-08 take effect?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ASU 2023-08 is effective for fiscal years beginning after 15 December 2024, including interim periods within those years. Early adoption was permitted. Entities apply it using a modified retrospective method, with a cumulative-effect adjustment booked to opening retained earnings in the year of adoption." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do IFRS and US GAAP treat crypto differently?",
+          "acceptedAnswer": { "@type": "Answer", "text": "US GAAP now uses fair value through net income for in-scope crypto under ASU 2023-08, recognising unrealised gains and losses each period. IFRS still defaults to the IAS 38 intangible model at cost, where unrealised gains are not recognised in profit or loss unless the revaluation model and an active market apply." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the IFRIC June 2019 agenda decision on cryptocurrencies?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The IFRS Interpretations Committee concluded in June 2019 that a holding of cryptocurrency is not cash and not a financial asset. It should be accounted for under IAS 38 as an intangible asset, unless the entity holds it for sale in the ordinary course of business, in which case IAS 2 inventory applies." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you record crypto gains under IFRS?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only in limited cases. Under the IAS 38 cost model, gains are recognised only on disposal. Under the IAS 38 revaluation model, which requires an active market, upward revaluation gains go to other comprehensive income as a revaluation surplus, not to profit or loss. IAS 2 broker-traders may use fair value through profit or loss." }
+        },
+        {
+          "@type": "Question",
+          "name": "How did US GAAP treat crypto before ASU 2023-08?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Before ASU 2023-08, crypto was an indefinite-lived intangible asset under ASC 350, measured at cost less impairment. Holders had to write the asset down when its price fell below carrying value but could never write it back up if the price recovered, producing an asymmetric model criticised for understating value." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which crypto assets are in scope of ASU 2023-08?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An asset qualifies if it meets the intangible definition, gives no enforceable rights to other assets, resides on a distributed ledger secured by cryptography, is fungible, and is not created or issued by the reporting entity or its related parties. Bitcoin and Ether qualify; NFTs, wrapped tokens, and self-issued tokens do not." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are NFTs covered by ASU 2023-08?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Non-fungible tokens fail the fungibility condition required for ASU 2023-08 scope, so they remain outside Subtopic 350-60. NFTs continue to be accounted for as indefinite-lived intangible assets under ASC 350 using the cost-less-impairment model, unless another standard applies to the specific arrangement." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is impairment under IFRS crypto accounting?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Under the IAS 38 cost model, crypto with an indefinite useful life is not amortised but is tested for impairment. When recoverable amount falls below carrying value, the entity books an impairment loss in profit or loss. Reversals are permitted within limits if the recoverable amount later rises, unlike the old US GAAP rule." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ASU 2023-08 apply to companies that mine crypto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crypto received by a miner or validator for performing validation services is not treated as created by the entity, so it can fall within ASU 2023-08 scope once held. However, tokens issued by the reporting entity itself or its related parties are excluded. The miner still applies separate revenue guidance to the validation activity." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which standard should a crypto exchange use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the reporting framework. A US GAAP filer applies ASU 2023-08 fair value to proprietary holdings. An IFRS reporter applies IAS 2 inventory if it trades crypto in the ordinary course, or IAS 38 for treasury holdings. Customer crypto held in custody is assessed separately, often as a liability and corresponding asset." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does crypto accounting affect a license application?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Regulators reviewing VASP and CASP applications expect audited or auditable financial statements and a clear accounting policy for digital assets. A coherent policy under IFRS or US GAAP, consistent with capital and safeguarding rules, signals operational maturity and supports both authorisation and ongoing supervision." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does crypto accounting relate to crypto tax?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Accounting and tax are linked but distinct. Book values from IFRS or US GAAP feed the tax computation, but each jurisdiction applies its own rules on realisation, deductibility, and unrealised gains. A firm reporting fair value gains under ASU 2023-08 may still be taxed only on realised disposals, depending on local law." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto Accounting: IFRS vs US GAAP
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/bitcoin-coins-euro-banknotes-laptop.jpg" alt="Bitcoin coins on euro banknotes beside a laptop, crypto accounting under IFRS vs US GAAP in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Crypto Accounting</div>
+        <h1 class="hero-h1">Crypto Accounting: IFRS vs US GAAP for Digital Assets Explained in <em>2026</em></h1>
+        <p class="hero-intro">IFRS and US GAAP now treat digital assets very differently. IFRS routes crypto holdings through IAS 38 intangible assets or IAS 2 inventory, while FASB ASU 2023-08 moved US GAAP to fair value through net income. This guide explains both frameworks, the divergence, and what it means for crypto firms reporting in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Crypto Accounting</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">Crypto Accounting Basics</a></li>
+            <li class="toc-item"><a href="#ifrs">Crypto Under IFRS</a></li>
+            <li class="toc-item"><a href="#gaap">Crypto Under US GAAP</a></li>
+            <li class="toc-item"><a href="#compare">IFRS vs US GAAP Compared</a></li>
+            <li class="toc-item"><a href="#divergence">Why the Divergence Matters</a></li>
+            <li class="toc-item"><a href="#scope">ASU 2023-08 Scope</a></li>
+            <li class="toc-item"><a href="#firms">What It Means for Crypto Firms</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he advises exchanges, custodians, and institutional investors on digital asset reporting, where a defensible accounting policy under IFRS or US GAAP is now a standard condition of licensing and bank onboarding.</p>
+                <p>He has coordinated digital asset accounting policies for clients reporting under IFRS in the EU and Switzerland and under US GAAP, working alongside audit teams on the move to fair value following FASB ASU 2023-08 across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">In Brief · Crypto Accounting IFRS vs US GAAP</div>
+                <p>IFRS has no crypto-specific standard: a digital asset holding is an intangible asset under IAS 38, measured at cost or the revaluation model, or inventory under IAS 2 for traders. US GAAP, after FASB ASU 2023-08, measures in-scope crypto at fair value with gains and losses in net income. The result is a clear divergence between the two frameworks.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>IFRS has no standard written for crypto; under the IFRIC June 2019 agenda decision, holdings are intangible assets under IAS 38, or inventory under IAS 2 if held for sale by traders</li>
+                    <li>Under IAS 38 the entity picks the cost model or the revaluation model; revaluation gains go to other comprehensive income, not net income, and require an active market</li>
+                    <li>FASB ASU 2023-08 moved US GAAP to fair value through net income for in-scope crypto, replacing the old cost-less-impairment model</li>
+                    <li>ASU 2023-08 is effective for fiscal years beginning after 15 December 2024, with early adoption permitted</li>
+                    <li>The divergence means the same Bitcoin holding can show very different net income and equity under IFRS versus US GAAP</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">Crypto Accounting <em>Basics</em></h2>
+            <div class="prose">
+                <p>Crypto accounting is the discipline of recognising, measuring, presenting, and disclosing digital assets in financial statements. The central problem is that neither IFRS nor US GAAP was designed with cryptocurrencies in mind. Standard setters have had to fit Bitcoin, Ether, and similar tokens into rules written for other asset classes, and the two frameworks have reached different answers.</p>
+                <p>The first question in any digital asset accounting analysis is classification. A crypto holding is generally not cash, because it is not legal tender backed by a central bank, and not a financial asset, because it is not a contractual right to receive cash or another financial instrument. That conclusion, reached for IFRS by the IFRS Interpretations Committee in June 2019, pushes crypto into the intangible asset rules by default. Our <a href="/crypto-accounting/">crypto accounting hub</a> sets out the full lifecycle from recognition through audit.</p>
+                <p>Once classified, measurement is where IFRS and US GAAP part company. IFRS keeps most treasury crypto at cost under the intangible asset model. US GAAP, since FASB ASU 2023-08, marks qualifying crypto to fair value each reporting date. The sections below take each framework in turn, then set them side by side and explain why the gap matters for any business that holds, trades, or reports digital assets.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">IAS 38</div>
+                    <div class="ig-stat-label">IFRS Default Standard</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">IAS 2</div>
+                    <div class="ig-stat-label">IFRS Inventory For Traders</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">350-60</div>
+                    <div class="ig-stat-label">US GAAP Subtopic (ASU 2023-08)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Fair Value</div>
+                    <div class="ig-stat-label">US GAAP Measurement</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Dec 2024</div>
+                    <div class="ig-stat-label">ASU 2023-08 Effective (FY After 15 Dec)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2019</div>
+                    <div class="ig-stat-label">IFRIC Agenda Decision</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: IFRS Interpretations Committee June 2019 agenda decision (IAS 38 / IAS 2); FASB ASU 2023-08 (Subtopic 350-60).</p>
+        </section>
+
+        <!-- IFRS -->
+        <section class="guide-section" id="ifrs">
+            <div class="section-label">Section 2: IFRS</div>
+            <h2 class="section-h2">Crypto Accounting Under <em>IFRS</em></h2>
+            <div class="prose">
+                <p>There is no IFRS standard written specifically for crypto. The authoritative guidance is the IFRS Interpretations Committee agenda decision of June 2019, "Holdings of Cryptocurrencies." The Committee concluded that a cryptocurrency holding is neither cash under IAS 7 nor a financial asset under IAS 32, because it does not give the holder a contractual right to receive a fixed or determinable number of currency units. That leaves two homes for crypto under IFRS, depending on why the entity holds it.</p>
+                <h3>IAS 38 intangible assets (the default)</h3>
+                <p>For most holders, a digital asset is an intangible asset under IAS 38, because it is identifiable, non-monetary, and separable. IAS 38 offers two measurement choices. The cost model carries crypto at cost less any impairment; an indefinite-life asset like Bitcoin is not amortised but is impairment-tested, with losses recognised in profit or loss and limited reversal allowed if value recovers. The revaluation model is available only where an active market exists, and crucially, upward revaluation gains are credited to other comprehensive income as a revaluation surplus rather than to net income.</p>
+                <h3>IAS 2 inventory (for traders)</h3>
+                <p>If an entity holds crypto for sale in the ordinary course of business, the holding is inventory under IAS 2 rather than IAS 38. Commodity broker-traders that acquire crypto principally to sell in the near term and generate a profit from price fluctuations may measure it at fair value less costs to sell, with changes recognised in profit or loss. This is the one IFRS route that brings unrealised crypto gains into the income statement. For a deeper treatment, see our dedicated page on <a href="/crypto-accounting/standards/ifrs/">crypto accounting under IFRS</a>.</p>
+            </div>
+        </section>
+
+        <!-- US GAAP -->
+        <section class="guide-section" id="gaap">
+            <div class="section-label">Section 3: US GAAP</div>
+            <h2 class="section-h2">Crypto Accounting Under <em>US GAAP</em></h2>
+            <div class="prose">
+                <p>US GAAP underwent a far bigger change. Before December 2023, crypto was treated as an indefinite-lived intangible asset under ASC 350, measured at cost less impairment. That model was widely criticised because it was asymmetric: holders had to write the asset down whenever its market price dropped below carrying value, but could never write it back up when the price recovered, no matter how far. Balance sheets carried Bitcoin at the lowest price it had touched, badly understating economic value during bull markets.</p>
+                <p>FASB ASU 2023-08, "Intangibles, Goodwill and Other, Crypto Assets (Subtopic 350-60)," issued on 13 December 2023, replaced that approach. In-scope crypto is now measured at fair value under ASC 820, with changes in fair value recognised in net income each reporting period, and presented separately from other intangible assets on the balance sheet. Unrealised gains and losses flow straight through earnings, so reported income now moves with crypto prices in both directions.</p>
+                <p>The standard is effective for fiscal years beginning after 15 December 2024, including interim periods within those years, with early adoption permitted. Entities transition using a modified retrospective method, recording a cumulative-effect adjustment to the opening balance of retained earnings in the year of adoption. Our page on <a href="/crypto-accounting/standards/us-gaap/">crypto accounting under US GAAP</a> walks through the disclosures the standard requires.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"The single biggest shift is psychological. Under the old US GAAP, finance teams managed crypto as a one-way impairment risk. Under ASU 2023-08, fair value runs through net income in both directions, so earnings now swing with the market. IFRS reporters do not get that symmetry by default, which is why dual-framework groups need to model both before they pick a reporting basis."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- COMPARISON -->
+        <section class="guide-section" id="compare">
+            <div class="section-label">Section 4: Side By Side</div>
+            <h2 class="section-h2">IFRS vs <em>US GAAP</em> Compared</h2>
+            <div class="prose">
+                <p>The table below sets the two frameworks side by side on the points that matter most: which standard applies, how crypto is measured, where gains and losses land, and how impairment works. The headline is simple. US GAAP now recognises unrealised gains and losses in net income, while IFRS by default does not, recognising gains only on disposal under the cost model or in other comprehensive income under the revaluation model.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>IFRS</th>
+                        <th>US GAAP (post ASU 2023-08)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Standard</td>
+                        <td>IAS 38 (default) or IAS 2 (traders); IFRIC June 2019 decision</td>
+                        <td>ASU 2023-08, Subtopic 350-60</td>
+                    </tr>
+                    <tr>
+                        <td>Measurement model</td>
+                        <td>Cost or revaluation (IAS 38); fair value less costs to sell (IAS 2 broker-traders)</td>
+                        <td>Fair value (ASC 820) each reporting date</td>
+                    </tr>
+                    <tr>
+                        <td>Unrealised gains</td>
+                        <td>Not in P&amp;L under cost; revaluation surplus in OCI; in P&amp;L for IAS 2 broker-traders</td>
+                        <td>Recognised in net income</td>
+                    </tr>
+                    <tr>
+                        <td>Unrealised losses</td>
+                        <td>Impairment in P&amp;L (cost model); revaluation decrease in P&amp;L below surplus</td>
+                        <td>Recognised in net income</td>
+                    </tr>
+                    <tr>
+                        <td>Impairment / reversal</td>
+                        <td>Impairment tested; reversal permitted within limits</td>
+                        <td>No separate impairment; fair value captures all moves</td>
+                    </tr>
+                    <tr>
+                        <td>Balance sheet</td>
+                        <td>Intangible asset (or inventory)</td>
+                        <td>Crypto presented separately from other intangibles</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on the IFRIC June 2019 agenda decision, IAS 38, IAS 2, and FASB ASU 2023-08. Specific facts and circumstances may change the analysis.</p>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure which framework and policy fit your crypto business?</strong> Get a free 30-minute consultation. We will review your reporting basis, holdings, and licensing plan and recommend a defensible accounting approach.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- DIVERGENCE -->
+        <section class="guide-section" id="divergence">
+            <div class="section-label">Section 5: The Divergence</div>
+            <h2 class="section-h2">Why the <em>Divergence</em> Matters</h2>
+            <div class="prose">
+                <p>For most of the last decade, IFRS and US GAAP reached broadly similar outcomes for crypto: both treated it as a cost-based intangible asset, and both ignored unrealised gains. ASU 2023-08 ended that alignment for US GAAP. From fiscal years beginning after 15 December 2024, a US GAAP filer marks Bitcoin to fair value through net income, while an IFRS reporter holding the identical position keeps it at cost or routes revaluation gains to other comprehensive income.</p>
+                <p>The practical effect is that the same balance sheet item can produce materially different reported figures. In a rising market, a US GAAP filer books unrealised gains that lift net income and equity, whereas an IFRS reporter under the cost model shows neither until disposal. In a falling market, the US GAAP filer recognises the loss in earnings immediately, while the IFRS reporter records an impairment that behaves differently and can later reverse. For groups that report under both frameworks, or that are comparing peers across the Atlantic, this divergence has to be modelled rather than assumed away.</p>
+                <p>It also feeds into tax and capital. Book values flow into tax computations and into regulatory capital calculations, so a framework that recognises unrealised gains can change taxable profit and own funds even before any crypto is sold, subject to local rules on realisation. Our guide to <a href="/guides/crypto-tax-by-country/">crypto tax by country</a> explains how jurisdictions diverge again at the tax layer.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our work with exchanges and treasury-heavy crypto firms across more than 60 jurisdictions, the accounting policy is no longer a back-office afterthought. Auditors, banking partners, and regulators all read it as a signal of operational maturity, and we increasingly see authorisation reviews ask directly how a firm measures and discloses its digital assets before a licence is granted.</p>
+            <p>The most common stumbling block is a group that reports under IFRS in Europe but benchmarks itself against US GAAP peers, then cannot explain why its net income looks flat while a US competitor reports large unrealised gains. We map the framework choice, the IAS 38 cost versus revaluation decision, and the ASU 2023-08 fair value impact at the start of an engagement, so the numbers tell a consistent story to every stakeholder rather than surprising the board at year end.</p>
+          </div>
+        </section>
+
+        <!-- SCOPE -->
+        <section class="guide-section" id="scope">
+            <div class="section-label">Section 6: ASU 2023-08 Scope</div>
+            <h2 class="section-h2">What Falls Inside <em>ASU 2023-08</em></h2>
+            <div class="prose">
+                <p>Fair value treatment under US GAAP is not automatic for everything labelled crypto. ASU 2023-08 applies only to assets that meet all of its scope conditions, and the boundaries matter because anything outside the scope stays on the old cost-less-impairment model under ASC 350. To qualify, an asset must meet the definition of an intangible asset, give the holder no enforceable rights or claims to underlying goods, services, or other assets, reside on a distributed ledger using blockchain or similar technology, be secured through cryptography, be fungible, and not be created or issued by the reporting entity or its related parties.</p>
+                <p>That definition cleanly captures Bitcoin and Ether, the assets most often cited as in scope. It just as cleanly excludes several categories. Non-fungible tokens fail the fungibility test. Wrapped tokens and any token that confers enforceable rights to other assets fail the no-enforceable-rights test. Tokens issued by the reporting entity or a related party are excluded outright, which keeps issuers' own coins out of fair value treatment. Assets that fall outside ASU 2023-08 continue under the legacy intangible model, so a single crypto business can end up applying two measurement bases at once.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Asset</th>
+                        <th>In ASU 2023-08 Scope?</th>
+                        <th>Why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bitcoin, Ether</td>
+                        <td>Yes</td>
+                        <td>Fungible, cryptographic, no enforceable rights, third-party issued</td>
+                    </tr>
+                    <tr>
+                        <td>NFTs</td>
+                        <td>No</td>
+                        <td>Not fungible</td>
+                    </tr>
+                    <tr>
+                        <td>Wrapped tokens</td>
+                        <td>No</td>
+                        <td>Confer enforceable rights to other assets</td>
+                    </tr>
+                    <tr>
+                        <td>Issuer's own token</td>
+                        <td>No</td>
+                        <td>Created or issued by the reporting entity or related parties</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on the FASB ASU 2023-08 scope criteria for Subtopic 350-60. Each holding should be assessed against all conditions.</p>
+        </section>
+
+        <!-- WHAT IT MEANS -->
+        <section class="guide-section" id="firms">
+            <div class="section-label">Section 7: For Crypto Firms</div>
+            <h2 class="section-h2">What This Means for <em>Crypto Firms</em></h2>
+            <div class="prose">
+                <p>Whatever framework applies, the accounting policy is now part of the licensing and banking conversation, not a year-end chore. The five steps below describe the core sequence a crypto firm should run when setting its digital asset accounting. The detail varies by framework and holding, but the order is consistent and works for IFRS and US GAAP alike. Our <a href="/crypto-accounting/">crypto accounting service</a> delivers each step as part of a licensing engagement.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Framework</div>
+                        <div class="ig-step-title">Confirm your reporting basis</div>
+                        <div class="ig-step-desc">Determine whether you report under IFRS or US GAAP, since the measurement of digital assets differs fundamentally between the two from fiscal years beginning after 15 December 2024.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Classify</div>
+                        <div class="ig-step-title">Classify each holding</div>
+                        <div class="ig-step-desc">Decide whether each asset is treasury (IAS 38 intangible) or trading inventory (IAS 2), and under US GAAP whether it meets all six ASU 2023-08 scope conditions.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Measure</div>
+                        <div class="ig-step-title">Pick the measurement model</div>
+                        <div class="ig-step-desc">Apply fair value through net income under ASU 2023-08, or choose the IAS 38 cost or revaluation model, or IAS 2 fair value less costs to sell for broker-traders.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Disclose</div>
+                        <div class="ig-step-title">Present and disclose</div>
+                        <div class="ig-step-desc">Present crypto separately on the balance sheet where required, and disclose policy, fair value inputs, impairment, and significant holdings in line with the standard.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Audit &amp; license</div>
+                        <div class="ig-step-title">Make it auditable and licence-ready</div>
+                        <div class="ig-step-desc">Document the policy, retain pricing and valuation evidence, and align it with capital, tax, and safeguarding rules so it withstands audit and supports your VASP or CASP application.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Accounting IFRS vs US GAAP: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">How is crypto accounted for under IFRS?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">IFRS has no crypto-specific standard. Under the IFRS Interpretations Committee June 2019 agenda decision, a cryptocurrency holding is an intangible asset under IAS 38, measured at cost or, where an active market exists, the revaluation model. If held for sale in the ordinary course of business, IAS 2 inventory applies instead.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is FASB ASU 2023-08?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">ASU 2023-08 is the FASB standard issued in December 2023 that created Subtopic 350-60 for crypto assets under US GAAP. It requires in-scope crypto to be measured at fair value with changes recognised in net income each period, replacing the old cost-less-impairment model that only allowed write-downs.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When does ASU 2023-08 take effect?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">ASU 2023-08 is effective for fiscal years beginning after 15 December 2024, including interim periods within those years. Early adoption was permitted. Entities apply it using a modified retrospective method, with a cumulative-effect adjustment booked to opening retained earnings in the year of adoption.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why do IFRS and US GAAP treat crypto differently?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">US GAAP now uses fair value through net income for in-scope crypto under ASU 2023-08, recognising unrealised gains and losses each period. IFRS still defaults to the IAS 38 intangible model at cost, where unrealised gains are not recognised in profit or loss unless the revaluation model and an active market apply.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the IFRIC June 2019 agenda decision on cryptocurrencies?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The IFRS Interpretations Committee concluded in June 2019 that a holding of cryptocurrency is not cash and not a financial asset. It should be accounted for under IAS 38 as an intangible asset, unless the entity holds it for sale in the ordinary course of business, in which case IAS 2 inventory applies.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can you record crypto gains under IFRS?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Only in limited cases. Under the IAS 38 cost model, gains are recognised only on disposal. Under the IAS 38 revaluation model, which requires an active market, upward revaluation gains go to other comprehensive income as a revaluation surplus, not to profit or loss. IAS 2 broker-traders may use fair value through profit or loss.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How did US GAAP treat crypto before ASU 2023-08?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Before ASU 2023-08, crypto was an indefinite-lived intangible asset under ASC 350, measured at cost less impairment. Holders had to write the asset down when its price fell below carrying value but could never write it back up if the price recovered, producing an asymmetric model criticised for understating value.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which crypto assets are in scope of ASU 2023-08?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An asset qualifies if it meets the intangible definition, gives no enforceable rights to other assets, resides on a distributed ledger secured by cryptography, is fungible, and is not created or issued by the reporting entity or its related parties. Bitcoin and Ether qualify; NFTs, wrapped tokens, and self-issued tokens do not.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are NFTs covered by ASU 2023-08?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. Non-fungible tokens fail the fungibility condition required for ASU 2023-08 scope, so they remain outside Subtopic 350-60. NFTs continue to be accounted for as indefinite-lived intangible assets under ASC 350 using the cost-less-impairment model, unless another standard applies to the specific arrangement.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is impairment under IFRS crypto accounting?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Under the IAS 38 cost model, crypto with an indefinite useful life is not amortised but is tested for impairment. When recoverable amount falls below carrying value, the entity books an impairment loss in profit or loss. Reversals are permitted within limits if the recoverable amount later rises, unlike the old US GAAP rule.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does ASU 2023-08 apply to companies that mine crypto?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Crypto received by a miner or validator for performing validation services is not treated as created by the entity, so it can fall within ASU 2023-08 scope once held. However, tokens issued by the reporting entity itself or its related parties are excluded. The miner still applies separate revenue guidance to the validation activity.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which standard should a crypto exchange use?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It depends on the reporting framework. A US GAAP filer applies ASU 2023-08 fair value to proprietary holdings. An IFRS reporter applies IAS 2 inventory if it trades crypto in the ordinary course, or IAS 38 for treasury holdings. Customer crypto held in custody is assessed separately, often as a liability and corresponding asset.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does crypto accounting affect a license application?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. Regulators reviewing VASP and CASP applications expect audited or auditable financial statements and a clear accounting policy for digital assets. A coherent policy under IFRS or US GAAP, consistent with capital and safeguarding rules, signals operational maturity and supports both authorisation and ongoing supervision.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does crypto accounting relate to crypto tax?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Accounting and tax are linked but distinct. Book values from IFRS or US GAAP feed the tax computation, but each jurisdiction applies its own rules on realisation, deductibility, and unrealised gains. A firm reporting fair value gains under ASU 2023-08 may still be taxed only on realised disposals, depending on local law.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.ifrs.org/content/dam/ifrs/supporting-implementation/agenda-decisions/2019/holdings-of-cryptocurrencies-june-2019.pdf" target="_blank" rel="nofollow noopener noreferrer">IFRS Interpretations Committee: Holdings of Cryptocurrencies, Agenda Decision (June 2019)</a></li>
+            <li><a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/" target="_blank" rel="nofollow noopener noreferrer">IFRS: IAS 38 Intangible Assets</a></li>
+            <li><a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/" target="_blank" rel="nofollow noopener noreferrer">IFRS: IAS 2 Inventories</a></li>
+            <li><a href="https://storage.fasb.org/ASU%202023-08.pdf" target="_blank" rel="nofollow noopener noreferrer">FASB: Accounting Standards Update 2023-08, Crypto Assets (Subtopic 350-60)</a></li>
+            <li><a href="https://www.fasb.org/projects/recently-completed-projects" target="_blank" rel="nofollow noopener noreferrer">FASB: Accounting for and Disclosure of Crypto Assets project</a></li>
+            <li><a href="https://www.grantthornton.com/insights/articles/audit/2023/snapshot/december/clarifies-accounting-for-certain-crypto-assets" target="_blank" rel="nofollow noopener noreferrer">Grant Thornton: ASU 2023-08 clarifies accounting for certain crypto assets</a></li>
+            <li><a href="https://dart.deloitte.com/USDART/home/publications/deloitte/heads-up/2023/fasb-issues-asu-crypto-assets" target="_blank" rel="nofollow noopener noreferrer">Deloitte Heads Up: FASB Issues Final Standard on Crypto Assets</a></li>
+            <li><a href="https://www.pwc.ch/en/insights/accounting/cryptographic-assets-and-related-transactions-accounting-considerations-under-ifrs.html" target="_blank" rel="nofollow noopener noreferrer">PwC: Cryptographic assets, accounting considerations under IFRS</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Accounting Policy Ready?</h3>
+                <p>Tell us your reporting basis and holdings. We will map the IFRS or US GAAP treatment that applies and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=crypto-accounting" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Frameworks at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">IFRS</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">IAS 38 cost / revaluation</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">IAS 2 for traders</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">US GAAP</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Fair value, net income</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">ASU 2023-08, Subtopic 350-60</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Effective</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">FY after 15 Dec 2024</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">US GAAP fair value</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/crypto-accounting/standards/ifrs/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Accounting Under IFRS</a>
+                    <a href="/crypto-accounting/standards/us-gaap/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Accounting Under US GAAP</a>
+                    <a href="/crypto-accounting/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Accounting Hub</a>
+                    <a href="/guides/crypto-tax-by-country/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Tax by Country</a>
+                    <a href="/contact/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Talk to an Advisor →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Digital asset policy built into the licensing plan</li>
+                    <li>Coverage of IFRS and US GAAP frameworks</li>
+                    <li>Audit-ready documentation and disclosures</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get Your Crypto Accounting Policy Right Before You Apply</h2>
+      <p class="cta-lead">Share your reporting basis, holdings, and target markets, and we will map the IFRS or US GAAP treatment that applies, recommend a licensing route, and build the audit-ready policy regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, reporting basis, and crypto accounting needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-accounting/">Crypto Accounting</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

@@ -1,0 +1,988 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is DeFi Regulated? MiCA's Fully Decentralized Exemption Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Is DeFi regulated in 2026? MiCA's Recital 22 exempts services provided in a fully decentralised manner without any intermediary, but there is no blanket DeFi exemption. We explain the fully decentralised test, the Article 142 ESMA report, and how FATF treats DeFi.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/defi-regulation-mica/">
+    <meta property="og:title" content="Is DeFi Regulated? MiCA's Fully Decentralized Exemption Explained (2026)">
+    <meta property="og:description" content="MiCA's Recital 22 exempts services provided in a fully decentralised manner without any intermediary, but there is no blanket DeFi exemption. The fully decentralised test, the Article 142 ESMA report, and the FATF control test explained.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/defi-regulation-mica/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Is DeFi Regulated? MiCA's Fully Decentralized Exemption", "item": "https://cryptolicenses.net/guides/defi-regulation-mica/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/defi-regulation-mica/#article",
+      "headline": "Is DeFi Regulated? MiCA's Fully Decentralized Exemption Explained (2026)",
+      "description": "MiCA's Recital 22 exempts services provided in a fully decentralised manner without any intermediary, but there is no blanket DeFi exemption. The fully decentralised test, the Article 142 ESMA report, and the FATF control test explained.",
+      "url": "https://cryptolicenses.net/guides/defi-regulation-mica/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/defi-regulation-mica/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is DeFi regulated under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no blanket DeFi exemption. MiCA's Recital 22 says crypto-asset services provided in a fully decentralised manner without any intermediary fall outside the regulation. Most DeFi has identifiable controllers, admin keys, or a front-end operator, so it can still be in scope and assessed case by case." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does MiCA Recital 22 say about DeFi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Recital 22 of MiCA states that where crypto-asset services are provided in a fully decentralised manner without any intermediary, they should not fall within the scope of the regulation. It sits in the preamble rather than the binding articles, and the term fully decentralised is not defined in the enacting provisions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a blanket DeFi exemption in MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The exemption is narrow and applies only when a service is fully decentralised and has no intermediary at all. If any part of the activity is intermediated, for example through a controlling team or a front-end operator, MiCA's obligations continue to apply to that activity." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fully decentralised test under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The test is not whether smart contracts run on a permissionless chain, but whether anyone can still change outcomes. Regulators look at who holds admin keys and upgrade rights, who can pause or reroute activity, who sets parameters, and whether a front-end acts as a practical gateway and creates a service-provider relationship with users." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a DeFi front-end make a protocol subject to MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It can. A front-end or user interface operated by an identifiable party may be treated as a practical gateway through which a service is provided. If that interface establishes a service-provider relationship with users, the operator may fall within MiCA, even where the underlying smart contracts are decentralised." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Article 142 MiCA report on DeFi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Article 142 of MiCA required the European Commission to report by 30 December 2024 on developments in crypto-assets, including the need for and feasibility of regulating decentralised finance. The European Banking Authority and ESMA published a joint contribution in January 2025 analysing DeFi and crypto lending, borrowing, and staking." }
+        },
+        {
+          "@type": "Question",
+          "name": "How big is DeFi according to the EBA and ESMA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In their joint Article 142 report, the EBA and ESMA found that value locked in DeFi protocols represented around 4 percent of all crypto-asset market value at the global level. They concluded DeFi remains a niche phenomenon and that EU adoption, while above the global average, is lower than in the US and South Korea." }
+        },
+        {
+          "@type": "Question",
+          "name": "Did the EBA and ESMA recommend regulating DeFi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not directly. The joint report analysed DeFi developments and risks such as leverage, information gaps, and money laundering exposure, but found no immediate financial stability concerns. It left the decision on the need for and feasibility of regulating DeFi to the European Commission's report to the Parliament and Council." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does FATF treat DeFi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "FATF applies an owner or operator control test. Creators, owners, and operators who maintain control or sufficient influence over a DeFi arrangement may be virtual asset service providers, even if the arrangement seems decentralised. FATF looks at influence over the protocol, the ability to set parameters, an ongoing business relationship, and profiting from the service." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the DeFi software itself regulated by FATF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. FATF clarifies that its standards apply to persons, not to the underlying technology. A decentralised application or the software behind it is not itself a VASP. Developers who simply create or sell software are not VASPs unless they use it to provide virtual asset services as a business on behalf of others." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do MiCA and FATF use the same DeFi test?",
+          "acceptedAnswer": { "@type": "Answer", "text": "They are similar but distinct. MiCA's Recital 22 asks whether a service is fully decentralised without any intermediary. FATF's guidance asks whether an owner or operator retains control or sufficient influence. Both look past the label of decentralisation to who can actually control or influence the arrangement in fact." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a DAO be exempt from MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Possibly, but governance distribution alone is not decisive. If a small group holds admin keys or upgrade rights, controls a treasury, or operates the main interface, the arrangement is unlikely to qualify as fully decentralised. Each DAO must be assessed on its specific facts, looking at where real control sits." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does fully decentralised mean in practice for compliance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In practice it means no single entity controls the protocol or its use, no entity provides core services essential to its functioning, multiple independent access points exist, and no service-provider relationship is established with users. Because few systems meet all of these at once, most DeFi projects should map their control points before assuming an exemption." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does DeFi regulation affect crypto licensing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If your DeFi project has identifiable controllers or a front-end operator, you may need a MiCA crypto-asset service provider authorisation or another licence for the in-scope activity. We assess where control sits, map it against the fully decentralised test and FATF guidance, and advise whether and how to license before you launch in the EU." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Is DeFi Regulated?
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg" alt="Bitcoin, Ethereum and Ripple coins representing DeFi regulation under MiCA in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: EU Regulation</div>
+        <h1 class="hero-h1">Is DeFi Regulated? MiCA's Fully Decentralized Exemption Explained in <em>2026</em></h1>
+        <p class="hero-intro">MiCA's Recital 22 puts crypto-asset services provided in a fully decentralised manner without any intermediary outside the regulation. But there is no blanket DeFi exemption. This guide explains the fully decentralised test, the Article 142 ESMA report, how FATF treats DeFi, and what it all means for licensing in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>EU Regulation</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">Is DeFi Regulated?</a></li>
+            <li class="toc-item"><a href="#recital22">The Recital 22 Exemption</a></li>
+            <li class="toc-item"><a href="#test">The Fully Decentralised Test</a></li>
+            <li class="toc-item"><a href="#article142">The Article 142 ESMA Report</a></li>
+            <li class="toc-item"><a href="#fatf">How FATF Treats DeFi</a></li>
+            <li class="toc-item"><a href="#mica-vs-fatf">MiCA vs FATF DeFi Tests</a></li>
+            <li class="toc-item"><a href="#compliance">DeFi Compliance Checklist</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he advises protocol teams, exchanges, and institutional investors on where their activity sits relative to MiCA, where the fully decentralised line falls, and when a crypto-asset service provider authorisation is required.</p>
+                <p>He has mapped control points for DeFi and DAO projects against MiCA's Recital 22 and FATF's owner-operator guidance, and advises on licensing strategy across more than 60 jurisdictions, including the transition of EU-facing businesses into MiCA CASP authorisation.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Quick Answer · Is DeFi Regulated?</div>
+                <p>There is no blanket DeFi exemption. MiCA's Recital 22 places crypto-asset services provided in a fully decentralised manner without any intermediary outside the regulation. But most DeFi has identifiable controllers, admin keys, or a front-end operator, so it can still fall in scope and must be assessed case by case.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>MiCA's Recital 22 exempts services provided in a fully decentralised manner without any intermediary, but it sits in the preamble and does not define fully decentralised</li>
+                    <li>The exemption is narrow: it needs full decentralisation and the absence of any intermediary at the same time, so partial decentralisation is not enough</li>
+                    <li>The real test is who can change outcomes, who holds admin keys, who can pause or reroute, who sets parameters, and whether a front-end is a practical gateway</li>
+                    <li>The joint EBA-ESMA Article 142 report found DeFi at around 4 percent of global crypto-asset market value and left the regulating question to the Commission</li>
+                    <li>FATF applies an owner-operator control test that can pull seemingly decentralised arrangements back into the VASP definition</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Short Answer</div>
+            <h2 class="section-h2">Is DeFi <em>Actually Regulated</em>?</h2>
+            <div class="prose">
+                <p>The honest answer to whether DeFi is regulated is: it depends on how decentralised the project is in fact, not in marketing. There is no provision in the EU's Markets in Crypto-Assets Regulation that says decentralised finance is exempt as a category. What exists is a narrow carve-out for services that are genuinely run without any controlling intermediary, and very few projects clear that bar. To put MiCA itself in context, our overview of <a href="/guides/mica-explained/">MiCA explained</a> walks through the regulation's structure and timeline.</p>
+                <p>This matters because a common assumption in the market, "we are DeFi, so MiCA does not apply to us," does not survive contact with how regulators actually read the rules. The European Banking Authority and ESMA have made clear that the label decentralised is not a shield. What they examine is who can still control or influence the arrangement. For the wider picture of how crypto rules are built worldwide, see our guide on <a href="/guides/what-is-crypto-regulation/">what crypto regulation is</a>.</p>
+                <p>So DeFi is not unregulated, and it is not blanket-exempt. It sits on a spectrum. A fully decentralised protocol with no controlling party and no operated front-end may genuinely fall outside MiCA. A protocol with an admin-key holder, a governance team, or an operated interface is likely in scope for that activity. The rest of this guide explains where the line falls and how to map your project against it.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Recital 22</div>
+                    <div class="ig-stat-label">MiCA DeFi Carve-Out</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2</div>
+                    <div class="ig-stat-label">Cumulative Conditions</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">~4%</div>
+                    <div class="ig-stat-label">DeFi Share of Crypto Value</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Art. 142</div>
+                    <div class="ig-stat-label">EU DeFi Report Mandate</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Jan 2025</div>
+                    <div class="ig-stat-label">EBA-ESMA Joint Report</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Owner / Operator</div>
+                    <div class="ig-stat-label">FATF Control Test</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: MiCA Regulation (EU) 2023/1114, Recital 22; the joint EBA-ESMA Article 142 report (January 2025); FATF Updated VA/VASP Guidance (2021).</p>
+        </section>
+
+        <!-- RECITAL 22 -->
+        <section class="guide-section" id="recital22">
+            <div class="section-label">Section 2: The Exemption</div>
+            <h2 class="section-h2">The <em>Recital 22</em> Exemption</h2>
+            <div class="prose">
+                <p>The source of the so-called DeFi exemption is Recital 22 of MiCA. In substance it states that where crypto-asset services are provided in a fully decentralised manner without any intermediary, they should not fall within the scope of the regulation. That single sentence is the entire legal basis for the idea that DeFi might be out of scope.</p>
+                <p>Two features of that wording do a lot of work. First, the exemption is cumulative: a service must be both fully decentralised and provided without any intermediary. If either condition fails, the activity is in scope. Second, the word fully is strict. Partial decentralisation, or decentralisation of some components while others remain controlled, does not qualify. Where part of an activity is carried out in a decentralised manner but part is not, MiCA obligations remain in force for the intermediated part.</p>
+                <p>There is also a structural catch that founders should understand. Recital 22 is part of the preamble, which explains the purpose of the regulation, rather than the binding operative articles. The term fully decentralised is not defined in MiCA's enacting provisions at all. That means the exemption has to be interpreted, and ESMA has signalled that each system should be assessed on its own facts rather than against a fixed checklist. For the practical compliance route, our page on <a href="/crypto-licenses/europe/mica-compliance/">MiCA compliance</a> sets out what authorised CASPs must do.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Fully Decentralised?</th>
+                        <th>Intermediary Present?</th>
+                        <th>MiCA Treatment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No controlling party, no operated front-end</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>Likely outside MiCA scope</td>
+                    </tr>
+                    <tr>
+                        <td>Decentralised contracts, operated front-end</td>
+                        <td>No (partial)</td>
+                        <td>Yes (interface operator)</td>
+                        <td>In scope for the intermediated service</td>
+                    </tr>
+                    <tr>
+                        <td>Admin keys or upgrade rights held by a team</td>
+                        <td>No</td>
+                        <td>Yes (controller)</td>
+                        <td>In scope; controller may be a CASP</td>
+                    </tr>
+                    <tr>
+                        <td>DAO with concentrated control or treasury</td>
+                        <td>Assessed case by case</td>
+                        <td>Possibly</td>
+                        <td>In scope where real control is concentrated</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Interpretation based on MiCA Recital 22 and EBA-ESMA analysis. Each system is assessed on its specific features. This is general information, not legal advice.</p>
+        </section>
+
+        <!-- THE TEST -->
+        <section class="guide-section" id="test">
+            <div class="section-label">Section 3: The Test</div>
+            <h2 class="section-h2">The <em>Fully Decentralised</em> Test</h2>
+            <div class="prose">
+                <p>The most useful way to think about the test is to ignore the marketing claim of decentralisation and ask one question: can anyone still change outcomes? The relevant inquiry is not whether smart contracts are deployed on a permissionless chain. It is whether a person or group retains the ability to control or influence the service.</p>
+                <p>In practice, regulators and advisers look at a consistent set of control points. Who holds the admin keys and the right to upgrade the contracts? Who can pause, freeze, or reroute activity in an emergency? Who sets or changes the protocol's parameters, such as fees, collateral ratios, or supported assets? And does a user interface or front-end act as a practical gateway through which the service is actually accessed, creating a service-provider relationship with users?</p>
+                <p>Drawing those threads together, a protocol is most likely to fall outside MiCA when no single entity controls the protocol or its use, no entity provides core services essential to its functioning, multiple independent access points exist rather than one operated front-end, and no service-provider relationship is established with users. Because few systems satisfy all of those at once, the practical reality is that most projects calling themselves DeFi have at least one control point that keeps them in scope.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders read Recital 22 and hear the word exemption. Regulators read the same recital and hear the words fully and any intermediary. The gap between those two readings is where projects get caught. If your team holds an admin key or runs the front-end everyone uses, you are not fully decentralised, whatever the token distribution says."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- ARTICLE 142 -->
+        <section class="guide-section" id="article142">
+            <div class="section-label">Section 4: The EU DeFi Report</div>
+            <h2 class="section-h2">The <em>Article 142</em> ESMA Report</h2>
+            <div class="prose">
+                <p>MiCA did not pretend to settle the DeFi question. Instead, Article 142 of the regulation tasked the European Commission with producing a report, due by 30 December 2024, on recent developments in crypto-assets. That report was required to assess the development of decentralised finance and the appropriate regulatory treatment of decentralised crypto-asset systems without an issuer or service provider, including the need for and feasibility of regulating DeFi. Our <a href="/regulation/eu/">EU regulation hub</a> tracks how these EU files progress.</p>
+                <p>To feed that exercise, the European Banking Authority and ESMA published a joint report in January 2025 analysing DeFi together with crypto lending, borrowing, and staking. Their headline finding was that DeFi remains a niche phenomenon: value locked in DeFi protocols represented around 4 percent of all crypto-asset market value at the global level. EU adoption was above the global average but below that of other advanced economies such as the United States and South Korea.</p>
+                <p>On the central question, the joint report was deliberately cautious. It flagged risks including excessive leverage, information gaps on fees and rates, money laundering exposure, and interconnectedness, but it found no immediate financial stability concerns. It did not recommend a specific DeFi regime. Instead, it handed the decision on the need for and feasibility of regulating DeFi back to the Commission, which means the future treatment of genuinely decentralised systems is still an open policy question in 2026.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure whether your protocol is in scope?</strong> Get a free 30-minute consultation. We will map your control points against MiCA's fully decentralised test and tell you whether a licence is needed.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- FATF -->
+        <section class="guide-section" id="fatf">
+            <div class="section-label">Section 5: The Global View</div>
+            <h2 class="section-h2">How <em>FATF</em> Treats DeFi</h2>
+            <div class="prose">
+                <p>MiCA is not the only framework that looks past the decentralisation label. The Financial Action Task Force, whose standards drive anti-money laundering rules worldwide, addressed DeFi in its updated guidance on virtual assets. Its approach is the owner-operator control test, and it reaches a similar conclusion to the EU by a different route.</p>
+                <p>FATF's position is that creators, owners, and operators, or other persons who maintain control or sufficient influence over a DeFi arrangement, may fall within the FATF definition of a virtual asset service provider, even where the arrangement seems decentralised, if they provide or actively facilitate VASP services. To identify such a party, FATF looks at factors including sufficient influence over the assets or the protocol, the ability to set or change parameters, the existence of an ongoing business relationship with users, and whether anyone profits from the service.</p>
+                <p>Importantly, FATF is technology-neutral. Its standards apply to persons, not to software. A decentralised application is not itself a VASP, and a developer who simply writes or sells code is not a VASP, unless they use that software to provide virtual asset services as a business on behalf of others. The line, as in MiCA, falls on control and the provision of a service, not on the existence of code. For projects weighing a licence, our overview of <a href="/crypto-licenses/general/">crypto licensing services</a> explains the routes available.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our work with protocol teams and DAOs, the single most common mistake is treating decentralisation as a status the project has reached, rather than a fact to be evidenced. A team will describe itself as fully decentralised and then, two questions later, confirm that three founders hold the multisig that can upgrade the contracts. Under both MiCA's Recital 22 and FATF's owner-operator test, that multisig is usually enough to keep the activity in scope.</p>
+            <p>We approach these mandates by mapping every control point before anyone reaches for the exemption: admin keys, upgrade rights, pause functions, parameter control, treasury access, and who operates the interface users actually click through. Where control is concentrated, we plan for authorisation of the in-scope activity rather than hoping the carve-out applies. That is consistently faster and safer than launching on a contested exemption and arguing it with a regulator after the fact.</p>
+          </div>
+        </section>
+
+        <!-- MICA VS FATF -->
+        <section class="guide-section" id="mica-vs-fatf">
+            <div class="section-label">Section 6: Side by Side</div>
+            <h2 class="section-h2">MiCA vs <em>FATF</em> DeFi Tests</h2>
+            <div class="prose">
+                <p>The two frameworks ask similar questions in different language. MiCA asks whether a service is fully decentralised and without any intermediary. FATF asks whether an owner or operator retains control or sufficient influence. Both treat the decentralisation label as the start of the analysis, not the end of it, and both put the burden on identifiable control points rather than on the underlying technology.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>MiCA (Recital 22)</th>
+                        <th>FATF (VA/VASP Guidance)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Core test</td>
+                        <td>Fully decentralised, no intermediary</td>
+                        <td>Owner or operator control / influence</td>
+                    </tr>
+                    <tr>
+                        <td>Legal status</td>
+                        <td>Recital (preamble), not a binding article</td>
+                        <td>Soft-law guidance for jurisdictions</td>
+                    </tr>
+                    <tr>
+                        <td>Focus</td>
+                        <td>Whether anyone can change outcomes</td>
+                        <td>Control, parameters, business relationship, profit</td>
+                    </tr>
+                    <tr>
+                        <td>Software itself</td>
+                        <td>Out of scope; activity may be in scope</td>
+                        <td>Not a VASP; persons can be VASPs</td>
+                    </tr>
+                    <tr>
+                        <td>Practical result</td>
+                        <td>Few projects qualify as fully decentralised</td>
+                        <td>Many seemingly decentralised arrangements caught</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> a project can satisfy itself that it is decentralised and still be treated as a regulated service provider under both the EU and the global AML framework. If your control points keep you in scope, you need a MiCA crypto-asset service provider authorisation for the in-scope activity, plus AML obligations, before serving EU users. See our <a href="/crypto-licenses/europe/mica-compliance/">MiCA compliance overview</a> for what that involves.</p>
+            </div>
+        </section>
+
+        <!-- COMPLIANCE STEPS -->
+        <section class="guide-section" id="compliance">
+            <div class="section-label">Section 7: Assessment</div>
+            <h2 class="section-h2">A DeFi <em>Decentralisation</em> Assessment</h2>
+            <div class="prose">
+                <p>Whether you are launching a protocol or transitioning an existing product, the assessment below is the workflow we run to decide if the fully decentralised exemption is realistically available, or whether you should plan to license the in-scope activity. Each step probes a control point that regulators examine in practice.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Map control</div>
+                        <div class="ig-step-title">Identify admin keys and upgrade rights</div>
+                        <div class="ig-step-desc">Document who holds admin keys, multisig control, and the right to upgrade or migrate contracts. Concentrated upgrade power is usually fatal to a fully decentralised claim.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Pause / reroute</div>
+                        <div class="ig-step-title">Check emergency and parameter powers</div>
+                        <div class="ig-step-desc">Establish whether anyone can pause, freeze, or reroute activity, and who can set or change parameters such as fees, collateral ratios, and supported assets.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Front-end</div>
+                        <div class="ig-step-title">Assess the interface and access points</div>
+                        <div class="ig-step-desc">Determine whether an operated front-end is the practical gateway to the service and whether multiple independent access points genuinely exist for users.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Relationship</div>
+                        <div class="ig-step-title">Test for a service-provider relationship</div>
+                        <div class="ig-step-desc">Check whether the project provides core services, has an ongoing business relationship with users, or profits from the service, the factors FATF and ESMA weigh most.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Decide</div>
+                        <div class="ig-step-title">Conclude on exemption or licensing</div>
+                        <div class="ig-step-desc">If control is concentrated anywhere, plan for MiCA CASP authorisation and AML obligations for the in-scope activity rather than relying on the narrow carve-out.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">DeFi Regulation: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">Is DeFi regulated under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no blanket DeFi exemption. MiCA's Recital 22 says crypto-asset services provided in a fully decentralised manner without any intermediary fall outside the regulation. Most DeFi has identifiable controllers, admin keys, or a front-end operator, so it can still be in scope and assessed case by case.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does MiCA Recital 22 say about DeFi?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Recital 22 of MiCA states that where crypto-asset services are provided in a fully decentralised manner without any intermediary, they should not fall within the scope of the regulation. It sits in the preamble rather than the binding articles, and the term fully decentralised is not defined in the enacting provisions.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is there a blanket DeFi exemption in MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. The exemption is narrow and applies only when a service is fully decentralised and has no intermediary at all. If any part of the activity is intermediated, for example through a controlling team or a front-end operator, MiCA's obligations continue to apply to that activity.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the fully decentralised test under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The test is not whether smart contracts run on a permissionless chain, but whether anyone can still change outcomes. Regulators look at who holds admin keys and upgrade rights, who can pause or reroute activity, who sets parameters, and whether a front-end acts as a practical gateway and creates a service-provider relationship with users.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does a DeFi front-end make a protocol subject to MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It can. A front-end or user interface operated by an identifiable party may be treated as a practical gateway through which a service is provided. If that interface establishes a service-provider relationship with users, the operator may fall within MiCA, even where the underlying smart contracts are decentralised.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the Article 142 MiCA report on DeFi?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Article 142 of MiCA required the European Commission to report by 30 December 2024 on developments in crypto-assets, including the need for and feasibility of regulating decentralised finance. The European Banking Authority and ESMA published a joint contribution in January 2025 analysing DeFi and crypto lending, borrowing, and staking.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How big is DeFi according to the EBA and ESMA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">In their joint Article 142 report, the EBA and ESMA found that value locked in DeFi protocols represented around 4 percent of all crypto-asset market value at the global level. They concluded DeFi remains a niche phenomenon and that EU adoption, while above the global average, is lower than in the US and South Korea.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Did the EBA and ESMA recommend regulating DeFi?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Not directly. The joint report analysed DeFi developments and risks such as leverage, information gaps, and money laundering exposure, but found no immediate financial stability concerns. It left the decision on the need for and feasibility of regulating DeFi to the European Commission's report to the Parliament and Council.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does FATF treat DeFi?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">FATF applies an owner or operator control test. Creators, owners, and operators who maintain control or sufficient influence over a DeFi arrangement may be virtual asset service providers, even if the arrangement seems decentralised. FATF looks at influence over the protocol, the ability to set parameters, an ongoing business relationship, and profiting from the service.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the DeFi software itself regulated by FATF?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. FATF clarifies that its standards apply to persons, not to the underlying technology. A decentralised application or the software behind it is not itself a VASP. Developers who simply create or sell software are not VASPs unless they use it to provide virtual asset services as a business on behalf of others.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do MiCA and FATF use the same DeFi test?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">They are similar but distinct. MiCA's Recital 22 asks whether a service is fully decentralised without any intermediary. FATF's guidance asks whether an owner or operator retains control or sufficient influence. Both look past the label of decentralisation to who can actually control or influence the arrangement in fact.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a DAO be exempt from MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Possibly, but governance distribution alone is not decisive. If a small group holds admin keys or upgrade rights, controls a treasury, or operates the main interface, the arrangement is unlikely to qualify as fully decentralised. Each DAO must be assessed on its specific facts, looking at where real control sits.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does fully decentralised mean in practice for compliance?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">In practice it means no single entity controls the protocol or its use, no entity provides core services essential to its functioning, multiple independent access points exist, and no service-provider relationship is established with users. Because few systems meet all of these at once, most DeFi projects should map their control points before assuming an exemption.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does DeFi regulation affect crypto licensing?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">If your DeFi project has identifiable controllers or a front-end operator, you may need a MiCA crypto-asset service provider authorisation or another licence for the in-scope activity. We assess where control sits, map it against the fully decentralised test and FATF guidance, and advise whether and how to license before you launch in the EU.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1114" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 on Markets in Crypto-Assets (MiCA), including Recital 22</a></li>
+            <li><a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-142-report-latest-developments" target="_blank" rel="nofollow noopener noreferrer">ESMA: Article 142 report on latest developments in crypto-assets</a></li>
+            <li><a href="https://www.esma.europa.eu/press-news/esma-news/eba-and-esma-analyse-recent-developments-crypto-assets" target="_blank" rel="nofollow noopener noreferrer">ESMA: The EBA and ESMA analyse recent developments in crypto-assets (January 2025)</a></li>
+            <li><a href="https://www.esma.europa.eu/sites/default/files/2025-01/ESMA75-453128700-1391_Joint_Report_on_recent_developments_in_crypto-assets__Art_142_MiCA_.pdf" target="_blank" rel="nofollow noopener noreferrer">EBA-ESMA: Joint Report on recent developments in crypto-assets, Article 142 of MiCA (full PDF)</a></li>
+            <li><a href="https://www.eba.europa.eu/publications-and-media/press-releases/eba-and-esma-analyse-recent-developments-crypto-assets" target="_blank" rel="nofollow noopener noreferrer">EBA: The EBA and ESMA analyse recent developments in crypto-assets</a></li>
+            <li><a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-virtual-assets-2021.html" target="_blank" rel="nofollow noopener noreferrer">FATF: Updated Guidance for a Risk-Based Approach to Virtual Assets and VASPs (2021), DeFi owner-operator test</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>In Scope or Exempt?</h3>
+                <p>Tell us how your protocol is built. We will map your control points against MiCA's fully decentralised test and tell you whether you need a licence. Free, no obligation.</p>
+                <a href="/contact/?topic=defi-mica" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">DeFi &amp; MiCA at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Exemption</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Recital 22</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Fully decentralised, no intermediary</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EU DeFi Report</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Article 142</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">EBA-ESMA joint report, Jan 2025</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">FATF</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Owner / Operator Test</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Control or sufficient influence</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/mica-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Explained</a>
+                    <a href="/guides/what-is-crypto-regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is Crypto Regulation?</a>
+                    <a href="/crypto-licenses/europe/mica-compliance/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Compliance</a>
+                    <a href="/crypto-licenses/general/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Licensing Services</a>
+                    <a href="/regulation/eu/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EU Regulation Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Control-point mapping against Recital 22</li>
+                    <li>MiCA CASP authorisation support</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Know Where Your Protocol Stands Before You Launch</h2>
+      <p class="cta-lead">Share how your protocol is built, and we will map your control points against MiCA's fully decentralised test, apply the FATF owner-operator guidance, and tell you whether you need a crypto-asset service provider authorisation. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your protocol, control points, and target markets…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/mica-explained/">MiCA Explained</a></li>
+                <li><a href="/guides/what-is-crypto-regulation/">What Is Crypto Regulation?</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/europe/mica-compliance/">MiCA Compliance</a></li>
+                <li><a href="/crypto-licenses/general/">Crypto Licensing</a></li>
+                <li><a href="/regulation/eu/">EU Regulation</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

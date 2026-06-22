@@ -1,0 +1,968 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Payment Processing: PSP Licensing & High-Risk Merchants Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto payment processing in 2026 explained: how fiat-crypto ramps and stablecoin rails work, the PI, EMI and MiCA CASP licences involved under PSD2/EMD2, high-risk merchant acquiring, rolling reserves, and AML/Travel Rule obligations.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-payment-processing-psp/">
+    <meta property="og:title" content="Crypto Payment Processing: PSP Licensing & High-Risk Merchants Explained (2026)">
+    <meta property="og:description" content="How crypto payment processing works in 2026: fiat-crypto ramps and stablecoin rails, the PI vs EMI vs MiCA CASP licences under PSD2/EMD2, high-risk merchant acquiring, rolling reserves, and the AML/Travel Rule overlay.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-payment-processing-psp/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/crypto-portfolio-app-bitcoin-coins.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Crypto Payment Processing: PSP Licensing & High-Risk Merchants", "item": "https://cryptolicenses.net/guides/crypto-payment-processing-psp/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-payment-processing-psp/#article",
+      "headline": "Crypto Payment Processing: PSP Licensing & High-Risk Merchants Explained (2026)",
+      "description": "How crypto payment processing works in 2026: fiat-crypto ramps and stablecoin rails, the PI vs EMI vs MiCA CASP licences under PSD2/EMD2, high-risk merchant acquiring, rolling reserves, and the AML/Travel Rule overlay.",
+      "url": "https://cryptolicenses.net/guides/crypto-payment-processing-psp/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-payment-processing-psp/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/crypto-portfolio-app-bitcoin-coins.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cryptolicenses.net/about/dr-marcus-hartmann/#person",
+      "name": "Dr. Marcus Hartmann",
+      "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/",
+      "jobTitle": "Senior Licensing Advisor",
+      "worksFor": { "@id": "https://cryptolicenses.net/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is crypto payment processing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crypto payment processing is the infrastructure that lets businesses send or receive value in crypto, including fiat-to-crypto on-ramps, crypto-to-fiat off-ramps, merchant settlement, and stablecoin rails. It connects customers paying in cards or crypto with merchants who settle in fiat or stablecoins, sitting between the blockchain and the traditional banking system." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a crypto PSP?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A crypto PSP, or payment service provider, is a firm that processes payments involving crypto-assets for merchants and users. Depending on what it does, it may need a Payment Institution or Electronic Money Institution authorisation for the fiat leg under PSD2, plus a MiCA crypto-asset service provider authorisation for the crypto leg in the EU." }
+        },
+        {
+          "@type": "Question",
+          "name": "What licences do you need for crypto payment processing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the activity. The fiat leg of card acquiring, settlement, and e-money usually needs a Payment Institution or Electronic Money Institution licence under PSD2 and EMD2 in the EU, or a FinCEN money transmitter registration in the US. The crypto leg of custody, exchange, or transfer needs a MiCA CASP authorisation in the EU." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a PI and an EMI licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A Payment Institution moves money between parties but cannot store customer value, with initial capital from EUR 20,000 to EUR 125,000 depending on the service. An Electronic Money Institution can also issue and redeem electronic money and hold customer balances in wallets or IBANs, and carries a higher initial capital requirement of EUR 350,000." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do stablecoin payments need a payment licence in the EU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The EBA No-Action Letter advises that transfers of electronic money tokens, which is how most fiat-pegged stablecoins are classified under MiCA, are payment services under PSD2 when carried out on behalf of clients. From 2 March 2026 a crypto-asset service provider handling such transfers needs a Payment Institution or EMI authorisation." }
+        },
+        {
+          "@type": "Question",
+          "name": "What changed for crypto payments on 2 March 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "From 2 March 2026, the EBA No-Action period ended and national authorities began treating electronic money token transfers by crypto-asset service providers as payment services under PSD2. A CASP moving EMTs for clients from that date must hold a Payment Institution or Electronic Money Institution authorisation in addition to its MiCA licence." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do crypto payment processors need a CASP licence under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If the processor custodies, exchanges, or transfers crypto-assets on behalf of clients, it generally needs a MiCA crypto-asset service provider authorisation for that crypto leg. A pure fiat acquirer that never touches crypto-assets may need only a payment licence, but most crypto payment processors handle both legs and require both authorisations." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is crypto payment processing high-risk merchant business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Card networks and acquiring banks often classify crypto and related sectors as high-risk because of chargeback exposure, fraud, and regulatory uncertainty. High-risk merchants typically face higher fees, rolling reserves, and the threat of being de-risked. Crypto and stablecoin settlement is increasingly used to reduce reliance on traditional high-risk acquiring." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a rolling reserve in high-risk merchant acquiring?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A rolling reserve is a percentage of a merchant's revenue that the processor withholds for a set period to cover potential chargebacks and refunds. Industry estimates put high-risk rolling reserves at roughly 5 to 15 percent held for 6 to 12 months. It protects the processor against liability while the merchant loses access to that cash flow." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does crypto settlement help high-risk merchants?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crypto-settlement gateways let merchants accept card payments and receive settlement directly in stablecoins such as USDC or USDT, or in Bitcoin, paid to their own wallet. Because no acquiring bank holds the float, legitimate merchants with clean histories can reduce or avoid rolling reserves and the risk of sudden de-risking, though the underlying card rules still apply." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do US crypto payment processors need a FinCEN licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In the United States, a business that accepts and transmits convertible virtual currency, or buys and sells it, is generally a money transmitter and therefore a money services business. It must register with FinCEN by filing Form 107, run an AML programme, and meet recordkeeping and reporting rules. State money transmitter licences are usually required on top." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Travel Rule affect crypto payment processing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "When a crypto payment processor transfers crypto-assets on behalf of clients, the FATF Travel Rule requires it to collect and share originator and beneficiary data with the counterparty provider. The EU Transfer of Funds Regulation applies this with no threshold, while the US FinCEN recordkeeping rule applies at USD 3,000. It is a core part of the AML overlay." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get a crypto payment processing licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary by jurisdiction and licence type. A Payment Institution or EMI authorisation in the EU typically takes several months to over a year, and a MiCA CASP authorisation adds its own review. Where both legs are needed, regulators are encouraged to reuse CASP information, which can shorten the payment authorisation but rarely makes it quick." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use an agent of a licensed PSP instead of getting my own licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In many cases yes. A firm can either obtain its own Payment Institution or EMI authorisation or operate as a registered agent of an already-licensed payment service provider. The agent model can speed up market entry, but the principal PSP retains regulatory responsibility and applies its own onboarding, compliance, and commercial conditions." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto Payment Processing &amp; PSP Licensing
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/crypto-portfolio-app-bitcoin-coins.jpg" alt="Crypto portfolio app with bitcoin coins, crypto payment processing and PSP licensing in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Payments &amp; Banking</div>
+        <h1 class="hero-h1">Crypto Payment Processing: PSP Licensing &amp; High-Risk Merchants Explained in <em>2026</em></h1>
+        <p class="hero-intro">Crypto payment processing runs on two legs: a fiat leg licensed as a Payment Institution or EMI under PSD2, and a crypto leg licensed as a MiCA CASP. This guide explains how the rails work, the PI vs EMI vs CASP split, the 2 March 2026 stablecoin rule, high-risk merchant acquiring and rolling reserves, and the AML and Travel Rule overlay that sits on top.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Payments &amp; Banking</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">What Crypto Payment Processing Is</a></li>
+            <li class="toc-item"><a href="#how">How It Works</a></li>
+            <li class="toc-item"><a href="#licenses">PI vs EMI vs CASP</a></li>
+            <li class="toc-item"><a href="#stablecoin">Stablecoins &amp; the 2026 Rule</a></li>
+            <li class="toc-item"><a href="#highrisk">High-Risk Merchants</a></li>
+            <li class="toc-item"><a href="#aml">AML &amp; the Travel Rule</a></li>
+            <li class="toc-item"><a href="#path">Your Licensing Path</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and payment firms through Payment Institution, EMI, and MiCA CASP licensing, where the fiat and crypto legs of a processor each carry their own authorisation.</p>
+                <p>He has structured crypto payment models under the EU PSD2 and EMD2 regimes, FinCEN money transmitter rules in the US, and FATF-aligned frameworks across the Gulf and Asia, and advises on high-risk acquiring, stablecoin settlement, and Travel Rule readiness across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Quick Answer · Crypto Payment Processing</div>
+                <p>Crypto payment processing is the infrastructure that moves value between fiat and crypto for businesses: fiat-to-crypto on-ramps, crypto-to-fiat off-ramps, merchant settlement, and stablecoin rails. It splits into a fiat leg, licensed as a Payment Institution or EMI under PSD2, and a crypto leg, licensed as a MiCA CASP. Both legs sit under one AML and Travel Rule framework.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>Crypto payment processing has two legs: a fiat leg (card acquiring, settlement, e-money) and a crypto leg (custody, exchange, transfer of crypto-assets)</li>
+                    <li>The fiat leg needs a Payment Institution or EMI authorisation under PSD2 and EMD2; the crypto leg needs a MiCA CASP authorisation in the EU</li>
+                    <li>PI initial capital runs from EUR 20,000 to EUR 125,000 by service; an EMI requires EUR 350,000 and can store customer value</li>
+                    <li>From 2 March 2026, the EBA treats stablecoin (EMT) transfers by CASPs as payment services under PSD2, triggering a PI or EMI licence</li>
+                    <li>Crypto and related sectors are often high-risk for acquirers; crypto and stablecoin settlement is used to cut rolling reserves and de-risking exposure</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">What Crypto Payment Processing <em>Actually Is</em></h2>
+            <div class="prose">
+                <p>Crypto payment processing is the plumbing that lets a business send or receive money where crypto is involved on at least one side of the transaction. A customer might pay with a card and the merchant receives stablecoins, or a customer pays in Bitcoin and the merchant is settled in euros. The processor sits between the public blockchain and the traditional banking system, converting, routing, and settling value while keeping each side whole.</p>
+                <p>The crucial thing to understand from the outset is that a crypto payment processor is rarely one regulated activity. It is usually two. There is a fiat leg, which looks like classic payments: acquiring card transactions, holding client money, issuing e-money, and settling to bank accounts. And there is a crypto leg, which involves custodying, exchanging, or transferring crypto-assets on behalf of clients. Each leg attracts a different licence family, which is why so many founders underestimate the authorisation burden.</p>
+                <p>Because this is a payments business and not just a crypto business, the rulebook is the established one for payment services in the EU, principally PSD2 and the E-Money Directive, layered with MiCA for the crypto side. Our <a href="/banking-licenses/crypto-payment-processing/">crypto payment processing licence overview</a> sets out the activity-by-activity scope, and our <a href="/banking-licenses/">banking and payments hub</a> maps how these licences relate to EMI, SPI, and MSB authorisations.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€20k–125k</div>
+                    <div class="ig-stat-label">PI Initial Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€350k</div>
+                    <div class="ig-stat-label">EMI Initial Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2 Mar 2026</div>
+                    <div class="ig-stat-label">EMT / PSD2 Rule Starts</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2 Legs</div>
+                    <div class="ig-stat-label">Fiat + Crypto Licences</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">$3,000</div>
+                    <div class="ig-stat-label">US FinCEN Travel Rule</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">5–15%</div>
+                    <div class="ig-stat-label">High-Risk Rolling Reserve</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: PSD2 / EMD2 capital thresholds; EBA No-Action Letter on PSD2 and MiCA; FinCEN 31 CFR 1010.410. Rolling-reserve range is an industry estimate, not a regulator figure.</p>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="guide-section" id="how">
+            <div class="section-label">Section 2: How It Works</div>
+            <h2 class="section-h2">How Crypto Payments <em>Actually Move</em></h2>
+            <div class="prose">
+                <p>At a high level, crypto payment processing comes down to three flows. The first is the on-ramp: a customer pays in fiat by card or bank transfer, and the processor converts that fiat into crypto. The second is the off-ramp: a customer pays in crypto, and the processor converts it into fiat or a stablecoin for the merchant. The third is settlement: getting the agreed value to the merchant, either in their bank account or directly to a wallet.</p>
+                <p>Stablecoin rails sit at the centre of the modern model. Because a fiat-pegged stablecoin like USDC or USDT holds a steady value, a processor can accept a card payment, convert it, and settle the merchant in stablecoins paid to their own wallet, with no acquiring bank holding the float in between. This is the mechanism behind much of the 2026 shift toward crypto settlement, which we return to in the high-risk section below.</p>
+                <p>Every one of these flows touches both regulated worlds. Holding the customer's fiat, even briefly, is a payment or e-money activity. Converting to or from crypto, and moving crypto on the customer's behalf, is a crypto-asset service. That is why mapping the flow precisely is the first step in scoping which licences a given model actually needs.</p>
+            </div>
+        </section>
+
+        <!-- LICENSES -->
+        <section class="guide-section" id="licenses">
+            <div class="section-label">Section 3: The Licences</div>
+            <h2 class="section-h2">PI vs EMI vs <em>MiCA CASP</em></h2>
+            <div class="prose">
+                <p>Three authorisations dominate crypto payment processing in the EU, and they do different jobs. A Payment Institution (PI) under PSD2 can execute transfers, acquire card payments, and remit money, but it cannot store customer value over time. Initial capital scales with the service: around EUR 20,000 for money remittance only, EUR 50,000 for payment initiation, and EUR 125,000 for executing transfers, acquiring, and card issuing.</p>
+                <p>An Electronic Money Institution (EMI) does everything a PI does and adds the one thing a PI cannot: issuing and redeeming electronic money, and holding stored value in customer wallets or IBANs. That extra power comes with a flat EUR 350,000 initial capital requirement under the E-Money Directive. If your model holds customer balances, pre-funds wallets, or issues e-money, you are in EMI territory. Our step-by-step <a href="/guides/how-to-get-emi-license/">guide to getting an EMI licence</a> walks through that process in full.</p>
+                <p>The third piece is the MiCA crypto-asset service provider (CASP) authorisation, which covers the crypto leg: custody of crypto-assets, exchanging crypto for funds or other crypto, and transferring crypto-assets on behalf of clients. A processor that custodies or moves crypto for customers generally needs CASP authorisation alongside its payment licence, not instead of it.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Licence</th>
+                        <th>Leg</th>
+                        <th>Initial Capital</th>
+                        <th>Can Store Value?</th>
+                        <th>Typical Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Payment Institution (PI)</td>
+                        <td>Fiat</td>
+                        <td>EUR 20k–125k</td>
+                        <td>No</td>
+                        <td>Acquiring, transfers, remittance</td>
+                    </tr>
+                    <tr>
+                        <td>E-Money Institution (EMI)</td>
+                        <td>Fiat</td>
+                        <td>EUR 350k</td>
+                        <td>Yes (e-money, wallets)</td>
+                        <td>Wallets, prepaid, stored balances</td>
+                    </tr>
+                    <tr>
+                        <td>MiCA CASP</td>
+                        <td>Crypto</td>
+                        <td>EUR 50k–150k tier</td>
+                        <td>Crypto custody</td>
+                        <td>Custody, exchange, crypto transfer</td>
+                    </tr>
+                    <tr>
+                        <td>US Money Transmitter / MSB</td>
+                        <td>Both (US)</td>
+                        <td>State surety bonds</td>
+                        <td>Per state rules</td>
+                        <td>CVC transmit, on/off ramp (US)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">PI/EMI capital from PSD2 and the E-Money Directive. MiCA CASP capital depends on the service class. US figures reflect federal MSB registration plus state-level requirements.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"The mistake we see most often is a founder pricing a project around one licence. A real crypto payment processor that takes cards, holds client money, and settles in stablecoins is running a fiat leg and a crypto leg at once. Scope both before you raise, because the EMI plus CASP combination is a very different capital and timeline picture from a single payment licence."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- STABLECOIN -->
+        <section class="guide-section" id="stablecoin">
+            <div class="section-label">Section 4: Stablecoins</div>
+            <h2 class="section-h2">Stablecoins and the <em>2 March 2026</em> Rule</h2>
+            <div class="prose">
+                <p>The single most important regulatory development for crypto payments in the EU is the way stablecoins now interact with payment law. Most fiat-pegged stablecoins are classified under MiCA as electronic money tokens (EMTs). The European Banking Authority issued a No-Action Letter clarifying that when a crypto-asset service provider transfers EMTs on behalf of clients, that activity should be treated as a payment service under PSD2.</p>
+                <p>The practical effect arrives with a date. Before 2 March 2026, EMT transactions by CASPs did not require a separate PSD2 authorisation. From that date, national competent authorities began treating those transfers as payment services, so a CASP moving stablecoins for clients must hold a Payment Institution or EMI authorisation in addition to its MiCA licence. The EBA deliberately steered away from full dual authorisation, encouraging regulators to reuse the information already filed for CASP licensing to streamline the payment authorisation.</p>
+                <p>For payment processors built on stablecoin rails, this is not a fringe technicality, it is the licensing model. If your settlement layer moves USDC or USDT for merchants, you are very likely in scope, and the choice between a PI and an EMI will hinge on whether you also store that value. Founders who built around the assumption that a CASP licence alone covered stablecoin payments have had to revisit their structure in 2026.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> a stablecoin settlement model that looked like a pure MiCA CASP business in 2025 may need a PI or EMI authorisation in 2026. Build the payment authorisation into the plan from day one rather than retrofitting it after the CASP licence is granted. See our <a href="/banking-licenses/crypto-payment-processing/">crypto payment processing licence page</a> for how the two authorisations are sequenced.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure whether your stablecoin model needs a PI, an EMI, or a CASP licence?</strong> Get a free 30-minute consultation. We will map your payment flow to the right authorisations and a realistic timeline.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- HIGH RISK -->
+        <section class="guide-section" id="highrisk">
+            <div class="section-label">Section 5: High-Risk Merchants</div>
+            <h2 class="section-h2">High-Risk Merchants, Chargebacks &amp; <em>Rolling Reserves</em></h2>
+            <div class="prose">
+                <p>Card networks and acquiring banks sort merchants by risk, and crypto-adjacent sectors frequently land in the high-risk bucket. The classification turns on chargeback history, fraud exposure, the merchant's industry and geography, and how predictable the revenue is. Once a business is high-risk, the economics change sharply and not in the merchant's favour.</p>
+                <p>High-risk merchants typically face transaction fees that industry sources put at roughly 4 to 8 percent, against around 2.9 percent for mainstream merchants, along with rolling reserves of about 5 to 15 percent withheld for 6 to 12 months and chargeback fees of USD 25 to 100 per dispute. A rolling reserve is essentially insurance the processor holds against future chargebacks: the processor keeps the float and the merchant loses the cash flow. Worse, if an acquiring bank decides to exit an entire merchant category, the business can be cut off regardless of its own clean record.</p>
+                <p>This is where crypto and stablecoin settlement has gained ground in 2026. Crypto-settlement gateways let merchants accept Visa and Mastercard and receive settlement directly in USDC, USDT, or Bitcoin, paid to their own wallet, bypassing the traditional acquiring-bank reserve model. Legitimate merchants with clean histories can reduce or avoid rolling reserves, though the card network rules and underwriting still apply on the acceptance side. Our dedicated <a href="/banking-licenses/crypto-payment-processing/high-risk/">high-risk crypto payment processing page</a> covers the structuring options in detail.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our payments and CASP licensing work across more than 60 jurisdictions, the clients who struggle most are not the ones with the riskiest models, but the ones who treated the banking relationship as an afterthought. A processor can hold a perfect licence stack and still stall because no acquirer or settlement bank will take the account, or because a rolling reserve quietly strangles its working capital. We scope the banking and settlement route alongside the licence, not after it.</p>
+            <p>We also see stablecoin-settlement projects assume the 2026 PSD2 position away. Building the Payment Institution or EMI authorisation into the structure from the start, in parallel with the MiCA CASP application, is consistently the difference between a clean launch and a scramble to retrofit a payment licence once volume is already flowing. Our work on <a href="/guides/crypto-friendly-banks-guide/">finding crypto-friendly banks</a> grew directly out of how often this becomes the binding constraint.</p>
+          </div>
+        </section>
+
+        <!-- AML -->
+        <section class="guide-section" id="aml">
+            <div class="section-label">Section 6: AML &amp; Travel Rule</div>
+            <h2 class="section-h2">The AML and <em>Travel Rule</em> Overlay</h2>
+            <div class="prose">
+                <p>Whatever licence stack a crypto payment processor holds, an AML and counter-terrorist-financing programme sits on top of all of it. For the crypto leg, the FATF Travel Rule requires that when the processor transfers crypto-assets on behalf of clients, it collects and shares originator and beneficiary data with the counterparty provider. The EU Transfer of Funds Regulation applies this with no de-minimis threshold, while the US FinCEN recordkeeping rule under 31 CFR 1010.410 applies at USD 3,000.</p>
+                <p>In the United States the AML obligation is bound up with the licence itself. A business that accepts and transmits convertible virtual currency, or buys and sells it, is generally a money transmitter and therefore a money services business. It must register with FinCEN by filing Form 107, operate a written AML programme, and meet recordkeeping and reporting duties including suspicious activity and currency transaction reports. State money transmitter licences usually apply on top of the federal registration.</p>
+                <p>For a crypto payment processor, AML is not a separate workstream bolted on at the end. The same customer identification that underpins onboarding feeds the Travel Rule data, the sanctions screening, and the transaction monitoring. Our <a href="/banking-licenses/">banking and payments hub</a> shows how this compliance layer maps across PI, EMI, and CASP authorisations so the controls are designed once and reused across both legs.</p>
+            </div>
+        </section>
+
+        <!-- PATH -->
+        <section class="guide-section" id="path">
+            <div class="section-label">Section 7: Your Path</div>
+            <h2 class="section-h2">Your Crypto Payment <em>Licensing Path</em></h2>
+            <div class="prose">
+                <p>Getting from a payment-processing idea to a live, licensed operation follows a consistent sequence, even though the detail shifts by jurisdiction. The five steps below describe the core route a processor runs, from scoping the flow to launching under supervision.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Map the flow</div>
+                        <div class="ig-step-title">Scope the fiat and crypto legs</div>
+                        <div class="ig-step-desc">Trace exactly where fiat is held, where crypto is custodied or moved, and where stablecoins settle, so you can see which regulated activities your model actually touches.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Pick the licences</div>
+                        <div class="ig-step-title">Choose PI, EMI, CASP, or MSB</div>
+                        <div class="ig-step-desc">Match the flow to authorisations: a PI or EMI for the fiat leg under PSD2, a MiCA CASP for the crypto leg, or a FinCEN money transmitter registration in the US.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Capitalise</div>
+                        <div class="ig-step-title">Meet the capital and governance bar</div>
+                        <div class="ig-step-desc">Hold the initial capital (EUR 20k to 125k for a PI, EUR 350k for an EMI, plus the CASP tier) and put in place fit-and-proper management and safeguarding of client funds.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Build compliance</div>
+                        <div class="ig-step-title">Stand up AML, Travel Rule, and banking</div>
+                        <div class="ig-step-desc">Design the AML programme, Travel Rule data flows, and sanctions screening once across both legs, and secure the acquiring and settlement banking that the model depends on.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Authorise &amp; launch</div>
+                        <div class="ig-step-title">File, respond, and go live under supervision</div>
+                        <div class="ig-step-desc">Submit the applications, answer regulator queries, and launch under ongoing supervision, reusing CASP information where regulators allow it to streamline the payment authorisation.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Payment Processing: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is crypto payment processing?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Crypto payment processing is the infrastructure that lets businesses send or receive value in crypto, including fiat-to-crypto on-ramps, crypto-to-fiat off-ramps, merchant settlement, and stablecoin rails. It connects customers paying in cards or crypto with merchants who settle in fiat or stablecoins, sitting between the blockchain and the traditional banking system.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a crypto PSP?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A crypto PSP, or payment service provider, is a firm that processes payments involving crypto-assets for merchants and users. Depending on what it does, it may need a Payment Institution or Electronic Money Institution authorisation for the fiat leg under PSD2, plus a MiCA crypto-asset service provider authorisation for the crypto leg in the EU.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What licences do you need for crypto payment processing?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It depends on the activity. The fiat leg of card acquiring, settlement, and e-money usually needs a Payment Institution or Electronic Money Institution licence under PSD2 and EMD2 in the EU, or a FinCEN money transmitter registration in the US. The crypto leg of custody, exchange, or transfer needs a MiCA CASP authorisation in the EU.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between a PI and an EMI licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A Payment Institution moves money between parties but cannot store customer value, with initial capital from EUR 20,000 to EUR 125,000 depending on the service. An Electronic Money Institution can also issue and redeem electronic money and hold customer balances in wallets or IBANs, and carries a higher initial capital requirement of EUR 350,000.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do stablecoin payments need a payment licence in the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. The EBA No-Action Letter advises that transfers of electronic money tokens, which is how most fiat-pegged stablecoins are classified under MiCA, are payment services under PSD2 when carried out on behalf of clients. From 2 March 2026 a crypto-asset service provider handling such transfers needs a Payment Institution or EMI authorisation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What changed for crypto payments on 2 March 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">From 2 March 2026, the EBA No-Action period ended and national authorities began treating electronic money token transfers by crypto-asset service providers as payment services under PSD2. A CASP moving EMTs for clients from that date must hold a Payment Institution or Electronic Money Institution authorisation in addition to its MiCA licence.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do crypto payment processors need a CASP licence under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">If the processor custodies, exchanges, or transfers crypto-assets on behalf of clients, it generally needs a MiCA crypto-asset service provider authorisation for that crypto leg. A pure fiat acquirer that never touches crypto-assets may need only a payment licence, but most crypto payment processors handle both legs and require both authorisations.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is crypto payment processing high-risk merchant business?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Card networks and acquiring banks often classify crypto and related sectors as high-risk because of chargeback exposure, fraud, and regulatory uncertainty. High-risk merchants typically face higher fees, rolling reserves, and the threat of being de-risked. Crypto and stablecoin settlement is increasingly used to reduce reliance on traditional high-risk acquiring.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a rolling reserve in high-risk merchant acquiring?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A rolling reserve is a percentage of a merchant's revenue that the processor withholds for a set period to cover potential chargebacks and refunds. Industry estimates put high-risk rolling reserves at roughly 5 to 15 percent held for 6 to 12 months. It protects the processor against liability while the merchant loses access to that cash flow.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does crypto settlement help high-risk merchants?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Crypto-settlement gateways let merchants accept card payments and receive settlement directly in stablecoins such as USDC or USDT, or in Bitcoin, paid to their own wallet. Because no acquiring bank holds the float, legitimate merchants with clean histories can reduce or avoid rolling reserves and the risk of sudden de-risking, though the underlying card rules still apply.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do US crypto payment processors need a FinCEN licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">In the United States, a business that accepts and transmits convertible virtual currency, or buys and sells it, is generally a money transmitter and therefore a money services business. It must register with FinCEN by filing Form 107, run an AML programme, and meet recordkeeping and reporting rules. State money transmitter licences are usually required on top.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the Travel Rule affect crypto payment processing?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">When a crypto payment processor transfers crypto-assets on behalf of clients, the FATF Travel Rule requires it to collect and share originator and beneficiary data with the counterparty provider. The EU Transfer of Funds Regulation applies this with no threshold, while the US FinCEN recordkeeping rule applies at USD 3,000. It is a core part of the AML overlay.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to get a crypto payment processing licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Timelines vary by jurisdiction and licence type. A Payment Institution or EMI authorisation in the EU typically takes several months to over a year, and a MiCA CASP authorisation adds its own review. Where both legs are needed, regulators are encouraged to reuse CASP information, which can shorten the payment authorisation but rarely makes it quick.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I use an agent of a licensed PSP instead of getting my own licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">In many cases yes. A firm can either obtain its own Payment Institution or EMI authorisation or operate as a registered agent of an already-licensed payment service provider. The agent model can speed up market entry, but the principal PSP retains regulatory responsibility and applies its own onboarding, compliance, and commercial conditions.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-no-action-letter-interplay-between-payment-services-directive-psd23-and-markets-crypto" target="_blank" rel="nofollow noopener noreferrer">EBA: No-Action Letter on the interplay between the Payment Services Directive (PSD2/3) and MiCA</a></li>
+            <li><a href="https://www.eba.europa.eu/sites/default/files/2025-06/e2958c99-a1b0-4b07-9d31-bcba0a28dbe7/Opinion%20on%20the%20interplay%20between%20PSD2%20and%20MiCA.pdf" target="_blank" rel="nofollow noopener noreferrer">EBA: Opinion on the interplay between PSD2 and MiCA (PDF)</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015L2366" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive (EU) 2015/2366 (PSD2)</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32009L0110" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive 2009/110/EC (E-Money Directive, EMD2)</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1114" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (Markets in Crypto-Assets, MiCA)</a></li>
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="nofollow noopener noreferrer">ESMA: Markets in Crypto-Assets Regulation (MiCA)</a></li>
+            <li><a href="https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models" target="_blank" rel="nofollow noopener noreferrer">FinCEN: Application of Regulations to Certain Business Models Involving Convertible Virtual Currencies (2019)</a></li>
+            <li><a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-D/section-1010.410" target="_blank" rel="nofollow noopener noreferrer">eCFR: 31 CFR 1010.410 (FinCEN funds transfer recordkeeping / Travel Rule)</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Building a Crypto PSP?</h3>
+                <p>Tell us your payment flow and target markets. We will map the PI, EMI, and CASP authorisations you need and build them into one licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=crypto-payment-processing" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Licences at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">PI</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EUR 20k–125k</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Fiat leg, no stored value</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EMI</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EUR 350,000</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Fiat leg, holds e-money</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">MiCA CASP</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Crypto leg</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Custody, exchange, transfer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/how-to-get-emi-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">How to Get an EMI License</a>
+                    <a href="/guides/crypto-friendly-banks-guide/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto-Friendly Banks Guide</a>
+                    <a href="/banking-licenses/crypto-payment-processing/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Payment Processing License</a>
+                    <a href="/banking-licenses/crypto-payment-processing/high-risk/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">High-Risk Crypto Processing</a>
+                    <a href="/banking-licenses/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Banking &amp; Payments Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Fiat and crypto legs in one licensing plan</li>
+                    <li>PI, EMI, CASP, and MSB authorisations</li>
+                    <li>Acquiring and settlement banking support</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get Your Crypto Payment Model Licensed Correctly</h2>
+      <p class="cta-lead">Share your payment flow and target markets, and we will map the PI, EMI, and MiCA CASP authorisations that apply, recommend a licensing route, and build the AML and banking framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and licensing needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

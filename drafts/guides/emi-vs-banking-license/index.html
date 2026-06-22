@@ -1,0 +1,967 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI License vs Banking License: Key Differences for Fintechs (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="EMI license vs banking license in 2026: EUR 350,000 vs EUR 5 million capital, deposits and lending, safeguarding client funds vs deposit insurance, timelines, regulators, and where a payment institution (PI) fits for fintechs.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/emi-vs-banking-license/">
+    <meta property="og:title" content="EMI License vs Banking License: Key Differences for Fintechs (2026)">
+    <meta property="og:description" content="EMI vs banking license in 2026: EUR 350,000 vs EUR 5 million capital, deposits and lending, safeguarding vs deposit insurance, timelines, regulators, and where a payment institution fits.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/emi-vs-banking-license/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/euro-banknotes-multiple-denominations.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "EMI License vs Banking License", "item": "https://cryptolicenses.net/guides/emi-vs-banking-license/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/emi-vs-banking-license/#article",
+      "headline": "EMI License vs Banking License: Key Differences for Fintechs (2026)",
+      "description": "EMI vs banking license in 2026: EUR 350,000 vs EUR 5 million capital, deposits and lending, safeguarding vs deposit insurance, timelines, regulators, and where a payment institution fits for fintechs.",
+      "url": "https://cryptolicenses.net/guides/emi-vs-banking-license/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/emi-vs-banking-license/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/euro-banknotes-multiple-denominations.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between an EMI license and a banking license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An EMI license lets a firm issue electronic money and run payment services, but it cannot take deposits or lend from client funds and offers no deposit insurance. A banking license authorises a full credit institution to take deposits, lend, and provide insured accounts under the full prudential regime, at far higher cost and capital." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much initial capital does an EMI license require?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Under the EU E-Money Directive 2009/110/EC, an electronic money institution must hold initial capital of at least EUR 350,000 at authorisation. On top of that, an EMI must maintain ongoing own funds, typically at least 2 percent of its average outstanding e-money under Method D, plus any supervisory buffer the regulator imposes." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much capital does a banking license require?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A full credit institution in the EU needs minimum initial capital of EUR 5,000,000 under the Capital Requirements Directive. The real figure is usually much higher once Pillar 1 capital ratios, the capital conservation buffer, and other prudential buffers under the Capital Requirements Regulation are applied to risk-weighted assets." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an EMI take deposits or lend money?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. An electronic money institution cannot take deposits in the legal sense and cannot lend from client funds. The money it receives is exchanged for e-money and must be safeguarded, not put on a balance sheet and lent out. Taking deposits and lending are reserved for licensed credit institutions, that is, banks." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is client money safe with an EMI if there is no deposit insurance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "EMI client funds are not covered by a deposit guarantee scheme, but they are protected by safeguarding. The EMI must segregate client money in a dedicated account at a credit institution or cover it with insurance or a comparable guarantee. In insolvency, safeguarded funds are ring-fenced for customers rather than for the EMI's creditors." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an EMI and a payment institution (PI)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A payment institution provides payment services under PSD2 but cannot issue or store electronic money. Its initial capital is lower, from EUR 20,000 for money remittance up to EUR 125,000 for transfers, acquiring, and card issuing. An EMI does everything a PI does and can also issue e-money, hence the higher EUR 350,000 capital floor." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which regulator authorises an EMI versus a bank?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An EMI is authorised and supervised by the national competent authority, such as the Bank of Lithuania, BaFin, or FINMA. A full bank is also authorised nationally, but in the euro area significant credit institutions fall under direct European Central Bank supervision through the Single Supervisory Mechanism, a much heavier oversight regime." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get an EMI license versus a banking license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An EMI authorisation typically takes around six to twelve months from a complete application, depending on the jurisdiction and the quality of the file. A full banking license usually takes much longer, often eighteen to thirty-six months, because of the depth of capital, governance, and business-plan scrutiny that supervisors apply to credit institutions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an EMI passport across the EU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. An EMI authorised in one EEA member state can passport its activities into the other member states under the E-Money Directive and PSD2, either through a branch or on a freedom-of-services basis. A banking license passports in the same way under the Capital Requirements Directive, letting a credit institution operate across the single market." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a banking license to offer crypto services?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Usually not. Most crypto businesses operate under a VASP or MiCA CASP authorisation rather than a banking license. An EMI or payment license is often paired with crypto activity to handle fiat on and off ramps. A full banking license is only needed if you intend to take deposits and lend in the classic sense." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Swiss FinTech license and how does it compare to an EMI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Switzerland's FinTech license under the Banking Act lets a firm accept public deposits up to CHF 100 million, provided it pays no interest and does not lend or invest them. It sits between an EMI and a full Swiss banking license, offering a lighter route for payment and crypto-adjacent models supervised by FINMA in Zug and beyond." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which license should an early-stage fintech choose?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most early-stage fintechs start with an EMI or payment license because the capital and timeline are realistic and the permissions cover wallets, cards, and transfers. A banking license is only worth pursuing if deposit-taking and lending are core to the model, since the capital, governance, and supervisory burden are an order of magnitude larger." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an EMI later upgrade to a banking license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no automatic upgrade. An EMI that wants to take deposits and lend must apply for a separate banking authorisation, meeting the EUR 5 million capital floor, the full prudential regime, and credit-institution governance. In practice firms run the EMI live while building the capital, systems, and team needed for a fresh banking application." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does safeguarding client funds actually mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Safeguarding means an EMI or payment institution must keep customer money separate from its own. Under the E-Money Directive and PSD2 it must either hold the funds in a segregated account with a credit institution or central bank, or cover them with an insurance policy or comparable guarantee, so customers are protected if the firm fails." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    EMI License vs Banking License
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/euro-banknotes-multiple-denominations.jpg" alt="Euro banknotes in multiple denominations, EMI license vs banking license capital comparison in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Banking &amp; Payments</div>
+        <h1 class="hero-h1">EMI License vs Banking License: Key Differences for Fintechs in <em>2026</em></h1>
+        <p class="hero-intro">An EMI license lets you issue electronic money and run payments on EUR 350,000 of capital, but you cannot take deposits, lend, or offer deposit insurance. A full banking license can do all three, at EUR 5 million capital and a far heavier regime. This guide compares capital, deposits, safeguarding, timelines, and regulators, and shows where a payment institution fits.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Banking &amp; Payments</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">EMI vs Bank in Brief</a></li>
+            <li class="toc-item"><a href="#emi">What an EMI License Is</a></li>
+            <li class="toc-item"><a href="#bank">What a Banking License Is</a></li>
+            <li class="toc-item"><a href="#comparison">EMI vs Bank: Side by Side</a></li>
+            <li class="toc-item"><a href="#safeguarding">Safeguarding vs Deposit Insurance</a></li>
+            <li class="toc-item"><a href="#pi">Where the PI Fits</a></li>
+            <li class="toc-item"><a href="#choose">How to Choose</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided fintechs, exchanges, and payment firms through electronic money, payment, and banking authorisations, where the choice between an EMI and a full banking license shapes the entire business plan.</p>
+                <p>He has structured EMI and payment institution licences under the EU E-Money Directive and PSD2, advised on FINMA FinTech and banking authorisations in Switzerland, and helped early-stage firms map capital, safeguarding, and supervisory expectations across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto and payment licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Definition · EMI vs Banking License</div>
+                <p>An EMI (electronic money institution) license authorises a firm to issue electronic money and provide payment services, but it cannot take deposits, lend from client funds, or offer deposit insurance. A banking license authorises a full credit institution to take deposits, lend, and run insured accounts under the full prudential regime, at much higher capital and cost.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>An EMI needs EUR 350,000 initial capital under the E-Money Directive 2009/110/EC; a full bank needs EUR 5,000,000 under the Capital Requirements Directive</li>
+                    <li>An EMI can issue e-money and run payments but cannot take deposits or lend; a bank can do all three</li>
+                    <li>EMI client funds are protected by safeguarding (segregation or insurance), not by deposit insurance; bank deposits are covered up to EUR 100,000 per depositor</li>
+                    <li>A payment institution (PI) sits below an EMI: lower capital, payment services only, no e-money issuance</li>
+                    <li>Most early-stage fintechs and crypto firms start with an EMI or PI; a banking license is only worth it if deposit-taking and lending are core to the model</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">EMI vs Bank, <em>In Brief</em></h2>
+            <div class="prose">
+                <p>For a fintech founder, the choice between an EMI license and a banking license is one of the biggest early decisions, because it sets the capital you must raise, the timeline before launch, and what you are legally allowed to do with customer money. The two sit at very different points on the regulatory ladder, and confusing them is a common and expensive mistake.</p>
+                <p>An EMI, or electronic money institution, is a regulated payments and e-money firm. It can store value in digital wallets, issue prepaid cards, and move money, but it cannot behave like a bank with that money. A full banking license, by contrast, authorises a credit institution: the only kind of entity allowed to take deposits from the public and lend them out, the core business that defines a bank. If you are weighing these alongside a crypto authorisation, our overview of <a href="/guides/what-is-crypto-license/">what a crypto license is and how it works</a> sets the wider context.</p>
+                <p>The practical headline is capital and permissions. An EMI launches on a fraction of the capital a bank needs and faces a lighter supervisory regime, but it trades away the ability to lend and the comfort of deposit insurance. A bank can do everything, but the price of admission, in money, time, and governance, is an order of magnitude higher. The rest of this guide unpacks exactly where the lines fall.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€350k</div>
+                    <div class="ig-stat-label">EMI Initial Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€5m</div>
+                    <div class="ig-stat-label">Bank Initial Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€125k</div>
+                    <div class="ig-stat-label">PI Capital (Transfers)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€100k</div>
+                    <div class="ig-stat-label">Bank Deposit Cover</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€0</div>
+                    <div class="ig-stat-label">EMI Deposit Insurance</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2%</div>
+                    <div class="ig-stat-label">EMI Own Funds (Method D)</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: EU E-Money Directive 2009/110/EC; PSD2 Directive (EU) 2015/2366; Capital Requirements Directive 2013/36/EU; Deposit Guarantee Schemes Directive 2014/49/EU.</p>
+        </section>
+
+        <!-- EMI -->
+        <section class="guide-section" id="emi">
+            <div class="section-label">Section 2: The EMI License</div>
+            <h2 class="section-h2">What an <em>EMI License</em> Lets You Do</h2>
+            <div class="prose">
+                <p>An electronic money institution is defined and regulated in the EU by the E-Money Directive 2009/110/EC, known as EMD2, working alongside the second Payment Services Directive, PSD2 (Directive (EU) 2015/2366). The headline permission is the right to issue electronic money: a digital store of monetary value held on a card or in an account, redeemable at par on demand. That underpins wallets, prepaid cards, and stored-balance accounts.</p>
+                <p>An EMI can also provide the full suite of PSD2 payment services on top of e-money: executing transfers, direct debits and card payments, acquiring transactions for merchants, and issuing payment instruments. This is why an EMI is the workhorse licence for neobanks, wallet apps, and the fiat layer of many crypto businesses. Our <a href="/banking-licenses/emi/">EMI license service page</a> sets out how we structure these applications across the EEA.</p>
+                <p>What an EMI cannot do is just as important. It cannot take deposits in the legal sense, it cannot lend from customer funds, and under EMD2 it cannot pay interest on e-money balances purely for holding them. The money it receives is exchanged for e-money and must be safeguarded, never used as a lending balance sheet. The initial capital floor is EUR 350,000, with ongoing own funds of at least 2 percent of average outstanding e-money under the standard Method D, plus any buffer the supervisor adds.</p>
+            </div>
+        </section>
+
+        <!-- BANK -->
+        <section class="guide-section" id="bank">
+            <div class="section-label">Section 3: The Banking License</div>
+            <h2 class="section-h2">What a <em>Banking License</em> Adds</h2>
+            <div class="prose">
+                <p>A banking license authorises a credit institution, the formal term for a bank in EU law. A credit institution is defined as an undertaking whose business is to take deposits or other repayable funds from the public and to grant credit for its own account. Those two activities, deposit-taking and lending, are the legal monopoly of licensed banks, and they are precisely what an EMI is forbidden from doing.</p>
+                <p>In the EU, banks are governed by the Capital Requirements Directive (CRD IV, Directive 2013/36/EU) and the Capital Requirements Regulation (CRR), the same framework now updated by CRR3, in force from 1 January 2025, and CRD6. The minimum initial capital is EUR 5,000,000, but that is a floor rather than a realistic figure. Supervisors expect capital sized to risk-weighted assets through Pillar 1 ratios (an 8 percent total capital requirement, of which 4.5 percent must be CET1), plus a 2.5 percent capital conservation buffer and other systemic and countercyclical buffers. Our <a href="/banking-licenses/">banking license hub</a> walks through the full prudential stack.</p>
+                <p>The supervisory burden matches the permissions. A bank carries deposit insurance obligations, full governance and fit-and-proper requirements, recovery and resolution planning, and ongoing prudential reporting. In the euro area, significant credit institutions are supervised directly by the European Central Bank through the Single Supervisory Mechanism, while smaller banks remain with national regulators. A banking authorisation commonly takes eighteen to thirty-six months, against roughly six to twelve months for an EMI.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders often ask for a banking license when what their model actually needs is an EMI. If you are not taking deposits and lending, the EUR 5 million capital, the ECB-grade governance, and the multi-year timeline are weight you do not need to carry. We size the licence to the business, not to the ambition on the pitch deck."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- COMPARISON -->
+        <section class="guide-section" id="comparison">
+            <div class="section-label">Section 4: Side by Side</div>
+            <h2 class="section-h2">EMI vs Bank: <em>The Core Differences</em></h2>
+            <div class="prose">
+                <p>The table below sets the two licences against each other on the dimensions that decide most applications: capital, what you may do with customer money, how that money is protected, the typical timeline, and who supervises you. These are the levers that turn a vague preference into a concrete licensing decision.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>EMI License</th>
+                        <th>Banking License</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Initial capital</td>
+                        <td>EUR 350,000</td>
+                        <td>EUR 5,000,000 (floor; usually higher)</td>
+                    </tr>
+                    <tr>
+                        <td>Take deposits</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Lend from client funds</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Client money protection</td>
+                        <td>Safeguarding (segregation or insurance)</td>
+                        <td>Deposit insurance up to EUR 100,000 per depositor</td>
+                    </tr>
+                    <tr>
+                        <td>Issue e-money / run payments</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Typical authorisation timeline</td>
+                        <td>~6 to 12 months</td>
+                        <td>~18 to 36 months</td>
+                    </tr>
+                    <tr>
+                        <td>Legal basis (EU)</td>
+                        <td>EMD2 2009/110/EC + PSD2</td>
+                        <td>CRD IV 2013/36/EU + CRR</td>
+                    </tr>
+                    <tr>
+                        <td>Supervisor</td>
+                        <td>National competent authority</td>
+                        <td>National authority + ECB (significant banks)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Capital and protection figures from EU directives; timelines are practice-based ranges and vary by jurisdiction and file quality.</p>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for fintechs:</strong> the gap is not just capital. An EMI keeps you out of the deposit-taking and lending regime entirely, which is what makes the lighter supervision and faster timeline possible. Once you want to hold deposits and lend, there is no halfway version of a bank, you take on the full credit-institution regime. Choose the licence that matches what you actually do with customer money.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure whether you need an EMI or a banking license?</strong> Get a free 30-minute consultation. We will map your business model to the right licence and the right jurisdiction.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- SAFEGUARDING -->
+        <section class="guide-section" id="safeguarding">
+            <div class="section-label">Section 5: Protecting Client Money</div>
+            <h2 class="section-h2"><em>Safeguarding</em> vs Deposit Insurance</h2>
+            <div class="prose">
+                <p>The way customer money is protected is the single most misunderstood difference between an EMI and a bank, and it matters enormously to customers and counterparties. They protect funds through completely different mechanisms, and conflating them in your marketing is both inaccurate and a compliance risk.</p>
+                <p>A bank protects deposits through a deposit guarantee scheme. Under the EU Deposit Guarantee Schemes Directive 2014/49/EU, eligible deposits are insured up to EUR 100,000 per depositor per bank, paid out by a national scheme if the bank fails. This is a government-backed safety net, and it is one of the reasons banking licences carry such heavy capital and supervision.</p>
+                <p>An EMI has no deposit guarantee, because e-money is not a deposit. Instead it must safeguard client funds: under EMD2 and PSD2 it has to either hold customer money in a segregated account at a credit institution or central bank, separate from its own operating funds, or cover it with an insurance policy or comparable guarantee. If the EMI becomes insolvent, safeguarded funds are ring-fenced for customers rather than going to the firm's creditors. The protection is real, but it is asset segregation, not state-backed insurance, and customers should be told which one applies.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our EMI and payment licensing work across more than 60 jurisdictions, the safeguarding model is where applications most often run into trouble. Regulators want to see the exact segregated account, the credit institution holding it, the daily reconciliation process, and the wording customers will see about the absence of deposit insurance. Firms that treat safeguarding as a back-office afterthought rather than a core control consistently face the longest review cycles.</p>
+            <p>We also see founders default to "we want a bank" when their roadmap, deposits in, payments and cards out, never actually involves lending. In almost every such case an EMI authorisation, sometimes paired later with a banking application once deposit-taking is genuinely on the table, delivers the same customer proposition far faster and on realistic capital. Matching the licence to the cash flows, not the brand ambition, is the decision that saves the most time and money.</p>
+          </div>
+        </section>
+
+        <!-- PI -->
+        <section class="guide-section" id="pi">
+            <div class="section-label">Section 6: The Middle Tier</div>
+            <h2 class="section-h2">Where the <em>Payment Institution</em> Fits</h2>
+            <div class="prose">
+                <p>Between doing nothing and becoming a bank, there is a third regulated tier that many fintechs miss: the payment institution, or PI. Understanding the EMI vs PI line is just as important as the EMI vs bank line, because picking the wrong one means either over-capitalising or applying for permissions you do not need.</p>
+                <p>A payment institution is authorised under PSD2 to provide payment services, executing transfers, direct debits, card acquiring, money remittance, and payment initiation, but it cannot issue or store electronic money. Its capital floor is lower and scaled to the service: EUR 20,000 for money remittance only, EUR 50,000 for payment initiation services, and EUR 125,000 for the broader set of transfers, acquiring, and card issuing. That makes a PI the lightest entry point for a pure payments model.</p>
+                <p>An EMI is effectively a PI plus the right to issue e-money. If your product needs stored balances, wallets, or prepaid cards that customers top up and hold, you need the e-money permission, and therefore an EMI with its EUR 350,000 capital. If you only move money in and out without holding balances on your books, a PI may be enough. A bank, finally, is the only one of the three that can take deposits and lend. For Swiss models, a further option is the FINMA FinTech licence; our <a href="/banking-licenses/emi/switzerland/">Swiss EMI and e-money guide</a> explains how it relates to the EU framework.</p>
+            </div>
+        </section>
+
+        <!-- CHOOSE -->
+        <section class="guide-section" id="choose">
+            <div class="section-label">Section 7: Choosing</div>
+            <h2 class="section-h2">How to <em>Choose</em> Your License</h2>
+            <div class="prose">
+                <p>Choosing between a PI, an EMI, and a banking license is a structured decision, not a guess. The five steps below are the sequence we run with founders to land on the right licence and jurisdiction before a single euro of application cost is spent. The order matters: permissions first, capital and timeline second.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Define</div>
+                        <div class="ig-step-title">List what you do with customer money</div>
+                        <div class="ig-step-desc">Map the cash flows: do you only move money, store balances and issue cards, or take deposits and lend? This single answer points to PI, EMI, or bank before anything else.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Match</div>
+                        <div class="ig-step-title">Pick the lightest sufficient licence</div>
+                        <div class="ig-step-desc">Choose the licence whose permissions cover your model and no more. Holding balances means EMI; pure payments may suit a PI; deposit-taking and lending require a full banking licence.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Cost</div>
+                        <div class="ig-step-title">Size capital and timeline honestly</div>
+                        <div class="ig-step-desc">Confirm you can fund the initial capital and the ongoing own funds, and that your runway fits the authorisation timeline, roughly 6 to 12 months for an EMI versus 18 to 36 for a bank.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Locate</div>
+                        <div class="ig-step-title">Choose the jurisdiction and supervisor</div>
+                        <div class="ig-step-desc">Select where to apply based on regulator appetite, banking access, passporting, and local capital add-ons, then plan for the supervisor that licence will put you under.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Build</div>
+                        <div class="ig-step-title">Prepare safeguarding and governance early</div>
+                        <div class="ig-step-desc">Stand up the safeguarding model, AML framework, and governance the supervisor expects before you file, so the application clears review rather than stalling on missing controls.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">EMI vs Banking License: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between an EMI license and a banking license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An EMI license lets a firm issue electronic money and run payment services, but it cannot take deposits or lend from client funds and offers no deposit insurance. A banking license authorises a full credit institution to take deposits, lend, and provide insured accounts under the full prudential regime, at far higher cost and capital.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How much initial capital does an EMI license require?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Under the EU E-Money Directive 2009/110/EC, an electronic money institution must hold initial capital of at least EUR 350,000 at authorisation. On top of that, an EMI must maintain ongoing own funds, typically at least 2 percent of its average outstanding e-money under Method D, plus any supervisory buffer the regulator imposes.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How much capital does a banking license require?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A full credit institution in the EU needs minimum initial capital of EUR 5,000,000 under the Capital Requirements Directive. The real figure is usually much higher once Pillar 1 capital ratios, the capital conservation buffer, and other prudential buffers under the Capital Requirements Regulation are applied to risk-weighted assets.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can an EMI take deposits or lend money?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. An electronic money institution cannot take deposits in the legal sense and cannot lend from client funds. The money it receives is exchanged for e-money and must be safeguarded, not put on a balance sheet and lent out. Taking deposits and lending are reserved for licensed credit institutions, that is, banks.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is client money safe with an EMI if there is no deposit insurance?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">EMI client funds are not covered by a deposit guarantee scheme, but they are protected by safeguarding. The EMI must segregate client money in a dedicated account at a credit institution or cover it with insurance or a comparable guarantee. In insolvency, safeguarded funds are ring-fenced for customers rather than for the EMI's creditors.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between an EMI and a payment institution (PI)?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A payment institution provides payment services under PSD2 but cannot issue or store electronic money. Its initial capital is lower, from EUR 20,000 for money remittance up to EUR 125,000 for transfers, acquiring, and card issuing. An EMI does everything a PI does and can also issue e-money, hence the higher EUR 350,000 capital floor.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which regulator authorises an EMI versus a bank?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An EMI is authorised and supervised by the national competent authority, such as the Bank of Lithuania, BaFin, or FINMA. A full bank is also authorised nationally, but in the euro area significant credit institutions fall under direct European Central Bank supervision through the Single Supervisory Mechanism, a much heavier oversight regime.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to get an EMI license versus a banking license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An EMI authorisation typically takes around six to twelve months from a complete application, depending on the jurisdiction and the quality of the file. A full banking license usually takes much longer, often eighteen to thirty-six months, because of the depth of capital, governance, and business-plan scrutiny that supervisors apply to credit institutions.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can an EMI passport across the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. An EMI authorised in one EEA member state can passport its activities into the other member states under the E-Money Directive and PSD2, either through a branch or on a freedom-of-services basis. A banking license passports in the same way under the Capital Requirements Directive, letting a credit institution operate across the single market.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need a banking license to offer crypto services?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Usually not. Most crypto businesses operate under a VASP or MiCA CASP authorisation rather than a banking license. An EMI or payment license is often paired with crypto activity to handle fiat on and off ramps. A full banking license is only needed if you intend to take deposits and lend in the classic sense.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the Swiss FinTech license and how does it compare to an EMI?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Switzerland's FinTech license under the Banking Act lets a firm accept public deposits up to CHF 100 million, provided it pays no interest and does not lend or invest them. It sits between an EMI and a full Swiss banking license, offering a lighter route for payment and crypto-adjacent models supervised by FINMA in Zug and beyond.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which license should an early-stage fintech choose?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Most early-stage fintechs start with an EMI or payment license because the capital and timeline are realistic and the permissions cover wallets, cards, and transfers. A banking license is only worth pursuing if deposit-taking and lending are core to the model, since the capital, governance, and supervisory burden are an order of magnitude larger.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can an EMI later upgrade to a banking license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no automatic upgrade. An EMI that wants to take deposits and lend must apply for a separate banking authorisation, meeting the EUR 5 million capital floor, the full prudential regime, and credit-institution governance. In practice firms run the EMI live while building the capital, systems, and team needed for a fresh banking application.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does safeguarding client funds actually mean?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Safeguarding means an EMI or payment institution must keep customer money separate from its own. Under the E-Money Directive and PSD2 it must either hold the funds in a segregated account with a credit institution or central bank, or cover them with an insurance policy or comparable guarantee, so customers are protected if the firm fails.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://eur-lex.europa.eu/eli/dir/2009/110/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive 2009/110/EC (E-Money Directive, EMD2)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/dir/2015/2366/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive (EU) 2015/2366 (PSD2)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/dir/2013/36/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive 2013/36/EU (Capital Requirements Directive, CRD IV)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2013/575/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 575/2013 (Capital Requirements Regulation, CRR)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/dir/2014/49/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive 2014/49/EU (Deposit Guarantee Schemes Directive)</a></li>
+            <li><a href="https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/market-access/guidelines-authorisation-credit-institutions" target="_blank" rel="nofollow noopener noreferrer">EBA: Guidelines on the authorisation of credit institutions</a></li>
+            <li><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/11764" target="_blank" rel="nofollow noopener noreferrer">EBA: Capital Requirements Directive (CRD) single rulebook</a></li>
+            <li><a href="https://www.finma.ch/en/authorisation/fintech/" target="_blank" rel="nofollow noopener noreferrer">FINMA: FinTech licence and authorisation in Switzerland</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto and payment licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>EMI or Bank?</h3>
+                <p>Tell us your business model and target markets. We will map whether you need an EMI, a payment, or a banking license, and build it into your plan. Free, no obligation.</p>
+                <a href="/contact/?topic=emi-banking" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">EMI vs Bank at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EMI Capital</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EUR 350,000</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">No deposits, no lending</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Bank Capital</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EUR 5,000,000</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Deposits + lending + insurance</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">PI Capital</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EUR 20k - 125k</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Payments only, no e-money</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a Crypto License?</a>
+                    <a href="/banking-licenses/emi/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EMI License Service</a>
+                    <a href="/banking-licenses/emi/switzerland/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Swiss EMI License</a>
+                    <a href="/banking-licenses/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Banking License Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>EMI, PI, and banking licences mapped to your model</li>
+                    <li>Coverage of EMD2, PSD2, and CRR regimes</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Choose the Right License Before You Apply</h2>
+      <p class="cta-lead">Share your business model and target markets, and we will map whether you need an EMI, a payment, or a banking license, recommend a jurisdiction, and build the framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and licensing needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/banking-licenses/emi/">EMI License</a></li>
+                <li><a href="/banking-licenses/">Banking License Hub</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

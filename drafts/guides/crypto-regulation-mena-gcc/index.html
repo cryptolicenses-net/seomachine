@@ -1,0 +1,943 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Regulation in the UAE & GCC: VARA, ADGM, DFSA & SCA Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto regulation in the UAE explained for 2026: how VARA (Dubai), ADGM/FSRA (Abu Dhabi), DFSA (DIFC) and the federal SCA, now the CMA, fit together, which one applies where, plus Bahrain, Qatar and Saudi GCC rules.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-regulation-mena-gcc/">
+    <meta property="og:title" content="Crypto Regulation in the UAE & GCC: VARA, ADGM, DFSA & SCA Explained (2026)">
+    <meta property="og:description" content="How VARA (Dubai), ADGM/FSRA (Abu Dhabi), DFSA (DIFC) and the federal SCA, now the CMA, fit together in 2026, which one applies where, plus Bahrain, Qatar and Saudi GCC crypto rules.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-regulation-mena-gcc/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/modern-office-building-glass-facade.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Crypto Regulation in the UAE & GCC", "item": "https://cryptolicenses.net/guides/crypto-regulation-mena-gcc/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-regulation-mena-gcc/#article",
+      "headline": "Crypto Regulation in the UAE & GCC: VARA, ADGM, DFSA & SCA Explained (2026)",
+      "description": "How VARA (Dubai), ADGM/FSRA (Abu Dhabi), DFSA (DIFC) and the federal SCA, now the CMA, fit together in 2026, which one applies where, plus Bahrain, Qatar and Saudi GCC crypto rules.",
+      "url": "https://cryptolicenses.net/guides/crypto-regulation-mena-gcc/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-regulation-mena-gcc/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/modern-office-building-glass-facade.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who regulates crypto in the UAE?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no single crypto regulator in the UAE. VARA regulates virtual assets in onshore Dubai, ADGM's FSRA covers the Abu Dhabi Global Market free zone, the DFSA covers the DIFC free zone, and the federal Securities and Commodities Authority, renamed the Capital Market Authority in January 2026, sits above them all at federal level." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is VARA in Dubai?",
+          "acceptedAnswer": { "@type": "Answer", "text": "VARA is the Virtual Assets Regulatory Authority, the dedicated crypto regulator for the Emirate of Dubai, established in 2022 under Dubai Law No. 4 of 2022. It licenses and supervises virtual asset service providers operating in or from onshore Dubai, covering everything except the DIFC financial free zone, which the DFSA handles." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between VARA and ADGM?",
+          "acceptedAnswer": { "@type": "Answer", "text": "VARA regulates onshore Dubai and is generally seen as retail-friendly, suiting exchanges and payment firms serving the public. ADGM's FSRA regulates a common-law free zone in Abu Dhabi and tends to attract global institutional players, custodians, and tokenization platforms. The two sit in different emirates under different legal frameworks." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does DFSA regulate for crypto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Dubai Financial Services Authority regulates financial services in the DIFC free zone. It introduced its Crypto Token regime in 2022, letting firms be licensed to offer services involving recognised Crypto Tokens within or from the DIFC. The DFSA updated those Crypto Token rules with changes that came into force on 12 January 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the SCA still the federal crypto regulator in the UAE?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The federal Securities and Commodities Authority was replaced by the Capital Market Authority, the CMA, effective 1 January 2026 under Federal Decree-Laws No. 32 and No. 33 of 2025. The CMA is the legal successor to the SCA, so all references to the SCA in legislation now read CMA, and it holds expanded authority over virtual assets." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which UAE crypto regulator should I choose?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your model and audience. Retail-facing exchanges and payment firms often choose VARA in Dubai. Global institutional custodians and tokenization platforms tend to favour ADGM. DIFC via the DFSA suits investment-token and securities-focused firms. The right choice is a licensing decision that should match your customers and target markets." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can one UAE crypto licence cover the whole country?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not automatically. Free-zone licences from ADGM or the DFSA apply within their zones, and a VARA licence covers onshore Dubai. Under Federal Decree-Law No. 33 of 2025, no virtual asset can be traded in the UAE unless it is on the CMA's official list and operated by a CMA-recognised platform, so federal rules layer on top of local ones." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many crypto firms are licensed by VARA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "As of February 2026, VARA was reported to have licensed 507 virtual asset service providers in Dubai, with combined assets under management exceeding USD 25 billion. The figures reflect Dubai's push to position itself as a leading global hub for regulated digital-asset activity and the rapid growth of its licensed VASP population." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Bahrain regulate crypto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Central Bank of Bahrain was the first GCC regulator with a comprehensive crypto framework, the Crypto-Asset, or CRA, Module within Volume 6 of its Rulebook, in place since 2019. In July 2025 the CBB added a Stablecoin Issuance and Offering Module, allowing approved issuance of fiat-backed stablecoins in Bahraini dinar and US dollar." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the crypto regulation status in Qatar and Saudi Arabia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Qatar has moved cautiously, with the Qatar Financial Centre introducing a Digital Assets Framework covering tokenization and smart-contract recognition while keeping onshore spot crypto trading restricted. Saudi Arabia remains conservative: the central bank, SAMA, runs a regulatory sandbox and has appointed a crypto lead, but a full licensing regime is still developing." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is crypto legal in the UAE?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, crypto activity is legal in the UAE when conducted under the right licence. The country has built one of the world's most developed regulatory environments for virtual assets, spread across VARA, ADGM, the DFSA, and the federal CMA. Operating without the relevant authorisation, however, exposes a firm to enforcement and the loss of banking relationships." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does mainland UAE federal regulation cover?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Federal rules administered by the CMA and the Central Bank of the UAE apply to mainland UAE outside Dubai and outside the financial free zones, and reach activities targeting UAE clients from abroad. Under FDL33, the CMA maintains the official list of tradable virtual assets, giving it effective veto over which tokens can trade nationwide." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a deadline for UAE crypto firms to get licensed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The 2025 federal reforms introduced a transitional period of roughly one year, running to around September 2026, for crypto firms to obtain proper licensing, partner with a licensed entity, or stop targeting UAE users. Firms still operating without authorisation after the transition risk enforcement action under the new federal framework." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the UAE a popular crypto licensing hub?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The UAE combines clear, purpose-built regulation, low or zero tax in several zones, strong banking infrastructure, and government backing for digital assets. Dubai and Abu Dhabi compete to attract regulated firms, and the layered VARA, ADGM, DFSA, and federal CMA structure lets businesses pick a regime that matches their model and clients." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    UAE & GCC Crypto Regulation
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/modern-office-building-glass-facade.jpg" alt="Modern glass office tower in the UAE, crypto regulation across VARA, ADGM, DFSA and SCA in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Regulation</div>
+        <h1 class="hero-h1">Crypto Regulation in the UAE &amp; GCC: VARA, ADGM, DFSA &amp; SCA Explained <em>2026</em></h1>
+        <p class="hero-intro">Crypto regulation in the UAE is not run by one authority but by several. VARA governs onshore Dubai, ADGM's FSRA and the DFSA run the Abu Dhabi and DIFC free zones, and the federal SCA, now the CMA, sits above them all. This guide maps which regulator applies where in 2026, and how Bahrain, Qatar, and Saudi Arabia fit the wider GCC picture.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Regulation</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#overview">The UAE Multi-Regulator Map</a></li>
+            <li class="toc-item"><a href="#vara">VARA: Onshore Dubai</a></li>
+            <li class="toc-item"><a href="#freezones">ADGM &amp; DFSA Free Zones</a></li>
+            <li class="toc-item"><a href="#federal">SCA, Now the CMA</a></li>
+            <li class="toc-item"><a href="#choose">Which Regulator Applies</a></li>
+            <li class="toc-item"><a href="#gcc">Bahrain, Qatar &amp; Saudi</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and institutional investors through licensing across the Gulf, where the UAE's layered regulatory map demands precise jurisdiction selection from the first day of an application.</p>
+                <p>He has advised clients applying under VARA in Dubai, the FSRA in ADGM, and the DFSA in the DIFC, and tracks federal developments at the Securities and Commodities Authority, now the Capital Market Authority, alongside GCC neighbours including Bahrain, Qatar, and Saudi Arabia across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="overview">
+
+            <div class="def-box">
+                <div class="def-term">In Short · Crypto Regulation UAE</div>
+                <p>Crypto regulation in the UAE is split across four authorities: VARA regulates virtual assets in onshore Dubai, ADGM's FSRA covers the Abu Dhabi free zone, the DFSA covers the DIFC free zone, and the federal Securities and Commodities Authority, renamed the Capital Market Authority in January 2026, sits above them. Which one applies depends on where you operate and who your clients are.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>The UAE has no single crypto regulator; VARA, ADGM's FSRA, the DFSA, and the federal CMA each govern a different zone and audience</li>
+                    <li>VARA covers onshore Dubai and is retail-friendly; ADGM and DIFC are common-law free zones favoured by institutional firms</li>
+                    <li>The federal SCA was renamed the Capital Market Authority on 1 January 2026 under Federal Decree-Laws 32 and 33 of 2025, with expanded virtual-asset powers</li>
+                    <li>Under FDL33, only assets on the CMA's official list may be traded, so federal rules layer on top of any local or free-zone licence</li>
+                    <li>Across the GCC, Bahrain's CBB leads with a framework since 2019, while Qatar and Saudi Arabia remain more cautious</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Map</div>
+            <h2 class="section-h2">The UAE <em>Multi-Regulator</em> Map</h2>
+            <div class="prose">
+                <p>The first thing to understand about crypto regulation in the UAE is that there is no single rulebook and no single regulator. Instead, the country runs a layered system: federal authorities set overarching policy, the Emirate of Dubai has its own dedicated crypto regulator, and two common-law financial free zones write their own frameworks. A virtual asset business can fall under more than one regime at once, depending on its activities and geographic footprint.</p>
+                <p>Four bodies matter most. VARA, the Virtual Assets Regulatory Authority, regulates virtual assets in onshore Dubai. The FSRA regulates the Abu Dhabi Global Market free zone. The DFSA regulates the Dubai International Financial Centre free zone. And the federal Securities and Commodities Authority, renamed the Capital Market Authority, or CMA, in January 2026, sits at the top alongside the Central Bank of the UAE. Choosing among them is a licensing decision before it is a compliance one, which is why our <a href="/guides/best-crypto-license-jurisdiction/">guide to choosing a crypto licence jurisdiction</a> treats the UAE as several options rather than one.</p>
+                <p>For founders weighing the UAE, the practical question is not "is crypto legal here" but "which authority should license me." The answer turns on where you base the business and who your customers are. Our <a href="/crypto-licenses/mena/">MENA crypto licensing hub</a> sets out each route in detail, and the sections below explain how the pieces fit together in 2026.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">4</div>
+                    <div class="ig-stat-label">Core UAE Regulators</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">507</div>
+                    <div class="ig-stat-label">VASPs Licensed by VARA (Feb 2026)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">$25B</div>
+                    <div class="ig-stat-label">Reported VARA AUM</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Jan 2026</div>
+                    <div class="ig-stat-label">SCA Becomes CMA</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2019</div>
+                    <div class="ig-stat-label">Bahrain CRA Module</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Sep 2026</div>
+                    <div class="ig-stat-label">Federal Transition Deadline</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: VARA; Federal Decree-Laws No. 32 and No. 33 of 2025; Central Bank of Bahrain Rulebook. VARA licence and AUM figures are reported as of February 2026.</p>
+        </section>
+
+        <!-- VARA -->
+        <section class="guide-section" id="vara">
+            <div class="section-label">Section 2: Dubai Onshore</div>
+            <h2 class="section-h2">VARA: The <em>Dubai</em> Regulator</h2>
+            <div class="prose">
+                <p>VARA, the Virtual Assets Regulatory Authority, was established in 2022 under Dubai Law No. 4 of 2022 and is widely described as the world's first purpose-built virtual-asset regulator. It supervises all virtual asset activity carried out in or from the Emirate of Dubai, with one important exception: the DIFC free zone, which is regulated separately by the DFSA. Any provider offering issuance, custody, exchange, or broker-dealer services in onshore Dubai must hold a VARA licence.</p>
+                <p>VARA's growth has been rapid. As of February 2026 it was reported to have licensed 507 virtual asset service providers, with combined assets under management exceeding USD 25 billion, as Dubai positions itself as a leading regulated digital-asset hub. Our <a href="/crypto-licenses/mena/vara/">VARA licensing page</a> walks through the activity categories and capital expectations in detail.</p>
+                <p>The framework is detailed and increasingly demanding on compliance. In 2026 VARA tightened its anti-money-laundering guidance, expecting firms to use data-driven risk models and to refresh risk profiles at least every three months, and it has pushed Dubai crypto businesses to track FATF blacklists closely. VARA is generally seen as the retail-friendly choice, suiting exchanges, marketplaces, and payment firms that serve the public rather than purely institutional clients.</p>
+            </div>
+        </section>
+
+        <!-- FREE ZONES -->
+        <section class="guide-section" id="freezones">
+            <div class="section-label">Section 3: The Free Zones</div>
+            <h2 class="section-h2">ADGM and DFSA: <em>Free-Zone</em> Frameworks</h2>
+            <div class="prose">
+                <p>Two common-law financial free zones run their own crypto frameworks, separate from both VARA and the federal regime. In Abu Dhabi, the Financial Services Regulatory Authority, the FSRA, regulates the Abu Dhabi Global Market, or ADGM. In Dubai, the Dubai Financial Services Authority, the DFSA, regulates the Dubai International Financial Centre, or DIFC. Both operate under English-law-inspired systems and tend to attract institutional and cross-border firms.</p>
+                <p>ADGM's FSRA was an early mover, operating a dedicated virtual-asset framework with an Accepted Virtual Assets list. It refreshed its guidance in June 2025 and again with amendments in 2026, adding new licence categories and addressing tokenized securities and DeFi protocols. ADGM is commonly favoured by global institutional firms, custody providers, and tokenization platforms seeking regulatory certainty. Our companion piece on <a href="/guides/vara-vs-adgm-crypto-license/">VARA versus ADGM</a> compares the two head to head.</p>
+                <p>The DFSA introduced its Crypto Token regime in 2022, allowing DIFC firms to be licensed for financial services involving recognised Crypto Tokens, and brought updated Crypto Token rules into force on 12 January 2026. The DFSA leans towards investment tokens and securities-style activity. Our <a href="/crypto-licenses/mena/difc/">DIFC licensing page</a> sets out what the DFSA route involves in practice.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Regulator</th>
+                        <th>Zone / Scope</th>
+                        <th>Retail Focus</th>
+                        <th>Typical Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>VARA</td>
+                        <td>Onshore Dubai (excl. DIFC)</td>
+                        <td>Retail-friendly</td>
+                        <td>Exchanges, custody, brokers, payments</td>
+                    </tr>
+                    <tr>
+                        <td>FSRA (ADGM)</td>
+                        <td>Abu Dhabi free zone</td>
+                        <td>Mainly institutional</td>
+                        <td>Custody, tokenization, DeFi, funds</td>
+                    </tr>
+                    <tr>
+                        <td>DFSA (DIFC)</td>
+                        <td>Dubai DIFC free zone</td>
+                        <td>Mainly institutional</td>
+                        <td>Investment tokens, securities, financial services</td>
+                    </tr>
+                    <tr>
+                        <td>CMA (federal)</td>
+                        <td>Mainland UAE + federal oversight</td>
+                        <td>Policy / list control</td>
+                        <td>Official tradable-asset list, national framework</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Scope and focus are indicative; exact permissions depend on the licence category and activity. The CMA is the legal successor to the federal SCA from January 2026.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Clients arrive convinced they need a UAE crypto licence, then ask which one. The honest answer is that VARA, ADGM, the DFSA, and the federal CMA are four different doors. A retail exchange and an institutional custodian should rarely walk through the same one. We pick the door before we draft a single application."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- FEDERAL -->
+        <section class="guide-section" id="federal">
+            <div class="section-label">Section 4: Federal Layer</div>
+            <h2 class="section-h2">SCA, Now the <em>CMA</em>: The Federal Layer</h2>
+            <div class="prose">
+                <p>Above the local and free-zone regulators sits the federal layer, and it changed significantly at the start of 2026. The Securities and Commodities Authority, long the UAE's federal securities regulator, was replaced by the Capital Market Authority, the CMA, with effect from 1 January 2026 under Federal Decree-Laws No. 32 and No. 33 of 2025. The CMA is the legal successor to the SCA, so existing references to the SCA in legislation now read CMA, and it carries an expanded statutory mandate over virtual assets.</p>
+                <p>The most consequential change for crypto is asset listing. Under Federal Decree-Law No. 33 of 2025, no virtual asset may be traded in the UAE unless it appears on the CMA's official list, is registered with the CMA, and is operated by a CMA-recognised platform. In practice this gives the federal authority a decisive say over which tokens can trade nationwide, even on platforms licensed by VARA or in the free zones. Our <a href="/regulation/">regulation hub</a> tracks how these federal rules interact with local regimes.</p>
+                <p>Federal oversight, administered by the CMA together with the Central Bank of the UAE, applies to mainland UAE outside Dubai and outside the financial free zones, and reaches activities targeting UAE clients from abroad. The reforms also introduced a transitional period of roughly a year, running to around September 2026, for firms to obtain licensing, partner with a licensed entity, or stop serving UAE users. The federal Securities and Commodities Authority portal remains the reference point for this national framework.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> a local or free-zone licence is necessary but no longer the whole story. A VARA or ADGM authorisation governs how you operate, while the federal CMA list governs which assets you may offer to UAE users. Plan for both layers from the outset rather than discovering the federal constraint after launch. See our <a href="/crypto-licenses/mena/">MENA licensing hub</a> for how the layers combine.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure which UAE or GCC regulator fits your model?</strong> Get a free 30-minute consultation. We will map VARA, ADGM, the DFSA, and federal rules to your business and recommend a licensing route.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- WHICH APPLIES -->
+        <section class="guide-section" id="choose">
+            <div class="section-label">Section 5: Choosing</div>
+            <h2 class="section-h2">Which Regulator <em>Applies to You</em></h2>
+            <div class="prose">
+                <p>Because the UAE runs four regimes in parallel, the decision tree below describes the questions a firm works through to identify the right route. The detail of each licence varies, but the sequence of questions is consistent, and getting it right at the start saves a costly relicensing later.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Locate</div>
+                        <div class="ig-step-title">Decide where you base the entity</div>
+                        <div class="ig-step-desc">Onshore Dubai points to VARA; the Abu Dhabi free zone points to ADGM's FSRA; the DIFC free zone points to the DFSA; mainland activity engages the federal CMA framework.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Audience</div>
+                        <div class="ig-step-title">Identify who your clients are</div>
+                        <div class="ig-step-desc">Retail and public-facing models often suit VARA, while institutional, custody, and tokenization businesses tend to favour the common-law free zones at ADGM or the DIFC.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Activity</div>
+                        <div class="ig-step-title">Map your activities to a licence category</div>
+                        <div class="ig-step-desc">Exchange, custody, broker-dealer, payment, and token-issuance activities each carry their own permissions and capital expectations under the relevant regulator.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Federal check</div>
+                        <div class="ig-step-title">Confirm assets against the CMA list</div>
+                        <div class="ig-step-desc">Under FDL33, verify that the tokens you plan to offer to UAE users are eligible under the CMA's official list, since federal listing rules apply on top of your local licence.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Apply</div>
+                        <div class="ig-step-title">Build the application and AML framework</div>
+                        <div class="ig-step-desc">Prepare the licence application with the AML, KYC, and governance documentation the chosen regulator expects, allowing for the federal transition deadline around September 2026.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our Gulf licensing work, the most common mistake we see is a founder choosing a regulator for its reputation rather than its fit. A retail exchange that applies to a free zone built for institutions can spend months meeting requirements designed for a different business, while the same firm under VARA would have moved faster. The geography and the client base, not the brand of the regulator, should drive the decision.</p>
+            <p>The second recurring issue since 2026 is the federal listing layer. We now routinely advise clients that a VARA or ADGM licence does not by itself settle which tokens they may offer to UAE users, because the CMA's official list applies on top. Building both the local licence and the federal asset position into the plan from day one is what keeps a launch on schedule rather than stalled at the last hurdle.</p>
+          </div>
+        </section>
+
+        <!-- GCC -->
+        <section class="guide-section" id="gcc">
+            <div class="section-label">Section 6: The Wider GCC</div>
+            <h2 class="section-h2">Bahrain, Qatar and <em>Saudi Arabia</em></h2>
+            <div class="prose">
+                <p>The UAE is the most developed crypto market in the Gulf, but it is not alone. Across the GCC, regulators are moving from treating crypto as a fringe asset class to building regulated digital-asset infrastructure, though they are doing so at very different speeds. For firms with regional ambitions, the neighbours matter.</p>
+                <p>Bahrain was the first GCC country to formalise a comprehensive framework. The Central Bank of Bahrain, the CBB, has regulated crypto activity through its Crypto-Asset, or CRA, Module within Volume 6 of the CBB Rulebook since 2019, and it updates the module regularly. In July 2025 the CBB added a Stablecoin Issuance and Offering Module, permitting approved issuance of fiat-backed stablecoins denominated in Bahraini dinar and US dollar, an early move into regulated stablecoins for the region.</p>
+                <p>Qatar and Saudi Arabia remain more cautious. The Qatar Financial Centre has introduced a Digital Assets Framework covering tokenization and the legal recognition of smart contracts, while keeping onshore spot crypto trading restricted. Saudi Arabia stays conservative: its central bank, SAMA, runs a regulatory sandbox and has appointed a crypto lead, but a full licensing regime is still developing. For most international firms today, the UAE and Bahrain offer the clearest licensing routes in the GCC, and a <a href="/crypto-licenses/mena/">MENA crypto licence</a> is most commonly built around one of them.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">UAE &amp; GCC Crypto Regulation: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">Who regulates crypto in the UAE?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no single crypto regulator in the UAE. VARA regulates virtual assets in onshore Dubai, ADGM's FSRA covers the Abu Dhabi Global Market free zone, the DFSA covers the DIFC free zone, and the federal Securities and Commodities Authority, renamed the Capital Market Authority in January 2026, sits above them all at federal level.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is VARA in Dubai?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">VARA is the Virtual Assets Regulatory Authority, the dedicated crypto regulator for the Emirate of Dubai, established in 2022 under Dubai Law No. 4 of 2022. It licenses and supervises virtual asset service providers operating in or from onshore Dubai, covering everything except the DIFC financial free zone, which the DFSA handles.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between VARA and ADGM?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">VARA regulates onshore Dubai and is generally seen as retail-friendly, suiting exchanges and payment firms serving the public. ADGM's FSRA regulates a common-law free zone in Abu Dhabi and tends to attract global institutional players, custodians, and tokenization platforms. The two sit in different emirates under different legal frameworks.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does DFSA regulate for crypto?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The Dubai Financial Services Authority regulates financial services in the DIFC free zone. It introduced its Crypto Token regime in 2022, letting firms be licensed to offer services involving recognised Crypto Tokens within or from the DIFC. The DFSA updated those Crypto Token rules with changes that came into force on 12 January 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the SCA still the federal crypto regulator in the UAE?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The federal Securities and Commodities Authority was replaced by the Capital Market Authority, the CMA, effective 1 January 2026 under Federal Decree-Laws No. 32 and No. 33 of 2025. The CMA is the legal successor to the SCA, so all references to the SCA in legislation now read CMA, and it holds expanded authority over virtual assets.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which UAE crypto regulator should I choose?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It depends on your model and audience. Retail-facing exchanges and payment firms often choose VARA in Dubai. Global institutional custodians and tokenization platforms tend to favour ADGM. DIFC via the DFSA suits investment-token and securities-focused firms. The right choice is a licensing decision that should match your customers and target markets.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can one UAE crypto licence cover the whole country?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Not automatically. Free-zone licences from ADGM or the DFSA apply within their zones, and a VARA licence covers onshore Dubai. Under Federal Decree-Law No. 33 of 2025, no virtual asset can be traded in the UAE unless it is on the CMA's official list and operated by a CMA-recognised platform, so federal rules layer on top of local ones.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How many crypto firms are licensed by VARA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">As of February 2026, VARA was reported to have licensed 507 virtual asset service providers in Dubai, with combined assets under management exceeding USD 25 billion. The figures reflect Dubai's push to position itself as a leading global hub for regulated digital-asset activity and the rapid growth of its licensed VASP population.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does Bahrain regulate crypto?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. The Central Bank of Bahrain was the first GCC regulator with a comprehensive crypto framework, the Crypto-Asset, or CRA, Module within Volume 6 of its Rulebook, in place since 2019. In July 2025 the CBB added a Stablecoin Issuance and Offering Module, allowing approved issuance of fiat-backed stablecoins in Bahraini dinar and US dollar.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the crypto regulation status in Qatar and Saudi Arabia?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Qatar has moved cautiously, with the Qatar Financial Centre introducing a Digital Assets Framework covering tokenization and smart-contract recognition while keeping onshore spot crypto trading restricted. Saudi Arabia remains conservative: the central bank, SAMA, runs a regulatory sandbox and has appointed a crypto lead, but a full licensing regime is still developing.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is crypto legal in the UAE?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, crypto activity is legal in the UAE when conducted under the right licence. The country has built one of the world's most developed regulatory environments for virtual assets, spread across VARA, ADGM, the DFSA, and the federal CMA. Operating without the relevant authorisation, however, exposes a firm to enforcement and the loss of banking relationships.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does mainland UAE federal regulation cover?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Federal rules administered by the CMA and the Central Bank of the UAE apply to mainland UAE outside Dubai and outside the financial free zones, and reach activities targeting UAE clients from abroad. Under FDL33, the CMA maintains the official list of tradable virtual assets, giving it effective veto over which tokens can trade nationwide.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is there a deadline for UAE crypto firms to get licensed?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The 2025 federal reforms introduced a transitional period of roughly one year, running to around September 2026, for crypto firms to obtain proper licensing, partner with a licensed entity, or stop targeting UAE users. Firms still operating without authorisation after the transition risk enforcement action under the new federal framework.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is the UAE a popular crypto licensing hub?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The UAE combines clear, purpose-built regulation, low or zero tax in several zones, strong banking infrastructure, and government backing for digital assets. Dubai and Abu Dhabi compete to attract regulated firms, and the layered VARA, ADGM, DFSA, and federal CMA structure lets businesses pick a regime that matches their model and clients.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.vara.ae/en/" target="_blank" rel="nofollow noopener noreferrer">VARA: Virtual Assets Regulatory Authority (Dubai)</a></li>
+            <li><a href="https://rulebooks.vara.ae/" target="_blank" rel="nofollow noopener noreferrer">VARA Rulebook</a></li>
+            <li><a href="https://www.adgm.com/business-areas/digital-assets" target="_blank" rel="nofollow noopener noreferrer">ADGM (FSRA): Digital Assets framework</a></li>
+            <li><a href="https://www.dfsa.ae/news/dfsa-issues-updated-rules-regulation-crypto-tokens-difc" target="_blank" rel="nofollow noopener noreferrer">DFSA: Updated rules on the regulation of Crypto Tokens in the DIFC</a></li>
+            <li><a href="https://www.sca.gov.ae/en/home.aspx" target="_blank" rel="nofollow noopener noreferrer">UAE Securities &amp; Commodities Authority (federal authority, now the CMA)</a></li>
+            <li><a href="https://www.cbb.gov.bh/" target="_blank" rel="nofollow noopener noreferrer">Central Bank of Bahrain (CBB Rulebook, Crypto-Asset Module)</a></li>
+            <li><a href="https://u.ae/en/about-the-uae/digital-uae/regulatory-framework/regulation-of-digital-properties" target="_blank" rel="nofollow noopener noreferrer">UAE Government: Regulation of digital properties</a></li>
+            <li><a href="https://www.dlapiper.com/en/insights/publications/the-uae-cryptocurrency-and-digital-asset-regulation-series/2025/no-1the-regulatory-landscape-for-digital-assets-in-the-uae" target="_blank" rel="nofollow noopener noreferrer">DLA Piper: The regulatory landscape for digital assets in the UAE</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>UAE Licensing Help?</h3>
+                <p>Tell us your business model and target markets. We will map the right UAE or GCC regulator and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=uae-gcc" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">UAE Regulators at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">VARA</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Onshore Dubai</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Retail-friendly crypto regulator</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">ADGM / DFSA</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Free zones</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Institutional, common-law</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">SCA → CMA</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Federal layer</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Official tradable-asset list</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/vara-vs-adgm-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">VARA vs ADGM</a>
+                    <a href="/guides/best-crypto-license-jurisdiction/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Best Crypto License Jurisdiction</a>
+                    <a href="/crypto-licenses/mena/vara/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">VARA License Overview</a>
+                    <a href="/crypto-licenses/mena/difc/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">DIFC License Overview</a>
+                    <a href="/crypto-licenses/mena/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MENA Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>VARA, ADGM, DFSA, and federal routes mapped</li>
+                    <li>Coverage of UAE and wider GCC regimes</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get the Right UAE or GCC Crypto Licence</h2>
+      <p class="cta-lead">Share your business model and target markets, and we will map the regulator that applies, VARA, ADGM, the DFSA, or the federal framework, recommend a licensing route, and build the compliance framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and UAE or GCC licensing needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

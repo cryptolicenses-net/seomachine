@@ -1,0 +1,1010 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINMA Crypto Licensing in Switzerland: SRO, FinTech & DLT Routes Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="FINMA crypto license routes in 2026: SRO membership under AMLA, the FinTech licence (Banking Act Art. 1b, deposits up to CHF 100m), the DLT trading facility licence, and the full banking licence. Plus FINMA's payment, utility and asset token taxonomy and which Swiss route fits which activity.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/finma-crypto-license-switzerland/">
+    <meta property="og:title" content="FINMA Crypto Licensing in Switzerland: SRO, FinTech & DLT Routes Explained (2026)">
+    <meta property="og:description" content="The Swiss FINMA crypto license routes for 2026: AMLA SRO membership, the FinTech licence, the DLT trading facility licence, and the full banking licence, plus FINMA's token taxonomy and which route fits which activity.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/finma-crypto-license-switzerland/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/lucerne-aerial-view-swiss-flag.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "FINMA Crypto Licensing in Switzerland", "item": "https://cryptolicenses.net/guides/finma-crypto-license-switzerland/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/finma-crypto-license-switzerland/#article",
+      "headline": "FINMA Crypto Licensing in Switzerland: SRO, FinTech & DLT Routes Explained (2026)",
+      "description": "FINMA crypto license routes in 2026: SRO membership under AMLA, the FinTech licence (Banking Act Art. 1b), the DLT trading facility licence, and the full banking licence, plus FINMA's token taxonomy and which Swiss route fits which activity.",
+      "url": "https://cryptolicenses.net/guides/finma-crypto-license-switzerland/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/finma-crypto-license-switzerland/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/lucerne-aerial-view-swiss-flag.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there a single FINMA crypto license in Switzerland?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Switzerland has no single FINMA crypto license. Instead there are several routes matched to activity: SRO membership for AML-only financial intermediaries, the FinTech licence under Banking Act Article 1b, the DLT trading facility licence under the FMIA, and the full banking or securities firm licence. The right route depends on what your business actually does." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SRO membership in Switzerland?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SRO membership is affiliation with a FINMA-recognised self-regulatory organisation that supervises members for anti-money laundering compliance under AMLA. It is not a FINMA licence; it satisfies the AML obligation for financial intermediaries such as crypto exchanges, brokers, OTC desks and payment providers that do not take deposits or hold assets as a bank." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Swiss route fits a crypto exchange or OTC desk?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A pure crypto exchange, broker, or OTC desk that does not accept public deposits or run banking activity typically operates as an AMLA financial intermediary through SRO membership. If the model involves accepting public funds or crypto deposits without interest or lending, the FinTech licence under Banking Act Article 1b is the next step up." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Swiss FinTech licence under Banking Act Article 1b?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The FinTech licence under Article 1b of the Banking Act lets an institution accept public deposits of up to CHF 100 million, or crypto-based assets, provided the funds are not invested, bear no interest, and are not used for lending. The applicant must be a Swiss company with its registered office and business activity in Switzerland." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are FinTech licence deposits protected in Switzerland?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. In the event of a FinTech institution's bankruptcy, client assets held under the Banking Act Article 1b licence are neither privileged nor covered by deposit protection. FINMA requires the institution to inform its clients of this limitation. This is one of the key trade-offs of the lighter FinTech regime versus a full banking licence." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a DLT trading facility licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A DLT trading facility licence, created by the Swiss DLT legislative package and regulated under the Financial Market Infrastructure Act, permits the multilateral trading of DLT securities, including admitting retail participants directly. It is the route for venues that match buyers and sellers of tokenised securities rather than spot crypto exchanges trading payment tokens." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum capital for a DLT trading facility?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Minimum capital is CHF 1 million if the facility provides no custody, clearing or settlement, and CHF 5 million if it does. Small DLT trading facilities benefit from a reduced requirement of CHF 500,000, or 5 percent of the DLT securities held in custody with a CHF 500,000 floor where custody services are offered." }
+        },
+        {
+          "@type": "Question",
+          "name": "When did the Swiss DLT Act take effect?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Swiss DLT legislative package was adopted in 2020 and phased in. The remaining provisions, including the amendments to the Financial Market Infrastructure Act that created the DLT trading facility category, entered into force on 1 August 2021. FINMA granted the first DLT trading facility licence, to BX Digital AG, in March 2025." }
+        },
+        {
+          "@type": "Question",
+          "name": "When do you need a full banking licence for crypto in Switzerland?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A full banking licence is needed when the model involves classic banking activity: accepting interest-bearing deposits, lending, or maturity transformation. The statutory minimum fully paid-in share capital is CHF 10 million under the Banking Ordinance, though FINMA in practice expects considerably more depending on the business model and risk profile." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does FINMA classify crypto tokens?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Under its 2018 ICO guidelines, FINMA classifies tokens into three types. Payment tokens are cryptocurrencies used as a means of payment, subject to AML but not securities law. Utility tokens give digital access to a service. Asset tokens represent assets, participations, or debt claims and are treated as securities. Hybrid tokens combine these categories." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are payment tokens treated as securities under FINMA rules?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. FINMA does not treat pure payment tokens as securities. They are subject to anti-money laundering requirements when transferred but fall outside securities law. Asset tokens, by contrast, are treated as securities, triggering prospectus duties and securities-trading requirements under the Code of Obligations and financial market law." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Zug called Crypto Valley?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Zug, where our firm is based, earned the name Crypto Valley because of the dense cluster of blockchain and crypto companies, foundations and service providers that settled there from the mid-2010s. Switzerland's legal certainty, the canton's business-friendly tax environment, and FINMA's pragmatic, principle-based approach made it a magnet for the sector." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do crypto firms in Switzerland still need AML compliance under a FinTech or DLT licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Anti-money laundering obligations under AMLA apply across all of the routes. SRO membership exists specifically to discharge them for intermediaries, but FinTech, DLT trading facility, and banking licensees are also AML-subject and are supervised by FINMA directly rather than through an SRO for that purpose." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Swiss FinTech licence being replaced?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A reform of the Financial Institutions Act is under consultation. Proposals would replace the FinTech licence with two new FINMA categories, a payment institution and a crypto-institution authorised for custody, trading and related crypto services. As of 2026 this is proposed rather than in force, with entry into force not expected before 2027 and a transition period." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does FINMA crypto licensing take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary by route. SRO membership is the fastest, often a few months end to end including company setup and bank onboarding. The FinTech licence and DLT trading facility licence take longer because FINMA reviews capital, governance, and risk frameworks. A full banking licence is the most demanding and lengthy of the four routes." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    FINMA Crypto Licensing
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/lucerne-aerial-view-swiss-flag.jpg" alt="Aerial view of Lucerne with the Swiss flag, FINMA crypto licensing in Switzerland in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Swiss Licensing</div>
+        <h1 class="hero-h1">FINMA Crypto Licensing in Switzerland: SRO, FinTech &amp; DLT Routes Explained <em>2026</em></h1>
+        <p class="hero-intro">Switzerland has no single FINMA crypto license. Instead it offers a ladder of routes, from AMLA SRO membership through the FinTech licence and the DLT trading facility licence to a full banking licence. This guide, written from our Zug office in the heart of Crypto Valley, explains each route, the capital and deposit limits, FINMA's token taxonomy, and which path fits which activity in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Swiss Licensing</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">No Single FINMA Crypto Licence</a></li>
+            <li class="toc-item"><a href="#sro">Route 1: SRO Membership</a></li>
+            <li class="toc-item"><a href="#fintech">Route 2: FinTech Licence</a></li>
+            <li class="toc-item"><a href="#dlt">Route 3: DLT Trading Facility</a></li>
+            <li class="toc-item"><a href="#banking">Route 4: Full Banking Licence</a></li>
+            <li class="toc-item"><a href="#tokens">FINMA Token Taxonomy</a></li>
+            <li class="toc-item"><a href="#choose">Choosing Your Route</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor based in Zug" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of Swiss financial law and emerging technology. Based in Zug, the canton at the centre of Switzerland's Crypto Valley, he has guided exchanges, custodians, token issuers, and institutional investors through every FINMA-relevant route, from SRO membership under AMLA to FinTech, DLT trading facility, and full banking licence applications.</p>
+                <p>He advises on token classification under FINMA's 2018 ICO guidelines, on capital and governance requirements, and on how to match a business model to the correct Swiss authorisation before a single franc of regulatory cost is spent. His mandates span more than 60 jurisdictions, with Switzerland as his home base.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net, based in Zug. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">In short · FINMA crypto license</div>
+                <p>A FINMA crypto license is not one document but a choice of route. Switzerland matches the authorisation to the activity: SRO membership under AMLA for pure financial intermediaries, the FinTech licence under Banking Act Article 1b for deposit-taking up to CHF 100 million without interest or lending, a DLT trading facility licence for trading tokenised securities, or a full banking licence for classic banking activity.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>Switzerland has no single FINMA crypto license; you pick the route that fits what your business actually does</li>
+                    <li>SRO membership under AMLA is the entry route for exchanges, brokers and OTC desks that act only as financial intermediaries</li>
+                    <li>The FinTech licence (Banking Act Article 1b) allows public deposits up to CHF 100 million with no interest and no lending</li>
+                    <li>The DLT trading facility licence under the FMIA, in force since 2021, governs multilateral trading of DLT securities</li>
+                    <li>FINMA classifies tokens as payment, utility, or asset tokens, and only asset tokens are treated as securities</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Framework</div>
+            <h2 class="section-h2">There Is No Single <em>FINMA Crypto Licence</em></h2>
+            <div class="prose">
+                <p>The first thing founders need to understand is that there is no single FINMA crypto license to apply for. Swiss financial market law is technology-neutral and activity-based, so the question is never "do I get the crypto licence", but "which regulated activity am I performing, and which authorisation does that trigger". Get that mapping right and the rest of the process is orderly; get it wrong and you waste months on the wrong application.</p>
+                <p>Swiss crypto regulation in 2026 rests on a stack of statutes rather than a dedicated crypto act. The core pieces are the Anti-Money Laundering Act (AMLA), the Banking Act (which contains the FinTech licence in Article 1b), the Financial Market Infrastructure Act (FMIA, which hosts the DLT trading facility), the Collective Investment Schemes Act, and the 2021 distributed ledger technology legislative package. Our broader explainer on <a href="/guides/what-is-crypto-license/">what a crypto license is and how it works</a> sets the global context for these Swiss specifics.</p>
+                <p>From that stack flow four practical routes, ordered roughly by intensity: SRO membership, the FinTech licence, the DLT trading facility licence, and the full banking or securities firm licence. The sections below take each in turn. For the country-level overview, see our dedicated page on the <a href="/crypto-licenses/europe/switzerland/">Swiss crypto licence</a> and the deeper regulatory picture on <a href="/regulation/switzerland/">Swiss crypto regulation</a>.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">4</div>
+                    <div class="ig-stat-label">Main Swiss Routes</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">CHF 100m</div>
+                    <div class="ig-stat-label">FinTech Deposit Cap</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">CHF 1–5m</div>
+                    <div class="ig-stat-label">DLT Facility Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">CHF 10m</div>
+                    <div class="ig-stat-label">Bank Min. Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">3</div>
+                    <div class="ig-stat-label">FINMA Token Types</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2021</div>
+                    <div class="ig-stat-label">DLT Act In Force</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: FINMA FinTech licence and DLT trading facility pages; Banking Ordinance Art. 15 (CHF 10m bank minimum); FINMA 2018 ICO guidelines token taxonomy.</p>
+        </section>
+
+        <!-- SRO -->
+        <section class="guide-section" id="sro">
+            <div class="section-label">Section 2: Route 1</div>
+            <h2 class="section-h2">SRO Membership <em>(AMLA)</em></h2>
+            <div class="prose">
+                <p>The lightest route is membership of a FINMA-recognised self-regulatory organisation, or SRO. This is the entry point for businesses that act purely as financial intermediaries: crypto exchanges, brokers, OTC desks, payment processors, and certain wallet providers. Under the Anti-Money Laundering Act, these activities make the firm a financial intermediary subject to AML and counter-terrorist-financing obligations.</p>
+                <p>It is vital to be precise here, because a common misconception trips up new entrants. SRO membership is not a FINMA licence. It is the way a financial intermediary discharges its AML obligation: the SRO, a private body recognised by FINMA, supervises its members for AML compliance, while FINMA supervises the SROs. The route does not authorise deposit-taking or holding client assets in the banking sense, so it suits models where the firm facilitates transactions but does not become a depositary of public funds.</p>
+                <p>Practically, this is the fastest and least capital-intensive way to operate a compliant Swiss crypto business. A typical setup involves a Swiss company, a resident director, and an appointed AML officer, with the intermediary then admitted to one of the recognised SROs such as VQF, PolyReg or SO-FIT. If your model goes beyond pure intermediation, the next route up is the FinTech licence.</p>
+            </div>
+        </section>
+
+        <!-- FINTECH -->
+        <section class="guide-section" id="fintech">
+            <div class="section-label">Section 3: Route 2</div>
+            <h2 class="section-h2">The <em>FinTech Licence</em> (Banking Act Art. 1b)</h2>
+            <div class="prose">
+                <p>The FinTech licence, formally the authorisation for persons under Article 1b of the Banking Act, was created to give innovative firms a lighter alternative to a full banking licence. It permits an institution to accept public deposits of up to CHF 100 million, or crypto-based assets, on a critical condition: those funds may not be invested, may not bear interest, and may not be used for lending. In Swiss terms, this is a prohibition on active banking business and on maturity transformation.</p>
+                <p>The applicant must be a Swiss legal entity, a company limited by shares, a corporation with unlimited partners, or a limited liability company, with both its registered office and its actual business activity in Switzerland. That substance requirement is not a formality; FINMA expects genuine operations and governance in the country, not a letterbox.</p>
+                <p>There is a significant trade-off to flag clearly to clients. Because the FinTech licence sits below full banking, deposits held under it are neither privileged nor covered by deposit protection in the event of the institution's bankruptcy, and the firm must inform its clients of exactly that. The FinTech licence is the right fit for custodial wallets, certain stablecoin and payment models, and platforms that hold customer balances without running a lending book.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"The line that decides FinTech licence versus SRO membership is deceptively simple: are you holding public funds or crypto deposits, or merely facilitating transactions? The moment client balances sit on your books, you have crossed into Article 1b territory, even with no interest and no lending. We map that line before a client commits to a route, because re-papering an application halfway through is the costliest mistake in Swiss licensing."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor, Zug</cite>
+          </blockquote>
+        </section>
+
+        <!-- DLT -->
+        <section class="guide-section" id="dlt">
+            <div class="section-label">Section 4: Route 3</div>
+            <h2 class="section-h2">The <em>DLT Trading Facility</em> Licence</h2>
+            <div class="prose">
+                <p>Switzerland's 2020 distributed ledger technology legislative package created a purpose-built market infrastructure category: the DLT trading facility. The relevant amendments to the Financial Market Infrastructure Act entered into force on 1 August 2021, and in March 2025 FINMA granted the first ever DLT trading facility licence, to BX Digital AG, demonstrating that the regime is live and usable rather than theoretical.</p>
+                <p>A DLT trading facility licence authorises the multilateral trading of DLT securities, the tokenised securities introduced by the same legislative package. Crucially, and unlike a traditional stock exchange, a DLT trading facility may admit retail participants to trade directly. This makes it the correct route for a venue matching buyers and sellers of tokenised shares, bonds, or other asset tokens, rather than a spot exchange dealing only in payment tokens, which would sit under the AML or FinTech routes instead.</p>
+                <p>Capital requirements scale with the services offered. A DLT trading facility needs minimum capital of CHF 1 million where it provides no custody, clearing, or settlement, rising to CHF 5 million where it does. Small DLT trading facilities benefit from a reduced floor of CHF 500,000, or, where custody is offered, 5 percent of the DLT securities held in custody subject to that CHF 500,000 minimum.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>DLT Facility Type</th>
+                        <th>Custody / Clearing / Settlement</th>
+                        <th>Minimum Capital</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Standard DLT trading facility</td>
+                        <td>Not provided</td>
+                        <td>CHF 1,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Standard DLT trading facility</td>
+                        <td>Provided</td>
+                        <td>CHF 5,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Small DLT trading facility</td>
+                        <td>Not provided</td>
+                        <td>CHF 500,000</td>
+                    </tr>
+                    <tr>
+                        <td>Small DLT trading facility</td>
+                        <td>Provided</td>
+                        <td>5% of custodied DLT securities (min CHF 500,000)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on the Swiss DLT legislative package and FMIA implementing provisions. Figures are statutory minimums; FINMA may require more.</p>
+        </section>
+
+        <!-- BANKING -->
+        <section class="guide-section" id="banking">
+            <div class="section-label">Section 5: Route 4</div>
+            <h2 class="section-h2">The Full <em>Banking Licence</em></h2>
+            <div class="prose">
+                <p>When a crypto business genuinely needs classic banking capability, accepting interest-bearing deposits, lending, or performing maturity transformation, none of the lighter routes will do, and a full banking licence under the Banking Act becomes necessary. This is the path taken by Switzerland's crypto-native banks, and it is the most demanding of the four routes in both capital and supervisory terms.</p>
+                <p>The statutory minimum is a fully paid-in share capital of CHF 10 million under the Banking Ordinance. That figure is a floor, not a target: in our experience FINMA expects materially more for a viable application, often in the region of CHF 20 million or above for a niche institution, and it can demand higher capital still depending on the intended activities, balance-sheet projection, and risk profile. Governance, internal control, and audit requirements are correspondingly heavier.</p>
+                <p>The pay-off is the broadest licence scope in Switzerland and the strongest signal of institutional credibility. For most crypto founders, though, the full banking licence is the wrong starting point; it is reserved for models that truly require banking activity rather than custody, trading, or payments, which the lighter routes already cover. If you are weighing Switzerland against other countries entirely, our guide to the <a href="/guides/best-crypto-license-jurisdiction/">best crypto license jurisdiction</a> puts these trade-offs in international context.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure whether you need an SRO, a FinTech, a DLT, or a banking licence?</strong> Get a free 30-minute consultation with our Zug team. We will map your model to the right FINMA route before you spend on the wrong one.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- TOKENS -->
+        <section class="guide-section" id="tokens">
+            <div class="section-label">Section 6: Token Classification</div>
+            <h2 class="section-h2">FINMA's <em>Token Taxonomy</em></h2>
+            <div class="prose">
+                <p>Running parallel to the licensing question is the classification of the token itself, and FINMA's approach here is one of the most cited frameworks in global crypto regulation. Its 2018 ICO guidelines set out three economic categories, with the legal treatment flowing from each. The category is determined by the token's underlying purpose and whether it is already transferable or tradeable, and hybrid forms are expressly recognised.</p>
+                <p>Payment tokens are synonymous with cryptocurrencies: a means of payment with no further function or claim. FINMA subjects their transfer to anti-money laundering requirements but does not treat them as securities. Utility tokens provide digital access to an application or service; if that access is fully functional at issue and is the token's sole purpose, the issue does not require securities-law approval. Asset tokens represent assets such as participations, debt, or claims to dividends or interest, and FINMA treats them as securities, which brings prospectus duties and securities-trading rules into play.</p>
+                <p>This taxonomy interacts directly with the licensing routes above. An asset-token issuance or a venue trading asset tokens points toward securities law and, for a trading venue, the DLT trading facility licence. A payment-token exchange points toward the AML or FinTech routes. Misclassifying a token is one of the surest ways to end up in the wrong authorisation, which is why classification is the very first step in any serious Swiss application.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>From our Zug office in the heart of Crypto Valley, the single most valuable thing we do for a new client is the route-and-token assessment before any application is drafted. Time and again a founder arrives convinced they need a banking licence, when their custodial-wallet model fits the FinTech licence, or that they need a FinTech licence when pure brokerage means SRO membership is enough. The wrong assumption can add a year and a seven-figure cost to a launch.</p>
+            <p>We also see applications stall when the token classification has not been pinned down. A project that calls its token a utility token but builds in a profit-share is issuing an asset token in FINMA's eyes, with securities consequences. Settling classification under the 2018 ICO guidelines first, and building the licensing route on top of it, is consistently the difference between a clean FINMA review and a long round of regulator queries.</p>
+          </div>
+        </section>
+
+        <!-- CHOOSE -->
+        <section class="guide-section" id="choose">
+            <div class="section-label">Section 7: Decision Guide</div>
+            <h2 class="section-h2">Choosing Your <em>Route</em></h2>
+            <div class="prose">
+                <p>The table below maps the four routes against the criteria that matter most: the activity each one permits, the capital involved, whether it allows deposit-taking, and its AML status. Use it as a first filter, then validate against your specific token and business model, because edge cases and hybrid activities frequently shift the answer.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Core Activity</th>
+                        <th>Capital</th>
+                        <th>Deposits</th>
+                        <th>AML Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SRO membership</td>
+                        <td>Exchange, broker, OTC, payments (intermediary only)</td>
+                        <td>Company capital only</td>
+                        <td>No public deposits</td>
+                        <td>AMLA via SRO</td>
+                    </tr>
+                    <tr>
+                        <td>FinTech licence (Art. 1b)</td>
+                        <td>Hold public deposits, no interest, no lending</td>
+                        <td>FINMA-set; lighter than bank</td>
+                        <td>Up to CHF 100m</td>
+                        <td>AMLA, FINMA-supervised</td>
+                    </tr>
+                    <tr>
+                        <td>DLT trading facility</td>
+                        <td>Multilateral trading of DLT securities</td>
+                        <td>CHF 0.5m–5m by service scope</td>
+                        <td>Per FMIA rules</td>
+                        <td>AMLA, FINMA-supervised</td>
+                    </tr>
+                    <tr>
+                        <td>Full banking licence</td>
+                        <td>Interest-bearing deposits, lending, banking</td>
+                        <td>CHF 10m minimum (more in practice)</td>
+                        <td>Full deposit-taking</td>
+                        <td>AMLA, FINMA-supervised</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="prose" style="margin-top:2rem;">
+                <p>Whichever route you land on, the path to authorisation follows a consistent sequence. The five steps below describe how a Swiss FINMA application typically runs, from the first classification call to going live under supervision.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Classify</div>
+                        <div class="ig-step-title">Classify the token and the activity</div>
+                        <div class="ig-step-desc">Determine whether the token is a payment, utility, or asset token under FINMA's 2018 ICO guidelines, and pin down exactly which regulated activity the business performs. This decides everything downstream.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Select route</div>
+                        <div class="ig-step-title">Choose the right Swiss route</div>
+                        <div class="ig-step-desc">Match the activity to SRO membership, the FinTech licence, the DLT trading facility, or a full banking licence, factoring in deposit-taking, capital, and AML status before drafting anything.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Set up substance</div>
+                        <div class="ig-step-title">Incorporate and build governance</div>
+                        <div class="ig-step-desc">Establish a Swiss entity with registered office and genuine business activity in Switzerland, appoint a resident director and AML officer, and build the required risk and compliance framework.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Apply</div>
+                        <div class="ig-step-title">Submit to FINMA or join an SRO</div>
+                        <div class="ig-step-desc">For licensed routes, file the application and supporting documentation with FINMA and respond to its queries. For pure intermediaries, apply for admission to a FINMA-recognised SRO.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Operate</div>
+                        <div class="ig-step-title">Go live under supervision</div>
+                        <div class="ig-step-desc">Begin operations once authorised, maintaining AML controls, capital, and reporting. FINMA supervises licensees directly; SROs supervise intermediaries for AML on FINMA's behalf.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Looking ahead:</strong> a reform of the Financial Institutions Act is under consultation and would, if adopted, replace the FinTech licence with two new FINMA categories, a payment institution and a crypto-institution authorised for custody, trading and related services. As of 2026 this remains a proposal, with entry into force not expected before 2027 and a transition period, so today's applications still proceed under the routes described above. See our <a href="/regulation/switzerland/">Swiss regulation hub</a> for ongoing updates.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">FINMA Crypto Licensing: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">Is there a single FINMA crypto license in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. Switzerland has no single FINMA crypto license. Instead there are several routes matched to activity: SRO membership for AML-only financial intermediaries, the FinTech licence under Banking Act Article 1b, the DLT trading facility licence under the FMIA, and the full banking or securities firm licence. The right route depends on what your business actually does.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is SRO membership in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">SRO membership is affiliation with a FINMA-recognised self-regulatory organisation that supervises members for anti-money laundering compliance under AMLA. It is not a FINMA licence; it satisfies the AML obligation for financial intermediaries such as crypto exchanges, brokers, OTC desks and payment providers that do not take deposits or hold assets as a bank.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which Swiss route fits a crypto exchange or OTC desk?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A pure crypto exchange, broker, or OTC desk that does not accept public deposits or run banking activity typically operates as an AMLA financial intermediary through SRO membership. If the model involves accepting public funds or crypto deposits without interest or lending, the FinTech licence under Banking Act Article 1b is the next step up.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the Swiss FinTech licence under Banking Act Article 1b?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The FinTech licence under Article 1b of the Banking Act lets an institution accept public deposits of up to CHF 100 million, or crypto-based assets, provided the funds are not invested, bear no interest, and are not used for lending. The applicant must be a Swiss company with its registered office and business activity in Switzerland.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are FinTech licence deposits protected in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. In the event of a FinTech institution's bankruptcy, client assets held under the Banking Act Article 1b licence are neither privileged nor covered by deposit protection. FINMA requires the institution to inform its clients of this limitation. This is one of the key trade-offs of the lighter FinTech regime versus a full banking licence.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a DLT trading facility licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A DLT trading facility licence, created by the Swiss DLT legislative package and regulated under the Financial Market Infrastructure Act, permits the multilateral trading of DLT securities, including admitting retail participants directly. It is the route for venues that match buyers and sellers of tokenised securities rather than spot crypto exchanges trading payment tokens.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the minimum capital for a DLT trading facility?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Minimum capital is CHF 1 million if the facility provides no custody, clearing or settlement, and CHF 5 million if it does. Small DLT trading facilities benefit from a reduced requirement of CHF 500,000, or 5 percent of the DLT securities held in custody with a CHF 500,000 floor where custody services are offered.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When did the Swiss DLT Act take effect?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The Swiss DLT legislative package was adopted in 2020 and phased in. The remaining provisions, including the amendments to the Financial Market Infrastructure Act that created the DLT trading facility category, entered into force on 1 August 2021. FINMA granted the first DLT trading facility licence, to BX Digital AG, in March 2025.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When do you need a full banking licence for crypto in Switzerland?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A full banking licence is needed when the model involves classic banking activity: accepting interest-bearing deposits, lending, or maturity transformation. The statutory minimum fully paid-in share capital is CHF 10 million under the Banking Ordinance, though FINMA in practice expects considerably more depending on the business model and risk profile.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does FINMA classify crypto tokens?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Under its 2018 ICO guidelines, FINMA classifies tokens into three types. Payment tokens are cryptocurrencies used as a means of payment, subject to AML but not securities law. Utility tokens give digital access to a service. Asset tokens represent assets, participations, or debt claims and are treated as securities. Hybrid tokens combine these categories.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are payment tokens treated as securities under FINMA rules?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. FINMA does not treat pure payment tokens as securities. They are subject to anti-money laundering requirements when transferred but fall outside securities law. Asset tokens, by contrast, are treated as securities, triggering prospectus duties and securities-trading requirements under the Code of Obligations and financial market law.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is Zug called Crypto Valley?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Zug, where our firm is based, earned the name Crypto Valley because of the dense cluster of blockchain and crypto companies, foundations and service providers that settled there from the mid-2010s. Switzerland's legal certainty, the canton's business-friendly tax environment, and FINMA's pragmatic, principle-based approach made it a magnet for the sector.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do crypto firms in Switzerland still need AML compliance under a FinTech or DLT licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. Anti-money laundering obligations under AMLA apply across all of the routes. SRO membership exists specifically to discharge them for intermediaries, but FinTech, DLT trading facility, and banking licensees are also AML-subject and are supervised by FINMA directly rather than through an SRO for that purpose.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the Swiss FinTech licence being replaced?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A reform of the Financial Institutions Act is under consultation. Proposals would replace the FinTech licence with two new FINMA categories, a payment institution and a crypto-institution authorised for custody, trading and related crypto services. As of 2026 this is proposed rather than in force, with entry into force not expected before 2027 and a transition period.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does FINMA crypto licensing take?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Timelines vary by route. SRO membership is the fastest, often a few months end to end including company setup and bank onboarding. The FinTech licence and DLT trading facility licence take longer because FINMA reviews capital, governance, and risk frameworks. A full banking licence is the most demanding and lengthy of the four routes.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.finma.ch/en/authorisation/fintech/fintech-bewilligung/" target="_blank" rel="nofollow noopener noreferrer">FINMA: FinTech licence (persons under Article 1b of the Banking Act)</a></li>
+            <li><a href="https://www.finma.ch/en/authorisation/fintech/dlt-handelssystem/" target="_blank" rel="nofollow noopener noreferrer">FINMA: Licensing as a DLT trading facility</a></li>
+            <li><a href="https://www.finma.ch/en/news/2025/03/20250318-mm-dlt-handelssystem/" target="_blank" rel="nofollow noopener noreferrer">FINMA: FINMA licenses first DLT trading facility (March 2025)</a></li>
+            <li><a href="https://www.finma.ch/en/authorisation/banks-and-securities-firms/getting-licensed/banks/" target="_blank" rel="nofollow noopener noreferrer">FINMA: Getting licensed as a bank</a></li>
+            <li><a href="https://www.finma.ch/en/news/2018/02/20180216-mm-ico-wegleitung/" target="_blank" rel="nofollow noopener noreferrer">FINMA: ICO guidelines and token taxonomy (2018)</a></li>
+            <li><a href="https://www.fedlex.admin.ch/eli/cc/1998/892_892_892/en" target="_blank" rel="nofollow noopener noreferrer">Fedlex: Anti-Money Laundering Act (AMLA, SR 955.0)</a></li>
+            <li><a href="https://www.fedlex.admin.ch/eli/cc/51/117_121_129/en" target="_blank" rel="nofollow noopener noreferrer">Fedlex: Banking Act (SR 952.0), including Article 1b FinTech licence</a></li>
+            <li><a href="https://www.sif.admin.ch/en/dlt-blockchain-en" target="_blank" rel="nofollow noopener noreferrer">State Secretariat for International Finance: DLT, blockchain and tokenisation</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Which FINMA Route?</h3>
+                <p>Tell us your business model and token type. Our Zug team will map the right Swiss route, SRO, FinTech, DLT, or banking, and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=finma-switzerland" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Swiss Routes at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">SRO</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">AMLA intermediary</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">No deposit-taking</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">FinTech</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">CHF 100m deposits</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">No interest, no lending</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">DLT Facility</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">CHF 1m–5m capital</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">DLT securities trading</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Bank</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">CHF 10m minimum</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Full banking activity</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a Crypto License?</a>
+                    <a href="/guides/best-crypto-license-jurisdiction/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Best Crypto License Jurisdiction</a>
+                    <a href="/crypto-licenses/europe/switzerland/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Swiss Crypto License</a>
+                    <a href="/regulation/switzerland/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Swiss Regulation</a>
+                    <a href="/contact/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Talk to Us →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Based in Zug, the heart of Crypto Valley</li>
+                    <li>All four FINMA routes under one roof</li>
+                    <li>Token classification done first, not last</li>
+                    <li>Coordination across 80+ jurisdictions</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Find Your FINMA Route Before You Apply</h2>
+      <p class="cta-lead">Share your business model and token type, and our Zug team will map the right Swiss route, SRO, FinTech, DLT, or banking, recommend a path, and build the framework FINMA expects to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, token type, and FINMA licensing needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-crypto-license/">What Is a Crypto License?</a></li>
+                <li><a href="/guides/best-crypto-license-jurisdiction/">Best Jurisdiction</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/europe/switzerland/">Swiss Crypto License</a></li>
+                <li><a href="/regulation/switzerland/">Swiss Regulation</a></li>
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

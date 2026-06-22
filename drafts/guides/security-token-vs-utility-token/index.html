@@ -1,0 +1,994 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Token vs Utility Token: Regulation, Howey Test & Classification (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Security token vs utility token in 2026: the Howey test, SEC vs CFTC treatment, MiCA token categories (ART, EMT, other) and the MiFID II carve-out for security tokens, plus the legal consequences of each classification.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/security-token-vs-utility-token/">
+    <meta property="og:title" content="Security Token vs Utility Token: Regulation, Howey Test & Classification (2026)">
+    <meta property="og:description" content="The Howey test, SEC vs CFTC treatment, MiCA token categories and the MiFID II carve-out for security tokens, plus the legal consequences of each classification in 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/security-token-vs-utility-token/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Security Token vs Utility Token", "item": "https://cryptolicenses.net/guides/security-token-vs-utility-token/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/security-token-vs-utility-token/#article",
+      "headline": "Security Token vs Utility Token: Regulation, Howey Test & Classification (2026)",
+      "description": "Security token vs utility token in 2026: the Howey test, SEC vs CFTC treatment, MiCA token categories and the MiFID II carve-out for security tokens, plus the legal consequences of each classification.",
+      "url": "https://cryptolicenses.net/guides/security-token-vs-utility-token/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/security-token-vs-utility-token/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a security token and a utility token?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A security token represents an investment, such as tokenized equity, debt, or a fund, and triggers full securities law. A utility token provides access to a product, service, or network function and is consumed rather than held for profit. The classification, not the marketing label, determines which regulator and rules apply to the token." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Howey test?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Howey test comes from the 1946 US Supreme Court case SEC v. W.J. Howey Co. It asks whether an arrangement involves an investment of money, in a common enterprise, with a reasonable expectation of profits, derived from the efforts of others. If all four prongs are met, the asset is an investment contract and therefore a security." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a utility token pass the Howey test?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A genuine utility token should fail the Howey test, because buyers acquire it to use a functioning network rather than to profit from the efforts of a promoter. In practice many tokens sold before the network is live fail this standard and are treated as securities at sale, even if they later become consumptive utility tokens." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the SEC classify crypto tokens in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On 17 March 2026 the SEC and CFTC issued a joint interpretation introducing a five-part taxonomy: digital commodities, digital collectibles, digital tools, payment stablecoins, and digital securities. Only digital securities fall fully within SEC jurisdiction. The interpretation expressly named 18 major crypto assets, including Bitcoin and Ether, as digital commodities." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between SEC and CFTC treatment of tokens?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The SEC regulates digital securities under the full securities regime, with registration, disclosure, and anti-fraud rules. The CFTC oversees digital commodities under the Commodity Exchange Act, with lighter requirements such as reduced disclosure and simpler custody. The 2026 SEC and CFTC memorandum of understanding coordinates this split of jurisdiction." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the MiCA token categories?",
+          "acceptedAnswer": { "@type": "Answer", "text": "MiCA covers three categories: asset-referenced tokens, which reference a basket or non-fiat values; e-money tokens, which are pegged to a single fiat currency; and other crypto-assets, which is the residual category covering most utility, governance, and platform tokens. Crypto-assets that qualify as MiFID II financial instruments fall outside MiCA entirely." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are security tokens regulated under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Crypto-assets that qualify as financial instruments under MiFID II are carved out of MiCA by Article 2(4)(a). Security tokens are therefore regulated under MiFID II and the Prospectus Regulation, not MiCA. For hybrid assets that share features with a financial instrument, the MiFID II qualification prevails over the MiCA regime." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the EU decide if a token is a financial instrument?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ESMA published guidelines on 19 March 2025 setting the conditions and criteria. For a transferable security, three cumulative tests apply: the token is not a payment instrument, it belongs to a class of interchangeable securities from the same issuer, and it is negotiable on the capital market. ESMA uses a substance-over-form approach." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a security token offering (STO)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A security token offering is the issuance and sale of tokens that qualify as securities. Because the token is a security, the offering must comply with securities law, meaning registration with a regulator, a prospectus, or a valid exemption, plus investor disclosures. An STO is the regulated counterpart to an unregistered initial coin offering." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a token change classification over time?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The SEC framework accepts that a digital asset sold as part of a securities offering can later cease to be a security if the network becomes sufficiently functional and decentralised, so that profits no longer depend on the efforts of a central promoter. The SEC has stated that Bitcoin and Ether are not securities." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the legal consequences of being a security token?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A security token triggers the full securities regime: registration or an exemption, prospectus and disclosure duties, licensed intermediaries for trading and custody, and anti-fraud liability. Issuing or trading a security token without authorisation exposes the firm to enforcement, fines, rescission claims, and potential criminal liability in some jurisdictions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a stablecoin a security or a utility token?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Usually neither. Under MiCA, fiat-pegged stablecoins are e-money tokens and basket-pegged stablecoins are asset-referenced tokens, each with their own regime. The 2026 US interpretation treats payment stablecoins as a distinct category tied to GENIUS Act compliance. They are generally not classed as utility tokens or as securities." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does token classification affect which licence I need?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, decisively. A security token issuer needs securities-side authorisation, such as a MiFID II investment firm permission or a securities exemption, while a utility token issuer works within MiCA or a comparable crypto regime. Misclassifying the token leads to applying for the wrong licence and a failed or delayed authorisation." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who decides whether my token is a security?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The relevant regulator in your licensing jurisdiction decides, applying its own test: the Howey analysis in the US, the MiFID II and ESMA criteria in the EU, and equivalent tests elsewhere. A legal classification opinion obtained before launch is the standard way to evidence your position and reduce regulatory risk." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Security Token vs Utility Token
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg" alt="Bitcoin, Ethereum and Ripple crypto coins, security token vs utility token classification in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Regulation &amp; Classification</div>
+        <h1 class="hero-h1">Security Token vs Utility Token: Regulation, Howey Test &amp; Classification in <em>2026</em></h1>
+        <p class="hero-intro">Whether a crypto-asset is a security token or a utility token decides which regulator governs it and which licence you need. This guide explains the Howey test, how the SEC and CFTC split jurisdiction after their 2026 joint interpretation, the MiCA token categories, the MiFID II carve-out for security tokens, and the legal consequences of each classification.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Regulation &amp; Classification</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">The Core Distinction</a></li>
+            <li class="toc-item"><a href="#howey">The Howey Test</a></li>
+            <li class="toc-item"><a href="#compare">Security vs Utility Compared</a></li>
+            <li class="toc-item"><a href="#us">SEC vs CFTC (US, 2026)</a></li>
+            <li class="toc-item"><a href="#eu">MiCA vs MiFID II (EU)</a></li>
+            <li class="toc-item"><a href="#consequences">Legal Consequences</a></li>
+            <li class="toc-item"><a href="#classify">How to Classify a Token</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he advises token issuers, exchanges, and funds on whether a digital asset is a security or a utility token, the single decision that determines the licence and the regulator that will govern it.</p>
+                <p>He has prepared token classification opinions under the US Howey test, the EU MiFID II and MiCA framework, and FINMA's Swiss token taxonomy, and has guided security token offerings and utility token launches across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Definition · Security Token vs Utility Token</div>
+                <p>A security token is a crypto-asset that represents an investment, such as tokenized equity, debt, or a fund, and is governed by securities law. A utility token gives access to a product, service, or network function and is meant to be used rather than held for profit. The legal classification, not the marketing label, sets the rules that apply.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>The label on a token is irrelevant; what matters is whether it legally qualifies as a security or a utility, which decides the regulator and the licence</li>
+                    <li>In the US the test is Howey: an investment of money, in a common enterprise, with an expectation of profit from the efforts of others</li>
+                    <li>The 2026 SEC and CFTC joint interpretation puts digital securities under the SEC and digital commodities, including Bitcoin and Ether, under the CFTC</li>
+                    <li>Under MiCA there are three categories, asset-referenced tokens, e-money tokens, and other crypto-assets, but security tokens are carved out into MiFID II</li>
+                    <li>A security token triggers registration, prospectus, and disclosure duties; a utility token works within the lighter crypto regime, which makes classification a licensing decision</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">The Core <em>Distinction</em></h2>
+            <div class="prose">
+                <p>The security token versus utility token question is the first fork in the road for any token project, and it is decided by substance, not by what the whitepaper calls the asset. A regulator looks past the name to the economic reality. If holders reasonably expect a return generated by the work of a promoter or team, the token behaves like a security and is treated as one. If holders acquire the token to use a live product or service, it behaves like a utility.</p>
+                <p>That single classification then drives everything downstream: which regulator has authority, which licence you apply for, what you must disclose, and how the token can legally be marketed and traded. Getting it wrong means applying for the wrong authorisation and facing enforcement. Our broader explainer on <a href="/guides/what-is-crypto-regulation/">what crypto regulation is and how it works</a> sets the wider context for where these rules sit.</p>
+                <p>The two leading frameworks approach the same question differently. The United States applies the judge-made Howey test and, since March 2026, a coordinated SEC and CFTC taxonomy. The European Union uses MiCA for crypto-assets that are not financial instruments, while pushing security tokens out into MiFID II. The rest of this guide works through each in turn.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">4</div>
+                    <div class="ig-stat-label">Howey Test Prongs</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">1946</div>
+                    <div class="ig-stat-label">Howey Origin (SEC v Howey)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">5</div>
+                    <div class="ig-stat-label">US Token Categories (2026)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">18</div>
+                    <div class="ig-stat-label">Named Digital Commodities</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">3</div>
+                    <div class="ig-stat-label">MiCA Token Categories</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Mar 2026</div>
+                    <div class="ig-stat-label">SEC / CFTC Joint Rule</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: SEC Framework for Investment Contract Analysis of Digital Assets (2019); SEC and CFTC joint interpretation of 17 March 2026; MiCA Regulation (EU) 2023/1114.</p>
+        </section>
+
+        <!-- HOWEY -->
+        <section class="guide-section" id="howey">
+            <div class="section-label">Section 2: The Howey Test</div>
+            <h2 class="section-h2">The <em>Howey Test</em> Explained</h2>
+            <div class="prose">
+                <p>The Howey test comes from the 1946 US Supreme Court decision in SEC v. W.J. Howey Co. It defines an investment contract, and therefore a security, as an arrangement with four elements. There must be an investment of money, in a common enterprise, with a reasonable expectation of profits, derived from the efforts of others. If all four are present, the asset is a security under US federal law regardless of how it is packaged.</p>
+                <p>The SEC applied this test to tokens in its 2019 Framework for Investment Contract Analysis of Digital Assets, published by its FinHub innovation unit. For tokens, the first prong is almost always met, because buyers pay fiat or another digital asset for the token. The common enterprise prong is usually satisfied where investor funds are pooled and fortunes rise and fall together. The decisive question is the fourth prong: does the holder expect profit from the entrepreneurial or managerial efforts of a central team?</p>
+                <p>Factors weighing toward a security include an active development team essential to the network's success, marketing that emphasises price appreciation, a token that is not yet usable, and supply managed to support the price. Factors weighing toward a utility include a fully functional and decentralised network, a token used to access a good or service today, and pricing tied to usage rather than speculation. The framework also accepts that a token sold as a security can later cease to be one as a network matures, which is why the SEC has stated that Bitcoin and Ether are not securities.</p>
+            </div>
+        </section>
+
+        <!-- COMPARE TABLE -->
+        <section class="guide-section" id="compare">
+            <div class="section-label">Section 3: Side by Side</div>
+            <h2 class="section-h2">Security Token vs Utility Token, <em>Compared</em></h2>
+            <div class="prose">
+                <p>The clearest way to see the distinction is to set the two side by side across the dimensions that actually matter for a licensing decision: the regulator, the test, the EU treatment, the type of offering, and typical examples. The table below summarises how each classification plays out in the two largest crypto markets.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>Security Token</th>
+                        <th>Utility Token</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Definition</td>
+                        <td>Represents an investment (equity, debt, fund) held for profit</td>
+                        <td>Gives access to a product, service, or network; consumed in use</td>
+                    </tr>
+                    <tr>
+                        <td>US regulator</td>
+                        <td>SEC (digital security)</td>
+                        <td>CFTC if a non-security digital commodity</td>
+                    </tr>
+                    <tr>
+                        <td>Howey test</td>
+                        <td>Meets all four prongs</td>
+                        <td>Fails Howey (no profit from others' efforts)</td>
+                    </tr>
+                    <tr>
+                        <td>EU framework</td>
+                        <td>MiFID II / Prospectus Reg (carved out of MiCA)</td>
+                        <td>MiCA "other crypto-asset" (white paper + CASP)</td>
+                    </tr>
+                    <tr>
+                        <td>Offering</td>
+                        <td>Security token offering (registration or exemption)</td>
+                        <td>Token sale under a MiCA white paper</td>
+                    </tr>
+                    <tr>
+                        <td>Examples</td>
+                        <td>Tokenized shares, tokenized bonds, tokenized funds</td>
+                        <td>Network access tokens, governance and platform-utility tokens</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on the SEC 2019 Framework, the 2026 SEC and CFTC interpretation, and MiCA Regulation (EU) 2023/1114 with the MiFID II carve-out. National rules vary.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders want a definitive yes or no on whether their token is a utility, but classification is a spectrum and it moves. We ask a sharper question: at the moment of sale, does the buyer depend on your team to make the network valuable? If the answer is yes, you are issuing a security token, whatever the deck says, and you license accordingly."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- US -->
+        <section class="guide-section" id="us">
+            <div class="section-label">Section 4: United States</div>
+            <h2 class="section-h2">SEC vs <em>CFTC</em> After the 2026 Interpretation</h2>
+            <div class="prose">
+                <p>For years the US lacked a clear line between the Securities and Exchange Commission and the Commodity Futures Trading Commission. That changed in March 2026. The two agencies signed a memorandum of understanding on overlapping jurisdiction on 11 March 2026, and on 17 March 2026 issued a joint interpretation on the application of federal securities laws to crypto assets. Our <a href="/regulation/usa/">US crypto regulation overview</a> tracks how this fits the broader American framework.</p>
+                <p>The interpretation introduces a five-part taxonomy: digital commodities, digital collectibles, digital tools, payment stablecoins, and digital securities. Only digital securities fall fully within SEC jurisdiction and the full securities regime. The interpretation expressly named 18 major crypto assets as digital commodities, including Bitcoin, Ether, Solana, Cardano, XRP, Litecoin, and Dogecoin, placing them under CFTC oversight with lighter requirements such as reduced disclosure and simpler custody.</p>
+                <p>For token issuers the practical message is direct. A token that passes the Howey test as an investment contract is a digital security under the SEC, while a token used as a network commodity falls to the CFTC. Payment stablecoins sit in their own category, tied to compliance with the GENIUS Act enacted in July 2025. Separate market-structure legislation continued to advance through Congress during 2025 and 2026, so the boundary is still settling, but the security versus utility line is now far clearer than it was.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> if your token is a digital security, you need securities-side authorisation and you cannot simply register as a money services business. If it is a digital commodity, the CFTC route is materially lighter. Pinning down the classification before you file is the difference between a clean application and a rejected one. See our <a href="/crypto-licenses/general/">crypto licensing overview</a> for how token type shapes the route.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure whether your token is a security or a utility?</strong> Get a free 30-minute consultation. We will assess your token against the Howey and MiFID II tests and map it to the right licence.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- EU -->
+        <section class="guide-section" id="eu">
+            <div class="section-label">Section 5: European Union</div>
+            <h2 class="section-h2">MiCA vs <em>MiFID II</em> in the EU</h2>
+            <div class="prose">
+                <p>The European Union takes a different route to the same answer. MiCA, Regulation (EU) 2023/1114, governs crypto-assets that are not financial instruments. It sorts them into three categories: asset-referenced tokens, which reference a basket or non-fiat values; e-money tokens, which are pegged to a single fiat currency; and other crypto-assets, the residual bucket that captures most utility, governance, and platform tokens. Our <a href="/regulation/eu/">EU crypto regulation guide</a> covers how MiCA licensing works in detail.</p>
+                <p>Security tokens never enter MiCA at all. Article 2(4)(a) of MiCA carves out crypto-assets that qualify as financial instruments under MiFID II, so a tokenized share or bond is regulated under MiFID II and the Prospectus Regulation, the same framework that governs traditional securities. For hybrid assets that share features with a financial instrument, the MiFID II qualification prevails over MiCA. This is the EU equivalent of the security token category.</p>
+                <p>To make the line workable, ESMA published guidelines on 19 March 2025 on when a crypto-asset qualifies as a financial instrument. For a transferable security, three cumulative criteria apply: the token is not a payment instrument, it belongs to a class of interchangeable securities issued by the same issuer, and it is negotiable on the capital market. ESMA applies a substance-over-form approach, so an asset with the economic function of a security is regulated as one. Note too that stablecoins, covered in our <a href="/guides/stablecoin-regulation/">guide to stablecoin regulation</a>, sit in the ART and EMT categories rather than being utility or security tokens.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Framework</th>
+                        <th>What It Covers</th>
+                        <th>Legal Basis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Other crypto-asset</td>
+                        <td>MiCA</td>
+                        <td>Utility, governance, platform tokens</td>
+                        <td>Reg. (EU) 2023/1114</td>
+                    </tr>
+                    <tr>
+                        <td>E-money token (EMT)</td>
+                        <td>MiCA</td>
+                        <td>Single-fiat stablecoins</td>
+                        <td>Reg. (EU) 2023/1114</td>
+                    </tr>
+                    <tr>
+                        <td>Asset-referenced token (ART)</td>
+                        <td>MiCA</td>
+                        <td>Basket or non-fiat stablecoins</td>
+                        <td>Reg. (EU) 2023/1114</td>
+                    </tr>
+                    <tr>
+                        <td>Security token</td>
+                        <td>MiFID II</td>
+                        <td>Tokenized securities; carved out of MiCA</td>
+                        <td>Directive 2014/65/EU</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our token classification work across more than 60 jurisdictions, the single most common error we correct is a project that has built its entire licensing plan around being a utility token, only for the regulator to read the same facts as a securities offering. The whitepaper promises holders a share of network revenue, or the team controls supply and markets price upside, and that is enough to tip a token from the MiCA route into the MiFID II or SEC route.</p>
+            <p>We also see the reverse: genuinely consumptive tokens that are over-classified out of caution, saddling a simple access token with a securities prospectus it never needed. The fix in both directions is the same. We prepare a written classification opinion against the Howey test and the MiFID II and ESMA criteria before launch, so the licence application and the legal position match the economic reality of the token.</p>
+          </div>
+        </section>
+
+        <!-- CONSEQUENCES -->
+        <section class="guide-section" id="consequences">
+            <div class="section-label">Section 6: Consequences</div>
+            <h2 class="section-h2">Legal <em>Consequences</em> of Each Classification</h2>
+            <div class="prose">
+                <p>Classification is not an academic label; it changes what you legally must do. A security token triggers the full securities regime. The offering needs registration with a regulator, a prospectus, or a valid exemption, plus investor disclosures. Trading and custody must run through licensed intermediaries, and the issuer carries anti-fraud liability. A security token offering, or STO, is the regulated counterpart to the unregistered initial coin offerings of the previous cycle.</p>
+                <p>A utility token works within the lighter crypto regime. In the EU that means publishing a MiCA white paper and operating through an authorised crypto-asset service provider rather than filing a securities prospectus. In the US a non-security commodity token answers to the CFTC rather than the SEC. The compliance burden, the cost, and the time to market are all materially lower than for a security token, which is precisely why classification is contested.</p>
+                <p>The downside of getting it wrong is severe. Issuing or trading a security token without authorisation exposes a firm to regulatory enforcement, fines, rescission claims from investors, and in some jurisdictions criminal liability. Counterparties and banks also de-risk away from projects with unresolved classification. The prudent path is to settle the classification, and the licence that follows from it, before any token reaches the market.</p>
+            </div>
+        </section>
+
+        <!-- CLASSIFY STEPS -->
+        <section class="guide-section" id="classify">
+            <div class="section-label">Section 7: Method</div>
+            <h2 class="section-h2">How to <em>Classify</em> a Token</h2>
+            <div class="prose">
+                <p>Classifying a token is a structured analysis, not a guess. The five steps below describe the workflow we run before any client launches, and the same logic underpins what a regulator will expect to see in your application. Our <a href="/crypto-licenses/general/">crypto licensing service</a> runs this end to end as part of an engagement.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Map the rights</div>
+                        <div class="ig-step-title">Document what the token actually does</div>
+                        <div class="ig-step-desc">Set out the legal and economic rights the token confers: access, governance, revenue share, profit, or redemption. Substance, not the marketing label, drives every later step.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Apply Howey</div>
+                        <div class="ig-step-title">Run the four-prong investment-contract test</div>
+                        <div class="ig-step-desc">Test the token against investment of money, common enterprise, expectation of profit, and reliance on the efforts of others. Focus on whether the team's work drives value.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Apply MiFID / MiCA</div>
+                        <div class="ig-step-title">Test against the EU criteria</div>
+                        <div class="ig-step-desc">Check the ESMA financial-instrument criteria. If the token is a transferable security it is carved out into MiFID II; if not, place it in the right MiCA category.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Document the opinion</div>
+                        <div class="ig-step-title">Produce a written classification opinion</div>
+                        <div class="ig-step-desc">Record the reasoning and conclusion in a legal opinion. This evidences your position to regulators and banks and is the foundation of the licence application.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">License to match</div>
+                        <div class="ig-step-title">Choose the authorisation that fits</div>
+                        <div class="ig-step-desc">Apply for securities-side authorisation for a security token or the crypto regime for a utility token, and align the offering documents with the classification.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Security vs Utility Tokens: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between a security token and a utility token?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A security token represents an investment, such as tokenized equity, debt, or a fund, and triggers full securities law. A utility token provides access to a product, service, or network function and is consumed rather than held for profit. The classification, not the marketing label, determines which regulator and rules apply to the token.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the Howey test?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The Howey test comes from the 1946 US Supreme Court case SEC v. W.J. Howey Co. It asks whether an arrangement involves an investment of money, in a common enterprise, with a reasonable expectation of profits, derived from the efforts of others. If all four prongs are met, the asset is an investment contract and therefore a security.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does a utility token pass the Howey test?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A genuine utility token should fail the Howey test, because buyers acquire it to use a functioning network rather than to profit from the efforts of a promoter. In practice many tokens sold before the network is live fail this standard and are treated as securities at sale, even if they later become consumptive utility tokens.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the SEC classify crypto tokens in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">On 17 March 2026 the SEC and CFTC issued a joint interpretation introducing a five-part taxonomy: digital commodities, digital collectibles, digital tools, payment stablecoins, and digital securities. Only digital securities fall fully within SEC jurisdiction. The interpretation expressly named 18 major crypto assets, including Bitcoin and Ether, as digital commodities.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between SEC and CFTC treatment of tokens?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The SEC regulates digital securities under the full securities regime, with registration, disclosure, and anti-fraud rules. The CFTC oversees digital commodities under the Commodity Exchange Act, with lighter requirements such as reduced disclosure and simpler custody. The 2026 SEC and CFTC memorandum of understanding coordinates this split of jurisdiction.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What are the MiCA token categories?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA covers three categories: asset-referenced tokens, which reference a basket or non-fiat values; e-money tokens, which are pegged to a single fiat currency; and other crypto-assets, which is the residual category covering most utility, governance, and platform tokens. Crypto-assets that qualify as MiFID II financial instruments fall outside MiCA entirely.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are security tokens regulated under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. Crypto-assets that qualify as financial instruments under MiFID II are carved out of MiCA by Article 2(4)(a). Security tokens are therefore regulated under MiFID II and the Prospectus Regulation, not MiCA. For hybrid assets that share features with a financial instrument, the MiFID II qualification prevails over the MiCA regime.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does the EU decide if a token is a financial instrument?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">ESMA published guidelines on 19 March 2025 setting the conditions and criteria. For a transferable security, three cumulative tests apply: the token is not a payment instrument, it belongs to a class of interchangeable securities from the same issuer, and it is negotiable on the capital market. ESMA uses a substance-over-form approach.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a security token offering (STO)?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A security token offering is the issuance and sale of tokens that qualify as securities. Because the token is a security, the offering must comply with securities law, meaning registration with a regulator, a prospectus, or a valid exemption, plus investor disclosures. An STO is the regulated counterpart to an unregistered initial coin offering.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a token change classification over time?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. The SEC framework accepts that a digital asset sold as part of a securities offering can later cease to be a security if the network becomes sufficiently functional and decentralised, so that profits no longer depend on the efforts of a central promoter. The SEC has stated that Bitcoin and Ether are not securities.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What are the legal consequences of being a security token?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A security token triggers the full securities regime: registration or an exemption, prospectus and disclosure duties, licensed intermediaries for trading and custody, and anti-fraud liability. Issuing or trading a security token without authorisation exposes the firm to enforcement, fines, rescission claims, and potential criminal liability in some jurisdictions.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is a stablecoin a security or a utility token?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Usually neither. Under MiCA, fiat-pegged stablecoins are e-money tokens and basket-pegged stablecoins are asset-referenced tokens, each with their own regime. The 2026 US interpretation treats payment stablecoins as a distinct category tied to GENIUS Act compliance. They are generally not classed as utility tokens or as securities.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does token classification affect which licence I need?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, decisively. A security token issuer needs securities-side authorisation, such as a MiFID II investment firm permission or a securities exemption, while a utility token issuer works within MiCA or a comparable crypto regime. Misclassifying the token leads to applying for the wrong licence and a failed or delayed authorisation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Who decides whether my token is a security?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The relevant regulator in your licensing jurisdiction decides, applying its own test: the Howey analysis in the US, the MiFID II and ESMA criteria in the EU, and equivalent tests elsewhere. A legal classification opinion obtained before launch is the standard way to evidence your position and reduce regulatory risk.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.sec.gov/about/divisions-offices/division-corporation-finance/framework-investment-contract-analysis-digital-assets" target="_blank" rel="nofollow noopener noreferrer">SEC: Framework for "Investment Contract" Analysis of Digital Assets (2019)</a></li>
+            <li><a href="https://www.sec.gov/newsroom/speeches-statements/statement-framework-investment-contract-analysis-digital-assets" target="_blank" rel="nofollow noopener noreferrer">SEC: Statement on the Framework for Investment Contract Analysis of Digital Assets</a></li>
+            <li><a href="https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets" target="_blank" rel="nofollow noopener noreferrer">SEC: SEC and CFTC Clarify the Application of Federal Securities Laws to Crypto Assets (March 2026)</a></li>
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="nofollow noopener noreferrer">ESMA: Markets in Crypto-Assets Regulation (MiCA)</a></li>
+            <li><a href="https://www.esma.europa.eu/sites/default/files/2025-03/ESMA75453128700-1323_Guidelines_on_the_conditions_and_criteria_for_the_qualification_of_CAs_as_FIs.pdf" target="_blank" rel="nofollow noopener noreferrer">ESMA: Guidelines on the Qualification of Crypto-Assets as Financial Instruments (19 March 2025)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (Markets in Crypto-Assets, MiCA)</a></li>
+            <li><a href="https://eur-lex.europa.eu/eli/dir/2014/65/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Directive 2014/65/EU (MiFID II)</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Security or Utility?</h3>
+                <p>Tell us what your token does and where you plan to launch. We will classify it against the Howey and MiFID II tests and map it to the right licence. Free, no obligation.</p>
+                <a href="/contact/?topic=token-classification" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Classification at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">US Test</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Howey (4 prongs)</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">SEC security vs CFTC commodity</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EU Test</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">MiFID II vs MiCA</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">ESMA criteria, 19 Mar 2025</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">US 2026 Rule</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">5 categories</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">SEC / CFTC joint interpretation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-crypto-regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is Crypto Regulation?</a>
+                    <a href="/guides/stablecoin-regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Stablecoin Regulation</a>
+                    <a href="/regulation/usa/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">US Crypto Regulation</a>
+                    <a href="/regulation/eu/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EU Crypto Regulation</a>
+                    <a href="/crypto-licenses/general/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Licensing →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Written token classification opinions</li>
+                    <li>Howey, MiFID II, and MiCA analysis</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Classify Your Token Before You Apply</h2>
+      <p class="cta-lead">Share what your token does and where you plan to launch, and we will classify it against the Howey and MiFID II tests, recommend a licensing route, and build the framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us what your token does, your target markets, and your classification questions…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-crypto-regulation/">What Is Crypto Regulation?</a></li>
+                <li><a href="/guides/stablecoin-regulation/">Stablecoin Regulation</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/general/">Crypto Licensing</a></li>
+                <li><a href="/regulation/usa/">US Regulation</a></li>
+                <li><a href="/regulation/eu/">EU Regulation</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

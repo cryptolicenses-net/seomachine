@@ -1,0 +1,986 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tax by Country: Zero-Tax & Low-Tax Jurisdictions (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto tax free countries in 2026: where personal crypto gains are taxed at 0% (UAE, Cayman, Singapore, Switzerland for private investors, Germany and Portugal after a holding period) versus high-tax regimes like the US and UK, plus what OECD CARF reporting means.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-tax-by-country/">
+    <meta property="og:title" content="Crypto Tax by Country: Zero-Tax & Low-Tax Jurisdictions (2026)">
+    <meta property="og:description" content="Where personal crypto gains are taxed at 0% in 2026 (UAE, Cayman, Singapore, Switzerland, Germany and Portugal after a holding period) versus high-tax regimes, plus what OECD CARF reporting means.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-tax-by-country/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/financial-report-charts-euro-calculator.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Crypto Tax by Country", "item": "https://cryptolicenses.net/guides/crypto-tax-by-country/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-tax-by-country/#article",
+      "headline": "Crypto Tax by Country: Zero-Tax & Low-Tax Jurisdictions (2026)",
+      "description": "Where personal crypto gains are taxed at 0% in 2026 (UAE, Cayman, Singapore, Switzerland, Germany and Portugal after a holding period) versus high-tax regimes like the US and UK, plus what OECD CARF reporting means.",
+      "url": "https://cryptolicenses.net/guides/crypto-tax-by-country/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-tax-by-country/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/financial-report-charts-euro-calculator.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which countries are crypto tax free in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For private individuals, the United Arab Emirates, the Cayman Islands, El Salvador, and Singapore impose no capital gains tax on crypto held as an investment in 2026. Switzerland exempts private investors but levies an annual wealth tax, while Germany and Portugal grant a 0% rate only after a qualifying holding period." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is crypto tax free in the UAE?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For individuals in the UAE, crypto is effectively tax free in 2026: there is no personal income tax and no capital gains tax, and crypto transactions have been VAT-exempt since November 2024. Crypto businesses can still fall under the 9% corporate tax that applies to profits above AED 375,000." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Germany tax crypto in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Germany treats crypto as a private asset under Section 23 of the Income Tax Act. Gains on coins held longer than one year are fully tax free. Gains on coins sold within twelve months are taxed at your personal income tax rate of up to 45%, but only above the annual 1,000 euro exemption limit." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Switzerland really have no crypto capital gains tax?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Capital gains on movable private wealth, including crypto, are exempt for private investors in Switzerland in 2026, regardless of size or holding period. However, all holdings are subject to an annual cantonal wealth tax, roughly 0.3% to 1%, and anyone classed as a professional trader is taxed on the gains as income." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Portugal still a crypto tax haven?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only partly. Since 2023, Portugal taxes gains on crypto held for less than 365 days at a flat 28%. Gains on crypto held for 365 days or more remain exempt. Staking and other passive yield is taxed at 28%, and business-scale activity is taxed under progressive income rates up to 53%." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Singapore tax cryptocurrency?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Singapore has no capital gains tax, so individuals holding crypto as an investment pay nothing on disposals in 2026. Income tax can still apply, at resident rates up to 24%, if the activity amounts to a trade or business, such as frequent professional trading, mining, or being paid in crypto for services." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is crypto taxed in the United States?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The US treats crypto as property. Gains on assets held one year or less are short-term and taxed as ordinary income at rates up to 37%. Gains on assets held more than a year are long-term and taxed at 0%, 15%, or 20%. Brokers began issuing Form 1099-DA for 2025 transactions filed in 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the UK crypto tax rate in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "HMRC treats crypto as property. Capital gains above the 3,000 pound annual exempt amount are taxed at 18% within the basic-rate band and 24% above the higher-rate threshold for 2025/26. Income from activities such as mining or staking is taxed separately at income tax rates of 0% to 45%." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between personal and corporate crypto tax?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Personal tax applies to individuals holding crypto as a private investment, and many jurisdictions exempt those gains. Corporate tax applies to a licensed company trading or holding crypto as a business, and is usually charged on profits regardless of the personal exemption. A zero personal rate does not mean a zero corporate rate." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is OECD CARF and when does it start?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Crypto-Asset Reporting Framework is the OECD standard for automatic exchange of crypto account information between tax authorities. Reporting crypto-asset service providers begin collecting data in 2026, and the first automatic exchanges take place in 2027 among 52 jurisdictions, with a second cohort joining in 2028." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a 0% tax country mean my crypto is hidden from my home tax authority?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A 0% local rate only removes tax in that jurisdiction. Under OECD CARF, crypto providers will report account holders and transactions to tax authorities, who exchange the data internationally from 2027. Your home country may still tax you and will increasingly receive the data to enforce it." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I relocate to avoid crypto tax?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tax residence, not citizenship, usually determines where you are taxed, and rules on becoming non-resident, exit taxes, and the timing of disposals are complex and country-specific. Relocation can lawfully reduce tax, but only with proper residence planning and professional advice. This guide is general information, not personal tax advice." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do staking and mining rewards get taxed differently from capital gains?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Usually yes. Many jurisdictions that exempt capital gains still tax staking, mining, and lending rewards as income at the time of receipt. Switzerland, Singapore, the UK, and others treat these rewards as taxable income even where a later disposal of the same coins may be tax free or lightly taxed." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does crypto tax affect where I should license a crypto business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Corporate tax, the substance and reporting expected of a licensed entity, and CARF obligations all factor into jurisdiction choice alongside the licence itself. A personal 0% rate is not the same as a competitive corporate regime, so the tax analysis should sit beside the licensing analysis, not replace it." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto Tax by Country
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/financial-report-charts-euro-calculator.jpg" alt="Financial report charts and a euro calculator illustrating crypto tax by country in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Crypto Tax</div>
+        <h1 class="hero-h1">Crypto Tax by Country: Zero-Tax &amp; Low-Tax Jurisdictions in <em>2026</em></h1>
+        <p class="hero-intro">Some countries tax crypto gains at zero, others at up to 45%. This guide maps personal and corporate crypto tax across the most notable jurisdictions in 2026, from genuine zero-tax havens like the UAE and Cayman to conditional regimes in Germany, Portugal, and Switzerland, and explains why OECD CARF reporting means a 0% rate no longer means invisibility.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Crypto Tax</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#overview">Crypto Tax in 60 Seconds</a></li>
+            <li class="toc-item"><a href="#table">Crypto Tax by Country</a></li>
+            <li class="toc-item"><a href="#zero">The Zero-Tax Jurisdictions</a></li>
+            <li class="toc-item"><a href="#conditional">Conditional Low-Tax Regimes</a></li>
+            <li class="toc-item"><a href="#high">High-Tax Jurisdictions</a></li>
+            <li class="toc-item"><a href="#carf">OECD CARF Reporting</a></li>
+            <li class="toc-item"><a href="#corporate">Personal vs Corporate Tax</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he advises founders, funds, and institutional investors on jurisdiction selection, where the tax treatment of crypto sits alongside the licensing analysis as a deciding factor.</p>
+                <p>He works daily with the practical reality that a zero personal rate is not the same as a competitive corporate regime, and that OECD CARF reporting has changed the calculus across more than 60 jurisdictions in the Gulf, Europe, and Asia.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026. This article is general information and not tax advice; always confirm your position with a qualified tax adviser in your jurisdiction.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="overview">
+
+            <div class="def-box">
+                <div class="def-term">Quick Answer · Crypto Tax Free Countries 2026</div>
+                <p>For private investors in 2026, crypto gains are taxed at 0% in the UAE, the Cayman Islands, El Salvador, and Singapore, and for private investors in Switzerland, though Switzerland adds an annual wealth tax. Germany and Portugal reach 0% only after a qualifying holding period. The US and UK tax crypto gains at meaningful rates.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>True zero-tax jurisdictions for personal crypto gains in 2026 are the UAE, Cayman, El Salvador, and Singapore, where no capital gains tax applies to crypto held as an investment</li>
+                    <li>Switzerland exempts private-investor capital gains but charges an annual cantonal wealth tax of roughly 0.3% to 1% on holdings, and taxes professional traders as income</li>
+                    <li>Germany taxes crypto held over one year at 0%, while Portugal exempts crypto held 365 days or more and taxes shorter-term gains at a flat 28%</li>
+                    <li>The US taxes short-term gains as ordinary income up to 37%, and the UK taxes gains above 3,000 pounds at 18% or 24%</li>
+                    <li>OECD CARF means crypto providers report account data from 2026, with first international exchanges in 2027, so a 0% local rate does not make crypto invisible to your home tax authority</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: Overview</div>
+            <h2 class="section-h2">Crypto Tax <em>in 60 Seconds</em></h2>
+            <div class="prose">
+                <p>There is no single global crypto tax. Each country decides for itself how crypto is classified and taxed, and the spread is enormous: from a clean 0% on personal gains in the Gulf and the Caribbean to ordinary income rates of up to 45% on short-term gains in major economies. The first thing to fix in your mind is the split between personal tax, which falls on an individual holding crypto as a private investment, and corporate tax, which falls on a licensed company that trades or holds crypto as a business.</p>
+                <p>The second thing to understand is that 0% is rarely unconditional. Some regimes exempt capital gains but tax staking and mining as income. Some grant the exemption only after a holding period. Switzerland exempts private gains but layers a wealth tax on top. If you are weighing jurisdictions for a venture rather than a personal portfolio, the corporate angle matters more, and our guide on choosing the <a href="/guides/best-crypto-license-jurisdiction/">best crypto license jurisdiction</a> sets out how tax fits alongside the licence itself.</p>
+                <p>The third shift, and the one most people miss, is transparency. Through 2027 the OECD Crypto-Asset Reporting Framework switches on automatic exchange of crypto account data between tax authorities. A 0% headline rate no longer means your activity is hidden from the country where you are tax resident. We unpack that below.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">0%</div>
+                    <div class="ig-stat-label">UAE · Cayman · Singapore (Investor)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">&gt;1 yr</div>
+                    <div class="ig-stat-label">Germany Tax-Free Holding</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">28%</div>
+                    <div class="ig-stat-label">Portugal Short-Term Rate</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">18–24%</div>
+                    <div class="ig-stat-label">UK CGT Band Rates</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">≤37%</div>
+                    <div class="ig-stat-label">US Short-Term (Ordinary)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">52</div>
+                    <div class="ig-stat-label">CARF Jurisdictions, First Exchange 2027</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: OECD CARF 2025 Monitoring and Implementation Update; national tax authorities (UAE FTA, Swiss FTA, German BMF, Portuguese tax authority, IRAS, HMRC, IRS). Personal-investor treatment; conditions apply.</p>
+        </section>
+
+        <!-- COMPARISON TABLE -->
+        <section class="guide-section" id="table">
+            <div class="section-label">Section 2: The Table</div>
+            <h2 class="section-h2">Crypto Tax by Country, <em>Side by Side</em></h2>
+            <div class="prose">
+                <p>The table below summarises how each jurisdiction treats a private individual's crypto gains and a crypto business's profits in 2026. Read it as a starting map, not a ruling: the column that matters for you depends on whether you are an investor or a business, your tax residence, and the specific activity. Every rate traces to a national authority or the OECD, listed in the Sources section.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Personal CGT on Crypto</th>
+                        <th>Corporate Treatment</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>UAE</td>
+                        <td>0%</td>
+                        <td>9% above AED 375,000</td>
+                        <td>No personal income tax; crypto VAT-exempt since Nov 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Cayman Islands</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>No income, capital gains, or corporate tax</td>
+                    </tr>
+                    <tr>
+                        <td>El Salvador</td>
+                        <td>0%</td>
+                        <td>0% on qualifying crypto</td>
+                        <td>2023 innovation law removed income, gains, and property tax on crypto</td>
+                    </tr>
+                    <tr>
+                        <td>Singapore</td>
+                        <td>0% (no CGT)</td>
+                        <td>Up to 17% on trading income</td>
+                        <td>Income tax up to 24% if activity is a trade or business</td>
+                    </tr>
+                    <tr>
+                        <td>Switzerland</td>
+                        <td>0% private investor</td>
+                        <td>~12–21% effective</td>
+                        <td>Annual wealth tax ~0.3–1%; pro traders taxed as income</td>
+                    </tr>
+                    <tr>
+                        <td>Germany</td>
+                        <td>0% after 1-year hold</td>
+                        <td>~30% effective (GmbH)</td>
+                        <td>Under 1 year taxed up to 45% above €1,000 exemption</td>
+                    </tr>
+                    <tr>
+                        <td>Portugal</td>
+                        <td>0% if held ≥365 days</td>
+                        <td>Progressive 14.5–53% if business</td>
+                        <td>Short-term (&lt;365 days) 28%; staking yield 28%</td>
+                    </tr>
+                    <tr>
+                        <td>United Kingdom</td>
+                        <td>18% / 24%</td>
+                        <td>Corporation tax up to 25%</td>
+                        <td>£3,000 annual exempt amount; mining/staking taxed as income</td>
+                    </tr>
+                    <tr>
+                        <td>United States</td>
+                        <td>Up to 37% short / 0–20% long</td>
+                        <td>Federal corporate 21%</td>
+                        <td>Form 1099-DA broker reporting from 2025 transactions</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Rates are indicative for 2026 and simplified. Corporate effective rates vary by canton, state, structure, and activity. Confirm with a local tax adviser.</p>
+        </section>
+
+        <!-- ZERO-TAX -->
+        <section class="guide-section" id="zero">
+            <div class="section-label">Section 3: Zero-Tax</div>
+            <h2 class="section-h2">The True <em>Zero-Tax</em> Jurisdictions</h2>
+            <div class="prose">
+                <p>A handful of jurisdictions impose no capital gains tax on a private individual's crypto at all. In the United Arab Emirates there is no personal income tax and no capital gains tax for individuals, and crypto transactions have been exempt from VAT since November 2024. That makes the UAE one of the cleanest personal regimes in the world, which is part of why so many founders cluster in Dubai and Abu Dhabi. Our <a href="/crypto-licenses/mena/">MENA licensing hub</a> covers the licensing side, which is a separate question from the personal tax position.</p>
+                <p>The Cayman Islands go further still: no income tax, no capital gains tax, and no corporate tax, so crypto held as a personal investment is fully exempt and a Cayman company pays no profits tax. The trade-off is a high cost of living and import duties. El Salvador, which made Bitcoin legal tender, removed income, capital gains, and property tax on crypto through its 2023 technological innovation legislation, and exempts foreign investors from capital gains on Bitcoin profits.</p>
+                <p>Singapore rounds out the zero-CGT group. It has no capital gains tax of any kind, so an individual holding crypto as an investment pays nothing on disposal. The catch is the line between investing and trading: where the activity is carried on in the nature of a trade, or crypto is received as payment, it is taxed as income at resident rates up to 24%.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Clients hear 0% and assume the whole problem is solved. It rarely is. A Cayman company with no profits tax still has to answer for economic substance, a Dubai founder still meets corporate tax once the business scales, and everyone now sits inside CARF. The headline rate is the start of the analysis, not the end of it."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- CONDITIONAL -->
+        <section class="guide-section" id="conditional">
+            <div class="section-label">Section 4: Conditional Regimes</div>
+            <h2 class="section-h2">Conditional <em>Low-Tax</em> Regimes</h2>
+            <div class="prose">
+                <p>The more interesting cases are the jurisdictions that reach 0% only on conditions. Switzerland is the headline example. Capital gains on movable private wealth, including crypto, are exempt for a private investor regardless of size or holding period. But two qualifications matter. First, all crypto holdings feed into the annual cantonal wealth tax, broadly 0.3% to 1% of declared net wealth depending on the canton. Second, the exemption only holds if you are a private investor and not a professional trader; the Swiss Federal Tax Administration applies safe-harbour criteria covering holding period, turnover, leverage, and the share of gains in your income.</p>
+                <p>Germany rewards patience. Crypto is treated as a private asset under Section 23 of the Income Tax Act, and gains on coins held longer than one year are entirely tax free. Sell within twelve months and the gain is taxed at your personal income rate of up to 45%, but only the portion above the annual 1,000 euro exemption limit. Our <a href="/crypto-licenses/europe/germany/">Germany crypto licensing page</a> covers how this private-asset logic interacts with running a regulated entity there.</p>
+                <p>Portugal lost its pure tax-haven status in 2023. Today gains on crypto held for less than 365 days are taxed at a flat 28%, while gains on crypto held for 365 days or more are exempt. Crypto-to-crypto swaps generally do not reset the clock, which preserves the long-term exemption across rebalancing, but staking and other passive yield is taxed at 28% and large-scale, business-like activity is folded into progressive income rates that climb to 53%.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why the holding period matters:</strong> in Germany and Portugal the same trade can be fully taxed or fully exempt depending on a single calendar date. Disposal timing, swap history, and accurate records are therefore the difference between a 0% and a double-digit rate. Clean accounting is not optional; see our note on <a href="/guides/crypto-accounting-ifrs-vs-gaap/">crypto accounting under IFRS versus GAAP</a> for why the books drive the tax outcome.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Weighing jurisdictions for a crypto venture?</strong> Get a free 30-minute consultation. We will map the personal and corporate tax position to your model and recommend a licensing route that fits.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- HIGH-TAX -->
+        <section class="guide-section" id="high">
+            <div class="section-label">Section 5: High-Tax</div>
+            <h2 class="section-h2">The <em>High-Tax</em> Jurisdictions</h2>
+            <div class="prose">
+                <p>At the other end of the scale sit the large economies that tax crypto as a normal capital asset. The United States treats crypto as property. Gains on assets held one year or less are short-term and taxed as ordinary income at federal rates up to 37%, while gains on assets held more than a year are long-term and taxed at the preferential 0%, 15%, or 20% rates. From the 2025 tax year, filed in 2026, US brokers began issuing the new Form 1099-DA, reporting crypto disposals to both the taxpayer and the IRS, with cost-basis reporting phasing in from 2026 transactions.</p>
+                <p>The United Kingdom also treats crypto as property for tax. Capital gains above the 3,000 pound annual exempt amount for 2025/26 are taxed at 18% within the basic-rate band and 24% above the higher-rate threshold, following the increase that took effect on 30 October 2024. Separately, income from crypto activity such as mining or staking rewards is taxed as income at rates from 0% to 45%, offset by the personal allowance.</p>
+                <p>These regimes are not punitive by design; they simply apply mainstream capital and income tax rules to crypto. The practical lesson is that for residents of high-tax countries, the holding period, loss harvesting, and the personal allowance are the levers that actually move the bill, and the planning has to be done before the disposal, not after.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>The most common mistake we see is founders treating the personal tax map as the business tax map. A client moves to Dubai for the 0% personal rate, then discovers their operating company crosses the AED 375,000 corporate tax threshold the moment it scales, or that economic substance rules in a Caribbean structure demand real presence they had not budgeted for. Personal residence planning and corporate structuring are two separate exercises that have to be run together.</p>
+            <p>The second pattern is records. In Germany and Portugal we have seen clients lose a clean exemption simply because they could not evidence the acquisition date of coins after years of swaps across multiple exchanges. By the time the holding period matters, the data is often gone. We tell clients to build the accounting trail from day one, because in a holding-period regime the books are the tax position.</p>
+          </div>
+        </section>
+
+        <!-- CARF -->
+        <section class="guide-section" id="carf">
+            <div class="section-label">Section 6: CARF Reporting</div>
+            <h2 class="section-h2">OECD <em>CARF</em>: The End of Quiet</h2>
+            <div class="prose">
+                <p>The single biggest change to crypto tax in 2026 is not a rate, it is reporting. The OECD Crypto-Asset Reporting Framework, or CARF, is a global standard for the automatic exchange of crypto account information between tax authorities, modelled on the bank-account exchange that ended traditional offshore secrecy. In November 2023, 54 jurisdictions committed to implementing it. Reporting crypto-asset service providers begin collecting and reporting data in 2026, and the first automatic exchanges take place in 2027 among 52 jurisdictions, with a further 15, including the UAE, the US, Singapore, and Hong Kong, joining in 2028.</p>
+                <p>The implication is blunt. A 0% local rate removes tax in that jurisdiction; it does not remove your obligations where you are tax resident, and it no longer keeps your activity quiet. Under CARF, exchanges and other providers will report who holds what and which transactions occurred, and tax authorities will swap that data across borders. The era in which crypto held abroad was effectively invisible to a home revenue service is closing.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Oct 2022</div>
+                        <div class="ig-step-title">OECD publishes CARF</div>
+                        <div class="ig-step-desc">The OECD releases the Crypto-Asset Reporting Framework, extending automatic information exchange from bank accounts to crypto-asset service providers.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Nov 2023</div>
+                        <div class="ig-step-title">54 jurisdictions commit</div>
+                        <div class="ig-step-desc">A joint statement sees 54 jurisdictions pledge to implement CARF, with first exchanges targeted for 2027.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2026</div>
+                        <div class="ig-step-title">Data collection begins</div>
+                        <div class="ig-step-desc">Reporting crypto-asset providers start collecting and reporting account-holder and transaction data to their local tax authorities.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2027</div>
+                        <div class="ig-step-title">First automatic exchanges</div>
+                        <div class="ig-step-desc">52 jurisdictions begin exchanging crypto account information internationally, including most of the EU, the UK, Switzerland, Japan, and Korea.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2028</div>
+                        <div class="ig-step-title">Second cohort joins</div>
+                        <div class="ig-step-desc">A further 15 jurisdictions, including the UAE, the US, Singapore, and Hong Kong, begin first exchanges, widening global coverage.</div>
+                    </div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Source: OECD Crypto-Asset Reporting Framework 2025 Monitoring and Implementation Update and CARF commitments list.</p>
+        </section>
+
+        <!-- CORPORATE -->
+        <section class="guide-section" id="corporate">
+            <div class="section-label">Section 7: Personal vs Corporate</div>
+            <h2 class="section-h2">Personal vs <em>Corporate</em> Tax</h2>
+            <div class="prose">
+                <p>For anyone running a crypto business rather than a personal portfolio, the personal-tax map is the wrong map. A jurisdiction with a 0% personal rate can still tax a licensed company at a meaningful rate: the UAE applies 9% corporate tax above AED 375,000, Switzerland taxes corporate profits at roughly 12% to 21% effective depending on canton, and Singapore taxes trading income up to 17% even though individuals pay no capital gains tax. The personal exemption simply does not flow through to the operating entity.</p>
+                <p>Corporate structuring also carries obligations that personal residence does not: economic substance requirements, audited accounts, transfer-pricing discipline, and, increasingly, CARF reporting as a regulated provider. That is why we treat the tax analysis as one input into jurisdiction selection rather than the deciding one, sitting beside licensing, banking access, and substance. Our <a href="/crypto-accounting/tax/">crypto tax accounting service</a> handles the corporate side end to end, and the <a href="/guides/best-crypto-license-jurisdiction/">jurisdiction selection guide</a> shows how it all fits together.</p>
+                <p>The honest summary is that there is no single best country for crypto tax. The right answer depends on whether you are an investor or a founder, where you are tax resident, what the activity is, and how much real substance you can put on the ground. A clean 0% headline is worth little if the corporate, substance, and reporting realities do not fit your business.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Tax by Country: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">Which countries are crypto tax free in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">For private individuals, the United Arab Emirates, the Cayman Islands, El Salvador, and Singapore impose no capital gains tax on crypto held as an investment in 2026. Switzerland exempts private investors but levies an annual wealth tax, while Germany and Portugal grant a 0% rate only after a qualifying holding period.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is crypto tax free in the UAE?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">For individuals in the UAE, crypto is effectively tax free in 2026: there is no personal income tax and no capital gains tax, and crypto transactions have been VAT-exempt since November 2024. Crypto businesses can still fall under the 9% corporate tax that applies to profits above AED 375,000.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does Germany tax crypto in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Germany treats crypto as a private asset under Section 23 of the Income Tax Act. Gains on coins held longer than one year are fully tax free. Gains on coins sold within twelve months are taxed at your personal income tax rate of up to 45%, but only above the annual 1,000 euro exemption limit.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does Switzerland really have no crypto capital gains tax?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Capital gains on movable private wealth, including crypto, are exempt for private investors in Switzerland in 2026, regardless of size or holding period. However, all holdings are subject to an annual cantonal wealth tax, roughly 0.3% to 1%, and anyone classed as a professional trader is taxed on the gains as income.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is Portugal still a crypto tax haven?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Only partly. Since 2023, Portugal taxes gains on crypto held for less than 365 days at a flat 28%. Gains on crypto held for 365 days or more remain exempt. Staking and other passive yield is taxed at 28%, and business-scale activity is taxed under progressive income rates up to 53%.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does Singapore tax cryptocurrency?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Singapore has no capital gains tax, so individuals holding crypto as an investment pay nothing on disposals in 2026. Income tax can still apply, at resident rates up to 24%, if the activity amounts to a trade or business, such as frequent professional trading, mining, or being paid in crypto for services.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How is crypto taxed in the United States?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The US treats crypto as property. Gains on assets held one year or less are short-term and taxed as ordinary income at rates up to 37%. Gains on assets held more than a year are long-term and taxed at 0%, 15%, or 20%. Brokers began issuing Form 1099-DA for 2025 transactions filed in 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the UK crypto tax rate in 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">HMRC treats crypto as property. Capital gains above the 3,000 pound annual exempt amount are taxed at 18% within the basic-rate band and 24% above the higher-rate threshold for 2025/26. Income from activities such as mining or staking is taxed separately at income tax rates of 0% to 45%.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between personal and corporate crypto tax?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Personal tax applies to individuals holding crypto as a private investment, and many jurisdictions exempt those gains. Corporate tax applies to a licensed company trading or holding crypto as a business, and is usually charged on profits regardless of the personal exemption. A zero personal rate does not mean a zero corporate rate.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is OECD CARF and when does it start?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The Crypto-Asset Reporting Framework is the OECD standard for automatic exchange of crypto account information between tax authorities. Reporting crypto-asset service providers begin collecting data in 2026, and the first automatic exchanges take place in 2027 among 52 jurisdictions, with a second cohort joining in 2028.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does a 0% tax country mean my crypto is hidden from my home tax authority?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. A 0% local rate only removes tax in that jurisdiction. Under OECD CARF, crypto providers will report account holders and transactions to tax authorities, who exchange the data internationally from 2027. Your home country may still tax you and will increasingly receive the data to enforce it.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I relocate to avoid crypto tax?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Tax residence, not citizenship, usually determines where you are taxed, and rules on becoming non-resident, exit taxes, and the timing of disposals are complex and country-specific. Relocation can lawfully reduce tax, but only with proper residence planning and professional advice. This guide is general information, not personal tax advice.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do staking and mining rewards get taxed differently from capital gains?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Usually yes. Many jurisdictions that exempt capital gains still tax staking, mining, and lending rewards as income at the time of receipt. Switzerland, Singapore, the UK, and others treat these rewards as taxable income even where a later disposal of the same coins may be tax free or lightly taxed.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does crypto tax affect where I should license a crypto business?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Corporate tax, the substance and reporting expected of a licensed entity, and CARF obligations all factor into jurisdiction choice alongside the licence itself. A personal 0% rate is not the same as a competitive corporate regime, so the tax analysis should sit beside the licensing analysis, not replace it.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.oecd.org/en/topics/sub-issues/crypto-asset-reporting-framework.html" target="_blank" rel="nofollow noopener noreferrer">OECD: Crypto-Asset Reporting Framework (CARF) overview</a></li>
+            <li><a href="https://www.oecd.org/content/dam/oecd/en/networks/global-forum-tax-transparency/crypto-asset-reporting-framework-monitoring-implementation-update-2025.pdf" target="_blank" rel="nofollow noopener noreferrer">OECD: CARF 2025 Monitoring and Implementation Update (first-exchange jurisdictions and timeline)</a></li>
+            <li><a href="https://www.oecd.org/content/dam/oecd/en/networks/global-forum-tax-transparency/commitments-carf.pdf" target="_blank" rel="nofollow noopener noreferrer">OECD: Jurisdictions committed to implement the CARF</a></li>
+            <li><a href="https://www.estv.admin.ch/estv/en/home.html" target="_blank" rel="nofollow noopener noreferrer">Swiss Federal Tax Administration (ESTV): tax treatment of cryptocurrencies and private wealth gains</a></li>
+            <li><a href="https://www.gov.uk/government/publications/tax-on-cryptoassets/cryptoassets-for-individuals" target="_blank" rel="nofollow noopener noreferrer">HMRC (gov.uk): Cryptoassets for individuals, Capital Gains Tax treatment</a></li>
+            <li><a href="https://www.irs.gov/filing/digital-assets" target="_blank" rel="nofollow noopener noreferrer">IRS: Digital assets, property treatment and Form 1099-DA reporting</a></li>
+            <li><a href="https://www.gesetze-im-internet.de/estg/__23.html" target="_blank" rel="nofollow noopener noreferrer">Germany: Section 23 EStG (private sales, one-year holding period)</a></li>
+            <li><a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/what-is-taxable-what-is-not/digital-tokens" target="_blank" rel="nofollow noopener noreferrer">IRAS Singapore: income tax treatment of digital tokens</a></li>
+            <li><a href="https://info.portaldasfinancas.gov.pt/pt/Paginas/default.aspx" target="_blank" rel="nofollow noopener noreferrer">Portuguese Tax and Customs Authority: personal income tax (IRS) on crypto-assets</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Tax-Smart Licensing?</h3>
+                <p>Tell us your business model and where you are tax resident. We will map the personal and corporate tax position and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=crypto-tax" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Zero-CGT at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">UAE</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">0% personal</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">9% corporate above AED 375k</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Switzerland</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">0% private investor</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Plus annual wealth tax</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Germany</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">0% after 1 year</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">§23 EStG private asset</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/best-crypto-license-jurisdiction/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Best Crypto License Jurisdiction</a>
+                    <a href="/guides/crypto-accounting-ifrs-vs-gaap/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Accounting: IFRS vs GAAP</a>
+                    <a href="/crypto-accounting/tax/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Tax Service</a>
+                    <a href="/crypto-licenses/europe/germany/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Germany Crypto License</a>
+                    <a href="/crypto-licenses/mena/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MENA Licensing Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Tax and licensing analysed together</li>
+                    <li>Coverage of EU, UAE, Swiss, and offshore regimes</li>
+                    <li>CARF-aware structuring from day one</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Plan the Tax Before You Pick the Jurisdiction</h2>
+      <p class="cta-lead">Share your business model and where you are tax resident, and we will map the personal and corporate crypto tax position, flag the CARF implications, and recommend a licensing route that actually fits. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target markets, and tax questions…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/aml-kyc-explained/">AML &amp; KYC Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal or tax advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

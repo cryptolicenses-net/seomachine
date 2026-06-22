@@ -1,0 +1,975 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is a Crypto Custody License? Qualified Custodian Rules Explained (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="What is a crypto custody license in 2026? MiCA custody and administration of crypto-assets explained: the EUR 125,000 Class 2 capital, Article 75 segregation and liability rules, the US qualified custodian concept, hot vs cold storage, and proof of reserves.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/what-is-crypto-custody-license/">
+    <meta property="og:title" content="What Is a Crypto Custody License? Qualified Custodian Rules Explained (2026)">
+    <meta property="og:description" content="MiCA custody and administration of crypto-assets explained for 2026: EUR 125,000 Class 2 capital, Article 75 segregation and liability rules, the US qualified custodian concept, hot vs cold storage, and proof of reserves.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/what-is-crypto-custody-license/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/gold-bars-pile.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "What Is a Crypto Custody License?", "item": "https://cryptolicenses.net/guides/what-is-crypto-custody-license/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/what-is-crypto-custody-license/#article",
+      "headline": "What Is a Crypto Custody License? Qualified Custodian Rules Explained (2026)",
+      "description": "MiCA custody and administration of crypto-assets explained for 2026: the EUR 125,000 Class 2 capital, Article 75 segregation and liability rules, the US qualified custodian concept, hot vs cold storage, and proof of reserves.",
+      "url": "https://cryptolicenses.net/guides/what-is-crypto-custody-license/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/what-is-crypto-custody-license/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/gold-bars-pile.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a crypto custody license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A crypto custody license is the regulatory authorisation a business needs to safekeep crypto-assets, or the private keys that control them, on behalf of clients. In the EU this is the MiCA service of custody and administration of crypto-assets on behalf of clients, which forms part of a crypto-asset service provider authorisation rather than a standalone permit." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a license to offer crypto custody?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you safekeep crypto-assets or control private keys for clients in a regulated market. Under MiCA, custody and administration of crypto-assets on behalf of clients is a licensed activity, so you must be authorised as a crypto-asset service provider. Pure self-custody, where you only hold your own assets, generally does not require a custody license." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the capital requirement for a MiCA custody license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Custody and administration of crypto-assets sits in Class 2 of MiCA Annex IV, which carries a permanent minimum capital requirement of EUR 125,000. The provider must also hold own funds equal to at least one quarter of the preceding year's fixed overheads where that figure is higher than the permanent minimum." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a qualified custodian?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A qualified custodian is a term from the US Investment Advisers Act Custody Rule, 17 CFR 275.206(4)-2. It means a bank or savings association, a registered broker-dealer, a registered futures commission merchant, or certain foreign financial institutions that hold client assets segregated from their own. Registered investment advisers with custody must use one." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does MiCA Article 75 require of crypto custodians?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Article 75 requires a custodian to conclude a custody agreement with each client, keep a register of positions opened in each client's name, operationally segregate client crypto-assets from its own estate, maintain a custody policy that minimises loss from fraud, cyber threats, or negligence, and provide a statement of position at least once every three months." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a crypto custodian liable if client assets are lost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Under MiCA Article 75, a custodian is liable to clients for the loss of crypto-assets or of the means of access resulting from an incident attributable to it, such as a hack of its systems. That liability is capped at the market value of the lost crypto-asset at the time the loss occurred, so the exposure is significant but defined." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between hot and cold storage?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A hot wallet is connected to the internet, which makes it convenient for trading and withdrawals but more exposed to cyber attack. Cold storage keeps private keys offline on hardware or air-gapped devices, which is far more secure. Institutional custodians typically keep 80 to 90 percent of assets in cold storage and only 10 to 20 percent hot." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is proof of reserves in crypto custody?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Proof of reserves is a cryptographic attestation, often built on a Merkle tree, that a custodian or exchange holds enough crypto-assets to cover all client balances. Clients can verify their balance was included in the snapshot without exposing other accounts. It is usually certified by an independent auditor to confirm solvency at a point in time." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is crypto custody regulated in the United States?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no single federal crypto custody license. Registered investment advisers must keep client crypto held as securities with a qualified custodian under the Investment Advisers Act Custody Rule. In September 2025 the SEC staff issued a no-action letter allowing advisers to treat certain state-chartered trust companies as banks for crypto custody, subject to conditions." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Switzerland regulate crypto custody?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Switzerland treats crypto custody under banking and DLT law, supervised by FINMA. FINMA Guidance 01/2026 confirms that banks may hold crypto-based assets as segregable custody assets with bankruptcy protection, provided they are kept ready for clients at all times in individual custody or in collective custody with clear customer shares." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a crypto custody license the same as a wallet license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "They overlap but are not identical. A custody license covers safekeeping and administration of clients' crypto-assets and private keys with full segregation and liability rules. A wallet license is a looser, marketing-driven term often used for providers that hold keys for users. In a MiCA context both map to custody and administration of crypto-assets on behalf of clients." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get a crypto custody license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary by jurisdiction and the quality of the application. A MiCA crypto-asset service provider authorisation that includes custody typically takes several months from a complete filing, because the regulator must assess capital, governance, the custody policy, segregation arrangements, and the IT and key-management security model before granting authorisation." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can crypto custody be delegated to a third party?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, custody can be delegated to a sub-custodian, but the licensed firm remains responsible to clients and to the regulator. Under FINMA Guidance 01/2026, delegation to a foreign custodian is acceptable where that custodian is prudentially supervised and foreign law guarantees bankruptcy protection for the crypto-based assets held in custody." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does custody fit into a wider crypto license?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Custody is one of several crypto-asset services a provider can be authorised for, alongside exchange, order execution, and transfer services. Many exchanges add custody to hold client assets in-house. Regulators expect the custody policy, segregation, key management, and proof-of-reserves approach to be evidenced as part of the overall license application." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto Custody License
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/gold-bars-pile.jpg" alt="Stacked gold bars representing safekeeping and crypto custody licensing in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Licensing &amp; Compliance</div>
+        <h1 class="hero-h1">What Is a Crypto Custody License? Qualified Custodian Rules Explained in <em>2026</em></h1>
+        <p class="hero-intro">A crypto custody license authorises a business to safekeep clients' crypto-assets and private keys. This guide explains the MiCA custody service and its EUR 125,000 Class 2 capital, the Article 75 segregation and liability rules, the US qualified custodian concept, hot versus cold storage, proof of reserves, and how to get authorised in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Licensing &amp; Compliance</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">What a Custody License Is</a></li>
+            <li class="toc-item"><a href="#need">When You Need One</a></li>
+            <li class="toc-item"><a href="#mica">MiCA Custody Requirements</a></li>
+            <li class="toc-item"><a href="#regimes">MiCA vs US vs Switzerland</a></li>
+            <li class="toc-item"><a href="#storage">Hot, Cold &amp; Proof of Reserves</a></li>
+            <li class="toc-item"><a href="#apply">How to Get Authorised</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and institutional investors through the full spectrum of crypto-asset service provider licensing, where custody and key-management controls are now among the most heavily scrutinised parts of any application.</p>
+                <p>He has built custody and safekeeping frameworks for clients authorised under MiCA in the EU, under banking and DLT law in Switzerland, and against the US qualified custodian standard, and advises on segregation, sub-custody delegation, and proof of reserves across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Definition · Crypto Custody License</div>
+                <p>A crypto custody license is the regulatory authorisation a business needs to safekeep crypto-assets, or the private keys that control them, on behalf of clients. In the EU it is the MiCA service of custody and administration of crypto-assets on behalf of clients, carried out under a crypto-asset service provider authorisation rather than a standalone permit.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>A crypto custody license authorises a firm to safekeep clients' crypto-assets and the private keys that control them, with strict segregation and liability rules</li>
+                    <li>Under MiCA, custody and administration of crypto-assets sits in Class 2 of Annex IV and carries a permanent minimum capital of EUR 125,000</li>
+                    <li>MiCA Article 75 requires a custody agreement, a register of positions, operational segregation, a custody policy, and liability for loss capped at market value</li>
+                    <li>The US uses the qualified custodian concept under the Investment Advisers Act Custody Rule rather than a single federal custody license</li>
+                    <li>Custodians keep most assets in cold storage and use proof of reserves to evidence that client balances are fully backed</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">What a Crypto Custody License <em>Actually Is</em></h2>
+            <div class="prose">
+                <p>Custody is the act of safekeeping something valuable for someone else. In crypto, that value lives behind a private cryptographic key: whoever controls the key controls the assets. A crypto custody license is the regulatory permission a business needs before it can hold those keys, and therefore those assets, on behalf of clients. It is one of the most sensitive activities in the sector, because a single key compromise can wipe out client funds in seconds.</p>
+                <p>In the European Union, the relevant rules sit inside the Markets in Crypto-Assets Regulation (MiCA), Regulation (EU) 2023/1114. MiCA defines the service of custody and administration of crypto-assets on behalf of clients as the safekeeping or control of crypto-assets, or of the means of access to them in the form of private keys, for clients. It is not a separate license but one of the services a crypto-asset service provider, or CASP, can be authorised to perform. If you are new to the broader framework, our explainer on <a href="/guides/what-is-crypto-license/">what a crypto license is and how the categories fit together</a> sets the scene.</p>
+                <p>Custody is closely tied to the wider concept of a Virtual Asset Service Provider. A firm that safekeeps client crypto is a VASP under FATF terminology and a CASP under MiCA. Our companion guide on <a href="/guides/what-is-vasp/">what a VASP is and which businesses fall in scope</a> shows exactly where custodians sit in that taxonomy, and our <a href="/crypto-licenses/custody-license/">custody license overview</a> covers how the authorisation works in practice.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€125k</div>
+                    <div class="ig-stat-label">MiCA Class 2 Min. Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Class 2</div>
+                    <div class="ig-stat-label">MiCA Annex IV Tier</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Art. 75</div>
+                    <div class="ig-stat-label">MiCA Custody Article</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">3 mo.</div>
+                    <div class="ig-stat-label">Statement of Position</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">80–90%</div>
+                    <div class="ig-stat-label">Assets in Cold Storage</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2023/1114</div>
+                    <div class="ig-stat-label">MiCA Regulation Number</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: Regulation (EU) 2023/1114 (MiCA) Annex IV and Article 75; industry custody-practice norms for cold-storage allocation.</p>
+        </section>
+
+        <!-- WHEN YOU NEED ONE -->
+        <section class="guide-section" id="need">
+            <div class="section-label">Section 2: Scope</div>
+            <h2 class="section-h2">When You <em>Need</em> a Custody License</h2>
+            <div class="prose">
+                <p>The trigger is simple: if you safekeep crypto-assets or control the private keys for clients, you almost certainly need authorisation. The dividing line is control. A firm that holds its own assets is self-custodying and generally needs no custody license. A firm that holds keys, or the means of access, on behalf of others is providing a regulated custody service and falls in scope.</p>
+                <p>This catches more businesses than founders expect. An exchange that lets users keep balances on the platform is custodying their assets. A staking provider that pools client tokens, a payment processor that holds crypto before settlement, and a wallet provider that retains the keys are all, in substance, custodians. Even brief or temporary holding can cross the line once the firm has the technical ability to move client assets without further instruction.</p>
+                <p>Non-custodial models are the main carve-out. A pure software wallet where the user alone controls the keys, or a genuinely non-custodial protocol, typically does not require a custody license because the provider never holds the means of access. The distinction matters commercially: many providers deliberately design for non-custody to stay outside the heaviest part of the regime. Our <a href="/crypto-licenses/wallet-license/">wallet license overview</a> explains how custodial and non-custodial wallet models are treated differently.</p>
+            </div>
+        </section>
+
+        <!-- MICA REQUIREMENTS -->
+        <section class="guide-section" id="mica">
+            <div class="section-label">Section 3: MiCA Requirements</div>
+            <h2 class="section-h2">MiCA Custody <em>Requirements</em> Under Article 75</h2>
+            <div class="prose">
+                <p>MiCA is the most detailed custody framework in force in 2026. Custody and administration of crypto-assets sits in Class 2 of Annex IV, which carries a permanent minimum capital requirement of EUR 125,000. The custodian must also hold own funds equal to at least one quarter of the previous year's fixed overheads where that figure is higher. Capital is only the entry ticket. The operating rules in Article 75 are what regulators inspect most closely.</p>
+                <p>Article 75 obliges a custodian to conclude a custody agreement with each client setting out duties and responsibilities, to keep a register of positions opened in the name of each client, and to operationally segregate clients' crypto-assets from the firm's own holdings and from its estate. That segregation is the heart of client protection: it is what keeps client assets ring-fenced if the custodian itself fails. The custodian must also maintain a custody policy designed to minimise the risk of loss from fraud, cyber threats, or negligence, and must send each client a statement of position at least once every three months and on request.</p>
+                <p>Crucially, MiCA imposes liability for loss. Where crypto-assets, or the means of access to them, are lost as a result of an incident attributable to the custodian, such as a hack of its own systems, the custodian is liable to the client. That liability is capped at the market value of the lost crypto-asset at the time the loss occurred. The exposure is therefore real but bounded, which is why robust key management and insurance arrangements are central to any credible custody application.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Obligation</th>
+                        <th>What MiCA Article 75 Requires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Capital</td>
+                        <td>EUR 125,000 (Class 2) or 25% of fixed overheads, whichever is higher</td>
+                    </tr>
+                    <tr>
+                        <td>Custody agreement</td>
+                        <td>Written contract with each client setting out duties and responsibilities</td>
+                    </tr>
+                    <tr>
+                        <td>Register of positions</td>
+                        <td>Positions opened in the name of each client; movements recorded</td>
+                    </tr>
+                    <tr>
+                        <td>Segregation</td>
+                        <td>Client assets operationally segregated from the custodian's own estate</td>
+                    </tr>
+                    <tr>
+                        <td>Custody policy</td>
+                        <td>Internal rules minimising loss from fraud, cyber threats, or negligence</td>
+                    </tr>
+                    <tr>
+                        <td>Liability for loss</td>
+                        <td>Liable for attributable losses, capped at market value at time of loss</td>
+                    </tr>
+                    <tr>
+                        <td>Statement of position</td>
+                        <td>Provided to each client at least once every three months and on request</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on Regulation (EU) 2023/1114 (MiCA) Annex IV and Article 75. National competent authorities may apply additional supervisory expectations.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders budget for the EUR 125,000 and stop there, but capital is never what derails a custody application. What regulators dig into is the key-management architecture: how keys are generated, who can sign, how cold and hot wallets are split, and how the firm evidences segregation. Build that story before you file, not in response to questions."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- REGIMES -->
+        <section class="guide-section" id="regimes">
+            <div class="section-label">Section 4: Regional Rules</div>
+            <h2 class="section-h2">MiCA vs <em>US Qualified Custodian</em> vs Switzerland</h2>
+            <div class="prose">
+                <p>Crypto custody is regulated very differently across the major markets, and the right route depends on where you operate and who your clients are. The EU offers a single, codified custody service under MiCA. The United States has no equivalent federal custody license and instead leans on the qualified custodian concept. Switzerland folds crypto custody into its banking and DLT framework. Our <a href="/regulation/">regulation hub</a> tracks how individual countries treat the activity.</p>
+                <p>In the United States, the key rule is the Custody Rule, 17 CFR 275.206(4)-2, under the Investment Advisers Act of 1940. A registered investment adviser with custody of client assets, including crypto held as securities, must keep those assets with a qualified custodian: a bank or savings association, a registered broker-dealer, a registered futures commission merchant, or certain foreign financial institutions. In September 2025 the SEC staff issued a no-action letter allowing advisers to treat certain state-chartered trust companies as banks for crypto custody, subject to conditions such as annual due diligence and no rehypothecation of client assets.</p>
+                <p>In Switzerland, FINMA Guidance 01/2026 confirms that banks may hold crypto-based assets as segregable custody assets that benefit from bankruptcy protection, provided the assets are held in readiness for clients at all times in individual custody, or in collective custody with clear customer shares. Where custody is delegated abroad, the foreign custodian must be prudentially supervised and foreign law must guarantee bankruptcy protection. The Swiss model treats well-structured crypto custody much like the safekeeping of any other client asset.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Jurisdiction</th>
+                        <th>Framework</th>
+                        <th>License Type</th>
+                        <th>Key Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>European Union</td>
+                        <td>MiCA (Reg. 2023/1114)</td>
+                        <td>CASP authorisation, custody service</td>
+                        <td>EUR 125,000 capital; Article 75 segregation and liability</td>
+                    </tr>
+                    <tr>
+                        <td>United States</td>
+                        <td>Investment Advisers Act</td>
+                        <td>No federal custody license; qualified custodian</td>
+                        <td>Custody Rule 206(4)-2; banks, broker-dealers, FCMs, trust cos.</td>
+                    </tr>
+                    <tr>
+                        <td>Switzerland</td>
+                        <td>Banking &amp; DLT law (FINMA)</td>
+                        <td>Banking / securities authorisation</td>
+                        <td>Segregable custody assets with bankruptcy protection (Guidance 01/2026)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> the same custody business can require an EU CASP authorisation, a relationship with a US qualified custodian, or a Swiss banking-grade setup, depending on the market. The choice shapes your capital, governance, and timeline, so it belongs at the start of your jurisdiction selection. See our <a href="/crypto-licenses/custody-license/">custody license overview</a> for how this fits the full application.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure whether your model needs a custody license?</strong> Get a free 30-minute consultation. We will assess your custody arrangements and recommend a licensing route across the EU, US, and Switzerland.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- STORAGE -->
+        <section class="guide-section" id="storage">
+            <div class="section-label">Section 5: Safekeeping</div>
+            <h2 class="section-h2">Hot Storage, Cold Storage &amp; <em>Proof of Reserves</em></h2>
+            <div class="prose">
+                <p>A custody license is granted on paper, but it stands or falls on the technical safekeeping of keys. The first decision every custodian makes is how to split assets between hot and cold storage. A hot wallet is connected to the internet, which makes it convenient for trading, withdrawals, and day-to-day movement, but also exposes it to cyber attack. Cold storage keeps private keys offline on hardware or air-gapped devices, which is far more secure but slower to access.</p>
+                <p>The industry norm reflects that trade-off. Institutional custodians typically keep 80 to 90 percent of assets in cold storage as long-term reserves and only 10 to 20 percent in hot wallets to support operational activity. Most also layer in multi-signature or multi-party computation so that no single person can move funds, alongside withdrawal whitelists, time delays, and crime insurance. Regulators reviewing a custody application expect to see this architecture documented, not improvised.</p>
+                <p>Proof of reserves has become the public-facing complement to segregation. It is a cryptographic attestation, often built on a Merkle tree, that the custodian holds enough crypto-assets to cover every client balance. Each client can verify that their balance was included in a snapshot without exposing any other account, and an independent auditor usually certifies the result. After several high-profile collapses, regulators and counterparties increasingly treat a credible proof-of-reserves process as a baseline expectation rather than a marketing extra.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our custody licensing work across more than 60 jurisdictions, the single most common reason an application stalls is a key-management model the firm cannot fully explain. The founders have a custody provider and a cold-storage setup, but they cannot map who holds which signing key, how the hot and cold split is enforced, or how segregation is evidenced if the company itself fails. Regulators read that gap as operational risk.</p>
+            <p>We also see firms underestimate the liability dimension. Under MiCA, a custodian is on the hook for the market value of assets lost in an attributable incident, so the custody policy, insurance cover, and incident-response plan are not paperwork: they are the controls that cap that exposure. Building the safekeeping architecture, segregation evidence, and proof-of-reserves process together, before filing, is consistently the difference between a clean review and months of regulator queries.</p>
+          </div>
+        </section>
+
+        <!-- HOW TO APPLY -->
+        <section class="guide-section" id="apply">
+            <div class="section-label">Section 6: The Process</div>
+            <h2 class="section-h2">How to Get a Custody License <em>Authorised</em></h2>
+            <div class="prose">
+                <p>Getting authorised for crypto custody is a structured process, not a form-filling exercise. The five steps below describe the core path a firm follows to a MiCA custody authorisation, which is broadly representative of how regulated markets approach the activity. Our <a href="/corporate-services/aml-kyc/">AML and KYC compliance service</a> and licensing team run this end to end as part of a single engagement.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Scope</div>
+                        <div class="ig-step-title">Confirm custody is in scope and choose a jurisdiction</div>
+                        <div class="ig-step-desc">Establish that your model holds client keys or assets, then select a regime, MiCA CASP in the EU, a qualified custodian relationship in the US, or a Swiss banking-grade setup.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Capital &amp; entity</div>
+                        <div class="ig-step-title">Set up the entity and meet the capital floor</div>
+                        <div class="ig-step-desc">Incorporate the licensed entity, fund the EUR 125,000 MiCA Class 2 minimum or the higher overhead-based figure, and appoint qualified directors and a compliance function.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Build controls</div>
+                        <div class="ig-step-title">Design the custody policy and key management</div>
+                        <div class="ig-step-desc">Document segregation, the hot and cold storage split, multi-signature or MPC signing, the register of positions, insurance, and the proof-of-reserves approach.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Apply</div>
+                        <div class="ig-step-title">File the authorisation application</div>
+                        <div class="ig-step-desc">Submit the application with the business plan, AML framework, custody policy, governance, and IT security model, then respond to the regulator's questions.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Operate &amp; report</div>
+                        <div class="ig-step-title">Maintain the license and report to clients</div>
+                        <div class="ig-step-desc">Once authorised, keep segregation and capital current, issue statements of position at least every three months, and evidence ongoing compliance to the regulator.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Custody License: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is a crypto custody license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A crypto custody license is the regulatory authorisation a business needs to safekeep crypto-assets, or the private keys that control them, on behalf of clients. In the EU this is the MiCA service of custody and administration of crypto-assets on behalf of clients, which forms part of a crypto-asset service provider authorisation rather than a standalone permit.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need a license to offer crypto custody?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, if you safekeep crypto-assets or control private keys for clients in a regulated market. Under MiCA, custody and administration of crypto-assets on behalf of clients is a licensed activity, so you must be authorised as a crypto-asset service provider. Pure self-custody, where you only hold your own assets, generally does not require a custody license.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the capital requirement for a MiCA custody license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Custody and administration of crypto-assets sits in Class 2 of MiCA Annex IV, which carries a permanent minimum capital requirement of EUR 125,000. The provider must also hold own funds equal to at least one quarter of the preceding year's fixed overheads where that figure is higher than the permanent minimum.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a qualified custodian?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A qualified custodian is a term from the US Investment Advisers Act Custody Rule, 17 CFR 275.206(4)-2. It means a bank or savings association, a registered broker-dealer, a registered futures commission merchant, or certain foreign financial institutions that hold client assets segregated from their own. Registered investment advisers with custody must use one.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does MiCA Article 75 require of crypto custodians?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Article 75 requires a custodian to conclude a custody agreement with each client, keep a register of positions opened in each client's name, operationally segregate client crypto-assets from its own estate, maintain a custody policy that minimises loss from fraud, cyber threats, or negligence, and provide a statement of position at least once every three months.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is a crypto custodian liable if client assets are lost?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Under MiCA Article 75, a custodian is liable to clients for the loss of crypto-assets or of the means of access resulting from an incident attributable to it, such as a hack of its systems. That liability is capped at the market value of the lost crypto-asset at the time the loss occurred, so the exposure is significant but defined.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between hot and cold storage?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A hot wallet is connected to the internet, which makes it convenient for trading and withdrawals but more exposed to cyber attack. Cold storage keeps private keys offline on hardware or air-gapped devices, which is far more secure. Institutional custodians typically keep 80 to 90 percent of assets in cold storage and only 10 to 20 percent hot.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is proof of reserves in crypto custody?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Proof of reserves is a cryptographic attestation, often built on a Merkle tree, that a custodian or exchange holds enough crypto-assets to cover all client balances. Clients can verify their balance was included in the snapshot without exposing other accounts. It is usually certified by an independent auditor to confirm solvency at a point in time.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How is crypto custody regulated in the United States?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no single federal crypto custody license. Registered investment advisers must keep client crypto held as securities with a qualified custodian under the Investment Advisers Act Custody Rule. In September 2025 the SEC staff issued a no-action letter allowing advisers to treat certain state-chartered trust companies as banks for crypto custody, subject to conditions.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does Switzerland regulate crypto custody?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Switzerland treats crypto custody under banking and DLT law, supervised by FINMA. FINMA Guidance 01/2026 confirms that banks may hold crypto-based assets as segregable custody assets with bankruptcy protection, provided they are kept ready for clients at all times in individual custody or in collective custody with clear customer shares.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is a crypto custody license the same as a wallet license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">They overlap but are not identical. A custody license covers safekeeping and administration of clients' crypto-assets and private keys with full segregation and liability rules. A wallet license is a looser, marketing-driven term often used for providers that hold keys for users. In a MiCA context both map to custody and administration of crypto-assets on behalf of clients.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to get a crypto custody license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Timelines vary by jurisdiction and the quality of the application. A MiCA crypto-asset service provider authorisation that includes custody typically takes several months from a complete filing, because the regulator must assess capital, governance, the custody policy, segregation arrangements, and the IT and key-management security model before granting authorisation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can crypto custody be delegated to a third party?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, custody can be delegated to a sub-custodian, but the licensed firm remains responsible to clients and to the regulator. Under FINMA Guidance 01/2026, delegation to a foreign custodian is acceptable where that custodian is prudentially supervised and foreign law guarantees bankruptcy protection for the crypto-based assets held in custody.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does custody fit into a wider crypto license?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Custody is one of several crypto-asset services a provider can be authorised for, alongside exchange, order execution, and transfer services. Many exchanges add custody to hold client assets in-house. Regulators expect the custody policy, segregation, key management, and proof-of-reserves approach to be evidenced as part of the overall license application.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="nofollow noopener noreferrer">ESMA: Markets in Crypto-Assets Regulation (MiCA)</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (MiCA) full text</a></li>
+            <li><a href="https://eur-lex.europa.eu/EN/legal-content/summary/european-crypto-assets-regulation-mica.html" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: European crypto-assets regulation (MiCA) summary</a></li>
+            <li><a href="https://www.sec.gov/rules-regulations/2002/07/custody-funds-or-securities-clients-investment-advisers" target="_blank" rel="nofollow noopener noreferrer">SEC: Custody of Funds or Securities of Clients by Investment Advisers (Rule 206(4)-2)</a></li>
+            <li><a href="https://www.law.cornell.edu/cfr/text/17/275.206(4)-2" target="_blank" rel="nofollow noopener noreferrer">Cornell LII: 17 CFR 275.206(4)-2 (qualified custodian definition)</a></li>
+            <li><a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/crypto-asset-custody-basics-retail-investors-investor-bulletin-0" target="_blank" rel="nofollow noopener noreferrer">Investor.gov (SEC): Crypto Asset Custody Basics Investor Bulletin</a></li>
+            <li><a href="https://www.finma.ch/en/news/2026/01/20260112-mm-am-01-26/" target="_blank" rel="nofollow noopener noreferrer">FINMA: Guidance 01/2026 on risks associated with the custody of crypto-based assets</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Building a Custody Business?</h3>
+                <p>Tell us your custody model and target markets. We will assess whether you need a license and map the route across the EU, US, and Switzerland. Free, no obligation.</p>
+                <a href="/contact/?topic=custody-license" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Custody at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">MiCA</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EUR 125,000</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Class 2 minimum capital</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">MiCA Art. 75</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Segregation + liability</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Capped at market value</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">US</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Qualified custodian</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Rule 206(4)-2</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a Crypto License?</a>
+                    <a href="/guides/what-is-vasp/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a VASP?</a>
+                    <a href="/crypto-licenses/custody-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Custody License Overview</a>
+                    <a href="/crypto-licenses/wallet-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Wallet License Overview</a>
+                    <a href="/regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Regulation Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Custody and key management built into the license plan</li>
+                    <li>Coverage of MiCA, US, and Swiss custody regimes</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get Your Crypto Custody License Right From Day One</h2>
+      <p class="cta-lead">Share your custody model and target markets, and we will assess whether you need a license, recommend the right jurisdiction, and build the segregation, key-management, and proof-of-reserves framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your custody model, target markets, and licensing needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-crypto-license/">What Is a Crypto License?</a></li>
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/custody-license/">Custody License</a></li>
+                <li><a href="/crypto-licenses/wallet-license/">Wallet License</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

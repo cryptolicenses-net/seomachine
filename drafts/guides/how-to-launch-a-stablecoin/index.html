@@ -1,0 +1,945 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Launch a Stablecoin: EMT vs ART Licensing Under MiCA (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="How to launch a stablecoin in 2026: the two MiCA categories explained. EMT (e-money token) needs an EMI or bank licence; ART (asset-referenced token) needs its own MiCA authorisation and EUR 350,000 own funds. Capital, reserve, redemption, and a step-by-step roadmap.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/how-to-launch-a-stablecoin/">
+    <meta property="og:title" content="How to Launch a Stablecoin: EMT vs ART Licensing Under MiCA (2026)">
+    <meta property="og:description" content="The two MiCA stablecoin categories in 2026: EMT (single fiat, EMI or bank licence, redemption at par) vs ART (basket, own MiCA authorisation, EUR 350,000 own funds). Capital, reserve, and a step-by-step launch roadmap.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/how-to-launch-a-stablecoin/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-gold-coin-single-glowing.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "How to Launch a Stablecoin", "item": "https://cryptolicenses.net/guides/how-to-launch-a-stablecoin/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/how-to-launch-a-stablecoin/#article",
+      "headline": "How to Launch a Stablecoin: EMT vs ART Licensing Under MiCA (2026)",
+      "description": "How to launch a stablecoin in 2026 under MiCA: EMT (e-money token) needs an EMI or bank licence, ART (asset-referenced token) needs its own MiCA authorisation and EUR 350,000 own funds. Capital, reserve, redemption, and a step-by-step roadmap.",
+      "url": "https://cryptolicenses.net/guides/how-to-launch-a-stablecoin/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/how-to-launch-a-stablecoin/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/bitcoin-gold-coin-single-glowing.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What licence do I need to launch a stablecoin under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the type. An e-money token pegged to a single official currency must be issued by an authorised electronic money institution or credit institution under existing EU law, plus a MiCA white paper. An asset-referenced token requires a separate MiCA authorisation as an ART issuer from a national competent authority." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an EMT and an ART?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An e-money token references a single official currency, such as a euro or US dollar stablecoin, and is treated like electronic money. An asset-referenced token references a basket or other value, such as several currencies, a commodity like gold, or crypto-assets. EMTs need an EMI or bank licence, while ARTs need their own MiCA authorisation." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much capital do I need to launch a stablecoin?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An ART issuer must hold own funds equal to the highest of EUR 350,000, 2 percent of the average reserve of assets, or a quarter of fixed overheads of the preceding year, under MiCA Article 35. An EMT is issued through an EMI, whose initial capital floor under EU e-money rules is EUR 350,000, with extra prudential rules for significant tokens." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is easier to launch, an EMT or an ART?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For a single-fiat stablecoin, the EMT route is usually more efficient because it builds on the established electronic money institution framework rather than a fresh ART authorisation. An ART makes sense only when the token references a basket or other assets that cannot fit the e-money definition. Most fiat-pegged projects choose the EMT path." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a stablecoin be redeemed at face value?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. E-money tokens must be redeemable by holders at par value, at any time, in funds, under MiCA Article 49. Asset-referenced tokens also carry a permanent redemption right, but the holder may receive funds or the underlying assets in line with the issuer's redemption policy. Reserves must fully back these claims at all times." }
+        },
+        {
+          "@type": "Question",
+          "name": "What reserve must a stablecoin issuer hold?",
+          "acceptedAnswer": { "@type": "Answer", "text": "MiCA requires a reserve of assets that fully covers liabilities to holders, segregated from the issuer's own funds. Under the EBA technical standards for ARTs, at least 20 percent of the reserve must be sellable within one day and 30 percent within five days, rising to 40 and 60 percent for significant tokens. EMT reserves follow e-money safeguarding rules." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a significant stablecoin under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A token is classified as significant when it meets at least three criteria, such as more than 10 million holders, issued value or reserve over EUR 5 billion, or more than 2.5 million daily transactions and EUR 500 million in daily volume. Significant tokens face higher own funds of up to 3 percent of average reserves and direct EBA oversight." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who supervises stablecoin issuers under MiCA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A national competent authority authorises and supervises ordinary ART and EMT issuers. Once a token is classified as significant, the European Banking Authority steps in: it takes over direct supervision of significant ART issuers, and shares supervision of significant EMTs with the national authority, focusing on the additional own funds and liquidity requirements." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a white paper to issue a stablecoin?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both EMT and ART issuers must publish a MiCA crypto-asset white paper describing the token, the issuer, the rights of holders, the reserve, and the risks. For an EMT, the white paper is notified to the competent authority. For an ART, the white paper is approved as part of the authorisation process before the token can be offered." }
+        },
+        {
+          "@type": "Question",
+          "name": "When did MiCA stablecoin rules take effect?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The MiCA rules for asset-referenced tokens under Title III and e-money tokens under Title IV applied from 30 June 2024. The broader transitional period for crypto-asset service providers across the EU ends on 1 July 2026, after which firms can no longer rely on transitional arrangements to operate without full MiCA authorisation." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I issue a US dollar stablecoin in the EU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, a US dollar stablecoin can be an EMT because it references a single official currency. It must be issued by an authorised EMI or credit institution with a MiCA white paper. However, MiCA imposes daily transaction caps on non-euro EMTs used widely as a means of payment, which is a key planning point for dollar-token projects." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to launch a MiCA stablecoin?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Timelines depend on the route. An EMT through an existing EMI can move quickly once the institution is authorised and the white paper is notified. A fresh ART authorisation or a new EMI licence typically takes several months to over a year, covering legal structuring, reserve and governance design, and the regulator's review of the application." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I passport my stablecoin across the EU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. A core benefit of MiCA is the single market passport. Once an issuer is authorised in one EU member state and its white paper is in order, the token can be offered across all member states without a separate authorisation in each. This is why the choice of home authority and entity structure is a strategic decision." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need legal help to launch a stablecoin?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Practically, yes. Choosing between the EMT and ART routes, structuring the issuing entity, designing a compliant reserve, drafting the white paper, and managing the authorisation dialogue with the regulator are detailed and high-stakes. A specialist advisor maps the right path, prepares the file, and reduces the risk of rejection or delay." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    How to Launch a Stablecoin
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/bitcoin-gold-coin-single-glowing.jpg" alt="Single glowing gold coin representing a MiCA stablecoin launch in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Stablecoins &amp; MiCA</div>
+        <h1 class="hero-h1">How to Launch a Stablecoin: EMT vs ART Licensing Under MiCA in <em>2026</em></h1>
+        <p class="hero-intro">Launching a stablecoin in the EU comes down to one decision: is it an e-money token or an asset-referenced token? This guide explains the two MiCA categories, who can issue each, the capital and reserve rules, redemption at par, the significant-token thresholds that bring EBA supervision, and a step-by-step roadmap to authorisation in 2026.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Stablecoins &amp; MiCA</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">Stablecoins Under MiCA</a></li>
+            <li class="toc-item"><a href="#emt-vs-art">EMT vs ART Compared</a></li>
+            <li class="toc-item"><a href="#capital">Capital &amp; Reserve Rules</a></li>
+            <li class="toc-item"><a href="#significant">Significant Tokens &amp; EBA</a></li>
+            <li class="toc-item"><a href="#roadmap">The Launch Roadmap</a></li>
+            <li class="toc-item"><a href="#mistakes">Mistakes to Avoid</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and payment institutions through the full spectrum of crypto and e-money licensing, where stablecoin issuance under MiCA is now one of the most demanding mandates a founder can take on.</p>
+                <p>He has structured EMT and ART projects for clients across the EU, advising on the choice between the e-money and asset-referenced routes, reserve and own funds design, white paper drafting, and the authorisation dialogue with national regulators and the EBA across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Quick Answer · How to Launch a Stablecoin</div>
+                <p>To launch a stablecoin in the EU, first classify it under MiCA. A token pegged to a single official currency is an e-money token (EMT) and must be issued by a licensed electronic money institution or bank, with redemption at par. A token backed by a basket or other assets is an asset-referenced token (ART) and needs its own MiCA authorisation plus at least EUR 350,000 in own funds.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>MiCA splits stablecoins into two categories: e-money tokens (EMT, single fiat) under Title IV and asset-referenced tokens (ART, basket or other assets) under Title III, both applicable since 30 June 2024</li>
+                    <li>An EMT must be issued by an authorised EMI or credit institution and is redeemable at par; an ART needs its own MiCA authorisation from a national competent authority</li>
+                    <li>ART own funds under Article 35 are the highest of EUR 350,000, 2 percent of average reserves, or a quarter of fixed overheads; EMTs build on the EUR 350,000 EMI capital floor</li>
+                    <li>Significant tokens (over 10 million holders or EUR 5 billion in value) face up to 3 percent own funds and direct EBA supervision</li>
+                    <li>The choice between EMT and ART is the single most important decision, and it should be made before you design the reserve or write the white paper</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">How MiCA <em>Classifies</em> Stablecoins</h2>
+            <div class="prose">
+                <p>The first thing to understand about launching a stablecoin in the EU is that the word "stablecoin" does not appear in the law as a single licence. The Markets in Crypto-Assets Regulation, Regulation (EU) 2023/1114, instead splits stable-value tokens into two distinct categories, each with its own title, issuer rules, and capital requirements. Getting this classification right is the foundation of the whole project. For the wider framework, our guide on <a href="/guides/mica-explained/">MiCA explained</a> sets out how the regulation fits together.</p>
+                <p>The first category is the e-money token, or EMT, governed by Title IV. An EMT references the value of a single official currency, so a euro-pegged or US dollar-pegged stablecoin is an EMT. It is treated as electronic money, which means it can only be issued by an entity authorised as an electronic money institution (EMI) or a credit institution under existing EU law. Our overview of the <a href="/banking-licenses/emi/">EMI licence</a> explains that base authorisation.</p>
+                <p>The second category is the asset-referenced token, or ART, governed by Title III. An ART references any other value: a basket of several currencies, a commodity such as gold, one or more crypto-assets, or a combination. Because it does not fit the narrow e-money definition, an ART issuer needs a dedicated MiCA authorisation from a national competent authority. Both titles have applied since 30 June 2024. Our companion piece on <a href="/guides/stablecoin-regulation/">stablecoin regulation</a> traces how these rules sit alongside frameworks in other regions.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2</div>
+                    <div class="ig-stat-label">MiCA Token Categories</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€350k</div>
+                    <div class="ig-stat-label">ART Min. Own Funds</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2%</div>
+                    <div class="ig-stat-label">Of Average Reserve (ART)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">EMI</div>
+                    <div class="ig-stat-label">Required to Issue EMTs</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€5bn</div>
+                    <div class="ig-stat-label">Significant-Token Threshold</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">Jun 2024</div>
+                    <div class="ig-stat-label">ART &amp; EMT Rules Applied</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: MiCA Regulation (EU) 2023/1114, Articles 35 and 49; EBA technical standards and supervisory guidance on ARTs and EMTs.</p>
+        </section>
+
+        <!-- EMT VS ART -->
+        <section class="guide-section" id="emt-vs-art">
+            <div class="section-label">Section 2: EMT vs ART</div>
+            <h2 class="section-h2">E-Money Token vs <em>Asset-Referenced Token</em></h2>
+            <div class="prose">
+                <p>The choice between an EMT and an ART defines everything that follows: the licence you apply for, the capital you post, the reserve you build, and the regulator you answer to. The distinction is not a matter of marketing. It turns on a single legal test of what the token references. If the peg is to one official currency and nothing else, it is an EMT. If it references anything broader, it is an ART.</p>
+                <p>For most fiat-pegged projects, the EMT route is the more efficient one because it builds on the mature electronic money institution framework rather than a brand-new authorisation type. The trade-off is that only an EMI or credit institution can issue an EMT, so a founder without that base licence must either obtain one or partner with an institution that holds it. The ART route is broader and more flexible, but heavier: it carries its own MiCA authorisation, a higher governance burden, and a own funds calculation that scales with the reserve.</p>
+                <p>The table below sets out the practical differences a founder needs before choosing a path. It is the single most consequential decision in the project, and it should be made before any reserve or white paper work begins.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>EMT (E-Money Token)</th>
+                        <th>ART (Asset-Referenced Token)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peg / reference</td>
+                        <td>A single official currency (e.g. EUR or USD)</td>
+                        <td>A basket: multiple currencies, commodities, or crypto-assets</td>
+                    </tr>
+                    <tr>
+                        <td>Issuer licence</td>
+                        <td>Authorised EMI or credit institution + white paper</td>
+                        <td>Dedicated MiCA ART authorisation from a national authority</td>
+                    </tr>
+                    <tr>
+                        <td>MiCA title</td>
+                        <td>Title IV (Articles 48 onward)</td>
+                        <td>Title III (Articles 16 to 47)</td>
+                    </tr>
+                    <tr>
+                        <td>Capital / own funds</td>
+                        <td>EUR 350,000 EMI capital floor (plus extras if significant)</td>
+                        <td>Highest of EUR 350,000, 2% of reserves, or 25% of overheads</td>
+                    </tr>
+                    <tr>
+                        <td>Reserve</td>
+                        <td>1:1 safeguarded e-money funds</td>
+                        <td>Segregated reserve of assets fully covering liabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Redemption</td>
+                        <td>At par value, at any time, in funds (Article 49)</td>
+                        <td>Permanent redemption right; funds or underlying assets</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Based on MiCA Regulation (EU) 2023/1114, Titles III and IV, Articles 35 and 49. National rules and EBA technical standards add detail.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders come to us asking how to launch a stablecoin, and the honest answer is that the question is really one decision in disguise: EMT or ART. A single-fiat token is almost always an EMT, and the EMI framework is the faster road. Reaching for an ART authorisation when an EMT would do is the most common way projects add a year and a layer of capital they never needed."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- CAPITAL & RESERVE -->
+        <section class="guide-section" id="capital">
+            <div class="section-label">Section 3: Capital &amp; Reserve</div>
+            <h2 class="section-h2">Capital, Reserve, and <em>Redemption</em> Rules</h2>
+            <div class="prose">
+                <p>Capital and reserve are where the two routes diverge most sharply in cost. For an ART issuer, MiCA Article 35 sets own funds at the highest of three figures: EUR 350,000, two percent of the average amount of the reserve of assets, or a quarter of the fixed overheads of the preceding year. The two percent figure is calculated on the average reserve measured at the end of each calendar day over the preceding six months, so a large or fast-growing token quickly pushes the requirement well above the EUR 350,000 floor.</p>
+                <p>An EMT does not have its own MiCA own funds article in the same form, because the issuer is already an EMI or credit institution and carries that framework's capital. The initial capital floor for an electronic money institution under EU e-money rules is EUR 350,000, with additional prudential requirements layered on for significant EMTs. In both routes the reserve sits on top of own funds and is the real backstop for holders.</p>
+                <p>The reserve must fully cover the issuer's liabilities to token holders and be segregated from the issuer's own assets. Under the EBA technical standards for ARTs, at least twenty percent of the reserve must be capable of being sold within one day and thirty percent within five days, rising to forty and sixty percent respectively for significant tokens. Redemption is the holder's core protection: an EMT must be redeemable at par value at any time in funds under Article 49, while an ART carries a permanent redemption right that may be settled in funds or in the underlying assets.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for your licence:</strong> the two percent reserve test means an ART issuer's capital is not a fixed number, it grows with the token. A project that models only the EUR 350,000 floor and ignores the reserve-based calculation will be undercapitalised the moment the token scales. Build the capital plan around the highest-of test from day one, and revisit it as the reserve grows. See our <a href="/crypto-licenses/europe/mica-compliance/">MiCA compliance overview</a> for how this fits the full application.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Unsure whether your token is an EMT or an ART?</strong> Get a free 30-minute consultation. We will classify your stablecoin, model the capital and reserve, and map the licensing route that fits your design.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- SIGNIFICANT TOKENS -->
+        <section class="guide-section" id="significant">
+            <div class="section-label">Section 4: Significant Tokens</div>
+            <h2 class="section-h2">Significant Tokens and <em>EBA Supervision</em></h2>
+            <div class="prose">
+                <p>MiCA applies a second, heavier tier of rules to stablecoins that reach systemic scale. A token is classified as significant when it meets at least three of a set of criteria, which include more than ten million holders, an issued value, market capitalisation, or reserve over EUR 5 billion, and more than 2.5 million daily transactions with EUR 500 million in average daily transaction volume. Other criteria capture international reach and interconnection with the financial system.</p>
+                <p>Crossing into significant status changes who supervises the token and how much capital it must hold. The European Banking Authority takes over direct supervision of significant ART issuers from the national competent authority, while for significant EMTs the EBA and the national authority supervise jointly, with the EBA focused on the additional own funds and liquidity requirements. Significant tokens face higher own funds of up to three percent of average reserves, stricter liquidity management, and recovery and redemption plans.</p>
+                <p>For most projects at launch this tier is a planning horizon rather than an immediate obligation, but it should shape the design from the start. A token built without headroom for the significant-token rules will hit a hard wall of extra capital and EU-level supervision exactly when it is succeeding, which is the worst moment to be re-engineering a reserve and a governance model. Our <a href="/regulation/eu/">EU regulation overview</a> tracks how these supervisory lines are drawn.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our EMT and ART licensing work across the EU, the most expensive mistakes are made in the first month, before a single line of code is written. We routinely meet founders who have already committed to an ART structure, and an ART reserve, for a token that references nothing but the euro. Reclassifying it as an EMT then saves them a separate authorisation, a reserve-based capital calculation, and several months of regulator dialogue.</p>
+            <p>We also see applications stall because the capital plan models only the EUR 350,000 floor and ignores the two percent reserve test, or because the white paper and the reserve design are built in isolation and contradict each other under review. Settling the classification, the capital model, and the white paper as one coherent package, before approaching the regulator, is consistently the difference between a clean authorisation and a long round of queries.</p>
+          </div>
+        </section>
+
+        <!-- ROADMAP -->
+        <section class="guide-section" id="roadmap">
+            <div class="section-label">Section 5: The Roadmap</div>
+            <h2 class="section-h2">How to <em>Launch</em> a Stablecoin: Step by Step</h2>
+            <div class="prose">
+                <p>With the theory settled, launching a stablecoin under MiCA follows a consistent sequence. The detail varies by route and member state, but the order below is the workflow we run on every mandate. The first step, classification, governs all the others, which is why it sits at the front.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / STEPS -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Classify</div>
+                        <div class="ig-step-title">Decide EMT or ART</div>
+                        <div class="ig-step-desc">Test what the token references. A single official currency makes it an EMT under Title IV; a basket or other assets makes it an ART under Title III. This single decision sets the licence, capital, and supervisor.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Structure</div>
+                        <div class="ig-step-title">Choose the issuing entity and home state</div>
+                        <div class="ig-step-desc">For an EMT, secure or partner with an EMI or credit institution. For an ART, set up the issuer for a dedicated authorisation. Pick the home member state, because the licence passports across the EU.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Capitalise</div>
+                        <div class="ig-step-title">Model own funds and design the reserve</div>
+                        <div class="ig-step-desc">Build the capital plan around the highest-of test (EUR 350,000, 2% of reserves, or 25% of overheads for ARTs) and design a segregated, liquid reserve that fully covers liabilities to holders.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Document</div>
+                        <div class="ig-step-title">Draft the MiCA white paper and policies</div>
+                        <div class="ig-step-desc">Prepare the crypto-asset white paper, redemption policy, reserve management policy, governance, and AML framework. For an ART the white paper is approved at authorisation; for an EMT it is notified.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">Authorise &amp; launch</div>
+                        <div class="ig-step-title">File, answer the regulator, then issue</div>
+                        <div class="ig-step-desc">Submit the application, manage the competent authority's review, obtain authorisation or EMI sign-off, and issue the token with passporting and ongoing reporting, reserve attestation, and supervision in place.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISTAKES -->
+        <section class="guide-section" id="mistakes">
+            <div class="section-label">Section 6: Pitfalls</div>
+            <h2 class="section-h2">Mistakes That <em>Sink</em> a Launch</h2>
+            <div class="prose">
+                <p>Most failed or delayed stablecoin launches stumble on the same handful of issues, and almost all of them trace back to the planning phase. The first is misclassification: choosing the ART route for a token that is plainly an EMT, which adds a separate authorisation and a heavier capital base for no benefit. The second is undercapitalisation: building the capital plan on the EUR 350,000 floor while ignoring the two percent reserve test that bites as the token grows.</p>
+                <p>The third is a reserve that looks adequate on paper but fails the liquidity standards, where too little of it can be sold within one or five days to meet redemption demand. The fourth is treating the white paper as a marketing document rather than a regulated disclosure that must match the reserve, redemption, and governance design exactly. The fifth is ignoring the significant-token horizon, so a successful token suddenly faces three percent own funds and direct EBA supervision with no headroom to absorb them.</p>
+                <p>None of these are exotic. They are the predictable result of starting the build before the classification, capital model, and disclosure are settled as one package. The roadmap above exists to put those decisions first, where they belong.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Launching a Stablecoin: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What licence do I need to launch a stablecoin under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It depends on the type. An e-money token pegged to a single official currency must be issued by an authorised electronic money institution or credit institution under existing EU law, plus a MiCA white paper. An asset-referenced token requires a separate MiCA authorisation as an ART issuer from a national competent authority.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between an EMT and an ART?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An e-money token references a single official currency, such as a euro or US dollar stablecoin, and is treated like electronic money. An asset-referenced token references a basket or other value, such as several currencies, a commodity like gold, or crypto-assets. EMTs need an EMI or bank licence, while ARTs need their own MiCA authorisation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How much capital do I need to launch a stablecoin?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">An ART issuer must hold own funds equal to the highest of EUR 350,000, 2 percent of the average reserve of assets, or a quarter of fixed overheads of the preceding year, under MiCA Article 35. An EMT is issued through an EMI, whose initial capital floor under EU e-money rules is EUR 350,000, with extra prudential rules for significant tokens.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which is easier to launch, an EMT or an ART?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">For a single-fiat stablecoin, the EMT route is usually more efficient because it builds on the established electronic money institution framework rather than a fresh ART authorisation. An ART makes sense only when the token references a basket or other assets that cannot fit the e-money definition. Most fiat-pegged projects choose the EMT path.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a stablecoin be redeemed at face value?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. E-money tokens must be redeemable by holders at par value, at any time, in funds, under MiCA Article 49. Asset-referenced tokens also carry a permanent redemption right, but the holder may receive funds or the underlying assets in line with the issuer's redemption policy. Reserves must fully back these claims at all times.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What reserve must a stablecoin issuer hold?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA requires a reserve of assets that fully covers liabilities to holders, segregated from the issuer's own funds. Under the EBA technical standards for ARTs, at least 20 percent of the reserve must be sellable within one day and 30 percent within five days, rising to 40 and 60 percent for significant tokens. EMT reserves follow e-money safeguarding rules.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is a significant stablecoin under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A token is classified as significant when it meets at least three criteria, such as more than 10 million holders, issued value or reserve over EUR 5 billion, or more than 2.5 million daily transactions and EUR 500 million in daily volume. Significant tokens face higher own funds of up to 3 percent of average reserves and direct EBA oversight.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Who supervises stablecoin issuers under MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A national competent authority authorises and supervises ordinary ART and EMT issuers. Once a token is classified as significant, the European Banking Authority steps in: it takes over direct supervision of significant ART issuers, and shares supervision of significant EMTs with the national authority, focusing on the additional own funds and liquidity requirements.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need a white paper to issue a stablecoin?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. Both EMT and ART issuers must publish a MiCA crypto-asset white paper describing the token, the issuer, the rights of holders, the reserve, and the risks. For an EMT, the white paper is notified to the competent authority. For an ART, the white paper is approved as part of the authorisation process before the token can be offered.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When did MiCA stablecoin rules take effect?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The MiCA rules for asset-referenced tokens under Title III and e-money tokens under Title IV applied from 30 June 2024. The broader transitional period for crypto-asset service providers across the EU ends on 1 July 2026, after which firms can no longer rely on transitional arrangements to operate without full MiCA authorisation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I issue a US dollar stablecoin in the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes, a US dollar stablecoin can be an EMT because it references a single official currency. It must be issued by an authorised EMI or credit institution with a MiCA white paper. However, MiCA imposes daily transaction caps on non-euro EMTs used widely as a means of payment, which is a key planning point for dollar-token projects.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to launch a MiCA stablecoin?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Timelines depend on the route. An EMT through an existing EMI can move quickly once the institution is authorised and the white paper is notified. A fresh ART authorisation or a new EMI licence typically takes several months to over a year, covering legal structuring, reserve and governance design, and the regulator's review of the application.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I passport my stablecoin across the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. A core benefit of MiCA is the single market passport. Once an issuer is authorised in one EU member state and its white paper is in order, the token can be offered across all member states without a separate authorisation in each. This is why the choice of home authority and entity structure is a strategic decision.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need legal help to launch a stablecoin?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Practically, yes. Choosing between the EMT and ART routes, structuring the issuing entity, designing a compliant reserve, drafting the white paper, and managing the authorisation dialogue with the regulator are detailed and high-stakes. A specialist advisor maps the right path, prepares the file, and reduces the risk of rejection or delay.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (Markets in Crypto-Assets, MiCA), full text</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1114" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: MiCA Title III (Asset-Referenced Tokens) and Title IV (E-Money Tokens)</a></li>
+            <li><a href="https://www.eba.europa.eu/regulation-and-policy/asset-referenced-and-e-money-tokens-mica" target="_blank" rel="nofollow noopener noreferrer">EBA: Asset-Referenced and E-Money Tokens (MiCA), regulatory technical standards and guidelines</a></li>
+            <li><a href="https://www.eba.europa.eu/activities/direct-supervision-and-oversight/ebas-supervisory-role-under-mica" target="_blank" rel="nofollow noopener noreferrer">EBA: The EBA's Supervisory Role Under MiCA (significant ARTs and EMTs)</a></li>
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="nofollow noopener noreferrer">ESMA: Markets in Crypto-Assets Regulation (MiCA) activities and timeline</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Launching a Stablecoin?</h3>
+                <p>Tell us your peg and business model. We will classify your token as EMT or ART, model the capital and reserve, and build it into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=stablecoin" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Stablecoins at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">EMT</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Single fiat · EMI / bank</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Redeemable at par (Art. 49)</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">ART</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Basket · own MiCA licence</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">EUR 350k own funds (Art. 35)</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Significant</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">EBA supervision</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Up to 3% of reserves</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/stablecoin-regulation/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Stablecoin Regulation</a>
+                    <a href="/guides/mica-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Explained</a>
+                    <a href="/crypto-licenses/europe/mica-compliance/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Compliance</a>
+                    <a href="/banking-licenses/emi/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EMI License</a>
+                    <a href="/regulation/eu/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EU Regulation →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>EMT vs ART classification done right</li>
+                    <li>Capital and reserve modelling for MiCA</li>
+                    <li>White paper and authorisation support</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Launch Your Stablecoin the Right Way</h2>
+      <p class="cta-lead">Share your peg and business model, and we will classify your token as an EMT or ART, model the capital and reserve, draft the white paper, and build the authorisation file regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your stablecoin: peg, business model, and target markets…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/stablecoin-regulation/">Stablecoin Regulation</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/banking-licenses/emi/">EMI License</a></li>
+                <li><a href="/crypto-licenses/europe/mica-compliance/">MiCA Compliance</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>

@@ -1,0 +1,1005 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Regulation in Asia: Singapore, Hong Kong, Japan & More (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="Crypto regulation in Asia in 2026: how Singapore (MAS), Hong Kong (SFC), Japan (FSA), South Korea (FSC) and Australia (ASIC/AUSTRAC) license VASPs, plus the rules in India, Thailand and Malaysia. Regulators, regimes, thresholds and licensing routes compared.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/crypto-regulation-asia-overview/">
+    <meta property="og:title" content="Crypto Regulation in Asia: Singapore, Hong Kong, Japan & More (2026)">
+    <meta property="og:description" content="How Singapore, Hong Kong, Japan, South Korea and Australia license crypto businesses in 2026, plus India, Thailand and Malaysia: regulators, regimes, thresholds and licensing routes compared.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/crypto-regulation-asia-overview/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/stock-trading-app-smartphone.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.svg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Crypto Regulation in Asia", "item": "https://cryptolicenses.net/guides/crypto-regulation-asia-overview/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/crypto-regulation-asia-overview/#article",
+      "headline": "Crypto Regulation in Asia: Singapore, Hong Kong, Japan & More (2026)",
+      "description": "How Singapore (MAS), Hong Kong (SFC), Japan (FSA), South Korea (FSC) and Australia (ASIC/AUSTRAC) license crypto businesses in 2026, plus the rules in India, Thailand and Malaysia.",
+      "url": "https://cryptolicenses.net/guides/crypto-regulation-asia-overview/",
+      "datePublished": "2026-06-22",
+      "dateModified": "2026-06-22",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Marcus Hartmann",
+        "url": "https://cryptolicenses.net/about/dr-marcus-hartmann/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": { "@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.svg" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/crypto-regulation-asia-overview/"
+      },
+      "image": "https://cryptolicenses.net/assets/images/stock-trading-app-smartphone.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which Asian country has the clearest crypto regulation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Singapore, Hong Kong and Japan are the most established. Singapore licenses digital payment token services under the Payment Services Act, Hong Kong runs a dual SFO and AMLO regime for trading platforms with retail access, and Japan registers crypto-asset exchanges with the FSA. Each offers a defined, mature licensing path rather than legal grey areas." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who regulates crypto in Singapore?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Monetary Authority of Singapore, or MAS, regulates crypto. Digital payment token services to Singapore customers fall under the Payment Services Act 2019, where firms hold a Major Payment Institution licence. A separate Digital Token Service Provider regime under the Financial Services and Markets Act took effect on 30 June 2025 for entities serving overseas customers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can retail investors trade crypto on licensed platforms in Hong Kong?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Since the SFC virtual asset trading platform regime took effect on 1 June 2023, licensed platforms may serve retail investors, subject to investor protection measures covering onboarding, governance, disclosure and token due diligence. Platforms must be dual-licensed under the Securities and Futures Ordinance and the Anti-Money Laundering Ordinance." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is crypto regulated in Japan?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crypto-asset exchange providers currently register with the Financial Services Agency under the Payment Services Act and belong to the self-regulatory JVCEA. In 2026 Japan advanced a plan to move most crypto regulation to the Financial Instruments and Exchange Act, treating crypto more like securities, while stablecoins remain under the Payment Services Act." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is South Korea's Virtual Asset User Protection Act?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Virtual Asset User Protection Act came into force on 19 July 2024. Supervised by the Financial Services Commission, it requires exchanges to segregate customer funds, hold at least 80 percent of customer virtual assets in cold storage, monitor for abnormal trading, and report suspicious activity. It also bans market manipulation and other unfair trading." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Australia regulate crypto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Australia uses a dual-regulator model. AUSTRAC handles AML and counter-terrorist financing and runs the exchange registration regime, now moving from the DCE label to VASP terminology. ASIC oversees consumer protection and a forthcoming Digital Asset framework requiring an AFSL for larger platforms. The FATF Travel Rule became effective on 31 March 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is crypto legal in India?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crypto is legal to hold and trade in India but not yet governed by a comprehensive licensing law. Gains are taxed at a flat 30 percent plus a 1 percent transaction levy. Since April 2025 SEBI oversees crypto tokens that behave like securities, and the government is consulting on a fuller framework ahead of the 2026 to 2027 budget." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a separate licence for each Asian country?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Generally yes. There is no single pan-Asian crypto licence. Each jurisdiction issues its own authorisation under its own statute, with its own capital, custody and AML conditions. A firm serving multiple Asian markets usually needs to license, or passport where possible, in each one, which is why jurisdiction selection is a core early decision." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Asian crypto hub is best for an exchange?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your model and target users. Singapore suits payment-token and institutional businesses, Hong Kong suits retail-facing exchanges seeking a regulated brand, and Japan suits firms targeting a large domestic retail base. The right answer turns on capital, timeline, retail access and banking, which we assess before recommending a route." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get a crypto licence in Asia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary widely by jurisdiction and by how prepared the applicant is. The leading hubs of Singapore, Hong Kong and Japan run thorough reviews that commonly take many months, reflecting capital, custody, AML and fit-and-proper checks. Lighter regimes can move faster, but a strong application file is the main driver of speed everywhere." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the FATF Travel Rule apply across Asia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Increasingly, yes. Major Asian jurisdictions have adopted or are adopting FATF Recommendation 16 for virtual asset transfers. Singapore, Hong Kong, Japan and South Korea apply Travel Rule style obligations, and Australia made the Travel Rule effective on 31 March 2026. Any licensed exchange in these markets must collect and transmit sender and recipient data." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are stablecoins regulated in Asia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Stablecoin frameworks are emerging fast. Singapore has published a stablecoin regulatory approach and draft legislation, Japan keeps fiat-linked stablecoins under the Payment Services Act, and Thailand is developing a baht-backed stablecoin framework. The trend across the region is toward dedicated, reserve-backed stablecoin rules separate from general crypto regulation." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Malaysia regulate crypto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. In Malaysia the trading, issuance and safekeeping of digital assets are regulated by the Securities Commission Malaysia, which licenses digital asset exchange operators and digital asset custodians under the capital markets framework. Tokens treated as securities or as a digital asset fall within the Commission's regulated activities." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose the right Asian jurisdiction to license in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start from your business model, target customers, capital and banking needs, then match those against each regime's scope, retail rules, capital thresholds and timelines. A custodian, a retail exchange and a payment-token issuer will land in different jurisdictions. We map your model to the regime that fits before any application is filed." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    Crypto Regulation in Asia
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/stock-trading-app-smartphone.jpg" alt="Crypto trading app on a smartphone, overview of crypto regulation across Asia in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: Regional Regulation</div>
+        <h1 class="hero-h1">Crypto Regulation in Asia: Singapore, Hong Kong, Japan &amp; More in <em>2026</em></h1>
+        <p class="hero-intro">Asia is the most fragmented crypto-licensing region in the world. This guide maps how Singapore, Hong Kong, Japan, South Korea and Australia license crypto businesses in 2026, with brief notes on India, Thailand and Malaysia, so you can see which regulator, regime and licensing route fits your model.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~10 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>Regional Regulation</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#overview">The Asian Crypto Map</a></li>
+            <li class="toc-item"><a href="#singapore">Singapore (MAS)</a></li>
+            <li class="toc-item"><a href="#hong-kong">Hong Kong (SFC)</a></li>
+            <li class="toc-item"><a href="#japan">Japan (FSA)</a></li>
+            <li class="toc-item"><a href="#south-korea">South Korea (FSC)</a></li>
+            <li class="toc-item"><a href="#australia">Australia (ASIC / AUSTRAC)</a></li>
+            <li class="toc-item"><a href="#emerging">India, Thailand &amp; Malaysia</a></li>
+            <li class="toc-item"><a href="#choosing">Choosing a Jurisdiction</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians and institutional investors through licensing across Asia, from MAS payment-token authorisations in Singapore to SFC platform licences in Hong Kong and FSA registration in Japan.</p>
+                <p>He advises founders on jurisdiction selection across more than 60 countries, matching business model, capital and target markets to the right regulator. His Asia work spans retail-facing exchanges, institutional custodians and cross-border payment-token issuers.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="overview">
+
+            <div class="def-box">
+                <div class="def-term">In Short · Crypto Regulation in Asia</div>
+                <p>There is no single Asian crypto framework. Each jurisdiction licenses crypto businesses under its own statute and regulator: Singapore under MAS, Hong Kong under the SFC, Japan under the FSA, South Korea under the FSC, and Australia under ASIC and AUSTRAC. Picking the right one is a model-by-model decision, not a one-size answer.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>Singapore (MAS) licenses digital payment token services under the Payment Services Act, with a separate DTSP regime for offshore-only providers since 30 June 2025</li>
+                    <li>Hong Kong (SFC) runs a dual SFO and AMLO trading-platform regime that allows retail access, with more than a dozen licensed platforms by early 2026</li>
+                    <li>Japan (FSA) registers exchanges under the Payment Services Act today but is moving most crypto regulation toward the securities-style FIEA from 2026</li>
+                    <li>South Korea's Virtual Asset User Protection Act (in force 19 July 2024) mandates cold-storage and market-abuse controls; Australia uses a dual ASIC and AUSTRAC model</li>
+                    <li>India, Thailand and Malaysia each take a distinct path, so jurisdiction selection should follow your business model, not the other way around</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Landscape</div>
+            <h2 class="section-h2">The Asian Crypto <em>Map</em></h2>
+            <div class="prose">
+                <p>Asia is not a single market for crypto regulation. It is a patchwork of national regimes that range from some of the most mature licensing frameworks in the world to jurisdictions still drafting their first comprehensive laws. A business that is fully compliant in Singapore may be unauthorised next door, because each country writes its own rules, sets its own capital and custody requirements, and names its own regulator.</p>
+                <p>That fragmentation is the single most important thing for a founder to understand. There is no pan-Asian passport equivalent to the EU's MiCA. Serving multiple Asian markets usually means licensing, or carefully structuring around, each one separately. The upside is choice: the region offers credible homes for almost every model, from institutional custody to retail exchange to cross-border payment tokens. Our <a href="/crypto-licenses/asia/">Asia crypto licensing hub</a> lists the individual country pages behind this overview.</p>
+                <p>Three jurisdictions anchor the region as recognised crypto hubs: Singapore, Hong Kong and Japan. Each runs a defined, mature licensing path rather than a legal grey area, which is why most serious institutional players cluster around them. South Korea and Australia are large, sophisticated markets with their own protective regimes, and India, Thailand and Malaysia round out the picture with distinct national approaches.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Regional Snapshot</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">MAS</div>
+                    <div class="ig-stat-label">Singapore Regulator</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">SFC</div>
+                    <div class="ig-stat-label">Hong Kong Regulator</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">FSA</div>
+                    <div class="ig-stat-label">Japan Regulator</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">FSC</div>
+                    <div class="ig-stat-label">South Korea Regulator</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">12+</div>
+                    <div class="ig-stat-label">HK Licensed Platforms (2026)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2 Bodies</div>
+                    <div class="ig-stat-label">Australia (ASIC + AUSTRAC)</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: MAS, SFC, FSA, FSC, ASIC and AUSTRAC official guidance; SFC list of licensed virtual asset trading platforms (early 2026).</p>
+        </section>
+
+        <!-- SINGAPORE -->
+        <section class="guide-section" id="singapore">
+            <div class="section-label">Section 2: Singapore</div>
+            <h2 class="section-h2">Singapore: <em>MAS</em> and the Payment Services Act</h2>
+            <div class="prose">
+                <p>Singapore is Asia's institutional crypto hub, and the Monetary Authority of Singapore (MAS) is its single financial regulator. Digital payment token services provided to customers in Singapore are regulated under the Payment Services Act 2019, where qualifying firms hold a Major Payment Institution licence. The regime covers buying, selling and facilitating the exchange of digital payment tokens, and MAS has steadily tightened consumer-protection and reserve expectations on licensed providers.</p>
+                <p>In June 2025 MAS added a second pillar. The Digital Token Service Provider regime under Part 9 of the Financial Services and Markets Act 2022 took effect on 30 June 2025, capturing Singapore-incorporated entities that provide digital token services solely to customers outside Singapore. MAS has been explicit that it will license such offshore-only DTSPs only in extremely limited circumstances, effectively closing a route that some firms had used to base in Singapore while serving foreign markets.</p>
+                <p>The practical takeaway is that Singapore rewards firms genuinely serving the Singapore or institutional market and discourages purely offshore booking structures. For a deeper comparison with its closest rival, see our guide on <a href="/guides/singapore-vs-hong-kong-crypto-license/">Singapore versus Hong Kong crypto licensing</a>, and our country page on <a href="/regulation/singapore/">crypto regulation in Singapore</a>.</p>
+            </div>
+        </section>
+
+        <!-- HONG KONG -->
+        <section class="guide-section" id="hong-kong">
+            <div class="section-label">Section 3: Hong Kong</div>
+            <h2 class="section-h2">Hong Kong: <em>SFC</em> Platforms with Retail Access</h2>
+            <div class="prose">
+                <p>Hong Kong took a deliberately different path from Singapore by opening regulated crypto to retail investors. Since 1 June 2023, centralised virtual asset trading platforms operating in or actively marketing to Hong Kong must be licensed by the Securities and Futures Commission (SFC) under a dual regime: the Securities and Futures Ordinance (Cap. 571) and the Anti-Money Laundering and Counter-Terrorist Financing Ordinance (Cap. 615). The SFC accepts a single combined application for both licences to ease the administrative burden.</p>
+                <p>Crucially, licensed platforms may serve retail investors, subject to investor protection measures covering onboarding, governance, disclosure and token due diligence and admission. By early 2026 the SFC had licensed more than a dozen platforms, including established names such as OSL and HashKey Exchange. In April 2026 the SFC went further, permitting secondary trading of tokenised SFC-authorised investment products on licensed platforms, bringing regulated on-chain liquidity to its fund market.</p>
+                <p>For a retail-facing exchange that wants a regulated brand in Asia, Hong Kong is often the strongest fit. Our <a href="/regulation/">regulation hub</a> tracks how the SFC regime sits alongside neighbouring frameworks.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders ask me to name the best Asian hub, but that is the wrong question. Singapore rewards institutional and payment-token businesses, Hong Kong rewards retail-facing exchanges that want a regulated brand, and Japan rewards firms targeting its huge domestic base. We pick the jurisdiction to fit the model, never the other way around."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- JAPAN -->
+        <section class="guide-section" id="japan">
+            <div class="section-label">Section 4: Japan</div>
+            <h2 class="section-h2">Japan: <em>FSA</em> Registration and the FIEA Shift</h2>
+            <div class="prose">
+                <p>Japan was one of the first major economies to formally license crypto exchanges, and it remains a heavyweight market. Crypto-asset exchange service providers register with the Financial Services Agency (FSA) under the Payment Services Act, and members belong to the Japan Virtual and Crypto Assets Exchange Association (JVCEA), the industry self-regulatory body that vets new token listings before they can be offered.</p>
+                <p>The big development for 2026 is structural. The FSA has advanced a plan to move most crypto-asset regulation out of the Payment Services Act and under the Financial Instruments and Exchange Act (FIEA), treating crypto with rigour closer to that applied to stocks and bonds. The shift brings pre-sale disclosure duties, insider-trading prohibitions and tougher penalties for unlicensed operators. Fiat-linked stablecoins are intended to remain under the Payment Services Act, and NFTs are expected to sit outside FIEA.</p>
+                <p>Japan suits firms targeting a large, mature domestic retail base willing to work through a demanding registration and listing process. Our country page on <a href="/regulation/japan/">crypto regulation in Japan</a> covers the FSA framework in more detail.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Not sure which Asian regulator fits your model?</strong> Get a free 30-minute consultation. We will map your business to the right jurisdiction across MAS, SFC, FSA and beyond, and recommend a licensing route.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- SOUTH KOREA -->
+        <section class="guide-section" id="south-korea">
+            <div class="section-label">Section 5: South Korea</div>
+            <h2 class="section-h2">South Korea: The <em>User Protection Act</em></h2>
+            <div class="prose">
+                <p>South Korea has one of Asia's most active retail crypto markets, and its first dedicated statute is squarely focused on protecting users. The Act on the Protection of Virtual Asset Users came into force on 19 July 2024, supervised by the Financial Services Commission (FSC). It is a protective rather than a market-opening law, built around three pillars: safeguarding customer deposits and assets, banning unfair trading, and giving regulators inspection and sanction powers.</p>
+                <p>The operational requirements are strict. Exchanges must keep customer money separate from their own funds and deposit it with a credible financial institution, store at least 80 percent of customers' virtual assets in cold wallets, and monitor for abnormal price and volume activity, reporting suspicious transactions immediately. Market manipulation and the use of material non-public information are explicitly prohibited.</p>
+                <p>In February 2025 the FSC signalled a gradual opening to institutional participation, a sign the regime may broaden over time. For now, South Korea is best understood as a large market with a hard protective floor that any licensed operator must meet.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our Asian licensing work, the most common founder mistake is treating the region as one market and assuming a licence in one hub unlocks the others. It does not. We regularly see firms that built around a Singapore base discover they still need separate authorisation to onboard Hong Kong retail users or to serve Japanese customers through a domestic entity. Each regulator wants its own application, its own capital and its own local compliance officer.</p>
+            <p>The second recurring issue is timing the structural shifts. Japan's move toward FIEA, Australia's transition from the DCE label to a full ASIC framework, and South Korea's institutional opening all change what a credible application looks like. Building the licensing plan against where each regime is heading, not just where it is today, is consistently what separates a clean approval from a stalled one.</p>
+          </div>
+        </section>
+
+        <!-- AUSTRALIA -->
+        <section class="guide-section" id="australia">
+            <div class="section-label">Section 6: Australia</div>
+            <h2 class="section-h2">Australia: <em>ASIC</em> and AUSTRAC</h2>
+            <div class="prose">
+                <p>Australia is included in any serious Asia-Pacific roundup, and it runs a dual-regulator model. AUSTRAC handles anti-money laundering and counter-terrorist financing and operates the exchange registration regime, while the Australian Securities and Investments Commission (ASIC) oversees consumer protection and financial-services licensing. Registration with AUSTRAC has long been mandatory for digital currency exchange activity.</p>
+                <p>Two changes define the 2026 landscape. First, the FATF Travel Rule became effective on 31 March 2026, legislated through the AML/CTF amendment framework, so all in-scope exchanges must collect and transmit originator and beneficiary information. Second, the long-standing digital currency exchange label is giving way to the internationally recognised VASP terminology, and a forthcoming ASIC Digital Asset framework will require larger platforms to hold an Australian Financial Services Licence in addition to AUSTRAC registration, phasing in from 2027 after a transition period.</p>
+                <p>Australia therefore sits between the light-touch and the heavily regulated camps: registration is straightforward, but the AFSL layer and Travel Rule obligations raise the bar for platforms above the relevant thresholds.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Jurisdiction</th>
+                        <th>Regulator</th>
+                        <th>Core Regime</th>
+                        <th>Retail Access</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Singapore</td>
+                        <td>MAS</td>
+                        <td>Payment Services Act + FSM Act DTSP</td>
+                        <td>Permitted, restricted promotion</td>
+                        <td>Mature</td>
+                    </tr>
+                    <tr>
+                        <td>Hong Kong</td>
+                        <td>SFC</td>
+                        <td>SFO + AMLO (VATP)</td>
+                        <td>Permitted with safeguards</td>
+                        <td>Mature, expanding</td>
+                    </tr>
+                    <tr>
+                        <td>Japan</td>
+                        <td>FSA</td>
+                        <td>Payment Services Act, moving to FIEA</td>
+                        <td>Permitted</td>
+                        <td>Mature, in transition</td>
+                    </tr>
+                    <tr>
+                        <td>South Korea</td>
+                        <td>FSC</td>
+                        <td>Virtual Asset User Protection Act</td>
+                        <td>Permitted (retail-heavy)</td>
+                        <td>In force since 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Australia</td>
+                        <td>ASIC + AUSTRAC</td>
+                        <td>AML/CTF + Digital Asset framework</td>
+                        <td>Permitted</td>
+                        <td>Framework phasing in</td>
+                    </tr>
+                    <tr>
+                        <td>Malaysia</td>
+                        <td>SC Malaysia</td>
+                        <td>Capital markets digital asset rules</td>
+                        <td>Permitted on DAX</td>
+                        <td>Established</td>
+                    </tr>
+                    <tr>
+                        <td>Thailand</td>
+                        <td>SEC Thailand</td>
+                        <td>Digital Asset Business Decree</td>
+                        <td>Permitted, licensed operators</td>
+                        <td>Established, tightening</td>
+                    </tr>
+                    <tr>
+                        <td>India</td>
+                        <td>SEBI / RBI / Finance Ministry</td>
+                        <td>Tax-led, framework pending</td>
+                        <td>Legal to trade, no licence regime</td>
+                        <td>Evolving</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Summary based on each regulator's official guidance as of June 2026. Frameworks change frequently; confirm current rules before applying.</p>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Why this matters for licensing:</strong> the right Asian jurisdiction is set by your model, not by reputation alone. A custodian, a retail exchange and a payment-token issuer will each land in a different country. See our guide on the <a href="/guides/best-crypto-license-jurisdiction/">best crypto licence jurisdiction</a> for a structured way to compare options.</p>
+            </div>
+        </section>
+
+        <!-- EMERGING -->
+        <section class="guide-section" id="emerging">
+            <div class="section-label">Section 7: Emerging Markets</div>
+            <h2 class="section-h2">India, Thailand &amp; <em>Malaysia</em></h2>
+            <div class="prose">
+                <p>Beyond the five anchor jurisdictions, three markets are worth a closer look. India permits crypto trading and ownership but has no comprehensive licensing law. Gains are taxed at a flat 30 percent plus a 1 percent transaction levy, and since April 2025 the Securities and Exchange Board of India (SEBI) oversees crypto tokens that behave like securities. The Finance Ministry has been consulting with SEBI and the Reserve Bank of India on a fuller framework ahead of the 2026 to 2027 budget, so the regime is best treated as evolving rather than settled.</p>
+                <p>Thailand regulates crypto through the Securities and Exchange Commission under its Digital Asset Business Decree, and a 2025 amendment extended licensing to offshore operators that serve persons in Thailand. Regulatory attention has shifted toward a baht-backed stablecoin framework designed to operate on a fully backed, one-to-one basis. Malaysia takes a securities-led approach: the trading, issuance and safekeeping of digital assets are regulated by the Securities Commission Malaysia, which licenses digital asset exchange operators and custodians within its capital markets framework.</p>
+                <p>The common thread across these three is movement. Each is tightening or building rules rather than standing still, which makes timing and structure as important as the rule book itself when planning an entry.</p>
+            </div>
+        </section>
+
+        <!-- CHOOSING -->
+        <section class="guide-section" id="choosing">
+            <div class="section-label">Section 8: Decision</div>
+            <h2 class="section-h2">How to <em>Choose</em> a Jurisdiction</h2>
+            <div class="prose">
+                <p>Because there is no pan-Asian licence, jurisdiction selection is the decision that shapes everything that follows. The right answer flows from a handful of variables, and the timeline below shows how the region's major regimes have arrived at their current shape, which matters because choosing well means reading where each is heading next.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE / MILESTONES -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2019</div>
+                        <div class="ig-step-title">Singapore Payment Services Act</div>
+                        <div class="ig-step-desc">MAS brings digital payment token services into a formal licensing regime, anchoring Singapore as Asia's institutional crypto hub.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">June 2023</div>
+                        <div class="ig-step-title">Hong Kong SFC VATP regime</div>
+                        <div class="ig-step-desc">Hong Kong opens dual SFO and AMLO licensing for trading platforms and permits retail access under investor-protection safeguards.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">July 2024</div>
+                        <div class="ig-step-title">South Korea User Protection Act</div>
+                        <div class="ig-step-desc">The FSC-supervised Virtual Asset User Protection Act takes effect, mandating cold-storage, fund segregation and market-abuse controls.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">June 2025</div>
+                        <div class="ig-step-title">Singapore DTSP regime begins</div>
+                        <div class="ig-step-desc">The FSM Act Digital Token Service Provider regime captures Singapore entities serving only offshore customers, licensed in very limited cases.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2026 onward</div>
+                        <div class="ig-step-title">Japan FIEA shift &amp; Australia framework</div>
+                        <div class="ig-step-desc">Japan moves crypto toward securities-style FIEA rules while Australia adopts the FATF Travel Rule and phases in an ASIC AFSL framework.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prose" style="margin-top:1.5rem;">
+                <p>Work through four questions before filing anywhere. What is your model: custodian, exchange, broker or payment-token issuer? Who are your customers: retail, institutional, domestic or cross-border? What capital and banking can you support? And how do retail rules and timelines in each candidate jurisdiction match your launch plan? Answer those, and the shortlist usually narrows to one or two countries. We run exactly this assessment before any application, so the licence fits the business rather than the other way around.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">Crypto Regulation in Asia: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">Which Asian country has the clearest crypto regulation?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Singapore, Hong Kong and Japan are the most established. Singapore licenses digital payment token services under the Payment Services Act, Hong Kong runs a dual SFO and AMLO regime for trading platforms with retail access, and Japan registers crypto-asset exchanges with the FSA. Each offers a defined, mature licensing path rather than legal grey areas.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Who regulates crypto in Singapore?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The Monetary Authority of Singapore, or MAS, regulates crypto. Digital payment token services to Singapore customers fall under the Payment Services Act 2019, where firms hold a Major Payment Institution licence. A separate Digital Token Service Provider regime under the Financial Services and Markets Act took effect on 30 June 2025 for entities serving overseas customers.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can retail investors trade crypto on licensed platforms in Hong Kong?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. Since the SFC virtual asset trading platform regime took effect on 1 June 2023, licensed platforms may serve retail investors, subject to investor protection measures covering onboarding, governance, disclosure and token due diligence. Platforms must be dual-licensed under the Securities and Futures Ordinance and the Anti-Money Laundering Ordinance.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How is crypto regulated in Japan?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Crypto-asset exchange providers currently register with the Financial Services Agency under the Payment Services Act and belong to the self-regulatory JVCEA. In 2026 Japan advanced a plan to move most crypto regulation to the Financial Instruments and Exchange Act, treating crypto more like securities, while stablecoins remain under the Payment Services Act.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is South Korea's Virtual Asset User Protection Act?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The Virtual Asset User Protection Act came into force on 19 July 2024. Supervised by the Financial Services Commission, it requires exchanges to segregate customer funds, hold at least 80 percent of customer virtual assets in cold storage, monitor for abnormal trading, and report suspicious activity. It also bans market manipulation and other unfair trading.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How does Australia regulate crypto?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Australia uses a dual-regulator model. AUSTRAC handles AML and counter-terrorist financing and runs the exchange registration regime, now moving from the DCE label to VASP terminology. ASIC oversees consumer protection and a forthcoming Digital Asset framework requiring an AFSL for larger platforms. The FATF Travel Rule became effective on 31 March 2026.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is crypto legal in India?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Crypto is legal to hold and trade in India but not yet governed by a comprehensive licensing law. Gains are taxed at a flat 30 percent plus a 1 percent transaction levy. Since April 2025 SEBI oversees crypto tokens that behave like securities, and the government is consulting on a fuller framework ahead of the 2026 to 2027 budget.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need a separate licence for each Asian country?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Generally yes. There is no single pan-Asian crypto licence. Each jurisdiction issues its own authorisation under its own statute, with its own capital, custody and AML conditions. A firm serving multiple Asian markets usually needs to license, or passport where possible, in each one, which is why jurisdiction selection is a core early decision.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which Asian crypto hub is best for an exchange?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It depends on your model and target users. Singapore suits payment-token and institutional businesses, Hong Kong suits retail-facing exchanges seeking a regulated brand, and Japan suits firms targeting a large domestic retail base. The right answer turns on capital, timeline, retail access and banking, which we assess before recommending a route.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to get a crypto licence in Asia?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Timelines vary widely by jurisdiction and by how prepared the applicant is. The leading hubs of Singapore, Hong Kong and Japan run thorough reviews that commonly take many months, reflecting capital, custody, AML and fit-and-proper checks. Lighter regimes can move faster, but a strong application file is the main driver of speed everywhere.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does the FATF Travel Rule apply across Asia?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Increasingly, yes. Major Asian jurisdictions have adopted or are adopting FATF Recommendation 16 for virtual asset transfers. Singapore, Hong Kong, Japan and South Korea apply Travel Rule style obligations, and Australia made the Travel Rule effective on 31 March 2026. Any licensed exchange in these markets must collect and transmit sender and recipient data.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are stablecoins regulated in Asia?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Stablecoin frameworks are emerging fast. Singapore has published a stablecoin regulatory approach and draft legislation, Japan keeps fiat-linked stablecoins under the Payment Services Act, and Thailand is developing a baht-backed stablecoin framework. The trend across the region is toward dedicated, reserve-backed stablecoin rules separate from general crypto regulation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does Malaysia regulate crypto?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. In Malaysia the trading, issuance and safekeeping of digital assets are regulated by the Securities Commission Malaysia, which licenses digital asset exchange operators and digital asset custodians under the capital markets framework. Tokens treated as securities or as a digital asset fall within the Commission's regulated activities.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do I choose the right Asian jurisdiction to license in?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Start from your business model, target customers, capital and banking needs, then match those against each regime's scope, retail rules, capital thresholds and timelines. A custodian, a retail exchange and a payment-token issuer will land in different jurisdictions. We map your model to the regime that fits before any application is filed.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://www.mas.gov.sg/regulation/payments/licensing-for-payment-service-providers/types-of-payment-services" target="_blank" rel="nofollow noopener noreferrer">MAS: Types of Payment Services (Payment Services Act, digital payment tokens)</a></li>
+            <li><a href="https://www.mas.gov.sg/regulation/guidelines/guidelines-on-licensing-for-dtsps" target="_blank" rel="nofollow noopener noreferrer">MAS: Guidelines on Licensing for Digital Token Service Providers (FSM Act)</a></li>
+            <li><a href="https://www.sfc.hk/en/Rules-and-standards/Virtual-assets/Virtual-asset-trading-platforms-operators" target="_blank" rel="nofollow noopener noreferrer">SFC Hong Kong: Virtual Asset Trading Platform Operators</a></li>
+            <li><a href="https://www.fsa.go.jp/en/" target="_blank" rel="nofollow noopener noreferrer">FSA Japan: Financial Services Agency (crypto-asset regulation)</a></li>
+            <li><a href="https://www.fsc.go.kr/eng/pr010101/82683" target="_blank" rel="nofollow noopener noreferrer">FSC South Korea: Act on the Protection of Virtual Asset Users</a></li>
+            <li><a href="https://www.austrac.gov.au/business/core-guidance/digital-currency-exchange-providers" target="_blank" rel="nofollow noopener noreferrer">AUSTRAC: Digital Currency Exchange Providers</a></li>
+            <li><a href="https://asic.gov.au/regulatory-resources/digital-transformation/crypto-assets/" target="_blank" rel="nofollow noopener noreferrer">ASIC Australia: Crypto Assets and Digital Asset Framework</a></li>
+            <li><a href="https://www.sc.com.my/digital-assets" target="_blank" rel="nofollow noopener noreferrer">Securities Commission Malaysia: Digital Assets</a></li>
+            <li><a href="https://www.fatf-gafi.org/en/topics/virtual-assets.html" target="_blank" rel="nofollow noopener noreferrer">FATF: Virtual Assets and the Travel Rule (Recommendation 16)</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>Licensing in Asia?</h3>
+                <p>Tell us your business model and target markets. We will map the Asian regulator and regime that fit and build them into your licensing plan. Free, no obligation.</p>
+                <a href="/contact/?topic=asia-licensing" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Asia at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Singapore</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">MAS · PSA + DTSP</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Institutional / payment tokens</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Hong Kong</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">SFC · SFO + AMLO</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Retail-facing exchanges</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Japan</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">FSA · PSA → FIEA</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Large domestic retail base</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/singapore-vs-hong-kong-crypto-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Singapore vs Hong Kong</a>
+                    <a href="/guides/best-crypto-license-jurisdiction/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Best Crypto Licence Jurisdiction</a>
+                    <a href="/regulation/singapore/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Singapore Regulation</a>
+                    <a href="/regulation/japan/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Japan Regulation</a>
+                    <a href="/crypto-licenses/asia/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Asia Licensing Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>Coverage of MAS, SFC, FSA, FSC and more</li>
+                    <li>Model-first jurisdiction selection</li>
+                    <li>Local legal partners across Asia</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Find the Right Asian Jurisdiction Before You Apply</h2>
+      <p class="cta-lead">Share your business model and target markets, and we will map the Asian regulator and regime that apply, recommend a licensing route, and build the compliance framework regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, target Asian markets, and licensing needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/singapore-vs-hong-kong-crypto-license/">Singapore vs Hong Kong</a></li>
+                <li><a href="/guides/best-crypto-license-jurisdiction/">Best Jurisdiction</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/asia/">Asia Licensing</a></li>
+                <li><a href="/regulation/singapore/">Singapore Regulation</a></li>
+                <li><a href="/regulation/japan/">Japan Regulation</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>
