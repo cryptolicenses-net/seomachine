@@ -5,6 +5,11 @@ https://www.cryptolicenses.net/* https://cryptolicenses.net/:splat 301
 http://cryptolicenses.net/* https://cryptolicenses.net/:splat 301
 http://www.cryptolicenses.net/* https://cryptolicenses.net/:splat 301
 
+# Manual redirects (keep near top of file)
+# Seychelles is an African jurisdiction — caribbean/ duplicate merged into africa/ (2026-05-25)
+/crypto-licenses/caribbean/seychelles/ /crypto-licenses/africa/seychelles/ 301
+/crypto-licenses/caribbean/seychelles /crypto-licenses/africa/seychelles/ 301
+
 # Trailing slash: URL без слеша → URL со слешем (301)
 # Сгенерировано автоматически — не редактировать вручную
 
@@ -39,6 +44,7 @@ http://www.cryptolicenses.net/* https://cryptolicenses.net/:splat 301
 /banking-licenses/spi/uk /banking-licenses/spi/uk/ 301
 /blog /blog/ 301
 /case-studies /case-studies/ 301
+/compare /compare/ 301
 /contact /contact/ 301
 /corporate-services/aml-kyc /corporate-services/aml-kyc/ 301
 /corporate-services/company-formation/bulgaria /corporate-services/company-formation/bulgaria/ 301
@@ -123,7 +129,6 @@ http://www.cryptolicenses.net/* https://cryptolicenses.net/:splat 301
 /crypto-licenses/asia/uzbekistan /crypto-licenses/asia/uzbekistan/ 301
 /crypto-licenses/asia/vietnam /crypto-licenses/asia/vietnam/ 301
 /crypto-licenses/caribbean /crypto-licenses/caribbean/ 301
-/crypto-licenses/caribbean/seychelles /crypto-licenses/caribbean/seychelles/ 301
 /crypto-licenses/caribbean/svg /crypto-licenses/caribbean/svg/ 301
 /crypto-licenses/custody-license /crypto-licenses/custody-license/ 301
 /crypto-licenses/europe/armenia /crypto-licenses/europe/armenia/ 301
@@ -232,10 +237,12 @@ http://www.cryptolicenses.net/* https://cryptolicenses.net/:splat 301
 /guides/cheapest-crypto-licenses /guides/cheapest-crypto-licenses/ 301
 /guides/crypto-broker-license /guides/crypto-broker-license/ 301
 /guides/crypto-license-cost /guides/crypto-license-cost/ 301
+/guides/defi-regulation /guides/defi-regulation/ 301
 /guides/fastest-crypto-licenses /guides/fastest-crypto-licenses/ 301
 /guides/how-to-get-crypto-license /guides/how-to-get-crypto-license/ 301
 /guides /guides/ 301
 /guides/mica-explained /guides/mica-explained/ 301
+/guides/mica-grandfathering /guides/mica-grandfathering/ 301
 /guides/no-kyc-exchanges-risks /guides/no-kyc-exchanges-risks/ 301
 /guides/stablecoin-regulation /guides/stablecoin-regulation/ 301
 /guides/start-crypto-business /guides/start-crypto-business/ 301

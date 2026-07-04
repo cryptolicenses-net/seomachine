@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - main
 
 jobs:
   deploy:
@@ -15,5 +14,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy cryptolicenses/output --project-name=cryptolicenses-net --branch=master --commit-dirty=true
+          accountId: 0166508d5cf2032b7d2eff4f9b50f66a
+          command: pages deploy . --project-name=cryptolicenses-net --branch=master

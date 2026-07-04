@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi Regulation 2026 | CryptoLicenses.net</title>
+    <meta name="description" content="Do DeFi protocols need a licence in 2026? How MiCA, the US and Asia treat decentralised finance — and when a front-end, team, or fee triggers regulation.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/defi-regulation/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CryptoLicenses.net">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="DeFi Regulation 2026">
+    <meta property="og:description" content="Do DeFi protocols need a licence in 2026? How MiCA, the US and Asia treat decentralised finance — and when a front-end, team, or fee triggers regulation.">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/defi-regulation/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DeFi Regulation 2026">
+    <meta name="twitter:description" content="Do DeFi protocols need a licence in 2026? How MiCA, the US and Asia treat decentralised finance — and when a front-end, team, or fee triggers regulation.">
+    <meta name="twitter:image" content="https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* STEPS */
+        .steps-big { display: flex; flex-direction: column; gap: 0; border: var(--heavy); margin-top: 1.5rem; }
+        .step-big { display: grid; grid-template-columns: 80px 1fr; border-bottom: var(--border); }
+        .step-big:last-child { border-bottom: none; }
+        .step-big-num { border-right: var(--heavy); display: flex; align-items: flex-start; justify-content: center; font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 300; color: var(--accent); padding: 2rem 0; padding-top: 1.75rem; }
+        .step-big-body { padding: 2rem; }
+        .step-big-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 0.75rem; }
+        .step-big-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+        .step-big-desc p { margin-bottom: 0.75rem; }
+        .step-big-desc p:last-child { margin-bottom: 0; }
+        .step-tip { margin-top: 1rem; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(201,168,76,0.05); font-size: 0.85rem; color: var(--ink); }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* CHECKLIST */
+        .checklist { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+        .checklist li { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: var(--muted); }
+        .checklist li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+
+        /* STABLECOIN TYPE CARDS */
+        .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .type-card { border: var(--heavy); padding: 1.5rem; }
+        .type-card-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.5rem; }
+        .type-card-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.75rem; }
+        .type-card-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+        }
+
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .aside-info-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.5rem 0; border-bottom: var(--border); font-size: 0.82rem; }
+        .aside-info-row:last-child { border-bottom: none; }
+        .aside-info-row-label { color: var(--muted); }
+        .aside-info-row-val { font-weight: 600; font-size: 0.8rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        .warn-box { border-left: 3px solid #dc2626; background: rgba(220,38,38,0.05); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .warn-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 900px) {
+  .hero-guide { grid-template-columns: 1fr !important; }
+  .hero-guide-img { display: none; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .type-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+        }
+        @media (max-width: 480px) {
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cryptolicenses.net/#organization","name":"CryptoLicenses.net","url":"https://cryptolicenses.net","logo":{"@type":"ImageObject","url":"https://cryptolicenses.net/assets/logo.png"},"address":{"@type":"PostalAddress","streetAddress":"Grafenauweg 4","addressLocality":"Zug","postalCode":"6300","addressRegion":"ZG","addressCountry":"CH"},"contactPoint":{"@type":"ContactPoint","email":"info@cryptolicenses.net","contactType":"customer service","availableLanguage":["English","Russian"]},"sameAs":["https://t.me/cryptolicensesnet"]},{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptolicenses.net/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cryptolicenses.net/guides/"}, {"@type": "ListItem", "position": 3, "name": "DeFi Regulation 2026", "item": "https://cryptolicenses.net/guides/defi-regulation/"}]},{"@type": "Article", "@id": "https://cryptolicenses.net/guides/defi-regulation/#article", "headline": "DeFi Regulation 2026", "description": "Do DeFi protocols need a licence in 2026? How MiCA, the US and Asia treat decentralised finance — and when a front-end, team, or fee triggers regulation.", "url": "https://cryptolicenses.net/guides/defi-regulation/", "datePublished": "2026-01-15", "dateModified": "2026-05-25", "author": {"@id": "https://cryptolicenses.net/#organization"}, "publisher": {"@type": "Organization", "@id": "https://cryptolicenses.net/#organization", "name": "CryptoLicenses.net", "logo": {"@type": "ImageObject", "url": "https://cryptolicenses.net/assets/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://cryptolicenses.net/guides/defi-regulation/"}, "inLanguage": "en", "image": "https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg"},{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do DeFi protocols need a licence?", "acceptedAnswer": {"@type": "Answer", "text": "There is no DeFi-specific licence, but a protocol can still require authorisation if there is an identifiable person or company that controls or profits from it. Regulators apply existing licensing, AML, securities, and payments rules to that operator. A genuinely decentralised protocol with no controlling team, no fee recipient, and no operated front-end may fall outside these rules — but such setups are rare."}}, {"@type": "Question", "name": "Is DeFi covered by MiCA?", "acceptedAnswer": {"@type": "Answer", "text": "MiCA's Recital 22 excludes crypto-asset services provided in a fully decentralised manner without any intermediary. In practice the exemption is narrow: if a company runs the interface, a team controls contract upgrades, or an entity collects fees, EU regulators may treat that entity as a CASP under MiCA. The European Commission and ESMA were tasked under Article 142 with assessing whether dedicated DeFi rules are needed, but no specific EU DeFi regime is in force yet."}}, {"@type": "Question", "name": "Can a DAO be held legally responsible?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Regulators and courts have shown that a DAO is not automatically beyond legal reach. In the United States, the CFTC obtained a judgment against the Ooki DAO, treating it as a person that could be held liable. The broader principle, echoed by the FATF, is that people who own or operate a protocol — including through governance — can carry regulatory obligations even when the project is structured as a DAO."}}, {"@type": "Question", "name": "Does running only a front-end create regulatory exposure?", "acceptedAnswer": {"@type": "Answer", "text": "It can. Operating the website or application that users rely on to access a protocol is often enough for a regulator to treat you as providing a crypto-asset service, even if the underlying smart contracts are decentralised. Several enforcement actions have focused on front-end operators and developers rather than the code itself, so running an interface should be treated as a regulated point of control."}}, {"@type": "Question", "name": "How do regulators decide if DeFi is 'decentralised enough'?", "acceptedAnswer": {"@type": "Answer", "text": "They look for control and economic benefit rather than a technical score. Key factors include whether anyone operates a front-end, holds admin or upgrade keys, captures protocol fees, controls governance, or can move user funds. The FATF's 2021 guidance states that the software itself is not a service provider, but persons with control or sufficient influence — its owners or operators — can be. The more of these factors that apply, the more likely a licence is required."}}, {"@type": "Question", "name": "What should a DeFi builder do to stay compliant?", "acceptedAnswer": {"@type": "Answer", "text": "Start by mapping every centralised element of the project — front-end, admin keys, multisig signers, fee recipients, treasury, and governance. Classify the activity and any tokens, then take jurisdiction-specific advice on whether a licence, AML programme, or securities registration is required. Where an operating entity is unavoidable, structure it deliberately rather than leaving liability with an undefined team. Document the legal basis for anything you treat as out of scope."}}]}]}</script>
+  <script src="/assets/attribution.js" defer></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licences</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a><span>/</span><a href="/guides/">Guides</a><span>/</span>DeFi Regulation 2026
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg" alt="Bitcoin, Ethereum and other crypto coins — DeFi regulation and licensing in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Regulatory Guide · Updated 2026</div>
+        <h1 class="hero-h1"><em>DeFi Regulation</em> in 2026:<br>Do You Need a Licence?</h1>
+        <p class="hero-intro">No major jurisdiction has a DeFi-specific licence. Instead, regulators ask whether an identifiable person or company controls or profits from a protocol — and apply existing rules to them. This guide explains how MiCA, the US, and Asia-Pacific treat decentralised finance, and the factors that decide whether your project needs authorisation.</p>
+        <div class="hero-meta"><div class="hero-meta-item"><span>Reading time</span>~9 minutes</div><div class="hero-meta-item"><span>Jurisdictions</span>EU, US, UK, Singapore, Hong Kong</div><div class="hero-meta-item"><span>Last updated</span>March 2026</div></div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#is-defi-regulated">Is DeFi Regulated?</a></li>
+            <li class="toc-item"><a href="#mica-defi">MiCA and DeFi</a></li>
+            <li class="toc-item"><a href="#us">United States</a></li>
+            <li class="toc-item"><a href="#apac">Asia-Pacific & UK</a></li>
+            <li class="toc-item"><a href="#when-licence">When You Need a Licence</a></li>
+            <li class="toc-item"><a href="#compliance">Compliance Steps</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+    <main class="guide-main">
+<!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann — Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug — Switzerland's Crypto Valley — he has guided startups, trading platforms, and institutional investors through the full spectrum of VASP licensing: from FINMA FinTech notifications to MiCA CASP applications and offshore structuring across 60+ jurisdictions.</p>
+                <p>He joined CryptoLicenses.net as Senior Licensing Advisor after a decade leading the fintech practice of a Swiss-regulated law firm, where he managed regulatory mandates in the UAE, Singapore, Liechtenstein, and the Cayman Islands.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net.</p>
+        </section>
+
+
+        <section class="guide-section" id="is-defi-regulated">
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>There is no DeFi-specific licence in most jurisdictions — regulators apply existing rules by looking for an identifiable person or entity behind a protocol</li>
+                    <li>MiCA excludes services provided in a "fully decentralised manner without any intermediary" (Recital 22), but truly decentralised setups are rare</li>
+                    <li>A front-end, a development team, a governance token, admin keys, or protocol fees can each create a regulated point of control</li>
+                    <li>US agencies (FinCEN, SEC, CFTC) and the FATF all focus on the people who own or operate a protocol, not the code itself</li>
+                    <li>The practical question is not "is DeFi regulated?" but "is there someone a regulator can hold responsible?"</li>
+                </ul>
+            </div>
+            <div class="section-label">Section 01</div>
+            <h2 class="section-h2">Is <em>DeFi</em> Regulated?</h2>
+            <div class="prose">
+                <p>There is no dedicated DeFi licence in any major jurisdiction as of 2026. Instead of regulating the technology, regulators ask a simpler question: is there an identifiable person or company that controls, operates, or profits from the protocol? If the answer is yes, existing financial rules — licensing, AML, securities, and payments law — generally apply to that person, regardless of the "DeFi" label.</p>
+                <p>This is why the degree of decentralisation matters more than the branding. A protocol that is genuinely run by no one, with no controlling team, no fee switch, and no operated front-end, sits in a regulatory grey zone. But most projects marketed as DeFi retain centralised points: a company that maintains the website, developers holding admin keys, a foundation managing a treasury, or a governance token concentrated among insiders. Each of those is a hook a regulator can use.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="mica-defi">
+            <div class="section-label">Section 02</div>
+            <h2 class="section-h2">MiCA and <em>DeFi</em> in the EU</h2>
+            <div class="prose">
+                <p>MiCA deliberately left fully decentralised finance outside its scope. Recital 22 states that where crypto-asset services are provided "in a fully decentralised manner without any intermediary", they should not fall within the Regulation. In principle, a protocol with no intermediary is not a CASP and needs no authorisation.</p>
+                <p>The difficulty is the word "fully". If a company operates the user interface, if a team can upgrade the contracts, or if an entity collects fees, the European regulators may treat that entity as providing a crypto-asset service — bringing it back within MiCA. The European Commission and ESMA were tasked under Article 142 of MiCA with reporting on decentralised finance and whether dedicated rules are needed. A future "MiCA II" addressing DeFi specifically remains under discussion, but no dedicated EU DeFi regime is in force yet.</p>
+            </div>
+            <div class="alert-box">
+                <p><strong>Practical test:</strong> if your project has a company, a team that controls upgrades, or a revenue stream, assume MiCA may apply and take advice — the "fully decentralised" exemption is narrower than most founders expect.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="us">
+            <div class="section-label">Section 03</div>
+            <h2 class="section-h2">United States — <em>Existing Rules Applied</em></h2>
+            <div class="prose">
+                <p>The United States has no DeFi statute, but three agencies apply existing law. <strong>FinCEN</strong> treats persons who control or facilitate money transmission as money services businesses (MSBs) with AML obligations. The <strong>SEC</strong> applies the Howey test, treating many tokens and yield arrangements as securities. The <strong>CFTC</strong> regulates derivatives and has pursued DeFi protocols offering leveraged trading.</p>
+                <p>Enforcement has repeatedly targeted the people behind protocols. The CFTC obtained a judgment against the Ooki DAO, establishing that a DAO can be held liable. The Treasury's OFAC sanctioned the Tornado Cash mixer, and the US Department of Justice charged its developers — though a 2024 appellate ruling narrowed how sanctions can apply to immutable smart contracts. The consistent theme is that decentralisation is not a shield where identifiable people own, operate, or profit from the service.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="apac">
+            <div class="section-label">Section 04</div>
+            <h2 class="section-h2">Asia-Pacific and the <em>UK</em></h2>
+            <div class="prose">
+                <p>Singapore's Monetary Authority (MAS) applies the Payment Services Act to any identifiable entity carrying on a regulated activity, and has been consistently cautious about retail access to DeFi. Hong Kong regulates virtual-asset activity through the SFC licensing regime and the AMLO, again focusing on operators rather than code. The UK brings crypto activity within the financial-promotions and authorisation perimeter where a firm carries on regulated activity in or to the UK.</p>
+                <p>Across all of these markets, the FATF's guidance is influential: its 2021 standards say that the software itself is not a virtual-asset service provider, but persons who maintain control or sufficient influence over a DeFi arrangement — "owners or operators" — can be. That principle now underpins how most regulators approach DeFi worldwide.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders ask whether their protocol is 'decentralised enough' to avoid regulation. That is the wrong frame. Regulators look for a person or entity with control or economic benefit. If you run the front-end, hold the upgrade keys, or earn the fees, you are the operator — and the licensing question is about you, not the smart contract."</p>
+            <cite>— Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <section class="guide-section" id="when-licence">
+            <div class="section-label">Section 05</div>
+            <h2 class="section-h2">When Does DeFi <em>Need a Licence</em>?</h2>
+            <div class="prose">
+                <p>Whether a project needs authorisation comes down to control and benefit. The more of the factors below that apply, the more likely a regulator treats your project as a regulated service provider rather than neutral software.</p>
+            </div>
+            <table class="jx-table">
+                <thead><tr><th>Factor</th><th>Lower regulatory risk</th><th>Higher regulatory risk</th></tr></thead>
+                <tbody>
+                    <tr><td>Front-end / website</td><td>No operated interface</td><td>Company runs the app users access</td></tr>
+                    <tr><td>Contract upgrades</td><td>Immutable, no admin keys</td><td>Team controls upgrade keys</td></tr>
+                    <tr><td>Fees</td><td>No fee captured by a party</td><td>Entity earns protocol fees</td></tr>
+                    <tr><td>Governance</td><td>Broadly distributed</td><td>Concentrated among insiders</td></tr>
+                    <tr><td>Custody</td><td>Non-custodial, user holds keys</td><td>Protocol or team can move funds</td></tr>
+                    <tr><td>Token offering</td><td>No sale to the public</td><td>Public sale with profit expectation</td></tr>
+                </tbody>
+            </table>
+            <div class="warn-box">
+                <p><strong>Reality check:</strong> very few live "DeFi" projects fall entirely in the left column. If even one high-risk factor applies, treat licensing and AML obligations as a live question and take jurisdiction-specific advice.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="compliance">
+            <div class="section-label">Section 06</div>
+            <h2 class="section-h2">Compliance Steps for <em>DeFi Builders</em></h2>
+            <div class="steps-big">
+                <div class="step-big"><div class="step-big-num">1</div><div class="step-big-body">
+                    <div class="step-big-title">Map your points of control</div>
+                    <div class="step-big-desc"><p>Honestly catalogue every centralised element: front-end, admin keys, multisig signers, fee recipients, treasury, and governance distribution. This is what a regulator will look at.</p></div></div></div>
+                <div class="step-big"><div class="step-big-num">2</div><div class="step-big-body">
+                    <div class="step-big-title">Classify the activity and tokens</div>
+                    <div class="step-big-desc"><p>Determine whether your protocol involves exchange, lending, derivatives, or token issuance, and whether any token is likely a security or e-money in your target markets.</p></div></div></div>
+                <div class="step-big"><div class="step-big-num">3</div><div class="step-big-body">
+                    <div class="step-big-title">Choose a jurisdiction and structure</div>
+                    <div class="step-big-desc"><p>If an operating entity is unavoidable, structure it deliberately in a jurisdiction whose rules fit your model, rather than letting liability land on an undefined team or DAO.</p></div></div></div>
+                <div class="step-big"><div class="step-big-num">4</div><div class="step-big-body">
+                    <div class="step-big-title">Implement AML and licensing where required</div>
+                    <div class="step-big-desc"><p>Where you operate a regulated point, put AML/KYC controls and the relevant authorisation in place. Document the basis for any service you treat as out of scope.</p></div></div></div>
+            </div>
+        </section>
+
+        <section class="guide-section" id="related">
+            <div class="section-label">Related Resources</div>
+            <h2 class="section-h2">Continue <em>Reading</em></h2>
+            <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Guides</h3>
+            <ul style="list-style:none;padding:0;margin-bottom:1.5rem;">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP? Definition &amp; Types</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Regulation Explained: EU Crypto Framework 2026</a></li>
+                <li><a href="/guides/how-to-get-crypto-license/">How to Get a Crypto Licence: Complete 2026 Guide</a></li>
+            </ul>
+            <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Services</h3>
+            <ul style="list-style:none;padding:0;">
+                <li><a href="/crypto-licenses/">All Crypto Licences (80+ jurisdictions)</a></li>
+                <li><a href="/regulation/usa/">USA Crypto Regulation 2026</a></li>
+                <li><a href="/regulation/eu/">EU Crypto Regulation 2026</a></li>
+            </ul>
+        </section>
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">DeFi Regulation — <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">Do DeFi protocols need a licence?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">There is no DeFi-specific licence, but a protocol can still require authorisation if there is an identifiable person or company that controls or profits from it. Regulators apply existing licensing, AML, securities, and payments rules to that operator. A genuinely decentralised protocol with no controlling team, no fee recipient, and no operated front-end may fall outside these rules — but such setups are rare.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is DeFi covered by MiCA?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA's Recital 22 excludes crypto-asset services provided in a fully decentralised manner without any intermediary. In practice the exemption is narrow: if a company runs the interface, a team controls contract upgrades, or an entity collects fees, EU regulators may treat that entity as a CASP under MiCA. The European Commission and ESMA were tasked under Article 142 with assessing whether dedicated DeFi rules are needed, but no specific EU DeFi regime is in force yet.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a DAO be held legally responsible?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. Regulators and courts have shown that a DAO is not automatically beyond legal reach. In the United States, the CFTC obtained a judgment against the Ooki DAO, treating it as a person that could be held liable. The broader principle, echoed by the FATF, is that people who own or operate a protocol — including through governance — can carry regulatory obligations even when the project is structured as a DAO.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does running only a front-end create regulatory exposure?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">It can. Operating the website or application that users rely on to access a protocol is often enough for a regulator to treat you as providing a crypto-asset service, even if the underlying smart contracts are decentralised. Several enforcement actions have focused on front-end operators and developers rather than the code itself, so running an interface should be treated as a regulated point of control.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do regulators decide if DeFi is 'decentralised enough'?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">They look for control and economic benefit rather than a technical score. Key factors include whether anyone operates a front-end, holds admin or upgrade keys, captures protocol fees, controls governance, or can move user funds. The FATF's 2021 guidance states that the software itself is not a service provider, but persons with control or sufficient influence — its owners or operators — can be. The more of these factors that apply, the more likely a licence is required.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What should a DeFi builder do to stay compliant?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Start by mapping every centralised element of the project — front-end, admin keys, multisig signers, fee recipients, treasury, and governance. Classify the activity and any tokens, then take jurisdiction-specific advice on whether a licence, AML programme, or securities registration is required. Where an operating entity is unavoidable, structure it deliberately rather than leaving liability with an undefined team. Document the legal basis for anything you treat as out of scope.</div>
+                </div>
+            </div>
+        </section>
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1114" target="_blank" rel="noopener nofollow">EUR-Lex — Regulation (EU) 2023/1114 (MiCA), Recital 22 and Article 142</a></li>
+            <li><a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-virtual-assets-2021.html" target="_blank" rel="noopener nofollow">FATF — Updated Guidance for a Risk-Based Approach to Virtual Assets and VASPs (2021)</a></li>
+            <li><a href="https://www.cftc.gov/PressRoom/PressReleases/8715-23" target="_blank" rel="noopener nofollow">CFTC — Order against the Ooki DAO</a></li>
+          </ul>
+        </section>
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+    </main>
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>DeFi Regulatory Review</h3>
+                <p>We assess whether your protocol triggers licensing or AML obligations, map your points of control, and advise on structuring across the EU, US, and Asia-Pacific.</p>
+                <a href="/contact/?topic=defi" class="btn-primary">Talk to an Advisor</a>
+            </div>
+            <div class="aside-info-box">
+                <div class="aside-info-title">Key Signals</div>
+                <div class="aside-info-row"><span class="aside-info-row-label">Operated front-end</span><span class="aside-info-row-val">Regulated</span></div>
+                <div class="aside-info-row"><span class="aside-info-row-label">Admin / upgrade keys</span><span class="aside-info-row-val">Regulated</span></div>
+                <div class="aside-info-row"><span class="aside-info-row-label">Protocol fees taken</span><span class="aside-info-row-val">Regulated</span></div>
+                <div class="aside-info-row"><span class="aside-info-row-label">Fully autonomous</span><span class="aside-info-row-val">Grey zone</span></div>
+            </div>
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.5rem;">
+                    <a href="/guides/what-is-vasp/" style="font-size:0.85rem;color:var(--ink);text-decoration:none;">What Is a VASP?</a>
+                    <a href="/guides/mica-explained/" style="font-size:0.85rem;color:var(--ink);text-decoration:none;">MiCA Explained: Full Guide</a>
+                    <a href="/guides/how-to-get-crypto-license/" style="font-size:0.85rem;color:var(--ink);text-decoration:none;">How to Get a Crypto Licence</a>
+                    <a href="/crypto-licenses/" style="font-size:0.85rem;color:var(--ink);text-decoration:none;">All 80+ Jurisdictions →</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Not Sure If Your Protocol Needs a Licence?</h2>
+      <p class="cta-lead">Describe your protocol — front-end, governance, fees, and team structure. We will assess your regulatory exposure across the EU, US, and Asia-Pacific and outline a compliant path, at no charge.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ MiCA, FCA, MAS &amp; offshore covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field"><label>Name *</label><input type="text" name="first_name" required="" placeholder="John Smith"></div>
+          <div class="cta-field"><label>Email *</label><input type="email" name="email" required="" placeholder="john@company.com"></div>
+        </div>
+        <div class="cta-field cta-field-full"><label>Company</label><input type="text" name="company" placeholder="Acme Crypto Ltd"></div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px"><label>Message *</label><textarea name="message" required="" placeholder="Describe your project, target markets, and timeline…" rows="4"></textarea></div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/how-to-get-crypto-license/">How to Get a Crypto Licence</a></li>
+                <li><a href="/guides/stablecoin-regulation/">Stablecoin Regulation</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Explained</a></li>
+                <li><a href="/compare/">Compare Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Top Jurisdictions</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/europe/poland/">Poland</a></li>
+                <li><a href="/crypto-licenses/mena/uae/">UAE</a></li>
+                <li><a href="/crypto-licenses/asia/singapore/">Singapore</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net — Registered in Switzerland</span>
+        <span>Information only — not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/assets/contact-form.js"></script>
+
+</body></html>

@@ -1,932 +1,325 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="apple-touch-icon" href="/assets/favicon.svg">
-    <title>Crypto Licensing Guides 2026 — Expert Resources | CryptoLicenses.net</title>
-    <meta name="description" content="Free crypto licensing guides: how to get a crypto licence, MiCA compliance, VASP explained, AML/KYC requirements, jurisdiction comparison. Written by Swiss-based crypto licensing experts.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://cryptolicenses.net/guides/">
-    <meta property="og:title" content="Crypto Licensing Guides 2026 — Expert Resources | CryptoLicenses.net">
-    <meta property="og:description" content="Free crypto licensing guides: how to get a crypto licence, MiCA compliance, VASP explained, AML/KYC requirements, jurisdiction comparison. Written by Swiss-based crypto licensing experts.">
-    <meta property="og:url" content="https://cryptolicenses.net/guides/">
-    <meta property="og:image" content="https://cryptolicenses.net/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/style.css">
-    <style>
-:root {
-            --paper: #F5F0EB;
-            --ink: #1C2B4A;
-            --accent: #C9A84C;
-            --muted: #6B7587;
-            --border: 1px solid rgba(28, 43, 74, 0.14);
-            --heavy: 1px solid #1C2B4A;
-            --su: 1.5rem;
-        }
-.hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); border-top: var(--heavy); margin-top: 2rem; }
-.guide-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 0; border: var(--heavy); margin-top: 1.5rem; }
-.guide-card { padding: 2rem; border-bottom: var(--border); display: flex; flex-direction: column; gap: 0.75rem; text-decoration: none; color: var(--ink); transition: background 0.15s; }
-.guide-card:last-child { border-bottom: none; }
-.guide-card:hover { background: rgba(28,43,74,0.03); }
-.guide-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
-.guide-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; line-height: 1.3; }
-.guide-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
-.guide-meta { display: flex; gap: 1rem; flex-wrap: wrap; }
-.guide-meta span { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); border: var(--border); padding: 0.2rem 0.6rem; }
-.guide-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 0.1rem; display: inline-block; margin-top: 0.25rem; transition: color 0.2s, border-color 0.2s; }
-.guide-card:hover .guide-arrow { color: var(--accent); border-color: var(--accent); }
-.coming-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: var(--heavy); margin-top: 1.5rem; }
-.coming-card { padding: 1.75rem 2rem; border-right: var(--border); border-bottom: var(--border); }
-.coming-card:nth-child(2n) { border-right: none; }
-.coming-date { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent); margin-bottom: 0.5rem; }
-.coming-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3; }
-.coming-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: var(--heavy); margin-top: 1.5rem; }
-.topic-card { padding: 2rem; border-right: var(--border); border-bottom: var(--border); }
-.topic-card:nth-child(3n) { border-right: none; }
-.topic-card:nth-last-child(-n+3) { border-bottom: none; }
-.topic-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.75rem; }
-.topic-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-.topic-list li { font-size: 0.82rem; color: var(--muted); padding-left: 1rem; position: relative; }
-.topic-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
-.aside-nav-box { border: var(--border); padding: 1.5rem; margin-bottom: 1rem; }
-.aside-nav-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
-.aside-nav-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.aside-nav-links a { font-size: 0.875rem; color: var(--ink); text-decoration: none; padding: 0.4rem 0; border-bottom: var(--border); display: block; }
-.aside-nav-links a:hover { color: var(--accent); }
-.aside-nav-links li:last-child a { border-bottom: none; }
-.cta-field input,.cta-field textarea,.cta-sel-wrap select{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:10px 14px;font-family:'Inter',sans-serif;font-size:.875rem;outline:none;transition:border-color .15s;width:100%}
-.cta-sel-wrap select{-webkit-appearance:none;appearance:none;padding:10px 36px 10px 14px;cursor:pointer}
-@media (max-width: 900px) {
-            .hero { grid-template-columns: 1fr; }
-            .hero-aside { border-top: var(--heavy); }
-            .content-wrap { grid-template-columns: 1fr; }
-            .main-col { border-right: none; }
-            .sticky-aside { position: static; }
-            .coming-grid { grid-template-columns: 1fr; }
-            .coming-card { border-right: none; }
-            .topic-grid { grid-template-columns: 1fr 1fr; }
-            .topic-card { border-right: none; }
-            .topic-card:nth-child(2n) { border-right: none; }
-            .hero-stats { grid-template-columns: repeat(2, 1fr); }
-        }
-@media (max-width: 768px) {
-            html, body { overflow-x: hidden; }
-            nav { overflow: hidden; }
-            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
-            .nav-links { display: none !important; }
-            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
-            .topic-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="+hh3DN/48kYIX1vd1G9NNQ" async=""></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://cryptolicenses.net/#organization",
-      "name": "CryptoLicenses.net",
-      "url": "https://cryptolicenses.net",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cryptolicenses.net/assets/logo.png"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Grafenauweg 4",
-        "addressLocality": "Zug",
-        "postalCode": "6300",
-        "addressRegion": "ZG",
-        "addressCountry": "CH"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@cryptolicenses.net",
-        "contactType": "customer service",
-        "availableLanguage": [
-          "English",
-          "Russian"
-        ]
-      },
-      "sameAs": [
-        "https://t.me/cryptolicensesnet"
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://cryptolicenses.net/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Crypto Licensing Guides 2026",
-          "item": "https://cryptolicenses.net/guides/"
-        }
-      ]
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://cryptolicenses.net/guides/#webpage",
-      "name": "Crypto Licensing Guides 2026",
-      "description": "Free crypto licensing guides: how to get a crypto licence, MiCA compliance, VASP explained, AML/KYC requirements, jurisdiction comparison. Written by Swiss-based crypto licensing experts.",
-      "url": "https://cryptolicenses.net/guides/",
-      "publisher": {
-        "@id": "https://cryptolicenses.net/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do I need a crypto licence to operate a crypto exchange in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. In virtually every major jurisdiction — EU (MiCA CASP), UK (FCA), USA (MSB + state MTL), Singapore (MAS MPI), UAE (VARA) — operating a crypto exchange without the appropriate licence or registration is illegal and carries significant penalties. The specific licence type depends on your business model, target markets, and the services you offer."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which crypto licence is easiest to obtain in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The fastest and most accessible crypto licences in 2026 are typically: Estonia VASP registration (1–3 months, EUR 3,300 state fee), Lithuania VASP registration (2–4 months), Georgia Virtual Zone company (1–2 months), and Seychelles FSA licence (2–3 months). However, \"easiest\" does not mean most commercially useful — banking access and client acceptance vary significantly by jurisdiction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between a VASP registration and a full crypto licence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A VASP (Virtual Asset Service Provider) registration is typically a lighter-touch regulatory requirement focused on AML/CFT compliance — common in Estonia and Lithuania. A full crypto licence (like MiCA CASP, Singapore MAS, or UAE VARA) involves prudential requirements: minimum capital, qualified management, technology audits, custody segregation, and ongoing reporting. Full licences take longer and cost more, but provide greater commercial credibility."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a crypto licence cost in total?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Total first-year costs range from approximately EUR 15,000–30,000 for a simple VASP registration (Estonia, Lithuania) to EUR 200,000–500,000+ for a full MiCA CASP authorisation or Singapore MAS licence including legal fees, compliance infrastructure, minimum capital deposit, and staffing. Our Crypto Licence Cost guide (publishing 29 March 2026) provides a full breakdown by jurisdiction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I operate globally with one crypto licence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not with a single licence in most cases. Within the EU, a MiCA CASP authorisation passports across all 27 member states. Outside the EU, most jurisdictions require their own registration or licence for businesses actively serving local customers. Many crypto businesses operate with 2–3 licences covering key markets: an EU MiCA licence for Europe, a Singapore or Hong Kong licence for Asia, and a US MSB registration for North America."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What documents do I need to prepare before applying for a crypto licence in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You'll typically need articles of association, proof of funding (usually CHF 250,000 minimum), detailed AML/KYC policies, organizational charts, CVs of board members and beneficial owners, compliance officer appointment documentation, and a business plan covering your crypto services. FINMA and cantonal authorities may request additional documentation based on your specific service model, so preparation timelines should allow 4-8 weeks for document compilation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it typically take to obtain a crypto licence in Switzerland in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard processing timelines range from 6 to 12 months depending on the licence type and completeness of your application. FINMA handles more complex applications (6-12 months), while cantonal authorities may process simpler registrations in 3-4 months. Incomplete submissions can extend timelines by 3-6 months, making thorough preparation critical."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the key compliance requirements I must maintain after obtaining my crypto licence in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You must implement continuous AML/KYC monitoring, file suspicious activity reports (SARs) within 5 business days, maintain capital adequacy ratios set by your regulator, conduct annual internal audits, and report significant operational changes to authorities within 30 days. Additionally, you must maintain detailed transaction records for 5-10 years and undergo regular compliance audits by FINMA or your cantonal supervisor."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does a crypto licence affect my corporate tax obligations in Switzerland for 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Crypto licence holders in Zug and other cantons benefit from competitive corporate tax rates (typically 11-14% combined federal and cantonal rates), though these vary by location. However, you must report all crypto-related income and establish proper transfer pricing for related-party transactions; SECO guidelines require documentation of your crypto valuation methodology. Licence costs themselves are generally tax-deductible as business expenses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I open a bank account with a Swiss bank if I hold a crypto licence in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, holding a valid crypto licence significantly improves banking relationships; major Swiss banks like SIX, UBS, and Postfinance increasingly work with licensed crypto firms. However, banks will conduct enhanced due diligence on your business model, customer profiles, and compliance infrastructure—expect 2-4 months and provide detailed documentation of your AML procedures. Some banks may still decline depending on your specific services or customer demographics."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if my crypto licence is suspended or revoked in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Licence suspension typically allows 30-90 days to remedy compliance violations before potential revocation. If revoked, you must cease all regulated activities within 14 days, transfer customer assets to licensed entities, and maintain records for regulatory review—violations carry fines up to CHF 5 million and potential criminal liability. You cannot reapply for 12-24 months after revocation in most cases."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I renew my crypto licence and what are the ongoing maintenance costs in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Licence renewals in Switzerland occur annually or biennially depending on your cantonal regulator, with renewal applications typically submitted 90 days before expiration. Annual maintenance costs range from CHF 10,000 to CHF 50,000 depending on licence type, including regulatory fees, compliance officer salaries, and audit costs; you must also demonstrate continued capital adequacy and updated compliance documentation at each renewal cycle."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
+<title>Crypto Licensing Guides 2026 | CryptoLicenses.net</title>
+<meta name="description" content="Free crypto licensing guides: how to get a crypto licence, MiCA compliance, jurisdiction comparison, AML requirements.">
+<link rel="canonical" href="https://cryptolicenses.net/guides/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CryptoLicenses.net">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Crypto Licensing Guides 2026">
+<meta property="og:description" content="Free crypto licensing guides: how to get a crypto licence, MiCA compliance, jurisdiction comparison, AML requirements.">
+<meta property="og:url" content="https://cryptolicenses.net/guides/">
+<meta property="og:image" content="https://cryptolicenses.net/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crypto Licensing Guides 2026">
+<meta name="twitter:description" content="Free crypto licensing guides: how to get a crypto licence, MiCA compliance, jurisdiction comparison, AML requirements.">
+<meta name="twitter:image" content="https://cryptolicenses.net/assets/og-default.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F0EB;--ink:#1C2B4A;--accent:#C9A84C;--muted:#6B7587;--border:1px solid #1C2B4A;--heavy:2px solid #1C2B4A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3,h4{font-family:'Fraunces',serif;line-height:1.2}
+nav{position:sticky;top:0;z-index:100;background:var(--ink);border-bottom:3px solid var(--accent)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:32px;height:60px}
+.nav-logo{color:#fff;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;text-decoration:none;flex-shrink:0}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.875rem;font-weight:500}
+.nav-links a:hover{color:#fff}
+.nav-cta{margin-left:auto;background:var(--accent);color:var(--ink);padding:8px 20px;font-weight:600;font-size:.875rem;text-decoration:none}
+.bc{border-bottom:var(--border)}.bc-inner{max-width:1280px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)}
+.bc a{color:var(--muted);text-decoration:none}.bc span{color:var(--ink);font-weight:500}
+.hero{background:var(--ink);color:#fff;border-bottom:4px solid var(--accent);padding:64px 24px}
+.hero-inner{max-width:1280px;margin:0 auto}
+.hero-kicker{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,4vw,3rem);max-width:700px;margin-bottom:16px;line-height:1.1}
+.hero-lead{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:600px}
+.main{max-width:1280px;margin:0 auto;padding:56px 24px}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.sec-title{font-size:1.5rem;margin-bottom:8px;border-bottom:var(--heavy);padding-bottom:10px}
+.sec-lead{color:var(--muted);margin-bottom:32px;font-size:.9rem}
+.guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:0;border-top:var(--border);border-left:var(--border);margin-bottom:56px}
+.guide-card{border-right:var(--border);border-bottom:var(--border);padding:28px;text-decoration:none;color:var(--ink);display:block;transition:background .15s}
+.guide-card:hover{background:#EDE8E2}
+.guide-tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;display:block}
+.guide-title{font-family:'Fraunces',serif;font-size:1.15rem;margin-bottom:8px;line-height:1.3}
+.guide-desc{font-size:.82rem;color:var(--muted);margin-bottom:16px;line-height:1.5}
+.guide-meta{display:flex;gap:16px;font-size:.75rem;color:var(--muted)}
+.guide-meta span{font-family:'JetBrains Mono',monospace}
+.topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:var(--border);border-left:var(--border);margin-bottom:56px}
+.topic-cell{border-right:var(--border);border-bottom:var(--border);padding:20px}
+.topic-cell h4{font-size:.9rem;margin-bottom:8px}
+.topic-cell ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.topic-cell ul li{font-size:.8rem;padding-left:14px;position:relative;color:var(--muted)}
+.topic-cell ul li::before{content:'→';position:absolute;left:0;color:var(--accent)}
+@media(max-width:900px){.topics-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.topics-grid{grid-template-columns:1fr}}
+.cta-band{background:var(--ink);color:#fff;padding:48px 24px;text-align:center;margin-top:0}
+.cta-band-inner{max-width:560px;margin:0 auto}
+.cta-band h2{font-size:1.8rem;margin-bottom:12px;color:#fff}
+.cta-band p{color:rgba(255,255,255,.7);margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--accent);color:var(--ink);padding:14px 32px;font-weight:700;font-size:.95rem;text-decoration:none}
+footer{background:var(--ink);color:rgba(255,255,255,.6);border-top:4px solid var(--accent);padding:48px 24px 24px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+.footer-brand{font-family:'Fraunces',serif;color:#fff;font-size:1.1rem;margin-bottom:8px}
+.footer-brand span{color:var(--accent)}
+.footer-col h4{color:#fff;font-size:.8rem;margin-bottom:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.footer-col ul li a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.8rem}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;font-size:.75rem;flex-wrap:wrap;gap:12px}
+</style>
+  <script src="/assets/attribution.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cryptolicenses.net/#organization","name":"CryptoLicenses.net","url":"https://cryptolicenses.net","logo":{"@type":"ImageObject","url":"https://cryptolicenses.net/assets/logo.png"},"address":{"@type":"PostalAddress","streetAddress":"Grafenauweg 4","addressLocality":"Zug","postalCode":"6300","addressRegion":"ZG","addressCountry":"CH"},"contactPoint":{"@type":"ContactPoint","email":"info@cryptolicenses.net","contactType":"customer service","availableLanguage":["English","Russian"]},"sameAs":["https://t.me/cryptolicensesnet"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cryptolicenses.net/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://cryptolicenses.net/guides/"}]},{"@type":"CollectionPage","@id":"https://cryptolicenses.net/guides/#webpage","url":"https://cryptolicenses.net/guides/","name":"Crypto Licensing Guides 2026","description":"Free crypto licensing guides: how to get a crypto licence, MiCA compliance, jurisdiction comparison, AML requirements.","isPartOf":{"@id":"https://cryptolicenses.net/#website"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://cryptolicenses.net/assets/og-default.jpg"}}]}</script>
 </head>
 <body>
-
 <nav>
-    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
-    <div class="nav-links">
-        <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
-        <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
-        <a href="/banking-licenses/" class="nav-link">Banking &amp; EMI</a>
-        <a href="/corporate-services/" class="nav-link">Corporate Services</a>
-        <a href="/regulation/" class="nav-link">Regulation Hub</a>
-        <a href="/guides/" class="nav-link">Guides</a>
-    </div>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Crypto<span>Licences</span>.net</a>
+    <ul class="nav-links">
+      <li><a href="/crypto-licenses/">Crypto Licences</a></li>
+      <li><a href="/forex-licenses/">Forex</a></li>
+      <li><a href="/banking-licenses/emi/">EMI</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
     <a href="/contact/" class="nav-cta">Free Consultation</a>
+  </div>
 </nav>
-<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-  <a href="/crypto-licenses/" class="mobile-nav-item">Crypto Licenses</a>
-  <a href="/forex-licenses/" class="mobile-nav-item">Forex Licenses</a>
-  <a href="/banking-licenses/" class="mobile-nav-item">Banking &amp; EMI</a>
-  <a href="/corporate-services/" class="mobile-nav-item">Corporate Services</a>
-  <a href="/regulation/" class="mobile-nav-item">Regulation Hub</a>
-  <a href="/blog/" class="mobile-nav-item">Blog</a>
-  <a href="/guides/" class="mobile-nav-item">Guides</a>
-  <a href="/contact/" class="mobile-nav-item mobile-nav-cta">Free Consultation →</a>
-</div>
-
-<div class="breadcrumb">
-    <a href="/">Home</a>
-    <span>›</span>
-    <span>Guides</span>
-</div>
-    <div class="last-updated">Last updated: April 2026</div>
-<div class="hero">
-    <div class="hero-content">
-        <div>
-            <div class="mono hero-label">◆ Expert Guides · 2026 Edition</div>
-            <h1 class="hero-h1">Crypto Licensing Guides: <em>Practical Knowledge</em> from Swiss Experts</h1>
-            <p class="hero-intro">Practical, up-to-date guides written by our team of crypto licensing lawyers and compliance officers. No generic content — only what actually matters when applying for a licence, selecting a jurisdiction, or structuring your compliance programme.</p>
-        </div>
-        <div class="hero-stats">
-            <div class="stat-box">
-                <div class="stat-value">13</div>
-                <div class="stat-label">Guides published &amp; in pipeline</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-value">80+</div>
-                <div class="stat-label">Jurisdictions covered across all guides</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-value">Free</div>
-                <div class="stat-label">All guides freely available</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-value">2026</div>
-                <div class="stat-label">All content reviewed and updated</div>
-            </div>
-        </div>
-    </div>
-    <div class="hero-aside" style="padding:0;overflow:hidden;">
-        <figure style="margin:0;height:260px;overflow:hidden;border-bottom:var(--heavy);">
-            <img src="/assets/images/bitcoin-ethereum-ripple-crypto-coins.jpg" alt="Bitcoin ethereum ripple crypto coins — Crypto Licensing Guides" width="400" height="260" loading="eager" decoding="async" style="width:100%;height:260px;object-fit:cover;display:block;">
-        </figure>
-        <div style="padding:2rem;display:flex;flex-direction:column;gap:1.5rem;">
-        <div class="aside-card">
-            <div class="aside-card-title">Guide Categories</div>
-            <div class="aside-metric"><span>Getting Started</span><span class="aside-metric-value">How-to guides</span></div>
-            <div class="aside-metric"><span>Jurisdiction Selection</span><span class="aside-metric-value">Cost &amp; speed</span></div>
-            <div class="aside-metric"><span>EU / MiCA</span><span class="aside-metric-value">CASP requirements</span></div>
-            <div class="aside-metric"><span>AML / Compliance</span><span class="aside-metric-value">KYC, Travel Rule</span></div>
-            <div class="aside-metric"><span>Regulation</span><span class="aside-metric-value">Global overview</span></div>
-        </div>
-        <div class="aside-card">
-            <div class="aside-card-title">Published Now</div>
-            <div class="aside-metric"><a href="/guides/how-to-get-crypto-license/" style="color:var(--ink);text-decoration:none;">How to Get a Crypto Licence</a></div>
-            <div class="aside-metric"><a href="/regulation/" style="color:var(--ink);text-decoration:none;">Regulation Hub →</a></div>
-            <div class="aside-metric"><a href="/crypto-licenses/" style="color:var(--ink);text-decoration:none;">All Jurisdictions →</a></div>
-        </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-<div class="content-wrap">
-    <div class="main-col">
-
-        <!-- SECTION 01: Published Guides -->
-        <div class="section-block photo-section"><div class="photo-section-inner">
-      <div class="photo-section-col-img">
-        <figure style="margin:0;width:100%;">
-            <img src="/assets/images/bitcoin-gold-coin-single-glowing.jpg" alt="Bitcoin gold coin single glowing — Crypto Licensing Guides: Practical Knowledge from Swiss Expe" width="380" height="480" loading="lazy" decoding="async" style="width:100%;height:480px;object-fit:cover;display:block;border-radius:8px;">
-          </figure>
-      </div>
-      <div class="photo-section-col-content">
-        
-            <div class="section-label">01 — Published</div>
-            <h2 class="section-h2">Available Guides — <em>Read Now</em></h2>
-            <div class="prose">
-                <p>Our published guides provide step-by-step, jurisdiction-specific guidance on the most critical aspects of crypto licensing. Each guide is reviewed and updated quarterly.</p>
-            </div>
-
-            <div class="guide-grid">
-                <a href="/guides/how-to-get-crypto-license/" class="guide-card">
-                    <span class="guide-tag">Getting Started · Beginner → Advanced · 25 min read</span>
-                    <div class="guide-title">How to Get a Crypto Licence: The Complete 2026 Guide</div>
-                    <div class="guide-desc">7-step process from business model assessment to operational launch. Covers jurisdiction selection, capital requirements, AML programme setup, and the 7 most common application mistakes. Includes a full jurisdiction comparison table across 10 countries.</div>
-                    <div class="guide-meta">
-                        <span>7 Steps</span>
-                        <span>10 Jurisdictions</span>
-                        <span>7 Mistakes to Avoid</span>
-                    </div>
-                    <span class="guide-arrow">Read Guide →</span>
-                </a>
-                <a href="/guides/crypto-license-cost/" class="guide-card">
-                    <span class="guide-tag">Costs &amp; Budgeting · Beginner → Intermediate · 20 min read</span>
-                    <div class="guide-title">Crypto Licence Cost 2026: Full Price Breakdown by Jurisdiction</div>
-                    <div class="guide-desc">Full cost breakdown across 15 jurisdictions: application fees, legal costs, minimum capital, staffing, and annual renewal. From €3,000 (SVG, Georgia) to $400,000+ (UK, Singapore). Hidden fees and ROI analysis included.</div>
-                    <div class="guide-meta">
-                        <span>15 Jurisdictions</span>
-                        <span>All Fee Types</span>
-                        <span>ROI Analysis</span>
-                    </div>
-                    <span class="guide-arrow">Read Guide →</span>
-                </a>
-                            <a href="/guides/what-is-crypto-license/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">What Is a Crypto License? Complete Guide 2026</div>
-                    <div class="guide-desc">Published April 5, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/what-is-crypto-license/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">What Is a Crypto License? Complete Guide 2026</div>
-                    <div class="guide-desc">Published April 5, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/what-is-vasp/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">What Is a VASP? Virtual Asset Service Provider Explained</div>
-                    <div class="guide-desc">Published April 12, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/mica-explained/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">MiCA Regulation Explained: EU Crypto Framework 2026</div>
-                    <div class="guide-desc">Published April 19, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/aml-kyc-explained/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">AML & KYC for Crypto: Complete Compliance Guide</div>
-                    <div class="guide-desc">Published April 26, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/no-kyc-exchanges-risks/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">No-KYC Crypto Exchanges: Legal Risks & Consequences</div>
-                    <div class="guide-desc">Published May 3, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/stablecoin-regulation/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">Stablecoin Regulation: Global Framework 2026</div>
-                    <div class="guide-desc">Published May 10, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/crypto-broker-license/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">How to Get a Crypto Broker License in 2026</div>
-                    <div class="guide-desc">Published May 17, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/fastest-crypto-licenses/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">Fastest Crypto Licenses: Get Licensed in Weeks</div>
-                    <div class="guide-desc">Published May 24, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/cheapest-crypto-licenses/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">Cheapest Crypto Licenses: Budget-Friendly Jurisdictions</div>
-                    <div class="guide-desc">Published May 31, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/start-crypto-business/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">How to Start a Crypto Business: Step-by-Step Guide</div>
-                    <div class="guide-desc">Published June 7, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/what-is-crypto-regulation/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">What Is Crypto Regulation? Global Overview 2026</div>
-                    <div class="guide-desc">Published June 14, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-                            <a href="/guides/what-is-fatf-travel-rule/" class="guide-card">
-                    <span class="guide-tag">Expert Guide · 20 min read</span>
-                    <div class="guide-title">What Is the FATF Travel Rule? Crypto Compliance Explained (2026)</div>
-                    <div class="guide-desc">Published June 28, 2026. Expert analysis and practical guidance for crypto licensing professionals.</div>
-                    <span class="guide-arrow">Read Guide &rarr;</span>
-                </a>
-            </div>
-        
-      </div>
-    </div></div>
-
-        <!-- SECTION 02: Upcoming Guides -->
-        <div class="section-block">
-            <div class="section-label">02 — Coming Soon</div>
-            <h2 class="section-h2">Upcoming Guides — <em>Publishing Weekly</em></h2>
-            <div class="prose">
-                <p>New guides are published every week starting 29 March 2026. Each guide is written by our in-house crypto licensing specialists and reviewed before publication.</p>
-            </div>
-
-            <div class="coming-grid">
-
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
-        </div>
-
-        <!-- SECTION 03: Topics -->
-        <div class="section-block">
-            <div class="section-label">03 — Topics</div>
-            <h2 class="section-h2">What Our Guides <em>Cover</em></h2>
-            <div class="prose">
-                <p>Our guides are organised around the most critical knowledge areas for anyone applying for a crypto licence, selecting a jurisdiction, or building a compliance programme.</p>
-            </div>
-
-            <div class="topic-grid">
-                <div class="topic-card">
-                    <div class="topic-title">Jurisdiction Selection</div>
-                    <ul class="topic-list">
-                        <li>EU vs non-EU trade-offs</li>
-                        <li>Offshore vs onshore analysis</li>
-                        <li>Tax efficiency by structure</li>
-                        <li>Banking access by jurisdiction</li>
-                    </ul>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-title">Application Process</div>
-                    <ul class="topic-list">
-                        <li>Document preparation checklists</li>
-                        <li>Regulator communication</li>
-                        <li>Common rejection reasons</li>
-                        <li>Timeline management</li>
-                    </ul>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-title">AML / Compliance</div>
-                    <ul class="topic-list">
-                        <li>KYC programme design</li>
-                        <li>FATF Travel Rule</li>
-                        <li>Transaction monitoring</li>
-                        <li>MLRO role &amp; requirements</li>
-                    </ul>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-title">EU Regulation (MiCA)</div>
-                    <ul class="topic-list">
-                        <li>CASP authorisation process</li>
-                        <li>Grandfathering transition</li>
-                        <li>10 CASP service categories</li>
-                        <li>Passporting across the EU</li>
-                    </ul>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-title">Cost &amp; Capital</div>
-                    <ul class="topic-list">
-                        <li>Application fee breakdown</li>
-                        <li>Minimum capital by jurisdiction</li>
-                        <li>Year 1 vs ongoing costs</li>
-                        <li>Fundraising for licensing capital</li>
-                    </ul>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-title">Business Structure</div>
-                    <ul class="topic-list">
-                        <li>Multi-entity structures</li>
-                        <li>Holding company design</li>
-                        <li>IP ownership placement</li>
-                        <li>Operational vs regulatory entity</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- SECTION 04: FAQ -->
-        <div class="section-block">
-  <div class="section-label">◆ APPLICATION TIMELINE</div>
-  <h2 class="section-h2">Crypto License <em>Approval</em> Process in Switzerland 2026</h2>
-  <div class="ig-timeline">
-    <div class="ig-step">
-      <div class="ig-step-num">1</div>
-      <div class="ig-step-body">
-        <div class="ig-step-tag">Weeks 1–2</div>
-        <div class="ig-step-title">Pre-Application Consultation</div>
-        <div class="ig-step-desc">FINMA jurisdictional assessment and entity structure review with cantonal authorities (Zug/Zurich)</div>
-      </div>
-    </div>
-    <div class="ig-step">
-      <div class="ig-step-num">2</div>
-      <div class="ig-step-body">
-        <div class="ig-step-tag">Weeks 3–6</div>
-        <div class="ig-step-title">Dossier Preparation</div>
-        <div class="ig-step-desc">Complete compliance manual, AML/CFT procedures, governance documents, and regulatory filings</div>
-      </div>
-    </div>
-    <div class="ig-step">
-      <div class="ig-step-num">3</div>
-      <div class="ig-step-body">
-        <div class="ig-step-tag">Week 7</div>
-        <div class="ig-step-title">Formal Application Submission</div>
-        <div class="ig-step-desc">Submit to FINMA (Banking Act) or cantonal regulator (DLT Act)</div>
-      </div>
-    </div>
-    <div class="ig-step">
-      <div class="ig-step-num">4</div>
-      <div class="ig-step-body">
-        <div class="ig-step-tag">Weeks 8–16</div>
-        <div class="ig-step-title">Regulator Review &amp; Q&amp;A</div>
-        <div class="ig-step-desc">FINMA/cantonal authority completeness check and clarification requests (typically 2–3 rounds)</div>
-      </div>
-    </div>
-    <div class="ig-step">
-      <div class="ig-step-num">5</div>
-      <div class="ig-step-body">
-        <div class="ig-step-tag">Weeks 17–24</div>
-        <div class="ig-step-title">Substantive Assessment</div>
-        <div class="ig-step-desc">FINMA conducts risk analysis, management assessment, and control testing</div>
-      </div>
-    </div>
-    <div class="ig-step">
-      <div class="ig-step-num">6</div>
-      <div class="ig-step-body">
-        <div class="ig-step-tag">Week 24+</div>
-        <div class="ig-step-title">Licence Issuance or Conditions</div>
-        <div class="ig-step-desc">Approval with or without conditions; average total timeline 5–7 months from submission</div>
-      </div>
-    </div>
+<div class="bc">
+  <div class="bc-inner">
+    <a href="/">Home</a> › <span>Guides</span>
   </div>
 </div>
 
-<div class="section-block">
-  <div class="section-label">◆ KEY FACTS</div>
-  <h2 class="section-h2">Switzerland Crypto Licensing <em>Essentials</em> 2026</h2>
-  <div class="ig-stats">
-    <div class="ig-stat">
-      <div class="ig-stat-value">CHF 250,000–500,000</div>
-      <div class="ig-stat-label">Total licence application cost (legal, compliance, FINMA fees)</div>
-    </div>
-    <div class="ig-stat">
-      <div class="ig-stat-value">3 regulatory <em>pathways</em></div>
-      <div class="ig-stat-label">Banking Act (FINMA), DLT Act (cantonal), or Payment Systems Act</div>
-    </div>
-    <div class="ig-stat">
-      <div class="ig-stat-value">CHF 6 million</div>
-      <div class="ig-stat-label">Minimum capital requirement for FINMA-regulated crypto bank</div>
-    </div>
-    <div class="ig-stat">
-      <div class="ig-stat-value">47 active crypto licences</div>
-      <div class="ig-stat-label">Issued in Switzerland (as of Q1 2026)</div>
-    </div>
-    <div class="ig-stat">
-      <div class="ig-stat-value">8 weeks average</div>
-      <div class="ig-stat-label">FINMA response time for completeness check</div>
-    </div>
-  </div>
-</div>
-
-<div class="section-block">
-            <div class="section-label">04 — FAQ</div>
-            <h2 class="section-h2">Frequently Asked Questions — <em>Crypto Licensing</em></h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-q">Do I need a crypto licence to operate a crypto exchange in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Yes. In virtually every major jurisdiction — EU (MiCA CASP), UK (FCA), USA (MSB + state MTL), Singapore (MAS MPI), UAE (VARA) — operating a crypto exchange without the appropriate licence or registration is illegal and carries significant penalties. The specific licence type depends on your business model, target markets, and the services you offer.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">Which crypto licence is easiest to obtain in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">The fastest and most accessible crypto licences in 2026 are typically: Estonia VASP registration (1–3 months, EUR 3,300 state fee), Lithuania VASP registration (2–4 months), Georgia Virtual Zone company (1–2 months), and Seychelles FSA licence (2–3 months). However, "easiest" does not mean most commercially useful — banking access and client acceptance vary significantly by jurisdiction.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">What is the difference between a VASP registration and a full crypto licence?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">A VASP (Virtual Asset Service Provider) registration is typically a lighter-touch regulatory requirement focused on AML/CFT compliance — common in Estonia and Lithuania. A full crypto licence (like MiCA CASP, Singapore MAS, or UAE VARA) involves prudential requirements: minimum capital, qualified management, technology audits, custody segregation, and ongoing reporting. Full licences take longer and cost more, but provide greater commercial credibility.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">How much does a crypto licence cost in total?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Total first-year costs range from approximately EUR 15,000–30,000 for a simple VASP registration (Estonia, Lithuania) to EUR 200,000–500,000+ for a full MiCA CASP authorisation or Singapore MAS licence including legal fees, compliance infrastructure, minimum capital deposit, and staffing. Our Crypto Licence Cost guide (publishing 29 March 2026) provides a full breakdown by jurisdiction.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">Can I operate globally with one crypto licence?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Not with a single licence in most cases. Within the EU, a MiCA CASP authorisation passports across all 27 member states. Outside the EU, most jurisdictions require their own registration or licence for businesses actively serving local customers. Many crypto businesses operate with 2–3 licences covering key markets: an EU MiCA licence for Europe, a Singapore or Hong Kong licence for Asia, and a US MSB registration for North America.</div>
-                </div>
-            
-                <div class="faq-item">
-                    <button class="faq-q">What documents do I need to prepare before applying for a crypto licence in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">You'll typically need articles of association, proof of funding (usually CHF 250,000 minimum), detailed AML/KYC policies, organizational charts, CVs of board members and beneficial owners, compliance officer appointment documentation, and a business plan covering your crypto services. FINMA and cantonal authorities may request additional documentation based on your specific service model, so preparation timelines should allow 4-8 weeks for document compilation.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">How long does it typically take to obtain a crypto licence in Switzerland in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Standard processing timelines range from 6 to 12 months depending on the licence type and completeness of your application. FINMA handles more complex applications (6-12 months), while cantonal authorities may process simpler registrations in 3-4 months. Incomplete submissions can extend timelines by 3-6 months, making thorough preparation critical.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">What are the key compliance requirements I must maintain after obtaining my crypto licence in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">You must implement continuous AML/KYC monitoring, file suspicious activity reports (SARs) within 5 business days, maintain capital adequacy ratios set by your regulator, conduct annual internal audits, and report significant operational changes to authorities within 30 days. Additionally, you must maintain detailed transaction records for 5-10 years and undergo regular compliance audits by FINMA or your cantonal supervisor.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">How does a crypto licence affect my corporate tax obligations in Switzerland for 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Crypto licence holders in Zug and other cantons benefit from competitive corporate tax rates (typically 11-14% combined federal and cantonal rates), though these vary by location. However, you must report all crypto-related income and establish proper transfer pricing for related-party transactions; SECO guidelines require documentation of your crypto valuation methodology. Licence costs themselves are generally tax-deductible as business expenses.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">Can I open a bank account with a Swiss bank if I hold a crypto licence in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Yes, holding a valid crypto licence significantly improves banking relationships; major Swiss banks like SIX, UBS, and Postfinance increasingly work with licensed crypto firms. However, banks will conduct enhanced due diligence on your business model, customer profiles, and compliance infrastructure—expect 2-4 months and provide detailed documentation of your AML procedures. Some banks may still decline depending on your specific services or customer demographics.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">What happens if my crypto licence is suspended or revoked in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Licence suspension typically allows 30-90 days to remedy compliance violations before potential revocation. If revoked, you must cease all regulated activities within 14 days, transfer customer assets to licensed entities, and maintain records for regulatory review—violations carry fines up to CHF 5 million and potential criminal liability. You cannot reapply for 12-24 months after revocation in most cases.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">How do I renew my crypto licence and what are the ongoing maintenance costs in 2026?<span class="faq-icon">+</span></button>
-                    <div class="faq-a">Licence renewals in Switzerland occur annually or biennially depending on your cantonal regulator, with renewal applications typically submitted 90 days before expiration. Annual maintenance costs range from CHF 10,000 to CHF 50,000 depending on licence type, including regulatory fees, compliance officer salaries, and audit costs; you must also demonstrate continued capital adequacy and updated compliance documentation at each renewal cycle.</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <aside>
-        <div class="sticky-aside">
-            <div class="aside-cta-box">
-                <h3>Need Licensing Guidance?</h3>
-                <p>Our team has advised 200+ crypto businesses on licensing strategy across 80+ jurisdictions. Free consultation, no obligation.</p>
-                <a href="/contact/" class="btn-primary">Book Free Consultation</a>
-            </div>
-
-            <div class="aside-nav-box">
-                <div class="aside-nav-title">Published Guides</div>
-                <ul class="aside-nav-links">
-                    <li><a href="/guides/how-to-get-crypto-license/">How to Get a Crypto Licence</a></li>
-                </ul>
-            </div>
-
-            <div class="aside-nav-box">
-                <div class="aside-nav-title">Related Sections</div>
-                <ul class="aside-nav-links">
-                    <li><a href="/regulation/">Regulation Hub</a></li>
-                    <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
-                    <li><a href="/crypto-licenses/europe/mica-compliance/">EU MiCA Guide</a></li>
-                    <li><a href="/corporate-services/aml-kyc/">AML/KYC Services</a></li>
-                    <li><a href="/about/">About Our Team</a></li>
-                </ul>
-            </div>
-
-            <div class="aside-nav-box">
-                <div class="aside-nav-title">Top Jurisdictions</div>
-                <ul class="aside-nav-links">
-                    <li><a href="/crypto-licenses/europe/estonia/">Estonia VASP</a></li>
-                    <li><a href="/crypto-licenses/europe/lithuania/">Lithuania VASP</a></li>
-                    <li><a href="/crypto-licenses/mena/uae/">UAE (VARA)</a></li>
-                    <li><a href="/crypto-licenses/asia/singapore/">Singapore (MAS)</a></li>
-                    <li><a href="/crypto-licenses/europe/switzerland/">Switzerland (FINMA)</a></li>
-                </ul>
-            </div>
-        </div>
-    </aside>
-</div>
-
-
-    <!-- Author -->
-    <div class="author-box">
-        <div class="author-avatar">MH</div>
-        <div>
-            <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
-            <div class="author-box-meta">Senior Licensing Consultant · LL.M. International Financial Law</div>
-            <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
-        </div>
-    </div>
-
-    <section class="cta-section">
-  <div class="cta-inner">
-    <div class="cta-text">
-      <div class="cta-label">Free Consultation</div>
-      <h2 class="cta-h2" data-heading-tag="H2">Ready to Get Licensed?</h2>
-      <p class="cta-lead">Tell us about your project and we'll identify the right jurisdiction, outline the requirements, and give you a realistic cost estimate — at no charge.</p>
-      <ul class="cta-trust">
-        <li>🇨🇭 Swiss-registered firm, Zug</li>
-        <li>⚡ Response within a few hours</li>
-        <li>🔒 Strictly confidential</li>
-        <li>✓ 80+ jurisdictions covered</li>
-      </ul>
-    </div>
-    <div class="cta-form-wrap">
-      <form data-contact-form="">
-        <div class="cta-form-row">
-          <div class="cta-field">
-            <label>Name *</label>
-            <input type="text" name="first_name" required="" placeholder="John Smith">
-          </div>
-          <div class="cta-field">
-            <label>Email *</label>
-            <input type="email" name="email" required="" placeholder="john@company.com">
-          </div>
-        </div>
-        <div class="cta-field cta-field-full">
-          <label>Company</label>
-          <input type="text" name="company" placeholder="Acme Exchange Ltd">
-        </div>
-        <div class="cta-sel-wrap">
-          <select name="service">
-            <option value="">Service needed…</option>
-            <option value="exchange">Crypto Exchange License</option>
-            <option value="custodian">Crypto Custodian</option>
-            <option value="broker">Broker / OTC Desk</option>
-            <option value="defi">DeFi Protocol</option>
-            <option value="payment">Crypto Payment Services</option>
-            <option value="mica">MiCA CASP Transition</option>
-            <option value="other">Other / Not Sure</option>
-          </select>
-        </div>
-        <div class="cta-field cta-field-full" style="margin-bottom:20px">
-          <label>Message *</label>
-          <textarea name="message" required="" placeholder="Tell us about your project, target markets, and timeline…" rows="4"></textarea>
-        </div>
-        <button type="submit" class="cta-submit">Get Free Consultation →</button>
-        <p class="cta-privacy">Confidential · No obligation · No spam</p>
-      </form>
-    </div>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Free Resources · Expert Guides</div>
+    <h1>Crypto Licensing Guides</h1>
+    <p class="hero-lead">Practical, up-to-date guides written by our team of crypto licensing lawyers and compliance officers. No generic content — only what actually matters when you're applying for a licence.</p>
   </div>
 </section>
+
+<div class="main">
+
+  <div class="sec-label">All Guides</div>
+  <h2 class="sec-title">Available Guides</h2>
+  <p class="sec-lead">Each guide is maintained and updated as regulations change. Last reviewed: Q1 2025.</p>
+
+  <div class="guides-grid">
+
+    <a href="/guides/how-to-get-crypto-license/" class="guide-card">
+      <span class="guide-tag">Beginner → Advanced · 25 min read</span>
+      <div class="guide-title">How to Get a Crypto Licence: The Complete 2025 Guide</div>
+      <div class="guide-desc">7-step process from business model assessment to operational launch. Covers jurisdiction selection, capital requirements, AML programme setup, and the 7 most common mistakes. Includes full jurisdiction comparison table (10 countries).</div>
+      <div class="guide-meta">
+        <span>7 Steps</span>
+        <span>10 Jurisdictions Compared</span>
+        <span>7 Mistakes to Avoid</span>
+      </div>
+    </a>
+
+    <a href="/crypto-licenses/europe/mica-compliance/" class="guide-card">
+      <span class="guide-tag">EU Regulation · 20 min read</span>
+      <div class="guide-title">MiCA Compliance Guide 2025: EU CASP Authorisation</div>
+      <div class="guide-desc">Complete guide to the Markets in Crypto-Assets Regulation. Covers 10 CASP service types, 3 licence classes, capital requirements, grandfathering deadline (July 2026), jurisdiction selection for CASP authorisation, and ongoing obligations.</div>
+      <div class="guide-meta">
+        <span>10 Service Types</span>
+        <span>3 Licence Classes</span>
+        <span>Jul 2026 Deadline</span>
+      </div>
+    </a>
+
+    <a href="/guides/aml-kyc-explained/" class="guide-card">
+      <span class="guide-tag">Compliance · 18 min read</span>
+      <div class="guide-title">AML/KYC for Crypto: Complete Compliance Guide</div>
+      <div class="guide-desc">What a regulator-ready AML/KYC programme requires: legal framework, KYC tiers, transaction monitoring, enforcement cases, and the tools that pass audits.</div>
+      <div class="guide-meta">
+        <span>FATF Travel Rule</span>
+        <span>KYC Tiers</span>
+        <span>Enforcement Cases</span>
+      </div>
+    </a>
+
+    <a href="/guides/crypto-license-cost/" class="guide-card">
+      <span class="guide-tag">Cost Planning · 15 min read</span>
+      <div class="guide-title">How Much Does a Crypto Licence Cost?</div>
+      <div class="guide-desc">Full crypto licence cost breakdown for 2026: cheapest from €3,000 (SVG, Georgia), mid-tier €25k–€80k (Lithuania, Estonia), premium EU and Gulf options.</div>
+      <div class="guide-meta">
+        <span>15+ Jurisdictions</span>
+        <span>Year 1 vs Ongoing</span>
+        <span>Capital Comparison</span>
+      </div>
+    </a>
+
+    <a href="/guides/mica-explained/" class="guide-card">
+      <span class="guide-tag">EU Regulation · 20 min read</span>
+      <div class="guide-title">MiCA Regulation Explained: EU Crypto Rules</div>
+      <div class="guide-desc">Complete MiCA guide for 2026: three crypto-asset categories, CASP licence classes, capital thresholds, EU passporting, and the July 2026 grandfathering deadline.</div>
+      <div class="guide-meta">
+        <span>10 Service Types</span>
+        <span>CASP Classes</span>
+        <span>Jul 2026 Deadline</span>
+      </div>
+    </a>
+
+    <a href="/guides/what-is-vasp/" class="guide-card">
+      <span class="guide-tag">Fundamentals · 12 min read</span>
+      <div class="guide-title">What Is a VASP? Definition & Types</div>
+      <div class="guide-desc">VASP explained: the FATF definition, VASP vs CASP differences, the 6 types of Virtual Asset Service Provider, Travel Rule obligations, and where to register.</div>
+      <div class="guide-meta">
+        <span>FATF Definition</span>
+        <span>VASP vs CASP</span>
+        <span>6 VASP Types</span>
+      </div>
+    </a>
+
+    <a href="/guides/no-kyc-exchanges-risks/" class="guide-card">
+      <span class="guide-tag">Compliance Risk</span>
+      <div class="guide-title">No-KYC Exchanges: The Real Regulatory Risks</div>
+      <div class="guide-desc">Why unlicensed and KYC-free exchanges face escalating enforcement under FATF Travel Rule, MiCA, and US FinCEN. Covers fines, indictments, banking blacklisting, and what regulated operators are doing instead.</div>
+      <div class="guide-meta">
+        <span>FATF Travel Rule</span>
+        <span>Enforcement Cases</span>
+        <span>Banking Impact</span>
+      </div>
+    </a>
+
+    <a href="/guides/stablecoin-regulation/" class="guide-card">
+      <span class="guide-tag">Stablecoins · 2026</span>
+      <div class="guide-title">Stablecoin Regulation: MiCA, GENIUS Act &amp; Asian Frameworks</div>
+      <div class="guide-desc">A jurisdiction-by-jurisdiction map of stablecoin issuer licensing — EMT/ART under MiCA, US GENIUS Act and state trust charters, Singapore MAS SCS, Hong Kong HKMA, and Japan FSA stablecoin rules.</div>
+      <div class="guide-meta">
+        <span>EMT vs ART</span>
+        <span>Reserve Rules</span>
+        <span>Issuer Capital</span>
+      </div>
+    </a>
+
+    <a href="/guides/mica-grandfathering/" class="guide-card">
+      <span class="guide-tag">EU Regulation · 9 min read</span>
+      <div class="guide-title">MiCA Grandfathering: Deadline for Existing VASPs</div>
+      <div class="guide-desc">What existing EU crypto firms must do before the transitional period ends. Who qualifies, the 1 July 2026 deadline, member-state variations, and the simplified CASP authorisation route.</div>
+      <div class="guide-meta">
+        <span>Article 143(3)</span>
+        <span>Jul 2026 Deadline</span>
+        <span>Simplified Route</span>
+      </div>
+    </a>
+
+    <a href="/guides/defi-regulation/" class="guide-card">
+      <span class="guide-tag">DeFi · 9 min read</span>
+      <div class="guide-title">DeFi Regulation 2026: Do You Need a Licence?</div>
+      <div class="guide-desc">How MiCA, the US, and Asia-Pacific treat decentralised finance — and the factors (front-end, admin keys, fees, governance) that decide whether your protocol needs authorisation.</div>
+      <div class="guide-meta">
+        <span>MiCA Recital 22</span>
+        <span>US Enforcement</span>
+        <span>Owners &amp; Operators</span>
+      </div>
+    </a>
+
+    <a href="/guides/what-is-crypto-license/" class="guide-card">
+      <span class="guide-tag">Fundamentals · 12 min read</span>
+      <div class="guide-title">What Is a Crypto Licence? Definition &amp; Types</div>
+      <div class="guide-desc">The definition, types (VASP, CASP, MSB), who needs one, the activities that are regulated, and the penalties for operating a crypto business without authorisation.</div>
+      <div class="guide-meta">
+        <span>VASP · CASP · MSB</span>
+        <span>Who Needs One</span>
+        <span>Penalties</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="sec-label">Topics Covered</div>
+  <h2 class="sec-title">What Our Guides Cover</h2>
+  <div class="topics-grid">
+    <div class="topic-cell">
+      <h4>Jurisdiction Selection</h4>
+      <ul>
+        <li>EU vs non-EU comparison</li>
+        <li>Offshore vs onshore trade-offs</li>
+        <li>Tax efficiency analysis</li>
+        <li>Banking access by jurisdiction</li>
+      </ul>
+    </div>
+    <div class="topic-cell">
+      <h4>Application Process</h4>
+      <ul>
+        <li>Document preparation checklists</li>
+        <li>Regulator communication tips</li>
+        <li>Common rejection reasons</li>
+        <li>Timeline management</li>
+      </ul>
+    </div>
+    <div class="topic-cell">
+      <h4>AML / Compliance</h4>
+      <ul>
+        <li>KYC programme design</li>
+        <li>FATF Travel Rule implementation</li>
+        <li>Transaction monitoring setup</li>
+        <li>MLRO role and requirements</li>
+      </ul>
+    </div>
+    <div class="topic-cell">
+      <h4>EU Regulation (MiCA)</h4>
+      <ul>
+        <li>CASP authorisation process</li>
+        <li>Grandfathering transition</li>
+        <li>10 CASP service categories</li>
+        <li>Passporting across EU</li>
+      </ul>
+    </div>
+    <div class="topic-cell">
+      <h4>Cost & Capital</h4>
+      <ul>
+        <li>Application fee breakdowns</li>
+        <li>Minimum capital by jurisdiction</li>
+        <li>Year 1 vs ongoing costs</li>
+        <li>Fundraising for licensing capital</li>
+      </ul>
+    </div>
+    <div class="topic-cell">
+      <h4>Business Structure</h4>
+      <ul>
+        <li>Multi-entity structures</li>
+        <li>Holding company design</li>
+        <li>IP ownership placement</li>
+        <li>Operational vs regulatory entity</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Have a Specific Question?</h2>
+    <p>Our guides cover the general framework. Every business has unique circumstances. Book a free 30-minute consultation and get specific answers from our licensing team.</p>
+    <a href="/contact/" class="cta-btn">Book Free Consultation</a>
+  </div>
+</div>
+
 <footer>
-    <div class="footer-top">
-        <div class="footer-col">
-            <div class="footer-brand">CryptoLicenses.net</div>
-            <div class="footer-tagline">International crypto &amp; FinTech licensing specialists. 80+ jurisdictions worldwide. Headquartered in Zug, Switzerland — the global crypto hub.</div>
-            <div class="footer-address">Grafenauweg 4<br>6300 Zug ZG, Switzerland<br><a href="mailto:info@cryptolicenses.net" style="color:inherit;text-decoration:none;">info@cryptolicenses.net</a></div>
-        </div>
-        <div class="footer-col">
-            <div class="footer-col-title">Crypto Licenses</div>
-            <a href="/crypto-licenses/europe/" class="footer-link">Europe</a>
-            <a href="/crypto-licenses/mena/" class="footer-link">MENA &amp; UAE</a>
-            <a href="/crypto-licenses/asia/" class="footer-link">Asia &amp; Pacific</a>
-            <a href="/crypto-licenses/americas/" class="footer-link">Americas &amp; Offshore</a>
-            <a href="/crypto-licenses/africa/" class="footer-link">Africa</a>
-            <a href="/crypto-licenses/europe/mica-compliance/" class="footer-link">MiCA Compliance</a>
-            <a href="/crypto-licenses/vasp-license/" class="footer-link">VASP License</a>
-        </div>
-        <div class="footer-col">
-            <div class="footer-col-title">Services</div>
-            <a href="/forex-licenses/" class="footer-link">Forex Licenses</a>
-            <a href="/banking-licenses/emi/" class="footer-link">EMI Licenses</a>
-            <a href="/banking-licenses/msb/" class="footer-link">MSB Licenses</a>
-            <a href="/crypto-accounting/" class="footer-link">Crypto Accounting</a>
-            <a href="/corporate-services/" class="footer-link">Corporate Services</a>
-            <a href="/corporate-services/ready-made-companies/" class="footer-link">Ready-Made Companies</a>
-            <a href="/corporate-services/aml-kyc/" class="footer-link">AML/KYC Services</a>
-        </div>
-        <div class="footer-col">
-            <div class="footer-col-title">Resources</div>
-            <a href="/guides/how-to-get-crypto-license/" class="footer-link">How to Get a Crypto License</a>
-            <a href="/guides/crypto-license-cost/" class="footer-link">Crypto License Cost</a>
-            <a href="/guides/what-is-vasp/" class="footer-link">What Is a VASP?</a>
-            <a href="/guides/mica-explained/" class="footer-link">MiCA Explained</a>
-            <a href="/regulation/" class="footer-link">Regulation Hub</a>
-            <a href="/about/" class="footer-link">About Us</a>
-            <a href="/contact/" class="footer-link">Contact</a>
-        </div>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Crypto<span>Licences</span>.net</div><p style="font-size:.8rem;max-width:280px">Swiss-based crypto licensing consultancy. Expert guidance across 20+ jurisdictions worldwide.</p></div>
+      <div class="footer-col"><h4>Guides</h4><ul><li><a href="/guides/how-to-get-crypto-license/">How to Get Licensed</a></li><li><a href="/crypto-licenses/europe/mica-compliance/">MiCA Guide</a></li></ul></div>
+      <div class="footer-col"><h4>Licences</h4><ul><li><a href="/crypto-licenses/europe/">Europe</a></li><li><a href="/crypto-licenses/asia/">Asia-Pacific</a></li><li><a href="/crypto-licenses/">All Licences</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-        <span>© 2026 CryptoLicenses.net — Grafenauweg 4, 6300 Zug ZG, Switzerland</span>
-        <span><a href="/privacy/" style="color:inherit;text-decoration:none;">Privacy Policy</a> · <a href="/terms/" style="color:inherit;text-decoration:none;">Terms of Service</a> · <a href="/sitemap/" style="color:inherit;text-decoration:none;">Sitemap</a></span>
-    </div>
+    <div class="footer-bottom"><span>© 2025 CryptoLicenses.net · Registered in Switzerland</span><span>This website does not constitute legal advice.</span></div>
+  </div>
 </footer>
-
-<script src="/assets/contact-form.js"></script>
-<script>document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');});});</script>
-<script>
-(function(){var b=document.querySelector('.burger-btn'),n=document.querySelector('.mobile-nav');if(!b||!n)return;b.addEventListener('click',function(){var o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',o);n.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!n.contains(e.target)){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''})})})();
-</script>
-<script>
-(function(){
-  var applied=false;
-  function fix(){
-    var w=window.innerWidth;
-    if(w>900){if(applied){location.reload()}return}
-    applied=true;
-    var all=document.querySelectorAll('*');
-    for(var i=0;i<all.length;i++){
-      var el=all[i];
-      var cs=getComputedStyle(el);
-      // Fix grids with multiple columns
-      if(cs.display==='grid'){
-        var cols=cs.gridTemplateColumns;
-        if(cols&&cols.indexOf(' ')!==-1){
-          var parts=cols.split(' ').filter(function(p){return p&&p!=='0px'});
-          if(parts.length>1){
-            // Check if any column is fixed px and wider than viewport
-            var hasFixed=false;
-            parts.forEach(function(p){
-              var px=parseFloat(p);
-              if(px>200&&p.indexOf('px')!==-1)hasFixed=true;
-            });
-            if(hasFixed||w<=768){
-              el.style.gridTemplateColumns='1fr';
-            } else if(parts.length>2&&w<=900){
-              el.style.gridTemplateColumns='1fr 1fr';
-            }
-          }
-        }
-      }
-      // Fix padding
-      if(w<=768){
-        var pl=parseFloat(cs.paddingLeft);
-        var pr=parseFloat(cs.paddingRight);
-        if(pl+pr>w*0.15&&pl>20){
-          var np=w<=520?Math.min(pl,16):Math.min(pl,20);
-          el.style.paddingLeft=np+'px';
-          el.style.paddingRight=np+'px';
-        }
-        var pt=parseFloat(cs.paddingTop);
-        var pb=parseFloat(cs.paddingBottom);
-        if(pt>60){
-          el.style.paddingTop=Math.min(pt,w<=520?24:40)+'px';
-        }
-        if(pb>60){
-          el.style.paddingBottom=Math.min(pb,w<=520?24:40)+'px';
-        }
-      }
-      // Fix elements wider than viewport
-      if(el.scrollWidth>w&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
-        el.style.maxWidth='100%';
-        el.style.overflowX='auto';
-      }
-      // Fix fixed widths
-      if(cs.width&&cs.width.indexOf('px')!==-1){
-        var ew=parseFloat(cs.width);
-        if(ew>w*0.7&&el.tagName!=='HTML'&&el.tagName!=='BODY'){
-          el.style.width='100%';
-          el.style.maxWidth='100%';
-        }
-      }
-    }
-    // Specific: border-right removal on stacked grids
-    document.querySelectorAll('[style*="grid-template-columns: 1fr"]').forEach(function(grid){
-      var ch=grid.children;
-      for(var j=0;j<ch.length;j++){
-        var brs=getComputedStyle(ch[j]).borderRightStyle;
-        if(brs!=='none'){
-          ch[j].style.borderRight='none';
-          ch[j].style.borderBottom='var(--border,1px solid rgba(28,43,74,0.14))';
-        }
-      }
-    });
-    // Force no overflow on html/body
-    document.documentElement.style.overflowX='hidden';
-    document.body.style.overflowX='hidden';
-    document.body.style.minWidth='0';
-    document.body.style.maxWidth='100vw';
-  }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',fix);
-  }else{
-    fix();
-  }
-  var resizeTimer;
-  window.addEventListener('resize',function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(fix,150)});
-})();
-</script>
-
-
-</body></html>
+</body>
+</html>

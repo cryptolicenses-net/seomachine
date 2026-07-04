@@ -1,0 +1,40 @@
+# CryptoLicenses.net
+
+> Specialist regulatory consultancy for crypto, forex, and EMI licensing. Switzerland-based (Zug), serving clients globally across 80+ jurisdictions since 2019.
+
+## Core Services
+- [Crypto License Overview](https://cryptolicenses.net/crypto-licenses/): VASP, exchange, custody, and OTC licensing across 80+ jurisdictions
+- [MiCA / EU Licensing](https://cryptolicenses.net/crypto-licenses/europe/): MiCA CASP authorisation and grandfathering guidance for EU member states
+- [Forex Licenses](https://cryptolicenses.net/forex-licenses/): Onshore and offshore broker licensing
+- [Banking & EMI Licenses](https://cryptolicenses.net/banking-licenses/): E-money and payment institution authorisations
+- [Corporate Services](https://cryptolicenses.net/corporate-services/): Company formation, AML/KYC compliance, license renewals
+
+## Regulatory Guides
+- [How to Get a Crypto License](https://cryptolicenses.net/guides/how-to-get-crypto-license/): 7-step process from decision to approval
+- [MiCA Grandfathering 2026](https://cryptolicenses.net/guides/mica-grandfathering/): Who qualifies, the 1 July 2026 deadline, member-state variations
+- [Crypto License Cost](https://cryptolicenses.net/guides/crypto-license-cost/): Cost breakdown by jurisdiction
+- [What Is a VASP](https://cryptolicenses.net/guides/what-is-vasp/): FATF definition, VASP categories, Travel Rule obligations
+- [MiCA Explained](https://cryptolicenses.net/guides/mica-explained/): EU Markets in Crypto-Assets Regulation, full breakdown
+- [AML/KYC Explained](https://cryptolicenses.net/guides/aml-kyc-explained/): Compliance requirements for crypto businesses
+- [What Is a Crypto License](https://cryptolicenses.net/guides/what-is-crypto-license/): Definition, who needs one, regulatory frameworks
+- [Stablecoin Regulation](https://cryptolicenses.net/guides/stablecoin-regulation/): Global stablecoin licensing frameworks
+- [DeFi Regulation](https://cryptolicenses.net/guides/defi-regulation/): Regulatory treatment of decentralised protocols
+
+## Jurisdiction Index
+- [Europe](https://cryptolicenses.net/crypto-licenses/europe/): Estonia, Lithuania, Poland, Slovakia, Malta, Gibraltar, Ireland, Germany, France and others
+- [Asia-Pacific](https://cryptolicenses.net/crypto-licenses/asia/): Singapore, Hong Kong, Japan, Australia, Philippines, Malaysia, South Korea
+- [MENA](https://cryptolicenses.net/crypto-licenses/mena/): UAE (VARA, ADGM, DIFC, DMCC, IFZA, RAK DAO), Bahrain, Turkey, Israel
+- [Americas](https://cryptolicenses.net/crypto-licenses/americas/): USA, Canada, BVI, Cayman Islands
+- [Caribbean](https://cryptolicenses.net/crypto-licenses/caribbean/): SVG and Caribbean offshore options
+- [Latin America](https://cryptolicenses.net/crypto-licenses/latam/): El Salvador, Panama
+- [Africa](https://cryptolicenses.net/crypto-licenses/africa/): Seychelles, Kenya, and other African jurisdictions
+
+## Regulation Hub
+- [Regulation Map](https://cryptolicenses.net/regulation/map/): Status of crypto regulation by country
+- [EU Regulation](https://cryptolicenses.net/regulation/eu/): MiCA implementation
+- [US Regulation](https://cryptolicenses.net/regulation/usa/): Federal and state-level crypto frameworks
+- [News & Trends](https://cryptolicenses.net/regulation/news/trends/): Regulatory developments
+
+## About
+- [About CryptoLicenses.net](https://cryptolicenses.net/about/): Switzerland-based regulatory consultancy
+- [Contact / Free Consultation](https://cryptolicenses.net/contact/): info@cryptolicenses.net, Grafenauweg 4, 6300 Zug, Switzerland

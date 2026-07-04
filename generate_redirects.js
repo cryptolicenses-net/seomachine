@@ -40,6 +40,14 @@ rules.push(`http://cryptolicenses.net/* https://cryptolicenses.net/:splat 301`);
 rules.push(`http://www.cryptolicenses.net/* https://cryptolicenses.net/:splat 301`);
 rules.push('');
 
+// 1.3 Ручные редиректы — ДЕРЖАТЬ ВВЕРХУ ФАЙЛА (CF Pages надёжно
+//     применяет только первые правила; хвост длинного файла игнорируется)
+rules.push('# Manual redirects (keep near top of file)');
+rules.push('# Seychelles is an African jurisdiction — caribbean/ duplicate merged into africa/ (2026-05-25)');
+rules.push('/crypto-licenses/caribbean/seychelles/ /crypto-licenses/africa/seychelles/ 301');
+rules.push('/crypto-licenses/caribbean/seychelles /crypto-licenses/africa/seychelles/ 301');
+rules.push('');
+
 // ─────────────────────────────────────────────────────────
 // БЛОК 2: Trailing slash — для каждой страницы
 // ─────────────────────────────────────────────────────────
