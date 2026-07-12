@@ -1,0 +1,1039 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VASP vs CASP: EU Crypto Registration vs MiCA Licensing (2026) | CryptoLicenses.net</title>
+    <meta name="description" content="VASP vs CASP in 2026: how a legacy FATF/national AML registration differs from a MiCA-authorised CASP with an EU passport. Covers scope, capital, passporting, the 30 Dec 2024 start, and the 1 July 2026 transition deadline.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <link rel="canonical" href="https://cryptolicenses.net/guides/vasp-vs-casp/">
+    <meta property="og:title" content="VASP vs CASP: EU Crypto Registration vs MiCA Licensing (2026)">
+    <meta property="og:description" content="How a legacy FATF/national AML VASP registration differs from a MiCA-authorised CASP with an EU passport: scope, capital, passporting, the 30 Dec 2024 start, and the 1 July 2026 transition deadline.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cryptolicenses.net/guides/vasp-vs-casp/">
+    <meta property="og:image" content="https://cryptolicenses.net/assets/images/switzerland-eu-miniature-flags-parliament-table.jpg">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F0EB;
+            --ink: #1C2B4A;
+            --accent: #C9A84C;
+            --muted: #6B7587;
+            --border: 1px solid rgba(28, 43, 74, 0.14);
+            --heavy: 1px solid #1C2B4A;
+            --su: 1.5rem;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1,h2,h3,.serif { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -0.02em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position: sticky; top: 0; background: var(--paper); z-index: 100; }
+        .nav-brand { padding: var(--su); font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; border-right: var(--heavy); width: 281px; display: flex; align-items: center; text-decoration: none; color: var(--ink); }
+        .nav-links { display: flex; flex-grow: 1; overflow-x: auto; }
+        .nav-link { padding: 0 1.25rem; display: flex; align-items: center; font-size: 0.875rem; border-right: var(--border); text-decoration: none; color: var(--ink); white-space: nowrap; transition: background 0.2s; }
+        .nav-link:hover { background: rgba(28,43,74,0.04); }
+        .nav-cta { background: var(--ink); color: var(--paper); border: none; padding: 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; cursor: pointer; white-space: nowrap; border-left: var(--heavy); transition: background 0.2s; text-decoration: none; display: flex; align-items: center; }
+        .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+        .breadcrumb { padding: 0.875rem 2rem; border-bottom: var(--border); display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+        .breadcrumb a { color: var(--muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--ink); }
+        .breadcrumb span { opacity: 0.5; }
+
+        /* HERO */
+        .hero-guide { display: grid; grid-template-columns: 650px 1fr; border-bottom: var(--heavy); background: var(--ink); color: var(--paper); min-height: 380px; }
+        .hero-guide-img { overflow: hidden; }
+        .hero-guide-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+        .hero-guide-content { padding: 3.5rem 3rem; }
+        .hero-guide-inner { max-width: 800px; }
+        .hero-label { color: var(--accent); margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .hero-h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-h1 em { font-style: italic; color: var(--accent); }
+        .hero-intro { font-size: 1.05rem; opacity: 0.75; max-width: 640px; line-height: 1.7; }
+        .hero-meta { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-meta-item { font-size: 0.8rem; opacity: 0.6; }
+        .hero-meta-item span { display: block; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; opacity: 1; }
+
+        /* 3-COLUMN */
+        .guide-wrap { display: grid; grid-template-columns: 280px 1fr 300px; background-image: linear-gradient(to bottom, #1C2B4A, #1C2B4A), linear-gradient(to bottom, #1C2B4A, #1C2B4A); background-size: 1px 100%, 1px 100%; background-position: 280px 0, calc(100% - 300px) 0; background-repeat: no-repeat; }
+        .toc-col { padding: 2rem 1.5rem; position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto; border-right: none; }
+        .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1.25rem; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .toc-item a { display: block; padding: 0.5rem 0; font-size: 0.82rem; text-decoration: none; color: var(--muted); border-bottom: var(--border); line-height: 1.4; transition: color 0.15s; }
+        .toc-item a:hover { color: var(--ink); }
+
+        .guide-main { }
+        .guide-section { padding: 3rem; border-bottom: var(--border); }
+        .guide-section:last-child { border-bottom: none; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .section-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2; }
+        .section-h2 em { font-style: italic; color: var(--accent); }
+        .prose p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 400; margin: 1.75rem 0 0.75rem; }
+
+        /* TLDR */
+        .tldr-box { background: var(--ink); color: var(--paper); padding: 2rem; margin-bottom: 2rem; }
+        .tldr-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1rem; }
+        .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .tldr-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+        .tldr-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+        /* DEFINITION BOX */
+        .def-box { border: var(--heavy); border-left: 4px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+        .def-box .def-term { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem; }
+        .def-box p { font-size: 0.98rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+        /* COMPARISON TABLE */
+        .jx-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; border: var(--heavy); }
+        .jx-table th { background: var(--ink); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.875rem 1rem; text-align: left; font-weight: 400; border-right: 1px solid rgba(255,255,255,0.1); }
+        .jx-table td { padding: 0.875rem 1rem; border-bottom: var(--border); border-right: var(--border); font-size: 0.85rem; vertical-align: middle; }
+        .jx-table td:last-child { border-right: none; }
+        .jx-table tr:last-child td { border-bottom: none; }
+        .jx-table td:first-child { font-weight: 600; }
+        .jx-table tr:hover td { background: rgba(28,43,74,0.02); }
+
+        /* INFOGRAPHIC: STATS */
+        .ig-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); border: var(--heavy); margin-top: 1.5rem; }
+        .ig-stat { padding: 1.5rem 1rem; border-right: var(--border); border-bottom: var(--border); text-align: center; }
+        .ig-stat-value { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.35rem; }
+        .ig-stat-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+
+        /* INFOGRAPHIC: TIMELINE */
+        .ig-timeline { border: var(--heavy); margin-top: 1.5rem; }
+        .ig-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: var(--border); }
+        .ig-step:last-child { border-bottom: none; }
+        .ig-step-num { background: var(--accent); color: var(--ink); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 300; border-right: var(--heavy); min-height: 80px; }
+        .ig-step-body { padding: 1.25rem 1.5rem; }
+        .ig-step-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+        .ig-step-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .ig-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-list { display: flex; flex-direction: column; border: var(--heavy); margin-top: 1.5rem; }
+        .faq-item { border-bottom: var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { width: 100%; background: none; border: none; padding: 1.5rem; text-align: left; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
+        .faq-q:hover { background: rgba(28,43,74,0.03); }
+        .faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: var(--heavy); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: transform 0.2s; }
+        .faq-a { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.8; display: none; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* EXPERT BLOCK */
+        .expert-block{display:flex;gap:2rem;align-items:flex-start;}
+        .expert-photo-wrap{flex-shrink:0;}
+        .expert-photo{display:block;object-fit:cover;}
+        .expert-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.25rem;}
+        .expert-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;}
+        .expert-creds{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;border-bottom:var(--border);padding-bottom:0.75rem;}
+        .expert-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+        .expert-hl{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--muted);}
+        .expert-hl-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:0.35rem;}
+        blockquote.expert-quote{border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.75rem 0;background:rgba(201,168,76,0.05);}
+        blockquote.expert-quote p{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0.5rem;}
+        blockquote.expert-quote cite{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-style:normal;}
+        .practice-box{border:var(--heavy);background:rgba(28,43,74,0.03);padding:1.75rem 2rem;margin-top:1.5rem;}
+        .practice-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.75rem;}
+        .practice-box p{color:var(--muted);line-height:1.8;margin-bottom:0.85rem;}
+        .practice-box p:last-child{margin-bottom:0;}
+        .cta-inline{background:var(--ink);color:var(--paper);padding:2rem;margin:2rem 0;}
+        .cta-inline .mono{margin-bottom:0.5rem;}
+        .cta-inline p{font-size:0.9rem;opacity:0.85;margin-bottom:1.25rem;line-height:1.6;}
+        .sources-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+        .sources-list li{font-size:0.85rem;}
+        .sources-list a{color:var(--ink);word-break:break-all;}
+        .author-byline{font-size:0.82rem;color:var(--muted);margin-top:0.75rem;font-style:italic;}
+        @media(max-width:768px){
+          .expert-block{flex-direction:column;}
+          .expert-photo-wrap{text-align:center;}
+          .expert-highlights{grid-template-columns:1fr;}
+          .ig-stats{grid-template-columns:repeat(2,1fr);}
+          .ig-step{grid-template-columns:44px 1fr;}
+          .ig-step-body{padding:1rem 1.25rem;}
+        }
+
+        /* AUTHOR */
+        .author-box { display: flex; align-items: center; gap: 20px; border: 2px solid #1C2B4A; padding: 20px 24px; margin-top: 40px; }
+        .author-avatar { width: 64px; height: 64px; background: #1C2B4A; border-radius: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.2rem; color: #C9A84C; flex-shrink: 0; }
+        .author-box-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .author-box-name a { color: var(--ink); text-decoration: none; }
+        .author-box-name a:hover { color: var(--accent); }
+        .author-box-meta { font-size: .75rem; color: var(--muted); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+        .author-box-bio { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+        /* ASIDE */
+        .guide-aside { padding: 2rem; }
+        .aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+        .aside-cta-box { border: var(--heavy); background: var(--ink); color: var(--paper); padding: 2rem; }
+        .aside-cta-box h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.2rem; margin-bottom: 0.75rem; }
+        .aside-cta-box p { font-size: 0.875rem; opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.6; }
+        .btn-primary { display: block; background: var(--accent); color: var(--ink); text-align: center; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.85; }
+        .aside-info-box { border: var(--border); padding: 1.5rem; }
+        .aside-info-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+
+        .alert-box { border-left: 3px solid var(--accent); background: rgba(201,168,76,0.06); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .alert-box p { font-size: 0.9rem; color: var(--ink); line-height: 1.7; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+        .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+        .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
+        .cta-lead { font-size: .95rem; color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 24px; max-width: 440px; }
+        .cta-trust { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cta-trust li { font-size: .82rem; color: rgba(255,255,255,.6); }
+        .cta-form-wrap { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); padding: 32px; }
+        .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .cta-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0; }
+        .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
+        .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
+        .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
+        .cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+        .cta-field-full { margin-bottom: 16px; }
+        .cta-sel-wrap { position: relative; margin-bottom: 16px; }
+        .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
+        .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
+        .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
+        .cta-sel-wrap select:focus { border-color: var(--accent); }
+        .cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+        .cta-submit:hover { opacity: .85; }
+        .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
+
+        /* FOOTER */
+        footer { border-top: var(--heavy); }
+        .footer-grid { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; border-bottom: var(--border); }
+        .footer-col { padding: 2.5rem 2rem; border-right: var(--border); }
+        .footer-col:last-child { border-right: none; }
+        .footer-brand { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .footer-tagline { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .footer-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links a { text-decoration: none; color: var(--ink); font-size: 0.875rem; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 1100px) {
+            .guide-wrap { grid-template-columns: 1fr 280px; background: none; }
+            .toc-col { display: none; }
+        }
+        @media (max-width: 800px) {
+            .guide-wrap { grid-template-columns: 1fr; background: none; }
+            .guide-main { border-right: none; border-left: none; }
+            .toc-col { display: none; border: none; }
+            .guide-aside { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden; }
+            nav { overflow: hidden; }
+            .nav-brand { width: auto !important; flex-shrink: 0; padding: 0 1rem; border-right: none !important; }
+            .nav-links { display: none !important; }
+            .nav-cta { margin-left: auto; padding: 0 1rem; font-size: 0.72rem; }
+            .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+            .cta-form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptolicenses.net/#organization",
+      "name": "CryptoLicenses.net",
+      "url": "https://cryptolicenses.net",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptolicenses.net/assets/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grafenauweg 4",
+        "addressLocality": "Zug",
+        "postalCode": "6300",
+        "addressRegion": "ZG",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@cryptolicenses.net",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Russian"
+        ]
+      },
+      "sameAs": [
+        "https://t.me/cryptolicensesnet"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptolicenses.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://cryptolicenses.net/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "VASP vs CASP: EU Crypto Registration vs MiCA Licensing (2026)",
+          "item": "https://cryptolicenses.net/guides/vasp-vs-casp/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptolicenses.net/guides/vasp-vs-casp/#article",
+      "headline": "VASP vs CASP: EU Crypto Registration vs MiCA Licensing (2026)",
+      "description": "VASP vs CASP in 2026: how a legacy FATF/national AML registration differs from a MiCA-authorised CASP with an EU passport. Covers scope, capital, passporting, the 30 Dec 2024 start, and the 1 July 2026 transition deadline.",
+      "url": "https://cryptolicenses.net/guides/vasp-vs-casp/",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-03-22",
+      "author": {
+        "@id": "https://cryptolicenses.net/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://cryptolicenses.net/#organization",
+        "name": "CryptoLicenses.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cryptolicenses.net/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cryptolicenses.net/guides/vasp-vs-casp/"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a VASP and a CASP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A VASP is a Virtual Asset Service Provider under the FATF standard, typically registered for anti-money-laundering purposes under national law with no cross-border rights. A CASP is a Crypto-Asset Service Provider authorised under the EU MiCA Regulation, a fuller licence covering capital, governance, and custody that carries an EU-wide passport."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a VASP the same as a CASP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. They overlap in scope but are different legal categories. VASP is a FATF term used for national AML registration regimes that pre-date MiCA. CASP is the MiCA term for a fully authorised crypto firm. In the EU, the CASP regime has now replaced the patchwork of national VASP registrations as the operative licence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does VASP stand for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VASP stands for Virtual Asset Service Provider. The term comes from FATF Recommendation 15, updated in 2019, which extended anti-money-laundering and counter-terrorist-financing rules to businesses that exchange, transfer, safekeep, or help issue virtual assets on behalf of customers as a business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does CASP stand for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CASP stands for Crypto-Asset Service Provider. It is the term used by the EU Markets in Crypto-Assets Regulation, Regulation (EU) 2023/1114, for a firm authorised to provide one or more of the crypto-asset services MiCA defines, such as custody, exchange, or operating a trading platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When did MiCA replace the VASP regime in the EU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The CASP rules of MiCA (Title V) became applicable on 30 December 2024. From that date, new firms must seek CASP authorisation from a national competent authority rather than relying on the old national VASP registration regimes, which MiCA is designed to supersede across the European Union."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the MiCA transition deadline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MiCA Article 143(3) sets 1 July 2026 as the outer limit of the transitional regime. Existing national VASPs could continue under grandfathering for up to 18 months from 30 December 2024, but after 1 July 2026 a CASP authorisation must be held to serve EU clients lawfully."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a legacy VASP registration still be used in the EU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only during a member state's grandfathering window, and only until 1 July 2026 at the latest. After the transitional period ends, a legacy national VASP, DASP, or PSAN registration no longer provides a legal basis to offer crypto-asset services to EU clients. A full MiCA CASP authorisation is then required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a CASP licence passport across the EU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A CASP authorised in one EU home member state can passport its services into the other member states through a notification procedure, without seeking a separate licence in each country. This single-market access is one of the headline advantages of MiCA over the old fragmented national VASP registrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a national VASP registration passport across the EU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Legacy national VASP registrations were purely domestic authorisations and conferred no passporting rights. A firm wanting to serve clients in several member states had to register separately in each one. Only a full MiCA CASP authorisation grants the EU-wide passport."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What capital does a CASP need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MiCA Annex IV sets three minimum capital classes: EUR 50,000 for advice and portfolio management, EUR 125,000 for custody and other services, and EUR 150,000 for operating a trading platform. A CASP must hold the higher of its class minimum or one quarter of the prior year's fixed overheads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all EU countries offer the full 18-month grandfathering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The grandfathering window under Article 143(3) was optional for each member state. Some offered the full period to 1 July 2026, others a shorter window. For example, the Netherlands ended its transition in mid-2025 and Germany at the end of 2025, while Spain ran the full term."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to an unlicensed VASP after 1 July 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After 1 July 2026, any entity offering crypto-asset services to EU clients without a MiCA CASP authorisation, or with only a pending application, is in breach of EU law and must cease serving EU clients. Continuing without authorisation exposes the firm to enforcement and loss of banking relationships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I transition from a VASP to a CASP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You apply to your national competent authority for MiCA CASP authorisation, submitting a programme of operations, governance and AML framework, prudential capital, custody arrangements, and complaints handling. Existing VASPs often qualify for a simplified procedure, but they must apply within their member state's transitional window to stay live."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a CASP harder to obtain than a VASP registration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally yes. A national VASP registration centred mainly on AML controls and fit-and-proper checks. A MiCA CASP authorisation adds minimum capital, prudential safeguards, governance, custody segregation, conflict-of-interest and market-abuse rules, so the bar and the documentation burden are materially higher."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+    <div class="nav-links">
+        <a href="/crypto-licenses/" class="nav-link">Licenses</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/compare/" class="nav-link">Compare</a>
+        <a href="/about/" class="nav-link">About</a>
+    </div>
+    <a href="/contact/" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/guides/">Guides</a>
+    <span>/</span>
+    VASP vs CASP
+</div>
+
+<!-- HERO -->
+<header class="hero-guide">
+  <div class="hero-guide-img">
+    <figure style="margin:0;height:100%;">
+      <img src="/assets/images/switzerland-eu-miniature-flags-parliament-table.jpg" alt="Swiss and EU miniature flags on a parliament table, VASP vs CASP crypto licensing in 2026" width="650" height="430" loading="eager" decoding="async" sizes="(max-width: 480px) 100vw, 650px" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block;">
+    </figure>
+  </div>
+  <div class="hero-guide-content">
+        <div class="hero-label">Guides: EU Crypto Regulation</div>
+        <h1 class="hero-h1">VASP vs CASP: EU Crypto Registration vs MiCA Licensing in <em>2026</em></h1>
+        <p class="hero-intro">A VASP is a FATF-defined firm registered for AML under national law; a CASP is a MiCA-authorised firm with an EU-wide passport. This guide explains the real difference, compares scope, regulator, capital, and passporting, and maps the transition from legacy VASP registration to CASP authorisation against the 1 July 2026 deadline.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span>Reading time</span>~9 minutes</div>
+            <div class="hero-meta-item"><span>Last updated</span>June 2026</div>
+            <div class="hero-meta-item"><span>Category</span>EU Crypto Regulation</div>
+        </div>
+  </div></header>
+
+<!-- 3-COLUMN -->
+<div class="guide-wrap">
+
+    <!-- TOC -->
+    <nav class="toc-col" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+            <li class="toc-item"><a href="#author">About the Author</a></li>
+            <li class="toc-item"><a href="#definition">VASP vs CASP in Brief</a></li>
+            <li class="toc-item"><a href="#vasp">What a VASP Is</a></li>
+            <li class="toc-item"><a href="#casp">What a CASP Is</a></li>
+            <li class="toc-item"><a href="#headtohead">Head-to-Head Comparison</a></li>
+            <li class="toc-item"><a href="#passporting">CASP Passporting</a></li>
+            <li class="toc-item"><a href="#transition">The Transition Deadline</a></li>
+            <li class="toc-item"><a href="#move">How to Transition</a></li>
+            <li class="toc-item"><a href="#faq">FAQ</a></li>
+            <li class="toc-item"><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="guide-main">
+
+        <!-- AUTHOR BLOCK -->
+        <section class="guide-section" id="author">
+          <div class="section-label">Lead Expert</div>
+          <h2 class="section-h2">Meet <em>Dr. Marcus Hartmann</em></h2>
+          <div class="expert-block">
+            <div class="expert-photo-wrap">
+              <img src="/assets/authors/dr-marcus-hartmann-portret.png" alt="Dr. Marcus Hartmann, Senior Crypto Licensing Advisor" width="220" height="280" class="expert-photo">
+            </div>
+            <div class="expert-info">
+              <div class="expert-name">Dr. Marcus Hartmann</div>
+              <div class="expert-role">Senior Licensing Advisor · Zug, Switzerland</div>
+              <div class="expert-creds">LL.M. International Financial Law · Dr. iur. · Zurich Bar</div>
+              <div class="prose">
+                <p>Dr. Marcus Hartmann has spent over two decades at the intersection of financial law and emerging technology. Based in Zug, Switzerland's Crypto Valley, he has guided exchanges, custodians, and institutional investors through the full spectrum of VASP and CASP licensing, including the migration of legacy national registrations into the MiCA framework.</p>
+                <p>He has steered clients through CASP authorisation and VASP-to-CASP transition in multiple EU home states, and advises non-EU firms on whether to passport into the single market or license elsewhere, drawing on work across more than 60 jurisdictions.</p>
+              </div>
+              <div class="expert-highlights">
+                <div class="expert-hl"><span class="expert-hl-dot"></span>22 years in financial services regulation</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>400+ crypto licensing mandates across 60+ jurisdictions</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Certified AML Officer (ACAMS), FINMA-registered</div>
+                <div class="expert-hl"><span class="expert-hl-dot"></span>Fluent in English, German, and French</div>
+              </div>
+              <a href="/about/dr-marcus-hartmann/" class="btn-primary" style="display:inline-block;margin-top:1.5rem;">View Full Profile →</a>
+            </div>
+          </div>
+          <p class="author-byline">This guide was researched and written by <a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a>, Senior Licensing Advisor at CryptoLicenses.net. Published June 2026. Updated June 2026.</p>
+        </section>
+
+        <!-- DEFINITION + TLDR -->
+        <section class="guide-section" id="definition">
+
+            <div class="def-box">
+                <div class="def-term">Definition · VASP vs CASP</div>
+                <p>A VASP (Virtual Asset Service Provider) is a FATF-defined firm, usually registered for anti-money-laundering purposes under national law, with no cross-border rights. A CASP (Crypto-Asset Service Provider) is authorised under the EU MiCA Regulation: a fuller licence covering capital and governance that carries an EU-wide passport.</p>
+            </div>
+
+            <div class="tldr-box">
+                <div class="tldr-label">Key Takeaways</div>
+                <ul class="tldr-list">
+                    <li>VASP is a FATF term (Recommendation 15, updated 2019) used for national AML registration regimes; CASP is the MiCA term for a fully authorised EU crypto firm</li>
+                    <li>The core practical differences are scope, capital, and passporting: a CASP must hold prudential capital and can passport across the EU, a national VASP cannot</li>
+                    <li>MiCA's CASP rules became applicable on 30 December 2024 and replace the old patchwork of national VASP registrations</li>
+                    <li>Existing VASPs had an optional grandfathering window of up to 18 months, with an absolute outer limit of 1 July 2026 under Article 143(3)</li>
+                    <li>After 1 July 2026 a legacy VASP registration alone no longer permits serving EU clients; a CASP authorisation is required</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Section 1: The Basics</div>
+            <h2 class="section-h2">VASP vs CASP, <em>In Brief</em></h2>
+            <div class="prose">
+                <p>The terms VASP and CASP are often used as if they were interchangeable, and in casual conversation they describe the same kind of business: an exchange, a custodian, a broker, or a wallet provider. Legally, though, they belong to two different worlds. VASP is the language of the Financial Action Task Force, the global anti-money-laundering standard setter. CASP is the language of the European Union's Markets in Crypto-Assets Regulation. Knowing which one applies to you is now a fundamental licensing decision, not a matter of vocabulary.</p>
+                <p>The simplest way to hold the distinction is this: a VASP regime asks whether your firm is clean, while the CASP regime asks whether your firm is sound. A national VASP registration centres on AML and counter-terrorist-financing controls plus fit-and-proper management. A MiCA CASP authorisation layers prudential capital, governance, custody segregation, and conduct rules on top of that AML baseline. If you are new to either term, our explainer on <a href="/guides/what-is-vasp/">what a VASP is</a> and our overview of <a href="/guides/mica-explained/">MiCA explained</a> set out each framework on its own.</p>
+                <p>For firms operating in or selling into the European Union, the relationship between the two is now defined by a handover. The CASP regime has largely absorbed the old national VASP registrations, and the rest of this guide walks through exactly how the two compare and how to move from one to the other before the window closes.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 1: KEY METRICS -->
+            <div class="section-label" style="margin-top:2.5rem;">Key Metrics</div>
+            <div class="ig-stats">
+                <div class="ig-stat">
+                    <div class="ig-stat-value">R.15</div>
+                    <div class="ig-stat-label">FATF VASP Basis</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">2023/1114</div>
+                    <div class="ig-stat-label">MiCA Regulation (CASP)</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">30 Dec 2024</div>
+                    <div class="ig-stat-label">CASP Rules Apply</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">1 Jul 2026</div>
+                    <div class="ig-stat-label">Transition Deadline</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">€50k–150k</div>
+                    <div class="ig-stat-label">CASP Min. Capital</div>
+                </div>
+                <div class="ig-stat">
+                    <div class="ig-stat-value">EU-wide</div>
+                    <div class="ig-stat-label">CASP Passport</div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Sources: FATF Recommendation 15 guidance; EU Regulation 2023/1114 (MiCA), Article 143(3) and Annex IV.</p>
+        </section>
+
+        <!-- VASP -->
+        <section class="guide-section" id="vasp">
+            <div class="section-label">Section 2: The VASP</div>
+            <h2 class="section-h2">What a <em>VASP</em> Is</h2>
+            <div class="prose">
+                <p>VASP stands for Virtual Asset Service Provider. The term originates in FATF Recommendation 15, updated in 2019 to extend anti-money-laundering and counter-terrorist-financing obligations to the crypto sector. FATF defines a VASP as any natural or legal person that, as a business on behalf of another, conducts one or more of five activities: exchanging virtual assets for fiat, exchanging one virtual asset for another, transferring virtual assets, safekeeping or administering virtual assets, and participating in the issuance or sale of virtual assets.</p>
+                <p>Crucially, VASP is a global standard, not a single law. FATF Recommendations are soft law; they only bite once a country transposes them into national legislation. Member states did so in their own ways, producing a patchwork of national registers. In the European Union before MiCA, that meant regimes such as Estonia's and Lithuania's crypto registers, Germany's BaFin crypto-custody licence, and France's PSAN registration, each centred on AML compliance and fit-and-proper management rather than prudential strength.</p>
+                <p>Two features defined the old VASP model. First, it was largely an AML registration rather than a full financial licence. Second, it was purely national: a VASP registration in one country conferred no right to operate in another. A firm wanting clients across several EU states had to register separately in each, with no single-market shortcut. That fragmentation is precisely what MiCA was designed to end.</p>
+            </div>
+        </section>
+
+        <!-- CASP -->
+        <section class="guide-section" id="casp">
+            <div class="section-label">Section 3: The CASP</div>
+            <h2 class="section-h2">What a <em>CASP</em> Is</h2>
+            <div class="prose">
+                <p>CASP stands for Crypto-Asset Service Provider, the central category of the EU Markets in Crypto-Assets Regulation, Regulation (EU) 2023/1114, known as MiCA. A CASP is a firm authorised by a national competent authority to provide one or more of the crypto-asset services MiCA defines, including custody and administration, operating a trading platform, exchanging crypto for funds or other crypto, executing orders, placing crypto-assets, receiving and transmitting orders, advice, portfolio management, and transfer services.</p>
+                <p>A CASP authorisation is a far heavier instrument than a VASP registration. Under MiCA Article 67 and Annex IV, a CASP must hold minimum capital scaled to its activities, plus governance arrangements, custody and asset-segregation rules, complaints handling, conflict-of-interest management, and market-abuse controls. The AML obligations that defined the VASP regime remain, but they are now just one layer in a comprehensive prudential and conduct framework comparable to a traditional investment-firm licence.</p>
+                <p>The decisive upgrade is reach. A CASP authorised in one EU home member state can passport its services into all the others. That single authorisation, not a stack of national registrations, becomes the key to the entire European market. For the wider licensing picture, see our hub on <a href="/crypto-licenses/europe/">crypto licences in Europe</a> and the dedicated <a href="/crypto-licenses/vasp-license/">VASP and CASP licence overview</a>.</p>
+            </div>
+
+            <div class="alert-box" style="margin-top:1.5rem;">
+                <p><strong>Capital at a glance:</strong> MiCA Annex IV sets three classes. Class 1 (advice and portfolio management) requires EUR 50,000; Class 2 (adding custody and exchange) requires EUR 125,000; Class 3 (adding operation of a trading platform) requires EUR 150,000. A CASP must always hold the higher of its class minimum or one quarter of the previous year's fixed overheads.</p>
+            </div>
+        </section>
+
+        <!-- HEAD TO HEAD -->
+        <section class="guide-section" id="headtohead">
+            <div class="section-label">Section 4: Comparison</div>
+            <h2 class="section-h2">VASP vs CASP <em>Head-to-Head</em></h2>
+            <div class="prose">
+                <p>The clearest way to see the gap is field by field. The table below sets the legacy national VASP registration against the MiCA CASP authorisation on the five dimensions that matter most for a licensing decision: scope, regulator, capital, passporting, and timeline. The pattern is consistent, the CASP regime is broader, heavier, and more valuable, which is exactly why the transition is worth the effort.</p>
+            </div>
+
+            <table class="jx-table">
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>VASP (legacy / FATF)</th>
+                        <th>CASP (MiCA)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scope</td>
+                        <td>AML registration; five FATF activities</td>
+                        <td>Full authorisation across MiCA crypto-asset services</td>
+                    </tr>
+                    <tr>
+                        <td>Legal basis</td>
+                        <td>FATF Recommendation 15, via national law</td>
+                        <td>Regulation (EU) 2023/1114 (MiCA)</td>
+                    </tr>
+                    <tr>
+                        <td>Regulator</td>
+                        <td>National AML / financial authority</td>
+                        <td>National competent authority, ESMA-coordinated</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum capital</td>
+                        <td>Usually none specific to the registration</td>
+                        <td>EUR 50,000 / 125,000 / 150,000 by class</td>
+                    </tr>
+                    <tr>
+                        <td>Passporting</td>
+                        <td>None; purely national</td>
+                        <td>EU-wide passport from one home state</td>
+                    </tr>
+                    <tr>
+                        <td>Timeline / status</td>
+                        <td>Being phased out; valid only to 1 July 2026</td>
+                        <td>Operative since 30 December 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Capital figures from MiCA Annex IV. National VASP regimes varied; capital was generally not a feature of the registration itself.</p>
+        </section>
+
+        <section class="guide-section">
+          <blockquote class="expert-quote">
+            <p>"Founders ask which is better, VASP or CASP, but inside the EU that is no longer a choice. The CASP authorisation is the only durable licence; the VASP registration is a fading legacy. The real question is timing, whether you can land your CASP authorisation before your member state's grandfathering window shuts."</p>
+            <cite>Dr. Marcus Hartmann, Senior Licensing Advisor</cite>
+          </blockquote>
+        </section>
+
+        <!-- PASSPORTING -->
+        <section class="guide-section" id="passporting">
+            <div class="section-label">Section 5: Passporting</div>
+            <h2 class="section-h2">CASP <em>Passporting</em> and Why It Matters</h2>
+            <div class="prose">
+                <p>Passporting is the single biggest reason the CASP regime is worth more than any national VASP registration. Once authorised in one EU home member state, a CASP can extend its services into the other member states through a notification procedure, without applying for a fresh licence in each. One authorisation unlocks a market of more than 400 million people, replacing what used to require a separate registration in every target country.</p>
+                <p>A legacy VASP registration offers nothing comparable. It is a domestic permission with no cross-border effect, which is why pre-MiCA crypto firms typically held registrations in several states at once. The shift from many national registrations to one passportable authorisation is the structural heart of MiCA, and it changes how firms choose where to incorporate. Our <a href="/regulation/eu/">EU regulation overview</a> tracks how the home-state choice plays out in practice.</p>
+                <p>Two caveats matter. First, only a full MiCA authorisation passports; a firm merely relying on grandfathering during the transition cannot exercise passport rights until its CASP authorisation is granted. Second, passporting is a notification, not a free pass: host-state authorities and consumer-protection rules still apply, and home-state supervisors remain accountable for the firm's conduct across the bloc.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+          <div class="cta-inline">
+            <div class="mono" style="color:var(--accent);">◆ Need Help?</div>
+            <p><strong>Deciding between a legacy registration and a full CASP authorisation?</strong> Get a free 30-minute consultation. We will assess your transition timeline and recommend the right EU home state for passporting.</p>
+            <a href="/contact/" class="btn-primary" style="display:inline-block;">Get Free Consultation →</a>
+          </div>
+        </section>
+
+        <!-- TRANSITION -->
+        <section class="guide-section" id="transition">
+            <div class="section-label">Section 6: The Deadline</div>
+            <h2 class="section-h2">The VASP-to-CASP <em>Transition Deadline</em></h2>
+            <div class="prose">
+                <p>MiCA's CASP rules became applicable on 30 December 2024. To avoid forcing every existing crypto firm to stop overnight, MiCA Article 143(3) created a transitional regime: entities lawfully providing crypto-asset services under national law before that date could continue under grandfathering for up to 18 months, with an absolute outer limit of 1 July 2026, or until their CASP application is granted or refused, whichever comes first.</p>
+                <p>The trap is that the grandfathering window was optional for each member state. Some used the full period, others cut it short. Reported examples include the Netherlands ending its transition in mid-2025 and Germany at the end of 2025, while Spain ran the full term to 1 July 2026. Because of this divergence, the application deadline that actually mattered for many firms fell well before July 2026, often during 2025. Founders who assumed a single EU-wide deadline were frequently caught out.</p>
+                <p>The 1 July 2026 date is the hard ceiling. After it, according to ESMA, any entity offering crypto-asset services to EU clients without a MiCA authorisation, or with only a pending application, is in breach of EU law and must cease serving those clients. A legacy national VASP, DASP, or PSAN registration no longer counts. The timeline below shows how the transition unfolded.</p>
+            </div>
+
+            <!-- INFOGRAPHIC 2: TIMELINE -->
+            <div class="ig-timeline">
+                <div class="ig-step">
+                    <div class="ig-step-num">1</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2019</div>
+                        <div class="ig-step-title">FATF defines the VASP</div>
+                        <div class="ig-step-desc">FATF updates Recommendation 15, extending AML and counter-terrorist-financing rules to virtual assets and creating the VASP category that EU member states transpose into national registers.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">2</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">June 2023</div>
+                        <div class="ig-step-title">MiCA enters into force</div>
+                        <div class="ig-step-desc">Regulation (EU) 2023/1114 is adopted, creating the CASP regime and a single EU rulebook to replace the patchwork of national VASP registrations.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">3</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">30 Dec 2024</div>
+                        <div class="ig-step-title">CASP rules apply</div>
+                        <div class="ig-step-desc">MiCA Title V becomes applicable. New firms must seek CASP authorisation; the 18-month grandfathering clock starts for existing national VASPs.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">4</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">2025</div>
+                        <div class="ig-step-title">Member-state windows close</div>
+                        <div class="ig-step-desc">Grandfathering was optional. Several states ended transition early during 2025 (for example the Netherlands and Germany), so application deadlines often fell well before mid-2026.</div>
+                    </div>
+                </div>
+                <div class="ig-step">
+                    <div class="ig-step-num">5</div>
+                    <div class="ig-step-body">
+                        <div class="ig-step-tag">1 Jul 2026</div>
+                        <div class="ig-step-title">Hard deadline</div>
+                        <div class="ig-step-desc">The Article 143(3) ceiling. After this date a CASP authorisation must be held; a legacy VASP registration or pending application no longer permits serving EU clients.</div>
+                    </div>
+                </div>
+            </div>
+            <p class="prose" style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Member-state transition dates are illustrative examples drawn from reported practice and vary by jurisdiction. Confirm your home state's actual deadline.</p>
+        </section>
+
+        <section class="guide-section">
+          <div class="practice-box">
+            <div class="practice-label">From Our Practice</div>
+            <p>In our EU licensing work we see the same costly assumption again and again: a founder reads "1 July 2026" and plans backwards from it, only to discover that their member state quietly closed its application window during 2025. The grandfathering clock was never a single EU-wide countdown; it was a separate timer in each country, and several ran short. By the time some firms came to us, their domestic route had already shut and the only options left were a rushed application elsewhere or temporary withdrawal from the market.</p>
+            <p>The firms that transitioned smoothly treated the CASP authorisation as a genuine upgrade rather than a paperwork refresh of an old VASP registration. They budgeted for the capital floor, built out governance and custody segregation early, and chose a home state for its passporting reach rather than its lighter touch. Getting that home-state decision right, before drafting a single application document, is consistently what separates a clean authorisation from a year of regulator queries.</p>
+          </div>
+        </section>
+
+        <!-- HOW TO MOVE -->
+        <section class="guide-section" id="move">
+            <div class="section-label">Section 7: How to Transition</div>
+            <h2 class="section-h2">How to <em>Transition</em> from VASP to CASP</h2>
+            <div class="prose">
+                <p>Moving from a legacy VASP registration to a MiCA CASP authorisation is an upgrade application, not a renewal. You apply to your national competent authority with a programme of operations, a governance and AML framework, evidence of the minimum capital for your class, custody and asset-segregation arrangements, complaints handling, and conflict-of-interest controls. Existing VASPs often qualify for a simplified procedure, but they must lodge their application inside their member state's transitional window to keep operating.</p>
+                <p>Three decisions shape the project. First, the home state, which fixes your supervisor and your passporting base. Second, the service class, which fixes your capital floor at EUR 50,000, EUR 125,000, or EUR 150,000 under Annex IV. Third, the timing, because a refused or late application means losing the legal basis to serve EU clients after the deadline. Our <a href="/corporate-services/aml-kyc/">AML and KYC compliance service</a> builds the framework regulators expect, and our team coordinates the whole authorisation end to end.</p>
+                <p>If the EU route does not fit your model or your timeline, a regulated non-EU base remains a credible alternative, with EU access handled through a separately authorised entity later. We weigh that trade-off with every client before committing to a jurisdiction.</p>
+            </div>
+        </section>
+
+        
+        <!-- Related Content — auto-published -->
+        <section class="guide-section" id="related">
+            <div class="section-label">Related Resources</div>
+            <h2 class="section-h2">Continue <em>Reading</em></h2>
+            <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Guides</h3>
+            <ul style="list-style:none;padding:0;margin-bottom:1.5rem;">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP? Virtual Asset Service Provider Explained</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Regulation Explained: EU Crypto Framework 2026</a></li>
+            </ul>
+            <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:0.75rem;">Related Services</h3>
+            <ul style="list-style:none;padding:0;">
+                <li><a href="/crypto-licenses/vasp-license/">VASP Licence 2026</a></li>
+                <li><a href="/crypto-licenses/europe/">European Crypto Licences 2026</a></li>
+                <li><a href="/regulation/eu/">EU Crypto Regulation 2026</a></li>
+            </ul>
+        </section>
+        <!-- FAQ -->
+        <section class="guide-section" id="faq">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-h2">VASP vs CASP: <em>Common Questions</em></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between a VASP and a CASP?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">A VASP is a Virtual Asset Service Provider under the FATF standard, typically registered for anti-money-laundering purposes under national law with no cross-border rights. A CASP is a Crypto-Asset Service Provider authorised under the EU MiCA Regulation, a fuller licence covering capital, governance, and custody that carries an EU-wide passport.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is a VASP the same as a CASP?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. They overlap in scope but are different legal categories. VASP is a FATF term used for national AML registration regimes that pre-date MiCA. CASP is the MiCA term for a fully authorised crypto firm. In the EU, the CASP regime has now replaced the patchwork of national VASP registrations as the operative licence.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does VASP stand for?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">VASP stands for Virtual Asset Service Provider. The term comes from FATF Recommendation 15, updated in 2019, which extended anti-money-laundering and counter-terrorist-financing rules to businesses that exchange, transfer, safekeep, or help issue virtual assets on behalf of customers as a business.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What does CASP stand for?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">CASP stands for Crypto-Asset Service Provider. It is the term used by the EU Markets in Crypto-Assets Regulation, Regulation (EU) 2023/1114, for a firm authorised to provide one or more of the crypto-asset services MiCA defines, such as custody, exchange, or operating a trading platform.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When did MiCA replace the VASP regime in the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">The CASP rules of MiCA (Title V) became applicable on 30 December 2024. From that date, new firms must seek CASP authorisation from a national competent authority rather than relying on the old national VASP registration regimes, which MiCA is designed to supersede across the European Union.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the MiCA transition deadline?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA Article 143(3) sets 1 July 2026 as the outer limit of the transitional regime. Existing national VASPs could continue under grandfathering for up to 18 months from 30 December 2024, but after 1 July 2026 a CASP authorisation must be held to serve EU clients lawfully.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can a legacy VASP registration still be used in the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Only during a member state's grandfathering window, and only until 1 July 2026 at the latest. After the transitional period ends, a legacy national VASP, DASP, or PSAN registration no longer provides a legal basis to offer crypto-asset services to EU clients. A full MiCA CASP authorisation is then required.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does a CASP licence passport across the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Yes. A CASP authorised in one EU home member state can passport its services into the other member states through a notification procedure, without seeking a separate licence in each country. This single-market access is one of the headline advantages of MiCA over the old fragmented national VASP registrations.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does a national VASP registration passport across the EU?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. Legacy national VASP registrations were purely domestic authorisations and conferred no passporting rights. A firm wanting to serve clients in several member states had to register separately in each one. Only a full MiCA CASP authorisation grants the EU-wide passport.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What capital does a CASP need?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">MiCA Annex IV sets three minimum capital classes: EUR 50,000 for advice and portfolio management, EUR 125,000 for custody and other services, and EUR 150,000 for operating a trading platform. A CASP must hold the higher of its class minimum or one quarter of the prior year's fixed overheads.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do all EU countries offer the full 18-month grandfathering?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">No. The grandfathering window under Article 143(3) was optional for each member state. Some offered the full period to 1 July 2026, others a shorter window. For example, the Netherlands ended its transition in mid-2025 and Germany at the end of 2025, while Spain ran the full term.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What happens to an unlicensed VASP after 1 July 2026?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">After 1 July 2026, any entity offering crypto-asset services to EU clients without a MiCA CASP authorisation, or with only a pending application, is in breach of EU law and must cease serving EU clients. Continuing without authorisation exposes the firm to enforcement and loss of banking relationships.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How do I transition from a VASP to a CASP?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">You apply to your national competent authority for MiCA CASP authorisation, submitting a programme of operations, governance and AML framework, prudential capital, custody arrangements, and complaints handling. Existing VASPs often qualify for a simplified procedure, but they must apply within their member state's transitional window to stay live.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is a CASP harder to obtain than a VASP registration?<span class="faq-icon">+</span></button>
+                    <div class="faq-a">Generally yes. A national VASP registration centred mainly on AML controls and fit-and-proper checks. A MiCA CASP authorisation adds minimum capital, prudential safeguards, governance, custody segregation, conflict-of-interest and market-abuse rules, so the bar and the documentation burden are materially higher.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="guide-section" id="sources">
+          <div class="section-label">References</div>
+          <h2 class="section-h2"><em>Sources</em> &amp; Official References</h2>
+          <ul class="sources-list">
+            <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng" target="_blank" rel="nofollow noopener noreferrer">EUR-Lex: Regulation (EU) 2023/1114 (Markets in Crypto-Assets, MiCA)</a></li>
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="nofollow noopener noreferrer">ESMA: Markets in Crypto-Assets Regulation (MiCA) overview</a></li>
+            <li><a href="https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Updated-Guidance-VA-VASP.pdf" target="_blank" rel="nofollow noopener noreferrer">FATF: Updated Guidance for a Risk-Based Approach to Virtual Assets and VASPs (Recommendation 15)</a></li>
+            <li><a href="https://www.fatf-gafi.org/en/topics/virtual-assets.html" target="_blank" rel="nofollow noopener noreferrer">FATF: Virtual Assets topic page</a></li>
+            <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#Interim%20MiCA%20registers" target="_blank" rel="nofollow noopener noreferrer">ESMA: Register of authorised crypto-asset service providers</a></li>
+            <li><a href="https://www.cssf.lu/en/crypto-assets-service-providers-casp/" target="_blank" rel="nofollow noopener noreferrer">CSSF: Crypto-Asset Service Providers (CASP) authorisation</a></li>
+          </ul>
+        </section>
+
+        <div class="author-box">
+            <div class="author-avatar">MH</div>
+            <div>
+                <div class="author-box-name"><a href="/about/dr-marcus-hartmann/">Dr. Marcus Hartmann</a></div>
+                <div class="author-box-meta">Senior Licensing Advisor · LL.M. International Financial Law</div>
+                <div class="author-box-bio">22 years in financial services regulation. Advised 400+ crypto licensing mandates across 60+ jurisdictions. Based in Zug, Switzerland.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="guide-aside">
+        <div class="aside-sticky">
+            <div class="aside-cta-box">
+                <h3>VASP to CASP?</h3>
+                <p>Tell us your home state and target markets. We will assess your transition timeline and build the CASP authorisation regulators expect. Free, no obligation.</p>
+                <a href="/contact/?topic=mica-transition" class="btn-primary">Get a Consultation</a>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">VASP vs CASP at a Glance</div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">VASP</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">National AML registration</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">FATF Recommendation 15, no passport</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">CASP</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">MiCA authorisation</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Reg. (EU) 2023/1114, EU passport</div>
+                    </div>
+                    <div style="border-top: var(--border); padding-top: 0.75rem;">
+                        <div style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.2rem;">Deadline</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">1 July 2026</div>
+                        <div style="font-size: 0.78rem; color: var(--muted);">Article 143(3) ceiling</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Related Guides</div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="/guides/what-is-vasp/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">What Is a VASP?</a>
+                    <a href="/guides/mica-explained/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">MiCA Explained</a>
+                    <a href="/crypto-licenses/vasp-license/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">VASP / CASP License Overview</a>
+                    <a href="/crypto-licenses/europe/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">Crypto Licenses in Europe</a>
+                    <a href="/regulation/eu/" style="font-size: 0.85rem; color: var(--ink); text-decoration: none;">EU Regulation Hub →</a>
+                </div>
+            </div>
+
+            <div class="aside-info-box">
+                <div class="aside-info-title">Why CryptoLicenses.net</div>
+                <ul class="checklist" style="font-size: 0.82rem; margin-top: 0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li>VASP-to-CASP transition handled end to end</li>
+                    <li>Home-state selection for EU passporting</li>
+                    <li>Local legal partners in 30+ countries</li>
+                    <li>Swiss-based coordination from Zug</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">Free Consultation</div>
+      <h2 class="cta-h2">Get CASP Authorised Before the Deadline</h2>
+      <p class="cta-lead">Share your business model and home state, and we will assess your VASP-to-CASP transition timeline, recommend the right EU home state for passporting, and build the authorisation regulators expect to see. No obligation.</p>
+      <ul class="cta-trust">
+        <li>🇨🇭 Swiss-registered firm, Zug</li>
+        <li>⚡ Response within 24 hours</li>
+        <li>🔒 Strictly confidential</li>
+        <li>✓ 80+ jurisdictions covered</li>
+      </ul>
+    </div>
+    <div class="cta-form-wrap">
+      <form data-contact-form="">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <label>Name *</label>
+            <input type="text" name="first_name" required="" placeholder="John Smith">
+          </div>
+          <div class="cta-field">
+            <label>Email *</label>
+            <input type="email" name="email" required="" placeholder="john@company.com">
+          </div>
+        </div>
+        <div class="cta-field cta-field-full">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Acme Exchange Ltd">
+        </div>
+        <div class="cta-sel-wrap">
+          <select name="service">
+            <option value="">Service needed…</option>
+            <option value="exchange">Crypto Exchange License</option>
+            <option value="custodian">Crypto Custodian</option>
+            <option value="broker">Broker / OTC Desk</option>
+            <option value="defi">DeFi Protocol</option>
+            <option value="payment">Crypto Payment Services</option>
+            <option value="mica">MiCA CASP Transition</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="cta-field cta-field-full" style="margin-bottom:20px">
+          <label>Message *</label>
+          <textarea name="message" required="" placeholder="Tell us about your business model, home state, and CASP transition needs…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-submit">Get Free Consultation →</button>
+        <p class="cta-privacy">Confidential · No obligation · No spam</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">CryptoLicenses.net</div>
+            <p class="footer-tagline">Swiss-based crypto licensing advisors. 80+ jurisdictions. Fixed fees. No surprises.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-links">
+                <li><a href="/guides/what-is-vasp/">What Is a VASP?</a></li>
+                <li><a href="/guides/mica-explained/">MiCA Explained</a></li>
+                <li><a href="/guides/crypto-license-cost/">Cost of a Crypto License</a></li>
+                <li><a href="/guides/">All Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Services</div>
+            <ul class="footer-links">
+                <li><a href="/crypto-licenses/vasp-license/">VASP License</a></li>
+                <li><a href="/corporate-services/aml-kyc/">AML / KYC</a></li>
+                <li><a href="/regulation/">Regulation Hub</a></li>
+                <li><a href="/crypto-licenses/">All Jurisdictions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="footer-heading">Company</div>
+            <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 CryptoLicenses.net · Registered in Switzerland</span>
+        <span>Information only · not legal advice</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+
+<script src="/contact-form.js"></script>
+
+</body></html>
