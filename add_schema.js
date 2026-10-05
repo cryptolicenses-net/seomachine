@@ -73,6 +73,19 @@ function buildBreadcrumb(segments, pageTitle) {
   return { "@type": "BreadcrumbList", "itemListElement": items };
 }
 
+const MONTHS = { january:"01", february:"02", march:"03", april:"04", may:"05", june:"06", july:"07", august:"08", september:"09", october:"10", november:"11", december:"12" };
+
+// dateModified follows the visible "Last updated" line of the page ("6 October 2026" or "October 2026");
+// pages without one keep the site-wide default.
+function extractModified(html) {
+  const m = /Last updated:?\s*(?:<\/span>)?\s*(?:(\d{1,2})\s+)?([A-Z][a-z]+)\s+(\d{4})/.exec(html);
+  if (m && MONTHS[m[2].toLowerCase()]) {
+    const day = m[1] ? String(m[1]).padStart(2, "0") : "01";
+    return m[3] + "-" + MONTHS[m[2].toLowerCase()] + "-" + day;
+  }
+  return "2026-03-22";
+}
+
 function extractFAQ(html) {
   const re = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
   let m;
@@ -156,7 +169,7 @@ function buildSchema(filePath, html) {
       "description": desc || "",
       "url": pageUrl,
       "datePublished": "2026-01-01",
-      "dateModified": "2026-03-22",
+      "dateModified": extractModified(html),
       "author": { "@id": "https://cryptolicenses.net/#organization" },
       "publisher": {
         "@type": "Organization",
