@@ -78,12 +78,13 @@ export async function onRequestPost(context) {
     return new Response(JSON.stringify({ success: false, error: 'Invalid request body' }), { status: 400, headers });
   }
 
-  // Honeypot
-  if (data._honey) {
-    return new Response(JSON.stringify({ success: true }), { status: 200, headers });
+  // HARD GATE 2026-10-07 — owner: nothing is accepted without a verified Turnstile
+  // token, including when the secret is missing. Runs before the honeypot.
+  if (!env.TURNSTILE_SECRET_KEY) {
+    console.error('TURNSTILE_SECRET_KEY is not set — rejecting');
+    return new Response(JSON.stringify({ success: false, error: 'Captcha unavailable' }), { status: 500, headers });
   }
-
-  if (env.TURNSTILE_SECRET_KEY) {
+  {
     const token = data['cf-turnstile-response'] || '';
     if (!token) return new Response(JSON.stringify({ success: false, error: 'Captcha missing' }), { status: 400, headers });
     try {
@@ -99,6 +100,11 @@ export async function onRequestPost(context) {
       console.error('Turnstile verify error:', e);
       return new Response(JSON.stringify({ success: false, error: 'Captcha unavailable' }), { status: 500, headers });
     }
+  }
+
+  // Honeypot — only visitors with a verified token reach it (2026-10-07).
+  if (data._honey) {
+    return new Response(JSON.stringify({ success: true }), { status: 200, headers });
   }
 
   const firstName = (data.first_name || '').trim();
