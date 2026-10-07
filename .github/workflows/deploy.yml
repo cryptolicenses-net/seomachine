@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check deploy dir for secrets
+        run: |
+          # output/ is served as-is: keep workflow files and wrangler caches out of it
+          rm -rf output/.github output/.wrangler
+          python3 "$GITHUB_WORKSPACE/.github/secret-gate.py" output
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

@@ -54,6 +54,13 @@ jobs:
         if: steps.publish.outputs.published == 'true'
         run: git push
 
+      - name: Check deploy dir for secrets
+        if: steps.publish.outputs.published == 'true'
+        run: |
+          # output/ is served as-is: keep workflow files and wrangler caches out of it
+          rm -rf output/.github output/.wrangler
+          python3 "$GITHUB_WORKSPACE/.github/secret-gate.py" output
+
       - name: Deploy to Cloudflare Pages
         if: steps.publish.outputs.published == 'true'
         uses: cloudflare/wrangler-action@v3
