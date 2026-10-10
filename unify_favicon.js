@@ -1,6 +1,7 @@
 // unify_favicon.js — ensures every output/*.html has a single, canonical favicon link.
 //
 // Canonical block (inserted right after <meta name="viewport"...>):
+//   <link rel="icon" href="/favicon.ico" sizes="any">
 //   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 //   <link rel="apple-touch-icon" href="/assets/favicon.svg">
 //
@@ -15,6 +16,7 @@ const path = require('path');
 
 const ROOT  = path.join(__dirname, 'output');
 const BLOCK =
+  '    <link rel="icon" href="/favicon.ico" sizes="any">\n' +
   '    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">\n' +
   '    <link rel="apple-touch-icon" href="/assets/favicon.svg">';
 
