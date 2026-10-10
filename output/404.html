@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="apple-touch-icon" href="/assets/favicon.svg">
   <title>Page Not Found — CryptoLicenses.net</title>
@@ -10,7 +11,7 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://cryptolicenses.net/404/">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/style.css?v=0a306be6">
     <style>
 :root {
       --paper: #F5F0EB;
@@ -41,7 +42,7 @@ h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 300; letter-spacing: -
 .error-link:hover { background: #F0EBE4; }
 .error-link-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--accent); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .btn-primary { background: var(--ink); color: var(--paper); padding: 0.875rem 2rem; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; display: inline-block; transition: background 0.2s; }
-.btn-primary:hover { background: var(--accent); color: var(--ink); }
+.btn-primary:hover { background: var(--brand-gold,#C9A84C); color: var(--ink); }
 /* FOOTER */
     footer { border-top: var(--heavy); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; gap: 0.5rem; }
 footer a { color: var(--muted); text-decoration: none; }
@@ -123,11 +124,29 @@ footer a:hover { color: var(--ink); }
   ]
 }
 </script>
+<style id="a11y-fixes">
+/* a11y-fixes: managed by normalize_pages.js - do not edit by hand */
+:root{--accent-ink:#7B6425;--accent-ink-lg:#9A7D2E;--muted-ink:#5E6777;--brand-gold:#C9A84C}
+body{--accent:var(--accent-ink);--accent-lg:var(--accent-ink-lg);--muted:var(--muted-ink)}
+footer,footer *,header.hero-guide,header.hero-guide *,a.nav-logo,a.nav-logo *,section.cta-section,section.cta-section *,div.cta-section,div.cta-section *,div.cta-band,div.cta-band *,div.cta-box,div.cta-box *,div.cta-block,div.cta-block *,div.cta-inline,div.cta-inline *,div.aside-cta-box,div.aside-cta-box *,div.aside-box-title,div.aside-box-title *,div.aside-card-head,div.aside-card-head *,div.hero-cta-box,div.hero-cta-box *,div.swiss-right,div.swiss-right *,div.final-cta,div.final-cta *,div.tldr-box,div.tldr-box *,div.form-header,div.form-header *,div.error-top,div.error-top *,div.vanuatu-header,div.vanuatu-header *,div.ticker,div.ticker *,div.tl-date,div.tl-date *,div.type-card-label,div.type-card-label *,div.trend-badge,div.trend-badge *,div.author-avatar,div.author-avatar *,div.ig-cost-row.total,div.ig-cost-row.total *,a.nav-cta,a.nav-cta *,a.btn-primary-lg,a.btn-primary-lg *,a.mobile-nav-cta,a.mobile-nav-cta *,button.newsletter-btn,button.newsletter-btn *,button.submit-btn,button.submit-btn *,a.filter-btn.active,a.filter-btn.active *{--accent:#C9A84C;--accent-lg:#C9A84C;--muted:#6B7587}
+.hero-h1 em,.value-big{color:var(--accent-lg)}
+.breadcrumb span{opacity:1}
+.hero-meta-item{opacity:1;color:rgba(245,240,235,.6)}
+.hero-meta-item span{color:#AF954C}
+.skip-link{position:absolute;left:0;top:0;z-index:1000;padding:.75rem 1rem;background:#1C2B4A;color:#F5F0EB;font:500 .875rem/1.2 Inter,sans-serif;text-decoration:none;transform:translateY(-120%)}
+.skip-link:focus{transform:none;outline:2px solid #C9A84C;outline-offset:2px}
+.site-header{position:sticky;top:0;z-index:100}
+.site-header>nav{position:static}
+.nav-links{min-width:0}
+@media (max-width:640px){.site-header{position:static}nav{flex-wrap:wrap;overflow:visible}.nav-brand{flex:1 1 auto;width:auto;padding:1rem 1.25rem;border-right:0}.nav-cta{flex:0 0 auto;padding:0 1rem}.nav-links{order:3;flex:1 1 100%;border-top:var(--border)}}
+@media (prefers-reduced-motion:reduce){.ticker-content{animation:none;transform:none}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav>
-    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+<header class="site-header"><nav>
+    <a href="/" class="nav-brand"><img width="252" height="28" src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
     <div class="nav-links">
         <a href="/crypto-licenses/" class="nav-link">Crypto Licenses</a>
         <a href="/forex-licenses/" class="nav-link">Forex Licenses</a>
@@ -137,7 +156,8 @@ footer a:hover { color: var(--ink); }
         <a href="/guides/" class="nav-link">Guides</a>
     </div>
     <a href="/contact/" class="nav-cta">Free Consultation</a>
-</nav>
+</nav></header>
+<main id="main-content">
 
 <div class="error-wrap">
   <div class="error-inner">
@@ -171,6 +191,7 @@ footer a:hover { color: var(--ink); }
   </div>
 </div>
 
+</main>
 <footer>
     <div class="footer-top">
         <div class="footer-col">

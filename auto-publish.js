@@ -7,7 +7,7 @@
  *   1. Copies draft from drafts/guides/[slug] → output/guides/[slug]
  *   2. Adds interlinks: new page ↔ existing pages
  *   3. Updates guides hub (output/guides/index.html)
- *   4. Runs sitemap + schema + redirects generation
+ *   4. Runs normalize_pages + schema + sitemap + redirects generation
  *   5. Updates publish-schedule.json status
  */
 
@@ -311,11 +311,17 @@ function formatDateForHub(dateStr) {
 // ---------------------------------------------------------------------------
 
 function runPostPublishScripts() {
-  log('Running generate_sitemap.js...');
-  execSync('node generate_sitemap.js', { cwd: ROOT, stdio: 'inherit' });
+  // Order matters: normalize_pages.js applies the accessibility/markup fixes to the freshly
+  // copied draft (and every other page); add_schema.js rebuilds the JSON-LD; generate_sitemap.js
+  // then reads each page's dateModified from that JSON-LD, so it has to run after add_schema.js.
+  log('Running normalize_pages.js...');
+  execSync('node normalize_pages.js output', { cwd: ROOT, stdio: 'inherit' });
 
   log('Running add_schema.js...');
   execSync(`node add_schema.js "${OUTPUT}"`, { cwd: ROOT, stdio: 'inherit' });
+
+  log('Running generate_sitemap.js...');
+  execSync('node generate_sitemap.js', { cwd: ROOT, stdio: 'inherit' });
 
   log('Running generate_redirects.js...');
   execSync('node generate_redirects.js output', { cwd: ROOT, stdio: 'inherit' });

@@ -6,6 +6,7 @@
 <title>Crypto Licensing Blog 2026 | CryptoLicenses.net</title>
 <meta name="description" content="Crypto licensing blog: expert analysis of MiCA, VARA, MAS regulations, licensing news, jurisdiction comparisons and compliance guides. Updated weekly.">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="canonical" href="https://cryptolicenses.net/blog/">
 <meta property="og:type" content="website">
@@ -22,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=0a306be6">
     <style>
 :root {
     --paper: #F5F0EB;
@@ -55,7 +56,7 @@ nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position
 .featured-meta { display: flex; align-items: center; gap: 1.5rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; }
 .featured-author { font-weight: 500; color: var(--ink); }
 .featured-read-link { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 1px; transition: color 0.2s; }
-.featured-read-link:hover { color: var(--accent); border-color: var(--accent); }
+.featured-read-link:hover { color: var(--accent); border-color: var(--brand-gold,#C9A84C); }
 .featured-aside { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1.5rem; background: rgba(28,43,74,0.02); }
 .featured-aside-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem; }
 .featured-stat { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 300; color: var(--accent); line-height: 1; }
@@ -78,7 +79,7 @@ nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position
 .topic-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; border: var(--heavy); padding: 0.5rem 1rem; text-decoration: none; color: var(--ink); transition: background 0.2s, color 0.2s; }
 .topic-badge:hover { background: var(--ink); color: var(--paper); }
 .topic-badge.accent { background: rgba(201,168,76,0.1); border-color: rgba(201,168,76,0.4); color: var(--accent); }
-.topic-badge.accent:hover { background: var(--accent); color: var(--ink); border-color: var(--accent); }
+.topic-badge.accent:hover { background: var(--brand-gold,#C9A84C); color: var(--ink); border-color: var(--brand-gold,#C9A84C); }
 /* NEWSLETTER */
 .newsletter-box { border: var(--heavy); padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 1.5rem; }
 .newsletter-text h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 0.75rem; }
@@ -87,10 +88,10 @@ nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position
 .newsletter-input { flex-grow: 1; padding: 0.875rem 1rem; background: none; border: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--ink); outline: none; }
 .newsletter-input::placeholder { color: var(--muted); opacity: 0.6; }
 .newsletter-btn { background: var(--ink); color: var(--paper); border: none; padding: 0.875rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
-.newsletter-btn:hover { background: var(--accent); color: var(--ink); }
+.newsletter-btn:hover { background: var(--brand-gold,#C9A84C); color: var(--ink); }
 .newsletter-note { font-size: 0.75rem; color: var(--muted); margin-top: 0.6rem; }
 /* CTA SECTION */
-.cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--accent); }
+.cta-section { background: var(--ink); color: #fff; padding: 72px 24px; border-top: 4px solid var(--brand-gold,#C9A84C); }
 .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
 .cta-label { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
 .cta-h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 16px; line-height: 1.1; }
@@ -103,14 +104,14 @@ nav { display: flex; align-items: stretch; border-bottom: var(--heavy); position
 .cta-field label { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .06em; }
 .cta-field input, .cta-field textarea { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; transition: border-color .15s; width: 100%; }
 .cta-field input::placeholder, .cta-field textarea::placeholder { color: rgba(255,255,255,.3); }
-.cta-field input:focus, .cta-field textarea:focus { border-color: var(--accent); }
+.cta-field input:focus, .cta-field textarea:focus { border-color: var(--brand-gold,#C9A84C); }
 .cta-field-full { margin-bottom: 16px; }
 .cta-sel-wrap { position: relative; margin-bottom: 16px; }
 .cta-sel-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(255,255,255,.5); pointer-events: none; }
 .cta-sel-wrap select { -webkit-appearance: none; appearance: none; width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: 10px 36px 10px 14px; font-family: 'Inter', sans-serif; font-size: .875rem; outline: none; cursor: pointer; transition: border-color .15s; }
 .cta-sel-wrap select option { background: #1C2B4A; color: #fff; }
-.cta-sel-wrap select:focus { border-color: var(--accent); }
-.cta-submit { width: 100%; background: var(--accent); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
+.cta-sel-wrap select:focus { border-color: var(--brand-gold,#C9A84C); }
+.cta-submit { width: 100%; background: var(--brand-gold,#C9A84C); color: var(--ink); border: none; padding: 14px; font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; margin-top: 4px; }
 .cta-submit:hover { opacity: .85; }
 .cta-privacy { font-size: .7rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 10px; }
 /* FOOTER */
@@ -311,12 +312,30 @@ nav{display:flex;align-items:stretch;border-bottom:var(--heavy);position:sticky;
   ]
 }
 </script>
+<style id="a11y-fixes">
+/* a11y-fixes: managed by normalize_pages.js - do not edit by hand */
+:root{--accent-ink:#7B6425;--accent-ink-lg:#9A7D2E;--muted-ink:#5E6777;--brand-gold:#C9A84C}
+body{--accent:var(--accent-ink);--accent-lg:var(--accent-ink-lg);--muted:var(--muted-ink)}
+footer,footer *,header.hero-guide,header.hero-guide *,a.nav-logo,a.nav-logo *,section.cta-section,section.cta-section *,div.cta-section,div.cta-section *,div.cta-band,div.cta-band *,div.cta-box,div.cta-box *,div.cta-block,div.cta-block *,div.cta-inline,div.cta-inline *,div.aside-cta-box,div.aside-cta-box *,div.aside-box-title,div.aside-box-title *,div.aside-card-head,div.aside-card-head *,div.hero-cta-box,div.hero-cta-box *,div.swiss-right,div.swiss-right *,div.final-cta,div.final-cta *,div.tldr-box,div.tldr-box *,div.form-header,div.form-header *,div.error-top,div.error-top *,div.vanuatu-header,div.vanuatu-header *,div.ticker,div.ticker *,div.tl-date,div.tl-date *,div.type-card-label,div.type-card-label *,div.trend-badge,div.trend-badge *,div.author-avatar,div.author-avatar *,div.ig-cost-row.total,div.ig-cost-row.total *,a.nav-cta,a.nav-cta *,a.btn-primary-lg,a.btn-primary-lg *,a.mobile-nav-cta,a.mobile-nav-cta *,button.newsletter-btn,button.newsletter-btn *,button.submit-btn,button.submit-btn *,a.filter-btn.active,a.filter-btn.active *{--accent:#C9A84C;--accent-lg:#C9A84C;--muted:#6B7587}
+.hero-h1 em,.value-big{color:var(--accent-lg)}
+.breadcrumb span{opacity:1}
+.hero-meta-item{opacity:1;color:rgba(245,240,235,.6)}
+.hero-meta-item span{color:#AF954C}
+.skip-link{position:absolute;left:0;top:0;z-index:1000;padding:.75rem 1rem;background:#1C2B4A;color:#F5F0EB;font:500 .875rem/1.2 Inter,sans-serif;text-decoration:none;transform:translateY(-120%)}
+.skip-link:focus{transform:none;outline:2px solid #C9A84C;outline-offset:2px}
+.site-header{position:sticky;top:0;z-index:100}
+.site-header>nav{position:static}
+.nav-links{min-width:0}
+@media (max-width:640px){.site-header{position:static}}
+@media (prefers-reduced-motion:reduce){.ticker-content{animation:none;transform:none}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- NAV -->
-<nav>
-    <a href="/" class="nav-brand"><img src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
+<header class="site-header"><nav>
+    <a href="/" class="nav-brand"><img width="252" height="28" src="/assets/logo.svg" alt="CryptoLicenses.net" style="height:28px;width:auto;display:block;"></a>
     <div class="nav-links">
         <a href="/crypto-licenses/" class="nav-link">Crypto Licences</a>
         <a href="/forex-licenses/" class="nav-link">Forex Licences</a>
@@ -326,7 +345,8 @@ nav{display:flex;align-items:stretch;border-bottom:var(--heavy);position:sticky;
         <a href="/guides/" class="nav-link">Guides</a>
     </div>
     <a href="/contact/" class="nav-cta">Free Consultation</a>
-</nav>
+</nav></header>
+<main id="main-content">
 <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a href="/crypto-licenses/" class="mobile-nav-item">Crypto Licences</a>
     <a href="/forex-licenses/" class="mobile-nav-item">Forex Licences</a>
@@ -611,20 +631,20 @@ nav{display:flex;align-items:stretch;border-bottom:var(--heavy);position:sticky;
             <form data-contact-form="">
                 <div class="cta-form-row">
                     <div class="cta-field">
-                        <label>Name *</label>
-                        <input type="text" name="first_name" required placeholder="John Smith">
+                        <label for="cf-first-name">Name *</label>
+                        <input id="cf-first-name" type="text" name="first_name" required placeholder="John Smith">
                     </div>
                     <div class="cta-field">
-                        <label>Email *</label>
-                        <input type="email" name="email" required placeholder="john@company.com">
+                        <label for="cf-email">Email *</label>
+                        <input id="cf-email" type="email" name="email" required placeholder="john@company.com">
                     </div>
                 </div>
                 <div class="cta-field cta-field-full">
-                    <label>Company</label>
-                    <input type="text" name="company" placeholder="Acme Exchange Ltd">
+                    <label for="cf-company">Company</label>
+                    <input id="cf-company" type="text" name="company" placeholder="Acme Exchange Ltd">
                 </div>
                 <div class="cta-sel-wrap">
-                    <select name="service">
+                    <select name="service" aria-label="Service needed">
                         <option value="">Service needed&hellip;</option>
                         <option value="exchange">Crypto Exchange Licence</option>
                         <option value="custodian">Crypto Custodian</option>
@@ -636,8 +656,8 @@ nav{display:flex;align-items:stretch;border-bottom:var(--heavy);position:sticky;
                     </select>
                 </div>
                 <div class="cta-field cta-field-full" style="margin-bottom:20px">
-                    <label>Message *</label>
-                    <textarea name="message" required placeholder="Tell us about your project, target markets, and timeline&hellip;" rows="4"></textarea>
+                    <label for="cf-message">Message *</label>
+                    <textarea id="cf-message" name="message" required placeholder="Tell us about your project, target markets, and timeline&hellip;" rows="4"></textarea>
                 </div>
                 <button type="submit" class="cta-submit">Get Free Consultation &rarr;</button>
                 <p class="cta-privacy">Confidential &middot; No obligation &middot; No spam</p>
@@ -647,6 +667,7 @@ nav{display:flex;align-items:stretch;border-bottom:var(--heavy);position:sticky;
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
     <div class="footer-top">
         <div class="footer-col">
