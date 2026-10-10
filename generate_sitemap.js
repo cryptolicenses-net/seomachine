@@ -6,29 +6,36 @@ const OUTPUT_DIR = path.join(__dirname, 'output');
 
 const EXCLUDE_DIRS = ['templates', 'seomachine', 'functions', '404'];
 
-// Priority rules by depth and section
-function getPriority(segments) {
-  const section = segments[0] || '';
-  const depth = segments.length;
+// lastmod is the page's own dateModified, read from its JSON-LD (Article/WebPage/...).
+// Pages that declare none get no <lastmod> at all: a build date is not a modification date.
+// changefreq and priority are not emitted (Google ignores both).
+const DATE_RE = /^\d{4}-\d{2}-\d{2}(T[\d:.]+(Z|[+-]\d{2}:\d{2})?)?$/;
 
-  if (depth === 0) return '1.0'; // homepage
-  if (section === 'privacy' || section === 'terms' || section === 'sitemap') return '0.3';
-  if (section === 'blog' || section === 'case-studies' || section === 'podcast-ads-guide-2025') return '0.6';
-  if (depth === 1) return '0.8'; // top hubs
-  if (depth === 2) return '0.7'; // regional hubs
-  return '0.6'; // jurisdiction pages
+function findDateModified(node) {
+  if (!node || typeof node !== 'object') return null;
+  if (Array.isArray(node)) {
+    for (const n of node) { const d = findDateModified(n); if (d) return d; }
+    return null;
+  }
+  if (typeof node.dateModified === 'string' && DATE_RE.test(node.dateModified)) return node.dateModified;
+  for (const k of ['@graph', 'mainEntity']) {
+    const d = findDateModified(node[k]);
+    if (d) return d;
+  }
+  return null;
 }
 
-function getChangefreq(segments) {
-  const section = segments[0] || '';
-  const depth = segments.length;
-
-  if (depth === 0) return 'daily';
-  if (section === 'regulation' || section === 'blog') return 'weekly';
-  if (section === 'guides') return 'weekly';
-  if (section === 'privacy' || section === 'terms') return 'yearly';
-  if (depth <= 2) return 'weekly';
-  return 'monthly';
+function pageLastmod(file) {
+  const html = fs.readFileSync(file, 'utf8');
+  const re = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    try {
+      const d = findDateModified(JSON.parse(m[1]));
+      if (d) return d.slice(0, 10);
+    } catch (e) { /* malformed JSON-LD: no lastmod */ }
+  }
+  return null;
 }
 
 const urls = [];
@@ -60,8 +67,7 @@ function walk(dir) {
 
     urls.push({
       loc: fullUrl,
-      priority: getPriority(segments),
-      changefreq: getChangefreq(segments),
+      lastmod: pageLastmod(full),
       depth: segments.length
     });
   });
@@ -75,8 +81,6 @@ urls.sort((a, b) => {
   return a.loc.localeCompare(b.loc);
 });
 
-const today = new Date().toISOString().split('T')[0];
-
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -84,10 +88,7 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 ${urls.map(u => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
-  </url>`).join('\n')}
+${u.lastmod ? `    <lastmod>${u.lastmod}</lastmod>\n` : ''}  </url>`).join('\n')}
 </urlset>`;
 
 fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), xml, 'utf8');
