@@ -92,6 +92,12 @@ ${dark}{--accent:${GOLD};--accent-lg:${GOLD};--muted:${MUTED}}
 @media (max-width:640px){main table{display:block;max-width:100%;overflow-x:auto}}
 @media (max-width:400px){.footer-top>.footer-col{padding:3rem 1rem}}
 .req-cell.req-cell-head{background:#ECE8E5}
+.timeline-content h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:.35rem}
+.layout>*,.cards-grid>*{min-width:0}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+@media (max-width:640px){.hero-meta{flex-wrap:wrap;row-gap:1rem}.nav-inner{flex-wrap:wrap;height:auto;padding:10px 16px;row-gap:8px}.nav-inner .nav-links{order:3;flex:1 1 100%;overflow-x:auto;gap:18px;margin:0;padding:6px 0 2px;border-top:0}.nav-inner .nav-links li{flex:0 0 auto}}
+@media (max-width:640px){[style*="grid-template-columns:1fr 1fr 1fr"],[style*="grid-template-columns: 1fr 1fr 1fr"]{grid-template-columns:1fr!important}}
+@media (max-width:480px){.cards-grid{grid-template-columns:1fr}.stat-box{padding:1rem .75rem}.stat-value{font-size:1.4rem}}
 @media (max-width:640px){.site-header{position:static}`;
   if (!hasBurger) {
     css += `.site-header>nav:has(.nav-links){flex-wrap:wrap;overflow:visible}nav:has(.nav-links) .nav-brand{flex:1 1 auto;width:auto;padding:1rem 1.25rem;border-right:0}nav:has(.nav-links) .nav-cta{flex:0 0 auto;padding:0 1rem}.nav-links{order:3;flex:1 1 100%;border-top:var(--border)}`;
@@ -129,12 +135,13 @@ function dropOrphanSizes(html) {
 
 function sizeLogos(html) {
   return html.replace(/<img\b[^>]*src="\/assets\/logo\.svg"[^>]*>/gi, tag => {
-    if (/\swidth\s*=/i.test(tag) && /\sheight\s*=/i.test(tag)) return tag;
-    const h = /height\s*:\s*(\d+(?:\.\d+)?)px/i.exec(tag);
+    const hasW = /\swidth\s*=/i.test(tag), hasH = /\sheight\s*=/i.test(tag);
+    if (hasW && hasH) return tag;
+    const h = /\sheight\s*=\s*"(\d+)"/i.exec(tag) || /height\s*:\s*(\d+(?:\.\d+)?)px/i.exec(tag);
     if (!h) return tag;
     const height = Math.round(parseFloat(h[1]));
     const width = Math.round(height * 9); // logo.svg is 288x32
-    return tag.replace(/<img\b/i, `<img width="${width}" height="${height}"`);
+    return tag.replace(/<img\b/i, `<img${hasW ? '' : ` width="${width}"`}${hasH ? '' : ` height="${height}"`}`);
   });
 }
 
@@ -185,7 +192,12 @@ function landmarks(html) {
   return html;
 }
 
+function timelineHeadings(html) {
+  return html.replace(/(<div class="timeline-content">\s*)<h4>([\s\S]*?)<\/h4>/gi, '$1<h3>$2</h3>');
+}
+
 function labelForms(html) {
+  const used = new Set([...html.matchAll(/\sid="([^"]+)"/gi)].map(m => m[1]));
   return html.replace(/<form\b[^>]*data-contact-form[\s\S]*?<\/form>/gi, form => {
     // 1. labels followed by their control
     form = form.replace(/<label(?![^>]*\sfor=)([^>]*)>([\s\S]*?)<\/label>(\s*(?:<div[^>]*>\s*)?)(<(?:input|select|textarea)\b[^>]*>)/gi,
@@ -194,7 +206,10 @@ function labelForms(html) {
         if (!nm) return m;
         let id = (/\sid="([^"]+)"/i.exec(control) || [])[1];
         if (!id) {
-          id = 'cf-' + nm[1].replace(/_/g, '-');
+          const base = 'cf-' + nm[1].replace(/_/g, '-');
+          id = base;
+          for (let n = 2; used.has(id); n++) id = `${base}-${n}`;
+          used.add(id);
           control = control.replace(/<(input|select|textarea)\b/i, `<$1 id="${id}"`);
         }
         return `<label${lattr} for="${id}">${text}</label>${between}${control}`;
@@ -239,6 +254,7 @@ function normalizeHtml(html, rel, version) {
   html = dropOrphanSizes(html);
   html = sizeLogos(html);
   html = labelForms(html);
+  html = timelineHeadings(html);
   html = homeOgType(html, rel);
   html = faviconIco(html);
   html = transformStyleRegions(html);
