@@ -10,6 +10,9 @@ const EXCLUDE_DIRS = ['templates', 'seomachine', 'functions', '404'];
 // Pages that declare none get no <lastmod> at all: a build date is not a modification date.
 // changefreq and priority are not emitted (Google ignores both).
 const DATE_RE = /^\d{4}-\d{2}-\d{2}(T[\d:.]+(Z|[+-]\d{2}:\d{2})?)?$/;
+// add_schema.js gives pages without a visible "Last updated" line this site-wide default;
+// it is not the page's own date, so such pages get no lastmod.
+const SITE_DEFAULT_MODIFIED = '2026-03-22';
 
 function findDateModified(node) {
   if (!node || typeof node !== 'object') return null;
@@ -32,7 +35,7 @@ function pageLastmod(file) {
   while ((m = re.exec(html)) !== null) {
     try {
       const d = findDateModified(JSON.parse(m[1]));
-      if (d) return d.slice(0, 10);
+      if (d) return d.slice(0, 10) === SITE_DEFAULT_MODIFIED ? null : d.slice(0, 10);
     } catch (e) { /* malformed JSON-LD: no lastmod */ }
   }
   return null;
