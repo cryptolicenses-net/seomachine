@@ -92,7 +92,7 @@ ${dark}{--accent:${GOLD};--accent-lg:${GOLD};--muted:${MUTED}}
 @media (max-width:640px){main table{display:block;max-width:100%;overflow-x:auto}}
 @media (max-width:400px){.footer-top>.footer-col{padding:3rem 1rem}}
 .req-cell.req-cell-head{background:#ECE8E5}
-.timeline-content h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:.35rem}
+.timeline-content h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;letter-spacing:normal;margin-bottom:.35rem}
 .layout>*,.cards-grid>*{min-width:0}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
 @media (max-width:640px){.hero-meta{flex-wrap:wrap;row-gap:1rem}.nav-inner{flex-wrap:wrap;height:auto;padding:10px 16px;row-gap:8px}.nav-inner .nav-links{order:3;flex:1 1 100%;overflow-x:auto;gap:18px;margin:0;padding:6px 0 2px;border-top:0}.nav-inner .nav-links li{flex:0 0 auto}}
@@ -137,7 +137,7 @@ function sizeLogos(html) {
   return html.replace(/<img\b[^>]*src="\/assets\/logo\.svg"[^>]*>/gi, tag => {
     const hasW = /\swidth\s*=/i.test(tag), hasH = /\sheight\s*=/i.test(tag);
     if (hasW && hasH) return tag;
-    const h = /\sheight\s*=\s*"(\d+)"/i.exec(tag) || /height\s*:\s*(\d+(?:\.\d+)?)px/i.exec(tag);
+    const h = /\sheight\s*=\s*["']?(\d+)/i.exec(tag) || /height\s*:\s*(\d+(?:\.\d+)?)px/i.exec(tag);
     if (!h) return tag;
     const height = Math.round(parseFloat(h[1]));
     const width = Math.round(height * 9); // logo.svg is 288x32
@@ -197,14 +197,14 @@ function timelineHeadings(html) {
 }
 
 function labelForms(html) {
-  const used = new Set([...html.matchAll(/\sid="([^"]+)"/gi)].map(m => m[1]));
+  const used = new Set([...html.matchAll(/\sid\s*=\s*["']([^"']+)["']/gi)].map(m => m[1]));
   return html.replace(/<form\b[^>]*data-contact-form[\s\S]*?<\/form>/gi, form => {
     // 1. labels followed by their control
     form = form.replace(/<label(?![^>]*\sfor=)([^>]*)>([\s\S]*?)<\/label>(\s*(?:<div[^>]*>\s*)?)(<(?:input|select|textarea)\b[^>]*>)/gi,
       (m, lattr, text, between, control) => {
         const nm = /\sname="([^"]+)"/i.exec(control);
         if (!nm) return m;
-        let id = (/\sid="([^"]+)"/i.exec(control) || [])[1];
+        let id = (/\sid\s*=\s*["']([^"']+)["']/i.exec(control) || [])[1];
         if (!id) {
           const base = 'cf-' + nm[1].replace(/_/g, '-');
           id = base;
